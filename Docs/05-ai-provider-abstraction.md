@@ -726,7 +726,7 @@ describe('AI Provider Comparison', () => {
   const testPrompt = 'Generate a simple math question for grade 5.'
   
   test('Anthropic generates valid content', async () => {
-    const provider = createProvider('anthropic', process.env.ANTHROPIC_API_KEY!)
+    const provider = createProvider('anthropic', process.env.AI_API_KEY!)
     const result = await provider.generateContent(testPrompt, {
       model: 'claude-sonnet-4-20250514',
       maxTokens: 500,

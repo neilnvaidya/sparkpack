@@ -17,11 +17,14 @@ Production: https://your-domain.com/api
 
 ## Authentication
 
-**v1:** No authentication required (serverless function with API key in environment)
+**v1:** No authentication required (serverless function with AI API key in environment).
 
-API key for Anthropic stored in `.env.local`:
-```
-ANTHROPIC_API_KEY=sk-ant-...
+The selected AI provider is configured via environment variables in `.env.local`:
+
+```bash
+AI_PROVIDER=anthropic  # or openai, google, etc.
+AI_API_KEY=sk-...      # API key for the chosen provider
+AI_MODEL=...           # Optional: override default model
 ```
 
 ---
@@ -245,16 +248,9 @@ interface GenerateGameRequest {
    - Add parameters
    - Include context
     ↓
-5. Call Claude API
-   POST https://api.anthropic.com/v1/messages
-   {
-     "model": "claude-sonnet-4-20250514",
-     "max_tokens": 4000,
-     "messages": [{
-       "role": "user",
-       "content": generationPrompt
-     }]
-   }
+5. Call AI provider via abstraction layer
+   - Provider selected via `AI_PROVIDER`
+   - Model selected via `AI_MODEL` (or provider default)
     ↓
 6. Parse Response
    - Extract JSON from response
@@ -508,7 +504,7 @@ async function callClaudeAPI(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'x-api-key': process.env.ANTHROPIC_API_KEY!,
+      'x-api-key': process.env.AI_API_KEY!,
       'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
@@ -566,15 +562,17 @@ function parseClaudeResponse(response: ClaudeResponse): any {
 Required in `.env.local`:
 
 ```bash
-# Anthropic API
-ANTHROPIC_API_KEY=sk-ant-api03-...
+# AI provider configuration (canonical)
+AI_PROVIDER=anthropic                 # anthropic | openai | google | ...
+AI_API_KEY=sk-...                     # API key for the selected provider
+AI_MODEL=claude-sonnet-4-20250514    # Optional: override default model
 
 # Optional: Logging
 LOG_LEVEL=info
 
 # Optional: Development
 ENABLE_DEBUG_LOGGING=true
-SKIP_VALIDATION=false  # Never true in production
+SKIP_VALIDATION=false                 # Never true in production
 ```
 
 ---
@@ -632,7 +630,7 @@ if (response.ok) {
 ## Security Considerations
 
 ### API Key Protection
-- Never expose `ANTHROPIC_API_KEY` to client
+- Never expose `AI_API_KEY` (or any provider-specific key) to client
 - API calls only from server-side routes
 - Environment variables in `.env.local` (not committed)
 

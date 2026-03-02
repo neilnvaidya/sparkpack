@@ -47,15 +47,15 @@ Read these in order before building.
 
 | # | Document | What It Covers |
 |---|----------|----------------|
-| 01 | [Business Case](docs/01-business-case.md) | Vision, decisions, business model, phases, risk |
-| 02 | [System Architecture](docs/02-system-architecture.md) | Tech stack, data flow, file structure |
-| 03 | [Design System](docs/03-design-system.md) | Colours, typography, components, spacing |
-| 04 | [Template System](docs/04-template-system.md) | Template structure, schemas, adding new templates |
-| 05 | [AI Provider Abstraction](docs/05-ai-provider-abstraction.md) | Provider interface, implementations, cost tracking |
-| 06 | [State Management](docs/06-state-management.md) | Zustand store, game state machine, types |
-| 07 | [API Specification](docs/07-api-specification.md) | Endpoints, request/response formats, error handling |
-| 08 | [Implementation Guide](docs/08-implementation-guide.md) | Exact build order, phases, verification checklists |
-| 12 | [Quick Reference](docs/12-quick-reference.md) | Patterns, snippets, debugging, common tasks |
+| 01 | [Master Plan](Docs/01-MASTER-PLAN.md) | Vision, decisions, business model, phases, risk |
+| 02 | [System Architecture](Docs/02-system-architecture.md) | Tech stack, data flow, file structure |
+| 04 | [Template System](Docs/04-template-system.md) | Template structure, schemas, adding new templates |
+| 05 | [AI Provider Abstraction](Docs/05-ai-provider-abstraction.md) | Provider interface, implementations, cost tracking |
+| 06 | [State Management](Docs/06-state-management.md) | Zustand store, game state machine, types |
+| 07 | [API Specification](Docs/07-api-specification.md) | Endpoints, request/response formats, error handling |
+| 08a | [Implementation Guide (Part 1)](Docs/08a-implementation-guide.md) | Build order, phases, backend and core logic |
+| 08b | [Implementation Guide (Part 2)](Docs/08b-implementation-guide-part2.md) | Generation UI, runtime, testing |
+| 12 | [Quick Reference](Docs/12-quick-reference.md) | Patterns, snippets, debugging, common tasks |
 
 ---
 
@@ -80,7 +80,7 @@ Phase 11  Testing & polish               6 hours
 
 Total: ~55 hours. With AI coding assistance: ~40 hours.
 
-Full detail in [docs/08-implementation-guide.md](docs/08-implementation-guide.md).
+Full detail in [Docs/08a-implementation-guide.md](Docs/08a-implementation-guide.md) and [Docs/08b-implementation-guide-part2.md](Docs/08b-implementation-guide-part2.md).
 
 ---
 
@@ -137,7 +137,7 @@ sparkpack/
 │   ├── templates/                     # Template definitions & registry
 │   ├── schemas/                       # Zod validation schemas
 │   └── utils/                         # Storage, rate limiting
-├── docs/                              # All documentation
+├── Docs/                              # All documentation
 └── public/
 ```
 

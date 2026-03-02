@@ -647,17 +647,18 @@ Month 4-6:  Expand features, prove viability
 
 ## Document Structure
 
-This master plan references these detailed documents:
+This master plan references these detailed documents in the `Docs/` folder:
 
 ```
-00-MASTER-PLAN.md              ← You are here
-01-system-architecture.md      ← Technical architecture details
-02-template-system.md          ← Template structure and design
-03-design-system.md            ← UI/UX specifications
-04-ai-provider-abstraction.md  ← AI integration details
-05-state-management.md         ← Zustand store architecture
-06-implementation-guide.md     ← Build order and code structure
-07-testing-strategy.md         ← Testing and validation approach
+01-MASTER-PLAN.md                    ← You are here
+02-system-architecture.md            ← Technical architecture details
+04-template-system.md                ← Template structure and design
+05-ai-provider-abstraction.md        ← AI integration details
+06-state-management.md               ← Zustand store architecture
+07-api-specification.md              ← API contracts and error handling
+08a-implementation-guide.md          ← Build order, phases, backend and core logic
+08b-implementation-guide-part2.md    ← Generation UI, runtime, testing
+12-quick-reference.md                ← Patterns, snippets, and common tasks
 ```
 
 All ambiguity has been removed. All decisions are final. Implementation begins now.

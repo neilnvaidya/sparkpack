@@ -281,15 +281,15 @@ async function fetchData() {
 }
 ```
 
-### Server-Side API Call (to Claude)
+### Server-Side API Call (to AI provider)
 
 ```typescript
 const response = await fetch('https://api.anthropic.com/v1/messages', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'x-api-key': process.env.ANTHROPIC_API_KEY!,
-    'anthropic-version': '2023-06-01'
+    'x-api-key': process.env.AI_API_KEY!,
+    'anthropic-version': '2023-06-01' // Example for Anthropic; other providers differ
   },
   body: JSON.stringify({
     model: 'claude-sonnet-4-20250514',
@@ -504,8 +504,10 @@ test('rejects invalid data', () => {
 ### Required Files
 
 **.env.local** (create this, never commit):
-```
-ANTHROPIC_API_KEY=sk-ant-api03-...
+```bash
+AI_PROVIDER=anthropic           # or openai, google, etc.
+AI_API_KEY=sk-...               # API key for the chosen provider
+AI_MODEL=claude-sonnet-4-20250514  # Optional: override default model
 ```
 
 **.gitignore** (should include):
@@ -642,7 +644,7 @@ Before deploying:
 ## Key File Locations Reference
 
 ```
-classroom-games/
+sparkpack/
 ├── app/
 │   ├── layout.tsx                 # Root layout
 │   ├── page.tsx                   # Home page

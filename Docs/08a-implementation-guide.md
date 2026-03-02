@@ -17,10 +17,10 @@ This document specifies the **exact order** in which components must be built. E
 ### 0.1 Initialize Project (30 minutes)
 
 ```bash
-# Create Next.js app
-npx create-next-app@latest classroom-games --typescript --tailwind --app --no-src-dir
+# Create Next.js app at the repo root
+npx create-next-app@latest sparkpack --typescript --tailwind --app --no-src-dir
 
-cd classroom-games
+cd sparkpack
 
 # Install core dependencies
 npm install zustand immer zod
@@ -2014,3 +2014,4 @@ function getPhaseLabel(phase: GamePhase): string {
 [Due to length, I'll create a separate document for remaining phases]
 
 **Phases 8-11 to follow in next implementation document...**
+

@@ -160,13 +160,12 @@ Game End
 ## File Structure
 
 ```
-/classroom-games/
+sparkpack/
 ├── app/
 │   ├── layout.tsx                 # Root layout with design system
 │   ├── page.tsx                   # Landing/template selection
 │   ├── generate/
-│   │   └── [templateId]/
-│   │       └── page.tsx           # Generation form
+│   │   └── page.tsx               # Generation form
 │   ├── game/
 │   │   └── [id]/
 │   │       └── page.tsx           # Game runtime
@@ -183,14 +182,10 @@ Game End
 │   │   └── TeacherControls.tsx
 │   │
 │   ├── templates/                 # Template-specific components
-│   │   ├── strategy-board-quiz/
-│   │   │   ├── GameBoard.tsx
-│   │   │   ├── QuestionModal.tsx
-│   │   │   └── StealPhase.tsx
-│   │   ├── timed-relay/
-│   │   │   └── ...
-│   │   └── discussion-prompts/
-│   │       └── ...
+│   │   └── strategy-board-quiz/
+│   │       ├── GameBoard.tsx
+│   │       ├── QuestionModal.tsx
+│   │       └── StealPhase.tsx
 │   │
 │   └── ui/                        # shadcn/ui components
 │       ├── button.tsx
@@ -201,26 +196,25 @@ Game End
 ├── lib/
 │   ├── templates/                 # Template definitions
 │   │   ├── registry.ts
-│   │   ├── strategy-board-quiz.ts
-│   │   ├── timed-relay.ts
-│   │   └── discussion-prompts.ts
+│   │   └── strategy-board-quiz.ts
 │   │
-│   ├── game-engine/              # Shared game logic
-│   │   ├── state-machine.ts
-│   │   ├── timer.ts
-│   │   └── scoring.ts
+│   ├── ai/                        # AI provider abstraction and prompts
+│   │   ├── provider-interface.ts
+│   │   ├── provider-factory.ts
+│   │   ├── generate.ts
+│   │   └── validation.ts
 │   │
-│   ├── ai/
-│   │   ├── generate.ts           # Claude API calls
-│   │   ├── prompts.ts            # Template-specific prompts
-│   │   └── validation.ts         # Schema validation
+│   ├── store/                     # Game state
+│   │   └── game-store.ts
 │   │
-│   └── utils/
-│       ├── schemas.ts            # Zod schemas
-│       └── game-storage.ts       # In-memory game state
+│   └── utils/                     # Shared utilities
+│       ├── schemas.ts             # Zod schemas
+│       └── game-storage.ts        # In-memory game state
+│
+├── Docs/                          # All documentation
 │
 ├── styles/
-│   └── globals.css               # Design system CSS variables
+│   └── globals.css                # Design system CSS variables
 │
 └── public/
     └── (no assets needed for v1)
