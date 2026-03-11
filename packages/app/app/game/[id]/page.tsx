@@ -1,35 +1,13 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useParams, useRouter } from 'next/navigation'
-import { useGameStore } from '@/lib/store/game-store'
 import { getGame } from '@/lib/utils/storage'
-import { getTemplate } from '@/lib/templates/registry'
-import type { TeamColorId } from '@/lib/constants/team-colors'
+import { getAllTemplates } from '@/lib/templates/registry'
+import type { GameTemplate } from '@/lib/templates/types'
 
-// ─── Helpers (unchanged) ──────────────────────────────────────────────────────
-
-function deriveNumTeams(content: unknown): number {
-  try {
-    const c = content as { board?: { cells?: unknown[] } }
-    const len = c?.board?.cells?.length ?? 0
-    if (len === 0) return 4
-    return Math.min(5, Math.max(3, Math.ceil(len / 4)))
-  } catch { return 4 }
-}
-
-function sanitizeTeamNames(teamNames: unknown): string[] {
-  if (!Array.isArray(teamNames)) return []
-  return teamNames.map((n) => (typeof n === 'string' ? n.trim() : '')).filter((n) => n.length > 0).slice(0, 5)
-}
-
-function sanitizeTeamColors(teamColors: unknown): TeamColorId[] {
-  if (!Array.isArray(teamColors)) return []
-  return teamColors.map((c) => (typeof c === 'string' ? c.trim() : '')).filter((c) => c.length > 0).slice(0, 5) as TeamColorId[]
-}
-
-// ─── Sub-screens ──────────────────────────────────────────────────────────────
+// ─── Shared shell for game-area screens ──────────────────────────────────────
 
 function SparkScreen({ children }: { children: React.ReactNode }) {
   return (
@@ -45,23 +23,10 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        @keyframes spin  { to { transform: rotate(360deg); } }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes popIn {
-          from { opacity: 0; transform: scale(0.85) translateY(20px); }
+          from { opacity: 0; transform: scale(0.95) translateY(12px); }
           to   { opacity: 1; transform: scale(1)    translateY(0); }
-        }
-        @keyframes floatY {
-          0%,100% { transform: translateY(0); }
-          50%      { transform: translateY(-12px); }
-        }
-        @keyframes shimmer {
-          0%   { background-position: -200% center; }
-          100% { background-position:  200% center; }
-        }
-        @keyframes glow {
-          0%,100% { box-shadow: 0 0 30px rgba(255,226,52,0.3), 0 0 60px rgba(255,122,26,0.15); }
-          50%      { box-shadow: 0 0 50px rgba(255,226,52,0.55), 0 0 90px rgba(255,122,26,0.3); }
         }
         @keyframes drift {
           0%   { transform: translateY(0) translateX(0); opacity: 0; }
@@ -70,33 +35,7 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
           100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
         }
 
-        .sp-shimmer-logo {
-          background: linear-gradient(120deg, var(--yellow) 0%, var(--orange) 30%, #fff 50%, var(--orange) 70%, var(--pink) 100%);
-          background-size: 200% auto;
-          -webkit-background-clip: text; background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: shimmer 3s linear infinite;
-        }
-        .sp-pop    { animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both; }
-        .sp-float  { animation: floatY 3s ease-in-out infinite; }
-
-        .sp-primary-btn {
-          display: inline-flex; align-items: center; gap: 10px;
-          padding: 18px 52px;
-          background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
-          border: none; border-radius: 100px;
-          font-size: 1.15rem; font-weight: 700;
-          font-family: var(--font-display);
-          color: #2a0f4a; cursor: pointer; letter-spacing: 0.03em;
-          box-shadow: 0 7px 0 #7a3300, 0 12px 35px rgba(255,122,26,0.45);
-          transition: transform 0.08s, box-shadow 0.08s, filter 0.15s;
-          animation: glow 2.5s ease-in-out infinite;
-        }
-        .sp-primary-btn:hover { filter: brightness(1.06); }
-        .sp-primary-btn:active {
-          transform: translateY(5px);
-          box-shadow: 0 2px 0 #7a3300, 0 4px 12px rgba(255,122,26,0.3);
-        }
+        .sp-pop { animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
 
         .sp-ghost-btn {
           display: inline-flex; align-items: center; gap: 6px;
@@ -116,93 +55,68 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
         }
       `}</style>
 
-      {/* Background */}
       <div style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
         background: 'radial-gradient(ellipse at 30% 20%, #4a1a7a 0%, #2e1252 40%, #160830 100%)',
         fontFamily: 'var(--font-body)', position: 'relative', overflow: 'hidden',
       }}>
-        {/* Grid */}
         <div aria-hidden="true" style={{
           position: 'absolute', inset: 0, pointerEvents: 'none',
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
           backgroundSize: '48px 48px',
         }} />
-        {/* Glow orbs */}
         <div aria-hidden="true" style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40vw', height: '40vw', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,122,26,0.2) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
         <div aria-hidden="true" style={{ position: 'absolute', bottom: '0%', right: '-10%', width: '45vw', height: '45vw', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,61,119,0.18) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
-
-        {/* Particles */}
-        {[...Array(10)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div key={i} aria-hidden="true" style={{
-            position: 'absolute',
-            left: `${(i * 11 + 5) % 100}%`, bottom: '-8px',
+            position: 'absolute', left: `${(i * 11 + 5) % 100}%`, bottom: '-8px',
             width: `${5 + (i % 3) * 3}px`, height: `${5 + (i % 3) * 3}px`,
             borderRadius: '50%', opacity: 0,
             background: i % 3 === 0 ? 'var(--yellow)' : i % 3 === 1 ? 'var(--pink)' : 'var(--orange)',
             animation: `drift ${9 + (i * 1.4) % 7}s ${(i * 0.7) % 5}s linear infinite`,
           }} />
         ))}
-
         <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>
       </div>
     </>
   )
 }
 
-// ── Loading ───────────────────────────────────────────────────────────────────
+// ─── Loading ───────────────────────────────────────────────────────────────────
+
 function LoadingScreen() {
   return (
     <SparkScreen>
       <div style={{ textAlign: 'center', padding: '20px' }}>
-        {/* Spinning ring */}
         <div style={{
-          width: '72px', height: '72px', borderRadius: '50%',
+          width: '56px', height: '56px', borderRadius: '50%',
           border: '4px solid rgba(255,255,255,0.08)',
           borderTop: '4px solid var(--yellow)',
-          margin: '0 auto 28px',
+          margin: '0 auto 24px',
           animation: 'spin 0.9s linear infinite',
         }} />
-
-        <div style={{
-          fontFamily: 'var(--font-display)', fontSize: '1.8rem',
-          fontWeight: 700, color: '#fffbe8', marginBottom: '8px',
-          animation: 'pulse 1.5s ease-in-out infinite',
-        }}>
-          Loading game…
+        <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 700, color: '#fffbe8' }}>
+          Loading…
         </div>
-        <p style={{ fontSize: '13px', color: 'rgba(255,251,232,0.4)' }}>
-          Setting up the board
-        </p>
       </div>
     </SparkScreen>
   )
 }
 
-// ── Error ─────────────────────────────────────────────────────────────────────
+// ─── Error ─────────────────────────────────────────────────────────────────────
+
 function ErrorScreen({ message, onBack }: { message: string; onBack: () => void }) {
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '420px', padding: '20px' }}>
-        <div style={{ fontSize: '56px', marginBottom: '20px' }} className="sp-float">😬</div>
-
-        <h1 style={{
-          fontFamily: 'var(--font-display)', fontSize: '2rem',
-          fontWeight: 700, color: '#ff8db3', marginBottom: '10px',
-        }}>
+        <div style={{ fontSize: '48px', marginBottom: '16px' }}>😬</div>
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: '#ff8db3', marginBottom: '10px' }}>
           Something went wrong
         </h1>
-        <p style={{
-          fontSize: '14px', color: 'rgba(255,251,232,0.5)',
-          lineHeight: 1.6, marginBottom: '32px',
-          background: 'rgba(255,61,119,0.1)',
-          border: '1px solid rgba(255,61,119,0.25)',
-          borderRadius: '10px', padding: '12px 16px',
-        }}>
+        <p style={{ fontSize: '14px', color: 'rgba(255,251,232,0.5)', lineHeight: 1.6, marginBottom: '28px' }}>
           {message}
         </p>
-
-        <button className="sp-ghost-btn" onClick={onBack} style={{ marginBottom: '12px' }}>
+        <button className="sp-ghost-btn" onClick={onBack}>
           ← Back to Create Game
         </button>
       </div>
@@ -210,193 +124,146 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   )
 }
 
-// ── Setup / Ready screen ──────────────────────────────────────────────────────
-function SetupScreen({ onStart }: { onStart: () => void }) {
-  const [countdown, setCountdown] = useState<number | null>(null)
+// ─── Game selector ─────────────────────────────────────────────────────────────
 
-  const handleStart = () => {
-    // Brief 3-2-1 countdown before handing off
-    setCountdown(3)
-  }
-
-  useEffect(() => {
-    if (countdown === null) return
-    if (countdown === 0) { onStart(); return }
-    const t = setTimeout(() => setCountdown((c) => (c ?? 1) - 1), 900)
-    return () => clearTimeout(t)
-  }, [countdown, onStart])
-
+function GameCard({
+  template,
+  gameId,
+  isThisGame,
+}: {
+  template: GameTemplate
+  gameId: string
+  isThisGame: boolean
+}) {
   return (
-    <SparkScreen>
-      <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '560px', padding: '20px' }}>
-
-        {/* Logo mark */}
-        <div style={{ marginBottom: '24px' }}>
+    <Link
+      href={`/game/${gameId}/${template.slug}`}
+      style={{
+        display: 'block',
+        textDecoration: 'none',
+        color: 'inherit',
+        background: 'rgba(255,255,255,0.06)',
+        border: '2px solid rgba(255,255,255,0.12)',
+        borderRadius: '16px',
+        padding: '20px 24px',
+        transition: 'background 0.2s, border-color 0.2s, transform 0.15s',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.background = 'rgba(255,255,255,0.1)'
+        e.currentTarget.style.borderColor = 'rgba(255,226,52,0.35)'
+        e.currentTarget.style.transform = 'translateY(-2px)'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'
+        e.currentTarget.style.transform = 'translateY(0)'
+      }}
+    >
+      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '12px', marginBottom: '8px' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', fontWeight: 700, color: '#fffbe8', margin: 0 }}>
+          {template.name}
+        </h2>
+        {isThisGame && (
           <span style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '2rem', fontWeight: 700,
+            flexShrink: 0,
+            fontSize: '11px',
+            fontWeight: 700,
+            letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+            color: 'var(--yellow)',
+            background: 'rgba(255,226,52,0.15)',
+            border: '1px solid rgba(255,226,52,0.4)',
+            borderRadius: '100px',
+            padding: '4px 10px',
           }}>
-            <span className="sp-shimmer-logo">Spark</span>
-            <span style={{
-              background: 'linear-gradient(135deg, #ffffff 0%, #c9a0ff 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-            }}>Pack</span>
+            This game
           </span>
-        </div>
-
-        {/* Checklist badge */}
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          background: 'rgba(255,226,52,0.12)',
-          border: '1px solid rgba(255,226,52,0.3)',
-          borderRadius: '100px', padding: '6px 16px',
-          marginBottom: '28px',
-        }}>
-          <span style={{ fontSize: '13px' }}>✅</span>
-          <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--yellow)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
-            Game Ready
-          </span>
-        </div>
-
-        {/* Heading */}
-        {countdown === null ? (
-          <>
-            <h1 style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2rem, 6vw, 3rem)',
-              fontWeight: 700, color: '#fffbe8',
-              lineHeight: 1.1, marginBottom: '14px',
-            }}>
-              Ready to light it up? 🔥
-            </h1>
-            <p style={{
-              fontSize: '15px', color: 'rgba(255,251,232,0.55)',
-              lineHeight: 1.7, maxWidth: '380px', margin: '0 auto 36px',
-            }}>
-              Make sure your projector is on and all teams are looking at the screen.
-            </p>
-
-            {/* Projector tips */}
-            <div style={{
-              display: 'flex', gap: '10px', justifyContent: 'center',
-              flexWrap: 'wrap', marginBottom: '40px',
-            }}>
-              {[
-                { icon: '📽️', text: 'Projector on' },
-                { icon: '👀', text: 'Teams watching' },
-                { icon: '🔊', text: 'Volume up' },
-              ].map(({ icon, text }) => (
-                <div key={text} style={{
-                  display: 'flex', alignItems: 'center', gap: '7px',
-                  background: 'rgba(255,255,255,0.06)',
-                  border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '10px', padding: '8px 14px',
-                  fontSize: '13px', color: 'rgba(255,251,232,0.6)',
-                  fontWeight: 500,
-                }}>
-                  <span>{icon}</span><span>{text}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* CTA */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
-              <button className="sp-primary-btn" onClick={handleStart}>
-                <span>⚡</span>
-                <span>Start Game</span>
-              </button>
-
-              <Link href="/" className="sp-ghost-btn">
-                ← Back to Home
-              </Link>
-            </div>
-          </>
-        ) : (
-          /* ── Countdown ── */
-          <div style={{ padding: '20px 0' }}>
-            <p style={{ fontSize: '14px', color: 'rgba(255,251,232,0.5)', marginBottom: '20px', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600 }}>
-              Starting in…
-            </p>
-            <div key={countdown} style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(5rem, 20vw, 9rem)',
-              fontWeight: 700, lineHeight: 1,
-              background: countdown === 1
-                ? 'linear-gradient(135deg, var(--pink), var(--orange))'
-                : countdown === 2
-                  ? 'linear-gradient(135deg, var(--orange), var(--yellow))'
-                  : 'linear-gradient(135deg, var(--yellow), #fff)',
-              WebkitBackgroundClip: 'text', backgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              animation: 'popIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both',
-              filter: 'drop-shadow(0 0 40px rgba(255,226,52,0.5))',
-            }}>
-              {countdown}
-            </div>
-          </div>
         )}
       </div>
-    </SparkScreen>
+      <p style={{ fontSize: '13px', color: 'rgba(255,251,232,0.6)', lineHeight: 1.5, margin: 0 }}>
+        {template.description}
+      </p>
+      <div style={{ marginTop: '14px', fontSize: '13px', color: 'var(--yellow)', fontWeight: 600 }}>
+        Play →
+      </div>
+    </Link>
   )
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
-export default function GamePage() {
+
+export default function GameSelectorPage() {
   const params = useParams()
   const router = useRouter()
   const gameId = typeof params.id === 'string' ? params.id : ''
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const tickInterval = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  const initializeGame = useGameStore((s) => s.initializeGame)
-  const startGame      = useGameStore((s) => s.startGame)
-  const phase          = useGameStore((s) => s.phase)
-  const templateId     = useGameStore((s) => s.templateId)
+  const [templateId, setTemplateId] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!gameId) { setError('Invalid game ID'); setLoading(false); return }
+    if (!gameId) {
+      setError('Invalid game ID')
+      setLoading(false)
+      return
+    }
     const stored = getGame(gameId)
-    if (!stored) { setError('Game not found. It may have expired — try creating a new one.'); setLoading(false); return }
-
-    try {
-      getTemplate(stored.templateId)
-      const configuredTeamNames  = sanitizeTeamNames(stored.settings?.teamNames)
-      const configuredTeamColors = sanitizeTeamColors(stored.settings?.teamColors)
-      const configuredNumTeams   = stored.settings?.numTeams
-      const numTeams = configuredNumTeams && configuredNumTeams >= 3 && configuredNumTeams <= 5
-        ? configuredNumTeams
-        : configuredTeamNames.length >= 3 && configuredTeamNames.length <= 5
-          ? configuredTeamNames.length
-          : deriveNumTeams(stored.content)
-      initializeGame({
-        gameId: stored.gameId,
-        templateId: stored.templateId,
-        numTeams,
-        teamNames:  configuredTeamNames.length  ? configuredTeamNames  : undefined,
-        teamColors: configuredTeamColors.length ? configuredTeamColors : undefined,
-        content: stored.content,
-      })
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load game')
+    if (!stored) {
+      setError('Game not found. It may have expired — try creating a new one.')
+      setLoading(false)
+      return
     }
+    setTemplateId(stored.templateId)
     setLoading(false)
-  }, [gameId, initializeGame])
-
-  useEffect(() => {
-    if (phase === 'setup' || phase === 'game_over' || loading) return
-    const store = useGameStore.getState()
-    tickInterval.current = setInterval(() => store.tick(), 100)
-    return () => {
-      if (tickInterval.current) { clearInterval(tickInterval.current); tickInterval.current = null }
-    }
-  }, [phase, loading])
+  }, [gameId])
 
   if (loading) return <LoadingScreen />
-  if (error)   return <ErrorScreen message={error} onBack={() => router.push('/generate')} />
-  if (phase === 'setup') return <SetupScreen onStart={startGame} />
+  if (error) {
+    return (
+      <ErrorScreen
+        message={error}
+        onBack={() => router.push('/generate')}
+      />
+    )
+  }
 
-  const template = getTemplate(templateId)
-  const RuntimeComponent = template.RuntimeComponent
-  return <RuntimeComponent />
+  const templates = getAllTemplates()
+
+  return (
+    <SparkScreen>
+      <div className="sp-pop" style={{ maxWidth: '520px', padding: '24px', width: '100%' }}>
+        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
+          <h1 style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(1.75rem, 5vw, 2.25rem)',
+            fontWeight: 700,
+            color: '#fffbe8',
+            marginBottom: '8px',
+          }}>
+            Choose a game
+          </h1>
+          <p style={{ fontSize: '14px', color: 'rgba(255,251,232,0.55)' }}>
+            Pick the game type to run for this session.
+          </p>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '28px' }}>
+          {templates.map((template, i) => (
+            <div key={template.id} style={{ animationDelay: `${i * 0.06}s` }} className="sp-pop">
+              <GameCard
+                template={template}
+                gameId={gameId}
+                isThisGame={template.id === templateId}
+              />
+            </div>
+          ))}
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <Link href="/generate" className="sp-ghost-btn">
+            ← Back to Create Game
+          </Link>
+        </div>
+      </div>
+    </SparkScreen>
+  )
 }
