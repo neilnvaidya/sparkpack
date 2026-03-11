@@ -1,0 +1,8 @@
+/* Theme variables for @sparkpack/visuals — SparkPack can override these. */
+:root {
+  --sp-visual-stroke: #374151;
+  --sp-visual-fill: #3b82f6;
+  --sp-visual-text: #111827;
+  --sp-visual-bg: #f3f4f6;
+  --sp-visual-coin: #fcd34d;
+}

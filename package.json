@@ -1,52 +1,14 @@
 {
-  "name": "sparkpack",
-  "version": "1.0.0",
-  "description": "Generate custom classroom games in under 30 seconds. No student devices required.",
-  "main": "index.js",
+  "name": "sparkpack-monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/neilnvaidya/sparkpack.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/neilnvaidya/sparkpack/issues"
-  },
-  "homepage": "https://github.com/neilnvaidya/sparkpack#readme",
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.78.0",
-    "@google/generative-ai": "^0.24.1",
-    "@radix-ui/react-dialog": "^1.1.15",
-    "@radix-ui/react-slot": "^1.2.4",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "immer": "^11.1.4",
-    "lightningcss": "^1.31.1",
-    "lucide-react": "^0.576.0",
-    "next": "^16.1.6",
-    "openai": "^6.25.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "tailwind-merge": "^3.5.0",
-    "zod": "^4.3.6",
-    "zustand": "^5.0.11"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "^25.3.3",
-    "@types/react": "^19.2.14",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.3",
-    "eslint-config-next": "^16.1.6",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
+    "dev": "npm run dev --workspace=packages/app",
+    "build": "npm run build --workspace=packages/visuals && npm run build --workspace=packages/app",
+    "storybook": "npm run storybook --workspace=packages/visuals",
+    "typecheck": "npm run typecheck --workspace=packages/visuals && npm run typecheck --workspace=packages/app",
+    "derive-questions": "node scripts/derive-ks1-2023-questions.mjs"
   }
 }

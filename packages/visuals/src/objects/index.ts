@@ -1,0 +1,26 @@
+export {
+  OBJECT_IDS,
+  isObjectInLibrary,
+  getObjectDrawing,
+  ObjectDrawing,
+  type ObjectId,
+  type ObjectDrawingProps,
+} from './ObjectLibrary';
+export {
+  SHAPE_2D_IDS,
+  SHAPE_3D_IDS,
+  SHAPE_IDS,
+  isShapeId,
+  ShapeDrawing,
+  getShapeRenderer,
+  registerShapeRenderer,
+  type ShapeId,
+  type Shape2dId,
+  type Shape3dId,
+  type ShapeDrawingProps,
+  type ShapeParams,
+  type ParamsFor,
+  type ShapeRenderOptions,
+  type BBox,
+  type ShapeRendererEntry,
+} from './shapes';
