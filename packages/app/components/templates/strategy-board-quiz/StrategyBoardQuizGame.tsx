@@ -12,14 +12,7 @@ import { TimerDisplay } from '@/components/shared/TimerDisplay'
 import { GameBoard } from './GameBoard'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils/cn'
-
-const teamColorClass: Record<Team['color'], string> = {
-  red: 'bg-team-red text-white',
-  blue: 'bg-team-blue text-white',
-  green: 'bg-team-green text-white',
-  yellow: 'bg-team-yellow text-white',
-  purple: 'bg-team-purple text-white',
-}
+import { getTeamColorDef } from '@/lib/constants/team-colors'
 
 import type { GamePhase } from '@/lib/store/game-store'
 
@@ -284,13 +277,13 @@ export default function StrategyBoardQuizGame() {
                         {winners.length === 1 ? 'Winner' : 'Winners'}
                       </div>
                       <div className="flex flex-wrap justify-center gap-4">
-                        {winners.map((team) => (
+                        {winners.map((team) => {
+                          const colorDef = getTeamColorDef(team.color)
+                          return (
                           <div
                             key={team.id}
-                            className={cn(
-                              'game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2',
-                              teamColorClass[team.color]
-                            )}
+                            className="game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2 text-white"
+                            style={{ backgroundColor: colorDef.hex, borderColor: colorDef.hex }}
                           >
                             <div className="text-sm font-semibold opacity-90 mb-1">
                               👑 {team.name}
@@ -299,21 +292,23 @@ export default function StrategyBoardQuizGame() {
                               {team.score}
                             </div>
                           </div>
-                        ))}
+                          )
+                        })}
                       </div>
                       {rest.length > 0 && (
                         <div className="pt-4 border-t border-border flex flex-wrap justify-center gap-2">
-                          {rest.map((team) => (
+                          {rest.map((team) => {
+                            const colorDef = getTeamColorDef(team.color)
+                            return (
                             <div
                               key={team.id}
-                              className={cn(
-                                'game-over-card px-3 py-2 rounded-full text-sm font-medium',
-                                teamColorClass[team.color]
-                              )}
+                              className="game-over-card px-3 py-2 rounded-full text-sm font-medium text-white"
+                              style={{ backgroundColor: colorDef.hex, borderColor: colorDef.hex }}
                             >
                               {team.name}: {team.score}
                             </div>
-                          ))}
+                            )
+                          })}
                         </div>
                       )}
                     </div>
