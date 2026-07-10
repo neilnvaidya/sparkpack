@@ -317,25 +317,25 @@ export default function HomePage() {
             </Link>
 
             {/* Secondary CTA */}
-            <Link href="/join" style={{ textDecoration: "none" }}>
+            <Link href="/create/math-rush" style={{ textDecoration: "none" }}>
               <button style={{
                 display: "inline-flex", alignItems: "center", gap: "8px",
                 padding: "12px 28px",
                 background: "rgba(255,255,255,0.08)",
-                border: "2px solid rgba(255,255,255,0.2)",
+                border: "2px solid rgba(255,226,52,0.35)",
                 borderRadius: "100px",
                 fontSize: "0.95rem",
                 fontWeight: 600,
                 fontFamily: "'Plus Jakarta Sans', sans-serif",
-                color: "rgba(255,248,231,0.9)",
+                color: "rgba(255,248,231,0.95)",
                 cursor: "pointer",
                 transition: "background 0.2s, border-color 0.2s",
               }}
-              onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.14)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.4)"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.08)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; }}
+              onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,226,52,0.12)"; e.currentTarget.style.borderColor = "rgba(255,226,52,0.55)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.08)"; e.currentTarget.style.borderColor = "rgba(255,226,52,0.35)"; }}
               >
-                <span>🔑</span>
-                <span>Join with a code</span>
+                <span>➗</span>
+                <span>Math Rush</span>
               </button>
             </Link>
 
@@ -344,7 +344,7 @@ export default function HomePage() {
               color: "rgba(255,232,190,0.5)",
               margin: 0,
             }}>
-              No account needed to join · Free for teachers
+              No account needed · Free for teachers
             </p>
           </div>
 

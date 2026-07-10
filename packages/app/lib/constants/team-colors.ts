@@ -43,7 +43,7 @@ export const TEAM_COLOR_OPTIONS: TeamColorDef[] = [
   { id: 'c16', name: '#9b9c82', hex: '#9b9c82', lightHex: '#cfd0c1' },
 ]
 
-export const DEFAULT_TEAM_COLORS: TeamColorId[] = ['c2', 'c3', 'c7', 'c8', 'c11']
+export const DEFAULT_TEAM_COLORS: TeamColorId[] = ['c2', 'c3', 'c7', 'c8', 'c11', 'c10']
 
 export function getTeamColorDef(id: TeamColorId): TeamColorDef {
   return TEAM_COLOR_OPTIONS.find((color) => color.id === id) ?? TEAM_COLOR_OPTIONS[0]

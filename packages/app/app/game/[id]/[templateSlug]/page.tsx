@@ -6,27 +6,60 @@ import { useParams, useRouter } from 'next/navigation'
 import { useGameStore } from '@/lib/store/game-store'
 import { getGame } from '@/lib/utils/storage'
 import { getTemplate, getTemplateBySlug } from '@/lib/templates/registry'
+import type { GameTemplate } from '@/lib/templates/types'
 import type { TeamColorId } from '@/lib/constants/team-colors'
+import type { StoredGame } from '@/lib/utils/storage'
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-function deriveNumTeams(content: unknown): number {
+function deriveNumTeams(template: GameTemplate, content: unknown): number {
+  const [minT, maxT] = template.teamRange
+  if (template.id === 'math_rush') {
+    return Math.min(maxT, Math.max(minT, 4))
+  }
   try {
     const c = content as { board?: { cells?: unknown[] } }
     const len = c?.board?.cells?.length ?? 0
-    if (len === 0) return 4
-    return Math.min(5, Math.max(3, Math.ceil(len / 4)))
-  } catch { return 4 }
+    if (len === 0) return Math.min(maxT, Math.max(minT, 4))
+    const guessed = Math.ceil(len / 4)
+    return Math.min(maxT, Math.max(minT, guessed))
+  } catch {
+    return Math.min(maxT, Math.max(minT, 4))
+  }
 }
 
-function sanitizeTeamNames(teamNames: unknown): string[] {
+function sanitizeTeamNames(teamNames: unknown, maxTeams: number): string[] {
   if (!Array.isArray(teamNames)) return []
-  return teamNames.map((n) => (typeof n === 'string' ? n.trim() : '')).filter((n) => n.length > 0).slice(0, 5)
+  return teamNames
+    .map((n) => (typeof n === 'string' ? n.trim() : ''))
+    .filter((n) => n.length > 0)
+    .slice(0, maxTeams)
 }
 
-function sanitizeTeamColors(teamColors: unknown): TeamColorId[] {
+function sanitizeTeamColors(teamColors: unknown, maxTeams: number): TeamColorId[] {
   if (!Array.isArray(teamColors)) return []
-  return teamColors.map((c) => (typeof c === 'string' ? c.trim() : '')).filter((c) => c.length > 0).slice(0, 5) as TeamColorId[]
+  return teamColors
+    .map((c) => (typeof c === 'string' ? c.trim() : ''))
+    .filter((c) => c.length > 0)
+    .slice(0, maxTeams) as TeamColorId[]
+}
+
+function resolveNumTeams(stored: StoredGame, template: GameTemplate): number {
+  const [minT, maxT] = template.teamRange
+  const configuredNumTeams = stored.settings?.numTeams
+  const nameCount = sanitizeTeamNames(stored.settings?.teamNames, maxT).length
+
+  if (
+    typeof configuredNumTeams === 'number' &&
+    configuredNumTeams >= minT &&
+    configuredNumTeams <= maxT
+  ) {
+    return configuredNumTeams
+  }
+  if (nameCount >= minT && nameCount <= maxT) {
+    return nameCount
+  }
+  return deriveNumTeams(template, stored.content)
 }
 
 // ─── Sub-screens ──────────────────────────────────────────────────────────────
@@ -298,14 +331,10 @@ export default function GameRunPage() {
       return
     }
     try {
-      const configuredTeamNames = sanitizeTeamNames(stored.settings?.teamNames)
-      const configuredTeamColors = sanitizeTeamColors(stored.settings?.teamColors)
-      const configuredNumTeams = stored.settings?.numTeams
-      const numTeams = configuredNumTeams && configuredNumTeams >= 3 && configuredNumTeams <= 5
-        ? configuredNumTeams
-        : configuredTeamNames.length >= 3 && configuredTeamNames.length <= 5
-          ? configuredTeamNames.length
-          : deriveNumTeams(stored.content)
+      const maxTeams = template.teamRange[1]
+      const configuredTeamNames = sanitizeTeamNames(stored.settings?.teamNames, maxTeams)
+      const configuredTeamColors = sanitizeTeamColors(stored.settings?.teamColors, maxTeams)
+      const numTeams = resolveNumTeams(stored, template)
       initializeGame({
         gameId: stored.gameId,
         templateId: stored.templateId,
@@ -322,6 +351,7 @@ export default function GameRunPage() {
 
   useEffect(() => {
     if (phase === 'setup' || phase === 'game_over' || loading) return
+    if (phase === 'math_rush_round') return
     const store = useGameStore.getState()
     tickInterval.current = setInterval(() => store.tick(), 100)
     return () => {

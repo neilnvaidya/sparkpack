@@ -8,6 +8,9 @@ import { immer } from 'zustand/middleware/immer'
 import type { StrategyBoardQuizContent } from '@/lib/templates/strategy-board-quiz'
 import type { TeamColorId } from '@/lib/constants/team-colors'
 import { DEFAULT_TEAM_COLORS } from '@/lib/constants/team-colors'
+import { mathRushContentSchema } from '@/lib/math-rush/content'
+import { loadMathRushQuestions, shuffleDeck } from '@/lib/math-rush/load-problem-sets'
+import type { MathRushQuestion } from '@/lib/math-rush/question'
 
 /** Template-validated content; shape depends on template. */
 export type GameContent = unknown
@@ -20,6 +23,7 @@ export type GamePhase =
   | 'answer_waiting'
   | 'steal_phase'
   | 'round_complete'
+  | 'math_rush_round'
   | 'game_over'
 
 export type TeamColor = TeamColorId
@@ -70,6 +74,21 @@ export interface StrategyBoardState {
   currentStealIndex: number
 }
 
+/** Math Rush – bounty cards */
+export interface MathRushActiveCard {
+  question: MathRushQuestion
+  claimedByTeamIndex: number | null
+  answerRevealed: boolean
+}
+
+export interface MathRushState {
+  deck: MathRushQuestion[]
+  discard: MathRushQuestion[]
+  activeCards: MathRushActiveCard[]
+  openCardIndex: number | null
+  lastAward: { teamIndex: number; points: number; teamName: string } | null
+}
+
 function defaultBoardCell(): BoardCell {
   return {
     topic: '',
@@ -109,6 +128,71 @@ function initializeBoardState(content: unknown): StrategyBoardState {
   }
 }
 
+function initializeMathRushTemplateState(content: unknown): MathRushState | null {
+  const parsed = mathRushContentSchema.safeParse(content)
+  if (!parsed.success) return null
+  const pool = loadMathRushQuestions(
+    parsed.data.problemSetIds,
+    parsed.data.customQuestions ?? []
+  )
+  const deck = shuffleDeck(pool.map((q) => ({ ...q })))
+  return {
+    deck,
+    discard: [],
+    activeCards: [],
+    openCardIndex: null,
+    lastAward: null,
+  }
+}
+
+function dealMathRushRound(
+  state: {
+    templateState: unknown
+    content: unknown
+    phase: GamePhase
+  },
+  isFirstDeal: boolean
+) {
+  const parsed = mathRushContentSchema.safeParse(state.content)
+  if (!parsed.success) {
+    state.phase = 'game_over'
+    return
+  }
+  const content = parsed.data
+  const ts = state.templateState as MathRushState | null
+  if (!ts) {
+    state.phase = 'game_over'
+    return
+  }
+
+  if (!isFirstDeal) {
+    for (const ac of ts.activeCards) {
+      ts.discard.push({ ...ac.question })
+    }
+  }
+  ts.activeCards = []
+  ts.openCardIndex = null
+
+  const n = content.questionsPerRound
+  while (ts.activeCards.length < n) {
+    if (ts.deck.length === 0 && ts.discard.length > 0) {
+      ts.deck = shuffleDeck(ts.discard)
+      ts.discard = []
+    }
+    if (ts.deck.length === 0) break
+    const q = ts.deck.shift()!
+    ts.activeCards.push({
+      question: { ...q },
+      claimedByTeamIndex: null,
+      answerRevealed: false,
+    })
+  }
+
+  if (ts.activeCards.length === 0) {
+    state.phase = 'game_over'
+  }
+}
+
 function countAvailableCells(state: StrategyBoardState): number {
   return state.board.flat().filter((cell) => cell.state === 'available').length
 }
@@ -144,6 +228,12 @@ export interface GameStore {
   endGame: () => void
   tick: () => void
   closeModal: () => void
+  mathRushOpenCard: (index: number | null) => void
+  mathRushAwardCard: (cardIndex: number, teamIndex: number) => void
+  mathRushRevealCard: (cardIndex: number) => void
+  mathRushRevealAllAnswers: () => void
+  mathRushNextRound: () => void
+  mathRushClearLastAward: () => void
 }
 
 export const useGameStore = create<GameStore>()(
@@ -189,12 +279,21 @@ export const useGameStore = create<GameStore>()(
 
         if (params.templateId === 'strategy_board_quiz') {
           state.templateState = initializeBoardState(params.content)
+        } else if (params.templateId === 'math_rush') {
+          state.templateState = initializeMathRushTemplateState(params.content)
+        } else {
+          state.templateState = null
         }
       })
     },
 
     startGame: () => {
       set((state) => {
+        if (state.templateId === 'math_rush') {
+          state.phase = 'math_rush_round'
+          dealMathRushRound(state, true)
+          return
+        }
         state.phase = 'team_selecting'
         if (state.templateId === 'strategy_board_quiz' && state.content) {
           state.templateState = initializeBoardState(state.content)
@@ -204,6 +303,7 @@ export const useGameStore = create<GameStore>()(
 
     selectCell: (row, col) => {
       set((state) => {
+        if (state.templateId !== 'strategy_board_quiz') return
         const ts = state.templateState as StrategyBoardState
         if (!ts?.board?.[row]?.[col]) return
         const cell = ts.board[row][col]
@@ -228,6 +328,7 @@ export const useGameStore = create<GameStore>()(
 
     startDiscussionTimer: () => {
       set((state) => {
+        if (state.templateId !== 'strategy_board_quiz') return
         state.phase = 'discussion'
         const duration = 20 + TIMER_PRE_COUNTDOWN_SECONDS
         state.timer = {
@@ -244,6 +345,7 @@ export const useGameStore = create<GameStore>()(
 
     markCorrect: () => {
       set((state) => {
+        if (state.templateId !== 'strategy_board_quiz') return
         const ts = state.templateState as StrategyBoardState
         if (!ts?.selectedCell) return
         const { row, col } = ts.selectedCell
@@ -268,6 +370,7 @@ export const useGameStore = create<GameStore>()(
       // Advance turn after short delay (normal order)
       setTimeout(() => {
         set((s) => {
+          if (s.templateId !== 'strategy_board_quiz') return
           const ts = s.templateState as StrategyBoardState
           const available = ts ? countAvailableCells(ts) : 0
           if (available === 0) {
@@ -283,6 +386,7 @@ export const useGameStore = create<GameStore>()(
 
     markIncorrect: () => {
       const phase = get().phase
+      if (get().templateId !== 'strategy_board_quiz') return
       if (phase === 'steal_phase') {
         get().nextStealAttempt()
         return
@@ -313,6 +417,7 @@ export const useGameStore = create<GameStore>()(
 
     nextStealAttempt: () => {
       set((state) => {
+        if (state.templateId !== 'strategy_board_quiz') return
         const ts = state.templateState as StrategyBoardState
         if (!ts?.selectedCell) return
 
@@ -328,6 +433,7 @@ export const useGameStore = create<GameStore>()(
 
           setTimeout(() => {
             set((s) => {
+              if (s.templateId !== 'strategy_board_quiz') return
               const t = s.templateState as StrategyBoardState
               const available = t ? countAvailableCells(t) : 0
               if (available === 0) {
@@ -388,6 +494,11 @@ export const useGameStore = create<GameStore>()(
     closeModal: () => {
       set((state) => {
         state.modal = null
+        if (state.templateId === 'math_rush') {
+          const ts = state.templateState as MathRushState
+          if (ts) ts.openCardIndex = null
+          return
+        }
         const ts = state.templateState as StrategyBoardState
         if (ts?.selectedCell && (state.phase === 'question_shown' || state.phase === 'discussion' || state.phase === 'answer_waiting')) {
           const cell = ts.board[ts.selectedCell.row]?.[ts.selectedCell.col]
@@ -396,6 +507,73 @@ export const useGameStore = create<GameStore>()(
           state.phase = 'team_selecting'
           state.timer = null
         }
+      })
+    },
+
+    mathRushOpenCard: (index) => {
+      set((state) => {
+        if (state.templateId !== 'math_rush') return
+        const ts = state.templateState as MathRushState
+        if (!ts) return
+        if (index !== null) {
+          const card = ts.activeCards[index]
+          if (!card || card.claimedByTeamIndex !== null) return
+        }
+        ts.openCardIndex = index
+      })
+    },
+
+    mathRushAwardCard: (cardIndex, teamIndex) => {
+      set((state) => {
+        if (state.templateId !== 'math_rush') return
+        const ts = state.templateState as MathRushState
+        if (!ts) return
+        const card = ts.activeCards[cardIndex]
+        const team = state.teams[teamIndex]
+        if (!card || !team || card.claimedByTeamIndex !== null) return
+
+        const pts = card.question.points
+        state.teams[teamIndex].score += pts
+        card.claimedByTeamIndex = teamIndex
+        ts.lastAward = { teamIndex, points: pts, teamName: team.name }
+        ts.openCardIndex = null
+      })
+    },
+
+    mathRushRevealCard: (cardIndex) => {
+      set((state) => {
+        if (state.templateId !== 'math_rush') return
+        const ts = state.templateState as MathRushState
+        if (!ts) return
+        const card = ts.activeCards[cardIndex]
+        if (card) card.answerRevealed = !card.answerRevealed
+      })
+    },
+
+    mathRushRevealAllAnswers: () => {
+      set((state) => {
+        if (state.templateId !== 'math_rush') return
+        const ts = state.templateState as MathRushState
+        if (!ts) return
+        const allOn = ts.activeCards.length > 0 && ts.activeCards.every((c) => c.answerRevealed)
+        for (const c of ts.activeCards) {
+          c.answerRevealed = !allOn
+        }
+      })
+    },
+
+    mathRushNextRound: () => {
+      set((state) => {
+        if (state.templateId !== 'math_rush' || state.phase !== 'math_rush_round') return
+        dealMathRushRound(state, false)
+      })
+    },
+
+    mathRushClearLastAward: () => {
+      set((state) => {
+        if (state.templateId !== 'math_rush') return
+        const ts = state.templateState as MathRushState
+        if (ts) ts.lastAward = null
       })
     },
   }))

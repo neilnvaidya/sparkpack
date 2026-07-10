@@ -5,9 +5,11 @@
 
 import { GameTemplate } from './types'
 import strategyBoardQuiz from './strategy-board-quiz'
+import mathRush from './math-rush'
 
 export const templateRegistry: Record<string, GameTemplate> = {
   strategy_board_quiz: strategyBoardQuiz,
+  math_rush: mathRush,
 }
 
 export type TemplateId = keyof typeof templateRegistry

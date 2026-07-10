@@ -1,0 +1,18 @@
+{
+  "id": "decimals",
+  "label": "Decimals",
+  "questions": [
+    { "id": "dec-1", "points": 150, "operator": "+", "left": "0.5", "right": "0.3", "result": "0.8", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "dec-2", "points": 150, "operator": "+", "left": "1.25", "right": "0.75", "result": "2", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "dec-3", "points": 200, "operator": "-", "left": "3.6", "right": "1.2", "result": "2.4", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "dec-4", "points": 150, "operator": "×", "left": "0.2", "right": "5", "result": "1", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "dec-5", "points": 200, "operator": "×", "left": "1.5", "right": "2", "result": "3", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "dec-6", "points": 100, "operator": "+", "left": "0.1", "right": "0.9", "result": "1", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "dec-7", "points": 150, "operator": "-", "left": "5.5", "right": "2.5", "result": "3", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "dec-8", "points": 200, "operator": "÷", "left": "0.8", "right": "0.2", "result": "4", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "dec-9", "points": 150, "operator": "+", "left": "2.05", "right": "0.95", "result": "3", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "dec-10", "points": 100, "operator": "×", "left": "0.4", "right": "0.5", "result": "0.2", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "dec-11", "points": 200, "operator": "-", "left": "10", "right": "0.1", "result": "9.9", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "dec-12", "points": 150, "operator": "+", "left": "0.25", "right": "0.25", "result": "0.5", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true }
+  ]
+}

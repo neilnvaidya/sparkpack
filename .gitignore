@@ -1,4 +1,8 @@
-node_modules
-.next
+node_modules/
+.next/
+dist/
 .env.local
 .env*.local
+.DS_Store
+*.tsbuildinfo
+storybook-static/

@@ -1,0 +1,18 @@
+{
+  "id": "addition",
+  "label": "Addition",
+  "questions": [
+    { "id": "add-1", "points": 100, "operator": "+", "left": "7", "right": "8", "result": "15", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "add-2", "points": 100, "operator": "+", "left": "24", "right": "16", "result": "40", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "add-3", "points": 150, "operator": "+", "left": "125", "right": "75", "result": "200", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "add-4", "points": 150, "operator": "+", "left": "0", "right": "99", "result": "99", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "add-5", "points": 200, "operator": "+", "left": "48", "right": "27", "result": "75", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "add-6", "points": 200, "operator": "+", "left": "13", "right": "28", "result": "41", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "add-7", "points": 100, "operator": "+", "left": "5", "right": "6", "result": "11", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "add-8", "points": 150, "operator": "+", "left": "300", "right": "450", "result": "750", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "add-9", "points": 100, "operator": "+", "left": "19", "right": "4", "result": "23", "hiddenLeft": false, "hiddenRight": true, "hiddenResult": true },
+    { "id": "add-10", "points": 200, "operator": "+", "left": "62", "right": "38", "result": "100", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true },
+    { "id": "add-11", "points": 150, "operator": "+", "left": "111", "right": "222", "result": "333", "hiddenLeft": true, "hiddenRight": true, "hiddenResult": false },
+    { "id": "add-12", "points": 100, "operator": "+", "left": "9", "right": "9", "result": "18", "hiddenLeft": true, "hiddenRight": false, "hiddenResult": true }
+  ]
+}
