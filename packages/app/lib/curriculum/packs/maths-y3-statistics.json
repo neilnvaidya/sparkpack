@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "maths-y3-statistics",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "statistics",
+  "title": "Statistics",
+  "description": "Interpreting and presenting data in bar charts, pictograms and tables, including one-step and two-step questions.",
+  "objectives": [
+    { "code": "Y3-S-1", "statement": "Interpret and present data using bar charts, pictograms and tables." },
+    { "code": "Y3-S-2", "statement": "Solve one-step and two-step questions (for example, 'How many more?' and 'How many fewer?') using information presented in scaled bar charts and pictograms and tables." }
+  ],
+  "items": [
+    { "id": "pi-1", "kind": "qa", "difficulty": 1, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "prompt": "In a pictogram, one apple symbol stands for 2 apples. What do 3 symbols stand for?", "answer": "6 apples", "acceptableAnswers": ["6"] },
+    { "id": "pi-2", "kind": "qa", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1", "Y3-S-2"], "prompt": "In a pictogram, one star stands for 5 points. A team has 4 stars. How many points is that?", "answer": "20 points", "acceptableAnswers": ["20"] },
+    { "id": "pi-3", "kind": "mcq", "difficulty": 3, "strand": "Pictograms", "objectiveCodes": ["Y3-S-2"], "prompt": "In a pictogram, one circle stands for 10 books. How many circles are needed to show 35 books?", "options": ["3", "3 and a half", "4", "35"], "correctIndex": 1 },
+    { "id": "pi-4", "kind": "truefalse", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "statement": "In a pictogram, half a symbol can stand for half the value of a whole symbol.", "isTrue": true },
+
+    { "id": "ba-1", "kind": "truefalse", "difficulty": 1, "strand": "Bar charts", "objectiveCodes": ["Y3-S-1"], "statement": "On a bar chart, the taller the bar, the bigger the number it shows.", "isTrue": true },
+    { "id": "ba-2", "kind": "qa", "difficulty": 2, "strand": "Bar charts", "objectiveCodes": ["Y3-S-2"], "prompt": "A bar chart shows 8 children chose cats and 12 chose dogs. How many more chose dogs than cats?", "answer": "4 more", "acceptableAnswers": ["4"] },
+    { "id": "ba-3", "kind": "mcq", "difficulty": 3, "strand": "Bar charts", "objectiveCodes": ["Y3-S-1", "Y3-S-2"], "prompt": "On a bar chart, the scale goes up in steps of 2. A bar reaches halfway between 6 and 8. What is its value?", "options": ["6", "7", "8", "9"], "correctIndex": 1 },
+    { "id": "ba-4", "kind": "qa", "difficulty": 3, "strand": "Bar charts", "objectiveCodes": ["Y3-S-2"], "prompt": "A bar chart shows favourite colours: red 15, blue 9, green 6. How many children voted in total?", "answer": "30 children", "acceptableAnswers": ["30"] },
+
+    { "id": "ta-1", "kind": "qa", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows laps run: Monday 25, Tuesday 32. How many laps were run altogether?", "answer": "57 laps", "acceptableAnswers": ["57"] },
+    { "id": "ta-2", "kind": "qa", "difficulty": 3, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows Class A read 48 books and Class B read 29 books. How many fewer books did Class B read?", "answer": "19 fewer", "acceptableAnswers": ["19"] },
+    { "id": "ta-3", "kind": "truefalse", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-1"], "statement": "In a tally chart, a group of five is drawn as four lines with a fifth line across them.", "isTrue": true },
+    { "id": "ta-4", "kind": "mcq", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-1"], "prompt": "A tally shows two full groups of five and two extra marks. What number is that?", "options": ["7", "10", "12", "52"], "correctIndex": 2 }
+  ]
+}

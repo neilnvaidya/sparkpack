@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "maths-y3-multiplication-division",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "multiplication-division",
+  "title": "Multiplication and Division",
+  "description": "The 3, 4 and 8 multiplication tables, two-digit by one-digit calculations, and problems including scaling and missing numbers.",
+  "objectives": [
+    { "code": "Y3-MD-1", "statement": "Recall and use multiplication and division facts for the 3, 4 and 8 multiplication tables." },
+    { "code": "Y3-MD-2", "statement": "Write and calculate mathematical statements for multiplication and division using the multiplication tables that they know, including for two-digit numbers times one-digit numbers, using mental and progressing to formal written methods." },
+    { "code": "Y3-MD-3", "statement": "Solve problems, including missing number problems, involving multiplication and division, including positive integer scaling problems and correspondence problems in which n objects are connected to m objects." }
+  ],
+  "items": [
+    { "id": "eq-1", "kind": "equation", "difficulty": 1, "objectiveCodes": ["Y3-MD-1"], "operator": "×", "left": "3", "right": "4", "result": "12" },
+    { "id": "eq-2", "kind": "equation", "difficulty": 1, "objectiveCodes": ["Y3-MD-1"], "operator": "×", "left": "8", "right": "3", "result": "24" },
+    { "id": "eq-3", "kind": "equation", "difficulty": 1, "objectiveCodes": ["Y3-MD-1"], "operator": "×", "left": "4", "right": "6", "result": "24" },
+    { "id": "eq-4", "kind": "equation", "difficulty": 1, "objectiveCodes": ["Y3-MD-1"], "operator": "÷", "left": "32", "right": "4", "result": "8" },
+    { "id": "eq-5", "kind": "equation", "difficulty": 2, "objectiveCodes": ["Y3-MD-1"], "operator": "×", "left": "8", "right": "7", "result": "56" },
+    { "id": "eq-6", "kind": "equation", "difficulty": 2, "objectiveCodes": ["Y3-MD-1"], "operator": "÷", "left": "48", "right": "8", "result": "6" },
+    { "id": "eq-7", "kind": "equation", "difficulty": 2, "objectiveCodes": ["Y3-MD-1"], "operator": "×", "left": "4", "right": "9", "result": "36" },
+    { "id": "eq-8", "kind": "equation", "difficulty": 2, "objectiveCodes": ["Y3-MD-1"], "operator": "÷", "left": "27", "right": "3", "result": "9" },
+    { "id": "eq-9", "kind": "equation", "difficulty": 3, "objectiveCodes": ["Y3-MD-2"], "operator": "×", "left": "23", "right": "3", "result": "69" },
+    { "id": "eq-10", "kind": "equation", "difficulty": 3, "objectiveCodes": ["Y3-MD-2"], "operator": "×", "left": "14", "right": "4", "result": "56" },
+    { "id": "eq-11", "kind": "equation", "difficulty": 3, "objectiveCodes": ["Y3-MD-2"], "operator": "÷", "left": "96", "right": "8", "result": "12" },
+    { "id": "eq-12", "kind": "equation", "difficulty": 3, "objectiveCodes": ["Y3-MD-2"], "operator": "×", "left": "15", "right": "8", "result": "120" },
+
+    { "id": "wp-1", "kind": "qa", "difficulty": 1, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "An egg box holds 4 eggs. How many eggs are in 5 boxes?", "answer": "20", "acceptableAnswers": ["20 eggs"] },
+    { "id": "wp-2", "kind": "qa", "difficulty": 2, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "3 friends share 27 sweets equally. How many sweets does each friend get?", "answer": "9", "acceptableAnswers": ["9 sweets", "9 each"] },
+    { "id": "wp-3", "kind": "qa", "difficulty": 2, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "A spider has 8 legs. How many legs do 6 spiders have altogether?", "answer": "48", "acceptableAnswers": ["48 legs"] },
+    { "id": "wp-4", "kind": "qa", "difficulty": 3, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "A blue ribbon is 12 cm long. A red ribbon is 4 times as long. How long is the red ribbon?", "answer": "48 cm", "acceptableAnswers": ["48", "48 centimetres"] },
+    { "id": "wp-5", "kind": "qa", "difficulty": 3, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "32 children sit in teams of 8. How many teams are there?", "answer": "4", "acceptableAnswers": ["4 teams"] },
+    { "id": "wp-6", "kind": "qa", "difficulty": 3, "strand": "Word problems", "objectiveCodes": ["Y3-MD-3"], "prompt": "One box holds 16 crayons. How many crayons are in 3 boxes?", "answer": "48", "acceptableAnswers": ["48 crayons"] },
+
+    { "id": "mn-1", "kind": "mcq", "difficulty": 2, "strand": "Missing numbers", "objectiveCodes": ["Y3-MD-3"], "prompt": "? × 4 = 28. What is the missing number?", "options": ["6", "7", "8", "24"], "correctIndex": 1 },
+    { "id": "mn-2", "kind": "mcq", "difficulty": 2, "strand": "Missing numbers", "objectiveCodes": ["Y3-MD-3"], "prompt": "24 ÷ ? = 3. What is the missing number?", "options": ["6", "8", "9", "21"], "correctIndex": 1 },
+    { "id": "mn-3", "kind": "mcq", "difficulty": 3, "strand": "Missing numbers", "objectiveCodes": ["Y3-MD-3"], "prompt": "8 × ? = 64. What is the missing number?", "options": ["6", "7", "8", "9"], "correctIndex": 2 },
+    { "id": "mn-4", "kind": "mcq", "difficulty": 3, "strand": "Missing numbers", "objectiveCodes": ["Y3-MD-3"], "prompt": "? ÷ 3 = 12. What is the missing number?", "options": ["4", "24", "36", "39"], "correctIndex": 2 },
+
+    { "id": "tf-1", "kind": "truefalse", "difficulty": 1, "strand": "True or false?", "objectiveCodes": ["Y3-MD-1"], "statement": "4 × 8 = 32", "isTrue": true },
+    { "id": "tf-2", "kind": "truefalse", "difficulty": 2, "strand": "True or false?", "objectiveCodes": ["Y3-MD-1"], "statement": "3 × 7 = 24", "isTrue": false },
+    { "id": "tf-3", "kind": "truefalse", "difficulty": 2, "strand": "True or false?", "objectiveCodes": ["Y3-MD-1"], "statement": "56 ÷ 8 = 7", "isTrue": true },
+    { "id": "tf-4", "kind": "truefalse", "difficulty": 3, "strand": "True or false?", "objectiveCodes": ["Y3-MD-2"], "statement": "Multiplying a number by 4 is the same as doubling it and doubling again.", "isTrue": true },
+    { "id": "tf-5", "kind": "truefalse", "difficulty": 3, "strand": "True or false?", "objectiveCodes": ["Y3-MD-1"], "statement": "40 ÷ 8 = 6", "isTrue": false }
+  ]
+}

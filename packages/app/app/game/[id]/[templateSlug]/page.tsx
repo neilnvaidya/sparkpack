@@ -200,7 +200,6 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '420px', padding: '20px' }}>
-        <div style={{ fontSize: '56px', marginBottom: '20px' }} className="sp-float">😬</div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: '#ff8db3', marginBottom: '10px' }}>
           Something went wrong
         </h1>
@@ -241,32 +240,31 @@ function SetupScreen({ onStart }: { onStart: () => void }) {
           background: 'rgba(255,226,52,0.12)', border: '1px solid rgba(255,226,52,0.3)',
           borderRadius: '100px', padding: '6px 16px', marginBottom: '28px',
         }}>
-          <span style={{ fontSize: '13px' }}>✅</span>
           <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--yellow)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Game Ready</span>
         </div>
 
         {countdown === null ? (
           <>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: '#fffbe8', lineHeight: 1.1, marginBottom: '14px' }}>
-              Ready to light it up? 🔥
+              Ready to play?
             </h1>
             <p style={{ fontSize: '15px', color: 'rgba(255,251,232,0.55)', lineHeight: 1.7, maxWidth: '380px', margin: '0 auto 36px' }}>
               Make sure your projector is on and all teams are looking at the screen.
             </p>
             <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '40px' }}>
-              {[{ icon: '📽️', text: 'Projector on' }, { icon: '👀', text: 'Teams watching' }, { icon: '🔊', text: 'Volume up' }].map(({ icon, text }) => (
+              {[{ text: 'Projector on' }, { text: 'Teams watching' }, { text: 'Volume up' }].map(({ text }) => (
                 <div key={text} style={{
                   display: 'flex', alignItems: 'center', gap: '7px',
                   background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '10px', padding: '8px 14px', fontSize: '13px', color: 'rgba(255,251,232,0.6)', fontWeight: 500,
                 }}>
-                  <span>{icon}</span><span>{text}</span>
+                  <span>{text}</span>
                 </div>
               ))}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
               <button className="sp-primary-btn" onClick={handleStart}>
-                <span>⚡</span><span>Start Game</span>
+                <span>Start Game</span>
               </button>
               <Link href="/" className="sp-ghost-btn">← Back to Home</Link>
             </div>

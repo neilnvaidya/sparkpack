@@ -17,8 +17,8 @@ export const mathRushQuestionSchema = z
     hiddenResult: z.boolean(),
   })
   .refine(
-    (q) => [q.hiddenLeft, q.hiddenRight, q.hiddenResult].filter(Boolean).length === 2,
-    { message: 'Exactly two of hiddenLeft, hiddenRight, hiddenResult must be true' }
+    (q) => [q.hiddenLeft, q.hiddenRight, q.hiddenResult].filter(Boolean).length === 1,
+    { message: 'Exactly one of hiddenLeft, hiddenRight, hiddenResult must be true' }
   )
 
 export type MathRushQuestion = z.infer<typeof mathRushQuestionSchema>

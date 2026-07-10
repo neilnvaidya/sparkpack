@@ -35,7 +35,7 @@ function getPhaseLabel(
     case 'steal_phase':
       return stealTeam ? `Steal — ${stealTeam.name}` : 'Steal'
     case 'round_complete':
-      return '✓ Team scores!'
+      return 'Team scores!'
     case 'game_over':
       return 'Game over!'
     default:
@@ -160,7 +160,7 @@ export default function StrategyBoardQuizGame() {
                 onClick={toggleMuted}
                 aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
               >
-                <span className="text-lg font-bold">{muted ? '🔇' : '🔈'}</span>
+                <span className="text-xs font-bold uppercase tracking-wide">{muted ? 'Muted' : 'Sound'}</span>
               </Button>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function StrategyBoardQuizGame() {
                             style={{ backgroundColor: colorDef.hex, borderColor: colorDef.hex }}
                           >
                             <div className="text-sm font-semibold opacity-90 mb-1">
-                              👑 {team.name}
+                              {team.name}
                             </div>
                             <div className="text-3xl font-extrabold">
                               {team.score}

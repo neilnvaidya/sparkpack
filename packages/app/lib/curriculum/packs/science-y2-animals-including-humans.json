@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "science-y2-animals-including-humans",
+  "subject": "science",
+  "keyStage": "KS1",
+  "year": 2,
+  "topicId": "animals-including-humans",
+  "title": "Animals, Including Humans",
+  "description": "How animals grow, what they need to survive, and staying healthy.",
+  "objectives": [
+    { "code": "Y2-AIH-1", "statement": "Notice that animals, including humans, have offspring which grow into adults." },
+    { "code": "Y2-AIH-2", "statement": "Find out about and describe the basic needs of animals, including humans, for survival (water, food and air)." },
+    { "code": "Y2-AIH-3", "statement": "Describe the importance for humans of exercise, eating the right amounts of different types of food, and hygiene." }
+  ],
+  "items": [
+    { "id": "gu-1", "kind": "qa", "difficulty": 1, "strand": "Growing up", "prompt": "What is a baby frog called?", "answer": "A tadpole", "acceptableAnswers": ["tadpole"] },
+    { "id": "gu-2", "kind": "qa", "difficulty": 1, "strand": "Growing up", "prompt": "What is a baby sheep called?", "answer": "A lamb", "acceptableAnswers": ["lamb"] },
+    { "id": "gu-3", "kind": "mcq", "difficulty": 2, "strand": "Growing up", "prompt": "Which order is correct for how a butterfly grows?", "options": ["egg → caterpillar → pupa → butterfly", "caterpillar → egg → butterfly → pupa", "egg → pupa → caterpillar → butterfly"], "correctIndex": 0 },
+    { "id": "gu-4", "kind": "mcq", "difficulty": 1, "strand": "Growing up", "prompt": "What is a baby cow called?", "options": ["a cub", "a calf", "a foal", "a kid"], "correctIndex": 1 },
+    { "id": "gu-5", "kind": "truefalse", "difficulty": 1, "strand": "Growing up", "statement": "A duckling grows into a duck.", "isTrue": true },
+    { "id": "gu-6", "kind": "truefalse", "difficulty": 2, "strand": "Growing up", "statement": "Kittens look completely different from cats when they grow up.", "isTrue": false },
+
+    { "id": "bn-1", "kind": "qa", "difficulty": 2, "strand": "Basic needs", "prompt": "Name the three things all animals need to survive.", "answer": "Water, food and air", "acceptableAnswers": ["food, water and air", "food, water, air"] },
+    { "id": "bn-2", "kind": "qa", "difficulty": 2, "strand": "Basic needs", "prompt": "Why do animals need water?", "answer": "Their bodies need water to work and stay alive", "acceptableAnswers": ["to stay alive", "to stay hydrated"] },
+    { "id": "bn-3", "kind": "mcq", "difficulty": 1, "strand": "Basic needs", "prompt": "Which of these is NOT a basic need of animals?", "options": ["water", "air", "television", "food"], "correctIndex": 2 },
+    { "id": "bn-4", "kind": "mcq", "difficulty": 2, "strand": "Basic needs", "prompt": "As well as food, water and air, what helps animals stay safe and well?", "options": ["sweets", "shelter and warmth", "toys"], "correctIndex": 1 },
+    { "id": "bn-5", "kind": "truefalse", "difficulty": 1, "strand": "Basic needs", "statement": "Humans can survive without water.", "isTrue": false },
+    { "id": "bn-6", "kind": "truefalse", "difficulty": 1, "strand": "Basic needs", "statement": "All animals, including humans, need air to breathe.", "isTrue": true },
+
+    { "id": "hl-1", "kind": "qa", "difficulty": 2, "strand": "Healthy living", "prompt": "Why is exercise good for you?", "answer": "It keeps your heart, muscles and body strong and healthy", "acceptableAnswers": ["it keeps you fit and healthy", "it makes your body strong"] },
+    { "id": "hl-2", "kind": "qa", "difficulty": 2, "strand": "Healthy living", "prompt": "Name two things you should do to keep your teeth healthy.", "answer": "Brush them twice a day and avoid too many sugary foods and drinks", "acceptableAnswers": ["brush your teeth and eat less sugar"] },
+    { "id": "hl-3", "kind": "mcq", "difficulty": 1, "strand": "Healthy living", "prompt": "Which meal is the healthiest choice?", "options": ["chips and cola", "chicken, rice and vegetables", "cake and sweets"], "correctIndex": 1 },
+    { "id": "hl-4", "kind": "mcq", "difficulty": 1, "strand": "Healthy living", "prompt": "Why do we wash our hands before eating?", "options": ["to make them smell nice", "to get rid of germs", "to make them wet"], "correctIndex": 1 },
+    { "id": "hl-5", "kind": "truefalse", "difficulty": 1, "strand": "Healthy living", "statement": "Eating sweets every day is good for your teeth.", "isTrue": false },
+    { "id": "hl-6", "kind": "truefalse", "difficulty": 2, "strand": "Healthy living", "statement": "Sleep helps your body grow and repair.", "isTrue": true },
+
+    { "id": "aa-1", "kind": "qa", "difficulty": 3, "strand": "Amazing animals", "prompt": "What do we call animals that only eat plants?", "answer": "Herbivores", "acceptableAnswers": ["herbivore"] },
+    { "id": "aa-2", "kind": "qa", "difficulty": 3, "strand": "Amazing animals", "prompt": "What do we call animals that eat both plants and meat?", "answer": "Omnivores", "acceptableAnswers": ["omnivore"] },
+    { "id": "aa-3", "kind": "mcq", "difficulty": 2, "strand": "Amazing animals", "prompt": "Which of these animals is a carnivore?", "options": ["rabbit", "lion", "cow", "sheep"], "correctIndex": 1 },
+    { "id": "aa-4", "kind": "mcq", "difficulty": 1, "strand": "Amazing animals", "prompt": "Which of these animals hatches from an egg?", "options": ["dog", "chicken", "cat", "cow"], "correctIndex": 1 },
+    { "id": "aa-5", "kind": "truefalse", "difficulty": 2, "strand": "Amazing animals", "statement": "Humans are mammals.", "isTrue": true },
+    { "id": "aa-6", "kind": "truefalse", "difficulty": 3, "strand": "Amazing animals", "statement": "Fish breathe air with lungs, just like humans.", "isTrue": false }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "maths-y2-addition-subtraction",
+  "subject": "maths",
+  "keyStage": "KS1",
+  "year": 2,
+  "topicId": "addition-subtraction",
+  "title": "Addition and Subtraction",
+  "description": "Adding and subtracting numbers to 100: number facts, missing numbers and word problems.",
+  "objectives": [
+    { "code": "Y2-AS-1", "statement": "Solve problems with addition and subtraction: using concrete objects and pictorial representations, including those involving numbers, quantities and measures; applying their increasing knowledge of mental and written methods." },
+    { "code": "Y2-AS-2", "statement": "Recall and use addition and subtraction facts to 20 fluently, and derive and use related facts up to 100." },
+    { "code": "Y2-AS-3", "statement": "Add and subtract numbers using concrete objects, pictorial representations, and mentally, including: a two-digit number and ones; a two-digit number and tens; two two-digit numbers; adding three one-digit numbers." },
+    { "code": "Y2-AS-4", "statement": "Show that addition of two numbers can be done in any order (commutative) and subtraction of one number from another cannot." },
+    { "code": "Y2-AS-5", "statement": "Recognise and use the inverse relationship between addition and subtraction and use this to check calculations and solve missing number problems." }
+  ],
+  "items": [
+    { "id": "eq-1", "kind": "equation", "difficulty": 1, "operator": "+", "left": "7", "right": "8", "result": "15" },
+    { "id": "eq-2", "kind": "equation", "difficulty": 1, "operator": "+", "left": "6", "right": "9", "result": "15" },
+    { "id": "eq-3", "kind": "equation", "difficulty": 1, "operator": "-", "left": "13", "right": "5", "result": "8" },
+    { "id": "eq-4", "kind": "equation", "difficulty": 1, "operator": "-", "left": "16", "right": "9", "result": "7" },
+    { "id": "eq-5", "kind": "equation", "difficulty": 2, "operator": "+", "left": "24", "right": "16", "result": "40" },
+    { "id": "eq-6", "kind": "equation", "difficulty": 2, "operator": "+", "left": "35", "right": "27", "result": "62" },
+    { "id": "eq-7", "kind": "equation", "difficulty": 2, "operator": "-", "left": "52", "right": "17", "result": "35" },
+    { "id": "eq-8", "kind": "equation", "difficulty": 2, "operator": "-", "left": "70", "right": "42", "result": "28" },
+    { "id": "eq-9", "kind": "equation", "difficulty": 2, "operator": "+", "left": "38", "right": "38", "result": "76" },
+    { "id": "eq-10", "kind": "equation", "difficulty": 3, "operator": "+", "left": "45", "right": "55", "result": "100" },
+    { "id": "eq-11", "kind": "equation", "difficulty": 3, "operator": "-", "left": "100", "right": "64", "result": "36" },
+    { "id": "eq-12", "kind": "equation", "difficulty": 3, "operator": "+", "left": "27", "right": "46", "result": "73" },
+
+    { "id": "wp-1", "kind": "qa", "difficulty": 1, "strand": "Word problems", "prompt": "Ava has 14 stickers. She gets 8 more. How many stickers does she have now?", "answer": "22", "acceptableAnswers": ["22 stickers"] },
+    { "id": "wp-2", "kind": "qa", "difficulty": 1, "strand": "Word problems", "prompt": "There are 25 apples in a basket. 9 are eaten. How many apples are left?", "answer": "16", "acceptableAnswers": ["16 apples"] },
+    { "id": "wp-3", "kind": "qa", "difficulty": 2, "strand": "Word problems", "prompt": "A class has 17 boys and 15 girls. How many children are in the class?", "answer": "32", "acceptableAnswers": ["32 children"] },
+    { "id": "wp-4", "kind": "qa", "difficulty": 2, "strand": "Word problems", "prompt": "Sam has 40p. He spends 23p on a pencil. How much money does he have left?", "answer": "17p", "acceptableAnswers": ["17", "17 pence"] },
+    { "id": "wp-5", "kind": "qa", "difficulty": 3, "strand": "Word problems", "prompt": "A book has 90 pages. Maya has read 47 pages. How many pages does she have left to read?", "answer": "43", "acceptableAnswers": ["43 pages"] },
+    { "id": "wp-6", "kind": "qa", "difficulty": 3, "strand": "Word problems", "prompt": "Two teams score 36 points and 48 points. How many points did they score altogether?", "answer": "84", "acceptableAnswers": ["84 points"] },
+
+    { "id": "mn-1", "kind": "mcq", "difficulty": 1, "strand": "Missing numbers", "prompt": "? + 6 = 14. What is the missing number?", "options": ["6", "8", "9", "20"], "correctIndex": 1 },
+    { "id": "mn-2", "kind": "mcq", "difficulty": 2, "strand": "Missing numbers", "prompt": "20 − ? = 12. What is the missing number?", "options": ["8", "12", "32", "10"], "correctIndex": 0 },
+    { "id": "mn-3", "kind": "mcq", "difficulty": 2, "strand": "Missing numbers", "prompt": "? − 30 = 45. What is the missing number?", "options": ["15", "65", "75", "85"], "correctIndex": 2 },
+    { "id": "mn-4", "kind": "mcq", "difficulty": 3, "strand": "Missing numbers", "prompt": "34 + ? = 81. What is the missing number?", "options": ["47", "53", "57", "113"], "correctIndex": 0 },
+
+    { "id": "tf-1", "kind": "truefalse", "difficulty": 1, "strand": "True or false?", "statement": "9 + 5 = 14", "isTrue": true },
+    { "id": "tf-2", "kind": "truefalse", "difficulty": 1, "strand": "True or false?", "statement": "18 − 9 = 8", "isTrue": false },
+    { "id": "tf-3", "kind": "truefalse", "difficulty": 1, "strand": "True or false?", "statement": "30 + 40 = 70", "isTrue": true },
+    { "id": "tf-4", "kind": "truefalse", "difficulty": 2, "strand": "True or false?", "statement": "62 − 20 = 42", "isTrue": true },
+    { "id": "tf-5", "kind": "truefalse", "difficulty": 2, "strand": "True or false?", "statement": "36 + 25 = 51", "isTrue": false },
+    { "id": "tf-6", "kind": "truefalse", "difficulty": 3, "strand": "True or false?", "statement": "100 − 55 = 45", "isTrue": true }
+  ]
+}

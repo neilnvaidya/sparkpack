@@ -6,10 +6,14 @@
 import { GameTemplate } from './types'
 import strategyBoardQuiz from './strategy-board-quiz'
 import mathRush from './math-rush'
+import flashRound from './flash-round'
+import trueFalseShowdown from './true-false'
 
 export const templateRegistry: Record<string, GameTemplate> = {
   strategy_board_quiz: strategyBoardQuiz,
   math_rush: mathRush,
+  flash_round: flashRound,
+  true_false_showdown: trueFalseShowdown,
 }
 
 export type TemplateId = keyof typeof templateRegistry

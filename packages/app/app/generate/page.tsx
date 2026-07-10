@@ -592,7 +592,7 @@ export default function GeneratePage() {
               color: 'rgba(255,251,232,0.45)',
               letterSpacing: '0.05em', textTransform: 'uppercase',
             }}>
-              ⚡ New Game
+              New Game
             </span>
           </div>
 
@@ -672,7 +672,7 @@ export default function GeneratePage() {
 
               {/* Teams */}
               <Panel style={{ position: 'relative' }}>
-                <SectionLabel icon="🏆">Teams</SectionLabel>
+                <SectionLabel icon="">Teams</SectionLabel>
 
                 {/* Team count */}
                 <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
@@ -766,7 +766,7 @@ export default function GeneratePage() {
 
               {/* Board size + tips */}
               <Panel>
-                <SectionLabel icon="📐">Board Size</SectionLabel>
+                <SectionLabel icon="">Board Size</SectionLabel>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
                   {(['3x3', '4x4', '4x5'] as const).map(p => (
                     <button
@@ -809,14 +809,13 @@ export default function GeneratePage() {
                 color: '#ff8db3', fontSize: '13px', fontWeight: 600,
                 display: 'flex', alignItems: 'center', gap: '8px',
               }}>
-                <span>⚠️</span> {error}
+                {error}
               </div>
             )}
 
             {/* ── Board grid ──────────────────────────────────────── */}
             <div className="sp-board">
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-                <span style={{ fontSize: '16px' }}>🎯</span>
                 <span style={{ fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,251,232,0.5)' }}>
                   Question Cards — {rows}×{cols}
                 </span>
@@ -907,7 +906,6 @@ export default function GeneratePage() {
             {/* ── Footer CTA ──────────────────────────────────────── */}
             <div className="sp-footer" style={{ display: 'flex', justifyContent: 'center', paddingTop: '8px' }}>
               <button type="submit" className="sp-save-btn">
-                <span>🚀</span>
                 <span>Save &amp; Play</span>
               </button>
             </div>

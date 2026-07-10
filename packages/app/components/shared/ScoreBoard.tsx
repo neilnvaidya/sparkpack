@@ -64,7 +64,7 @@ export function ScoreBoard({
               style={{ color: colorDef.hex }}
             >
               {team.name}
-              {isActive && ' ★'}
+              {isActive && ' •'}
             </span>
             <span
               className={cn(

@@ -109,7 +109,6 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '420px', padding: '20px' }}>
-        <div style={{ fontSize: '48px', marginBottom: '16px' }}>😬</div>
         <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '1.75rem', fontWeight: 700, color: '#ff8db3', marginBottom: '10px' }}>
           Something went wrong
         </h1>

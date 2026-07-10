@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "maths-y3-geometry-shapes",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "geometry-shapes",
+  "title": "Geometry: Properties of Shapes",
+  "description": "2-D and 3-D shapes, angles and turns, right angles, and horizontal, vertical, parallel and perpendicular lines.",
+  "objectives": [
+    { "code": "Y3-G-1", "statement": "Draw 2-D shapes and make 3-D shapes using modelling materials; recognise 3-D shapes in different orientations and describe them." },
+    { "code": "Y3-G-2", "statement": "Recognise angles as a property of shape or a description of a turn." },
+    { "code": "Y3-G-3", "statement": "Identify right angles, recognise that two right angles make a half-turn, three make three quarters of a turn and four a complete turn; identify whether angles are greater than or less than a right angle." },
+    { "code": "Y3-G-4", "statement": "Identify horizontal and vertical lines and pairs of perpendicular and parallel lines." }
+  ],
+  "items": [
+    { "id": "sh-1", "kind": "qa", "difficulty": 1, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many sides does a hexagon have?", "answer": "6", "acceptableAnswers": ["six"] },
+    { "id": "sh-2", "kind": "truefalse", "difficulty": 1, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "statement": "A triangle has 4 sides.", "isTrue": false },
+    { "id": "sh-3", "kind": "qa", "difficulty": 2, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many faces does a cube have?", "answer": "6", "acceptableAnswers": ["six"] },
+    { "id": "sh-4", "kind": "mcq", "difficulty": 2, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "Which 3-D shape has 2 circular faces and 1 curved surface?", "options": ["sphere", "cone", "cylinder", "cube"], "correctIndex": 2 },
+    { "id": "sh-5", "kind": "qa", "difficulty": 3, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many vertices (corners) does a square-based pyramid have?", "answer": "5", "acceptableAnswers": ["five"] },
+    { "id": "sh-6", "kind": "mcq", "difficulty": 3, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many edges does a cuboid have?", "options": ["6", "8", "10", "12"], "correctIndex": 3 },
+
+    { "id": "an-1", "kind": "mcq", "difficulty": 1, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-2", "Y3-G-3"], "prompt": "How many right angles does a square have?", "options": ["2", "3", "4", "5"], "correctIndex": 2 },
+    { "id": "an-2", "kind": "qa", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "prompt": "How many right angles make a full turn?", "answer": "4", "acceptableAnswers": ["four"] },
+    { "id": "an-3", "kind": "qa", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "prompt": "How many right angles make a half turn?", "answer": "2", "acceptableAnswers": ["two"] },
+    { "id": "an-4", "kind": "truefalse", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "statement": "Three right angles make three quarters of a full turn.", "isTrue": true },
+    { "id": "an-5", "kind": "mcq", "difficulty": 3, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-2", "Y3-G-3"], "prompt": "The corner of a book makes what kind of angle?", "options": ["an angle smaller than a right angle", "a right angle", "an angle greater than a right angle"], "correctIndex": 1 },
+    { "id": "an-6", "kind": "truefalse", "difficulty": 3, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "statement": "An angle can be greater than or less than a right angle.", "isTrue": true },
+
+    { "id": "li-1", "kind": "truefalse", "difficulty": 1, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "statement": "A flagpole standing straight up is vertical.", "isTrue": true },
+    { "id": "li-2", "kind": "truefalse", "difficulty": 2, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "statement": "The horizon is a horizontal line.", "isTrue": true },
+    { "id": "li-3", "kind": "qa", "difficulty": 2, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "What do we call two lines that stay the same distance apart and never meet?", "answer": "Parallel lines", "acceptableAnswers": ["parallel"] },
+    { "id": "li-4", "kind": "qa", "difficulty": 3, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "What do we call two lines that meet at a right angle?", "answer": "Perpendicular lines", "acceptableAnswers": ["perpendicular"] }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "maths-y3-measurement",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "measurement",
+  "title": "Measurement",
+  "description": "Length, mass, capacity, perimeter, money including giving change, and time on analogue and digital clocks.",
+  "objectives": [
+    { "code": "Y3-M-1", "statement": "Measure, compare, add and subtract: lengths (m/cm/mm); mass (kg/g); volume/capacity (l/ml)." },
+    { "code": "Y3-M-2", "statement": "Measure the perimeter of simple 2-D shapes." },
+    { "code": "Y3-M-3", "statement": "Add and subtract amounts of money to give change, using both £ and p in practical contexts." },
+    { "code": "Y3-M-4", "statement": "Tell and write the time from an analogue clock, including using Roman numerals from I to XII, and 12-hour and 24-hour clocks." },
+    { "code": "Y3-M-5", "statement": "Estimate and read time with increasing accuracy to the nearest minute; record and compare time in terms of seconds, minutes and hours; use vocabulary such as o'clock, a.m./p.m., morning, afternoon, noon and midnight." },
+    { "code": "Y3-M-6", "statement": "Know the number of seconds in a minute and the number of days in each month, year and leap year; compare durations of events." }
+  ],
+  "items": [
+    { "id": "l-1", "kind": "qa", "difficulty": 1, "strand": "Length", "objectiveCodes": ["Y3-M-1"], "prompt": "How many centimetres are in 1 metre?", "answer": "100", "acceptableAnswers": ["100 cm", "100 centimetres"] },
+    { "id": "l-2", "kind": "qa", "difficulty": 2, "strand": "Length", "objectiveCodes": ["Y3-M-1"], "prompt": "How many millimetres are in 1 centimetre?", "answer": "10", "acceptableAnswers": ["10 mm", "10 millimetres"] },
+    { "id": "l-3", "kind": "mcq", "difficulty": 2, "strand": "Length", "objectiveCodes": ["Y3-M-1"], "prompt": "Which of these is the longest?", "options": ["45 cm", "405 mm", "4 m", "440 mm"], "correctIndex": 2 },
+    { "id": "l-4", "kind": "qa", "difficulty": 3, "strand": "Length", "objectiveCodes": ["Y3-M-1"], "prompt": "A ribbon is 1 m 20 cm long. How many centimetres is that?", "answer": "120 cm", "acceptableAnswers": ["120", "120 centimetres"] },
+
+    { "id": "p-1", "kind": "qa", "difficulty": 2, "strand": "Perimeter", "objectiveCodes": ["Y3-M-2"], "prompt": "A square has sides of 5 cm. What is its perimeter?", "answer": "20 cm", "acceptableAnswers": ["20", "20 centimetres"] },
+    { "id": "p-2", "kind": "qa", "difficulty": 3, "strand": "Perimeter", "objectiveCodes": ["Y3-M-2"], "prompt": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?", "answer": "22 cm", "acceptableAnswers": ["22", "22 centimetres"] },
+    { "id": "p-3", "kind": "truefalse", "difficulty": 1, "strand": "Perimeter", "objectiveCodes": ["Y3-M-2"], "statement": "Perimeter is the distance all the way around the outside of a shape.", "isTrue": true },
+
+    { "id": "mc-1", "kind": "qa", "difficulty": 1, "strand": "Mass and capacity", "objectiveCodes": ["Y3-M-1"], "prompt": "How many grams are in 1 kilogram?", "answer": "1000", "acceptableAnswers": ["1000 g", "1000 grams"] },
+    { "id": "mc-2", "kind": "qa", "difficulty": 1, "strand": "Mass and capacity", "objectiveCodes": ["Y3-M-1"], "prompt": "How many millilitres are in 1 litre?", "answer": "1000", "acceptableAnswers": ["1000 ml", "1000 millilitres"] },
+    { "id": "mc-3", "kind": "mcq", "difficulty": 2, "strand": "Mass and capacity", "objectiveCodes": ["Y3-M-1"], "prompt": "Which of these is the heaviest?", "options": ["900 g", "1 kg", "half a kilogram", "250 g"], "correctIndex": 1 },
+    { "id": "mc-4", "kind": "truefalse", "difficulty": 3, "strand": "Mass and capacity", "objectiveCodes": ["Y3-M-1"], "statement": "1500 ml is the same as one and a half litres.", "isTrue": true },
+
+    { "id": "mo-1", "kind": "qa", "difficulty": 2, "strand": "Money", "objectiveCodes": ["Y3-M-3"], "prompt": "You buy a snack for 65p and pay with a £1 coin. How much change do you get?", "answer": "35p", "acceptableAnswers": ["35", "35 pence"] },
+    { "id": "mo-2", "kind": "mcq", "difficulty": 2, "strand": "Money", "objectiveCodes": ["Y3-M-3"], "prompt": "How many pence are in £2?", "options": ["20", "100", "200", "2000"], "correctIndex": 2 },
+    { "id": "mo-3", "kind": "qa", "difficulty": 3, "strand": "Money", "objectiveCodes": ["Y3-M-3"], "prompt": "A pencil costs 45p and a ruler costs 80p. What is the total cost?", "answer": "£1.25", "acceptableAnswers": ["125p", "1.25", "one pound twenty-five"] },
+    { "id": "mo-4", "kind": "qa", "difficulty": 3, "strand": "Money", "objectiveCodes": ["Y3-M-3"], "prompt": "A comic costs £1.30. You pay with a £2 coin. What is your change?", "answer": "70p", "acceptableAnswers": ["70", "70 pence"] },
+
+    { "id": "ti-1", "kind": "qa", "difficulty": 1, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "How many seconds are in one minute?", "answer": "60", "acceptableAnswers": ["60 seconds"] },
+    { "id": "ti-2", "kind": "qa", "difficulty": 1, "strand": "Time", "objectiveCodes": ["Y3-M-5"], "prompt": "How many minutes are in one hour?", "answer": "60", "acceptableAnswers": ["60 minutes"] },
+    { "id": "ti-3", "kind": "mcq", "difficulty": 2, "strand": "Time", "objectiveCodes": ["Y3-M-4"], "prompt": "On a clock face with Roman numerals, what number does XII stand for?", "options": ["2", "7", "10", "12"], "correctIndex": 3 },
+    { "id": "ti-4", "kind": "truefalse", "difficulty": 2, "strand": "Time", "objectiveCodes": ["Y3-M-4"], "statement": "15:00 on a 24-hour clock is 3 o'clock in the afternoon.", "isTrue": true },
+    { "id": "ti-5", "kind": "qa", "difficulty": 3, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "How many days are in a leap year?", "answer": "366", "acceptableAnswers": ["366 days"] },
+    { "id": "ti-6", "kind": "mcq", "difficulty": 3, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "Which of these months has exactly 30 days?", "options": ["January", "February", "April", "December"], "correctIndex": 2 }
+  ]
+}

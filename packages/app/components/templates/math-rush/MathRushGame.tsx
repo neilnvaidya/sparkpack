@@ -214,7 +214,7 @@ export default function MathRushGame() {
                 onClick={toggleMuted}
                 aria-label={muted ? 'Unmute sounds' : 'Mute sounds'}
               >
-                <span className="text-lg font-bold">{muted ? '🔇' : '🔈'}</span>
+                <span className="text-xs font-bold uppercase tracking-wide">{muted ? 'Muted' : 'Sound'}</span>
               </Button>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function MathRushGame() {
                             }}
                           >
                             <div className="text-sm font-semibold opacity-90 mb-1">
-                              👑 {team.name}
+                              {team.name}
                             </div>
                             <div className="text-3xl font-extrabold">{team.score}</div>
                           </div>
