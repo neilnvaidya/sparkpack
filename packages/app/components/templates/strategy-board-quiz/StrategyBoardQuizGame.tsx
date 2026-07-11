@@ -288,10 +288,14 @@ export default function StrategyBoardQuizGame() {
                           return (
                           <div
                             key={team.id}
-                            className="game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2 text-white"
-                            style={{ backgroundColor: colorDef.hex, borderColor: colorDef.hex }}
+                            className="game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2 bg-surface-alt text-text-primary"
+                            style={{ borderColor: colorDef.hex }}
                           >
-                            <div className="text-sm font-semibold opacity-90 mb-1">
+                            <div className="text-sm font-semibold text-text-muted mb-1 flex items-center justify-center gap-1.5">
+                              <span
+                                className="inline-block w-2.5 h-2.5 rounded-sm shrink-0"
+                                style={{ backgroundColor: colorDef.hex }}
+                              />
                               {team.name}
                             </div>
                             <div className="text-3xl font-extrabold">
@@ -308,8 +312,8 @@ export default function StrategyBoardQuizGame() {
                             return (
                             <div
                               key={team.id}
-                              className="game-over-card px-3 py-2 rounded-full text-sm font-medium text-white"
-                              style={{ backgroundColor: colorDef.hex, borderColor: colorDef.hex }}
+                              className="game-over-card px-3 py-2 rounded-full text-sm font-medium border bg-surface-alt text-text-primary"
+                              style={{ borderColor: colorDef.hex }}
                             >
                               {team.name}: {team.score}
                             </div>
@@ -323,7 +327,7 @@ export default function StrategyBoardQuizGame() {
                       <Button
                         asChild
                         size="sm"
-                        className="px-5 bg-[var(--color-accent)] hover:bg-indigo-700 text-white font-semibold rounded-full"
+                        className="px-5 bg-[var(--color-accent)] hover:brightness-110 text-[#1a1508] font-semibold rounded-full"
                       >
                         <Link href="/library">Back to Library</Link>
                       </Button>
@@ -331,7 +335,7 @@ export default function StrategyBoardQuizGame() {
                         asChild
                         size="sm"
                         variant="outline"
-                        className="px-5 rounded-full border border-color-border bg-surface-alt text-text-primary hover:bg-color-border"
+                        className="px-5 rounded-full border border-border bg-surface-alt text-text-primary hover:bg-surface"
                       >
                         <Link href="/">Back to home</Link>
                       </Button>
@@ -359,7 +363,7 @@ export default function StrategyBoardQuizGame() {
                     size="sm"
                     variant="outline"
                     onClick={() => setAnswersRevealed((v) => !v)}
-                    className="bg-surface-alt border border-color-border text-text-primary hover:bg-color-border"
+                    className="bg-surface-alt border border-border text-text-primary hover:bg-surface"
                   >
                     {answersRevealed ? 'Hide answers' : 'Reveal answers'}
                   </Button>
@@ -394,7 +398,7 @@ export default function StrategyBoardQuizGame() {
                     size="sm"
                     variant="outline"
                     onClick={nextStealAttempt}
-                    className="bg-surface-alt border border-color-border text-text-primary hover:bg-color-border px-3 py-2 rounded-[var(--radius-md)]"
+                    className="bg-surface-alt border border-border text-text-primary hover:bg-surface px-3 py-2 rounded-[var(--radius-md)]"
                   >
                     Next
                   </Button>

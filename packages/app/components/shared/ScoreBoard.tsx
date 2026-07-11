@@ -51,20 +51,20 @@ export function ScoreBoard({
           <div
             key={team.id}
             className={cn(
-              'sbq-score-card px-4 py-3 min-w-[120px] max-w-[180px] text-center transition-all duration-300 flex flex-col justify-center border-2',
-              isActive && 'scale-105 shadow-lg ring-4 ring-white/80 ring-offset-2 ring-offset-[var(--color-text-primary)]'
+              'sbq-score-card px-4 py-3 min-w-[120px] max-w-[180px] text-center transition-all duration-300 flex flex-col justify-center border',
+              isActive && 'scale-105 shadow-lg'
             )}
             style={{
-              backgroundColor: colorDef.lightHex,
-              borderColor: colorDef.hex,
+              backgroundColor: 'var(--color-surface-alt)',
+              borderColor: isActive ? colorDef.hex : 'var(--color-border)',
             }}
           >
-            <span
-              className="block text-sm font-semibold leading-tight truncate"
-              style={{ color: colorDef.hex }}
-            >
-              {team.name}
-              {isActive && ' •'}
+            <span className="flex items-center justify-center gap-1.5 text-sm font-semibold leading-tight text-text-muted">
+              <span
+                className="inline-block w-2.5 h-2.5 rounded-sm shrink-0"
+                style={{ backgroundColor: colorDef.hex }}
+              />
+              <span className="truncate">{team.name}</span>
             </span>
             <span
               className={cn(

@@ -65,10 +65,14 @@ function MathRushCard({
         </span>
         {claimedTeam && (
           <span
-            className="text-xs font-semibold px-2 py-0.5 rounded-full text-white truncate max-w-[55%]"
-            style={{ backgroundColor: claimColor!.hex }}
+            className="flex items-center gap-1.5 text-xs font-semibold px-2 py-0.5 rounded-full border bg-surface-alt text-text-primary max-w-[55%]"
+            style={{ borderColor: claimColor!.hex }}
           >
-            {claimedTeam.name}
+            <span
+              className="inline-block w-2 h-2 rounded-sm shrink-0"
+              style={{ backgroundColor: claimColor!.hex }}
+            />
+            <span className="truncate">{claimedTeam.name}</span>
           </span>
         )}
       </div>
@@ -134,13 +138,17 @@ function MathRushCard({
                 <button
                   key={team.id}
                   type="button"
-                  className="px-3 py-2 rounded-lg text-sm font-bold text-white shadow-md hover:opacity-95 transition-opacity"
-                  style={{ backgroundColor: cd.hex }}
+                  className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-bold border bg-surface-alt text-text-primary shadow-md hover:bg-surface transition-colors"
+                  style={{ borderColor: cd.hex }}
                   onClick={() => {
                     useGameStore.getState().mathRushAwardCard(cardIndex, ti)
                     playAwardSound()
                   }}
                 >
+                  <span
+                    className="inline-block w-2.5 h-2.5 rounded-sm shrink-0"
+                    style={{ backgroundColor: cd.hex }}
+                  />
                   {team.name}
                 </button>
               )
@@ -297,13 +305,14 @@ export default function MathRushGame() {
                         return (
                           <div
                             key={team.id}
-                            className="game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2 text-white"
-                            style={{
-                              backgroundColor: colorDef.hex,
-                              borderColor: colorDef.hex,
-                            }}
+                            className="game-over-card sbq-score-card px-5 py-4 min-w-[140px] text-center border-2 bg-surface-alt text-text-primary"
+                            style={{ borderColor: colorDef.hex }}
                           >
-                            <div className="text-sm font-semibold opacity-90 mb-1">
+                            <div className="text-sm font-semibold text-text-muted mb-1 flex items-center justify-center gap-1.5">
+                              <span
+                                className="inline-block w-2.5 h-2.5 rounded-sm shrink-0"
+                                style={{ backgroundColor: colorDef.hex }}
+                              />
                               {team.name}
                             </div>
                             <div className="text-3xl font-extrabold">{team.score}</div>
@@ -318,11 +327,8 @@ export default function MathRushGame() {
                           return (
                             <div
                               key={team.id}
-                              className="game-over-card px-3 py-2 rounded-full text-sm font-medium text-white"
-                              style={{
-                                backgroundColor: colorDef.hex,
-                                borderColor: colorDef.hex,
-                              }}
+                              className="game-over-card px-3 py-2 rounded-full text-sm font-medium border bg-surface-alt text-text-primary"
+                              style={{ borderColor: colorDef.hex }}
                             >
                               {team.name}: {team.score}
                             </div>
@@ -335,7 +341,7 @@ export default function MathRushGame() {
                     <Button
                       asChild
                       size="sm"
-                      className="px-5 bg-[var(--color-accent)] hover:bg-indigo-700 text-white font-semibold rounded-full"
+                      className="px-5 bg-[var(--color-accent)] hover:brightness-110 text-[#1a1508] font-semibold rounded-full"
                     >
                       <Link href="/library">Back to Library</Link>
                     </Button>
@@ -343,7 +349,7 @@ export default function MathRushGame() {
                       asChild
                       size="sm"
                       variant="outline"
-                      className="px-5 rounded-full border border-color-border bg-surface-alt text-text-primary hover:bg-color-border"
+                      className="px-5 rounded-full border border-border bg-surface-alt text-text-primary hover:bg-surface"
                     >
                       <Link href="/">Home</Link>
                     </Button>
@@ -366,7 +372,7 @@ export default function MathRushGame() {
                   size="sm"
                   variant="outline"
                   onClick={() => mathRushRevealAllAnswers()}
-                  className="bg-surface-alt border border-color-border text-text-primary hover:bg-color-border"
+                  className="bg-surface-alt border border-border text-text-primary hover:bg-surface"
                 >
                   {allAnswersRevealed ? 'Hide all answers' : 'Reveal all answers'}
                 </Button>
@@ -374,7 +380,7 @@ export default function MathRushGame() {
                   size="sm"
                   variant="outline"
                   onClick={() => mathRushNextRound()}
-                  className="bg-surface-alt border border-color-border text-text-primary hover:bg-color-border"
+                  className="bg-surface-alt border border-border text-text-primary hover:bg-surface"
                 >
                   Next round
                 </Button>

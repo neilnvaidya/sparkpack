@@ -33,16 +33,21 @@ export function GameBoard() {
       const rect = el.getBoundingClientRect()
       if (!rect.width) return
 
-      const maxCellWidth = rect.width / cols
-      const size = Math.floor(maxCellWidth)
-      const clamped = Math.max(72, Math.min(size, 132))
+      const rows = board.length
+      const gap = 8 // gap-2 between cells
+      const topicRowAllowance = 48 // column header chips + margin
+      const maxCellWidth = (rect.width - gap * (cols - 1)) / cols
+      const maxCellHeight =
+        (rect.height - topicRowAllowance - gap * (rows - 1)) / rows
+      const size = Math.floor(Math.min(maxCellWidth, maxCellHeight))
+      const clamped = Math.max(56, Math.min(size, 132))
       setCellSize(clamped)
     }
 
     recompute()
     window.addEventListener('resize', recompute)
     return () => window.removeEventListener('resize', recompute)
-  }, [cols])
+  }, [cols, board.length])
 
   return (
     <div ref={containerRef} className="w-full h-full flex flex-col items-center justify-center">
@@ -56,8 +61,8 @@ export function GameBoard() {
         }
       >
         {columnTopics.map((topic, c) => (
-          <div key={c} className="sbq-topic-chip px-3 py-2 text-center">
-            <span className="text-sm md:text-lg font-semibold text-text-primary tracking-[0.08em] uppercase truncate block leading-snug">
+          <div key={c} className="sbq-topic-chip px-2 py-1.5 text-center flex items-center justify-center">
+            <span className="text-[11px] md:text-xs font-semibold text-text-primary tracking-[0.06em] uppercase leading-tight line-clamp-2 break-words">
               {topic}
             </span>
           </div>
@@ -82,10 +87,10 @@ export function GameBoard() {
                 ? (() => {
                     const def = getTeamColorDef(teamColor)
                     return {
-                      bg: def.lightHex,
+                      bg: 'var(--color-surface-alt)',
                       border: def.hex,
                       dot: def.hex,
-                      text: def.hex,
+                      text: 'var(--color-text-muted)',
                     }
                   })()
                 : null

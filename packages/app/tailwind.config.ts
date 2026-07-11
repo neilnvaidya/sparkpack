@@ -56,6 +56,7 @@ const config: Config = {
         bg: "var(--color-bg)",
         surface: "var(--color-surface)",
         surfaceAlt: "var(--color-surface-alt)",
+        "surface-alt": "var(--color-surface-alt)",
         text: {
           primary: "var(--color-text-primary)",
           muted: "var(--color-text-muted)",
