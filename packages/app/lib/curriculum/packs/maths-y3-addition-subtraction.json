@@ -43,6 +43,7 @@
     { "id": "ec-2", "kind": "truefalse", "difficulty": 2, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "statement": "To check that 460 − 180 = 280, you can work out 280 + 180.", "isTrue": true },
     { "id": "ec-3", "kind": "truefalse", "difficulty": 2, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "statement": "398 + 401 is about 900.", "isTrue": false },
     { "id": "ec-4", "kind": "truefalse", "difficulty": 2, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "statement": "The inverse of addition is subtraction.", "isTrue": true },
-    { "id": "ec-5", "kind": "qa", "difficulty": 3, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "prompt": "Round each number to the nearest hundred to estimate 512 + 289.", "answer": "About 800 (500 + 300)", "acceptableAnswers": ["800"] }
+    { "id": "ec-5", "kind": "qa", "difficulty": 3, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "prompt": "Round each number to the nearest hundred to estimate 512 + 289.", "answer": "About 800 (500 + 300)", "acceptableAnswers": ["800"] },
+    { "id": "ec-6", "kind": "truefalse", "difficulty": 2, "strand": "Estimate and check", "objectiveCodes": ["Y3-AS-3"], "statement": "A good estimate for 612 − 195 is 400.", "isTrue": true }
   ]
 }

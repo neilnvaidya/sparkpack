@@ -20,6 +20,8 @@
     { "id": "sh-4", "kind": "mcq", "difficulty": 2, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "Which 3-D shape has 2 circular faces and 1 curved surface?", "options": ["sphere", "cone", "cylinder", "cube"], "correctIndex": 2 },
     { "id": "sh-5", "kind": "qa", "difficulty": 3, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many vertices (corners) does a square-based pyramid have?", "answer": "5", "acceptableAnswers": ["five"] },
     { "id": "sh-6", "kind": "mcq", "difficulty": 3, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many edges does a cuboid have?", "options": ["6", "8", "10", "12"], "correctIndex": 3 },
+    { "id": "sh-7", "kind": "qa", "difficulty": 1, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "prompt": "How many sides does a pentagon have?", "answer": "5", "acceptableAnswers": ["five"] },
+    { "id": "sh-8", "kind": "truefalse", "difficulty": 2, "strand": "2-D and 3-D shapes", "objectiveCodes": ["Y3-G-1"], "statement": "A sphere has no flat faces.", "isTrue": true },
 
     { "id": "an-1", "kind": "mcq", "difficulty": 1, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-2", "Y3-G-3"], "prompt": "How many right angles does a square have?", "options": ["2", "3", "4", "5"], "correctIndex": 2 },
     { "id": "an-2", "kind": "qa", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "prompt": "How many right angles make a full turn?", "answer": "4", "acceptableAnswers": ["four"] },
@@ -27,10 +29,12 @@
     { "id": "an-4", "kind": "truefalse", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "statement": "Three right angles make three quarters of a full turn.", "isTrue": true },
     { "id": "an-5", "kind": "mcq", "difficulty": 3, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-2", "Y3-G-3"], "prompt": "The corner of a book makes what kind of angle?", "options": ["an angle smaller than a right angle", "a right angle", "an angle greater than a right angle"], "correctIndex": 1 },
     { "id": "an-6", "kind": "truefalse", "difficulty": 3, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-3"], "statement": "An angle can be greater than or less than a right angle.", "isTrue": true },
+    { "id": "an-7", "kind": "mcq", "difficulty": 2, "strand": "Angles and turns", "objectiveCodes": ["Y3-G-2"], "prompt": "You face the door, then turn to face the opposite wall behind you. What turn have you made?", "options": ["a quarter turn", "a half turn", "three quarters of a turn", "a full turn"], "correctIndex": 1 },
 
     { "id": "li-1", "kind": "truefalse", "difficulty": 1, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "statement": "A flagpole standing straight up is vertical.", "isTrue": true },
     { "id": "li-2", "kind": "truefalse", "difficulty": 2, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "statement": "The horizon is a horizontal line.", "isTrue": true },
     { "id": "li-3", "kind": "qa", "difficulty": 2, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "What do we call two lines that stay the same distance apart and never meet?", "answer": "Parallel lines", "acceptableAnswers": ["parallel"] },
-    { "id": "li-4", "kind": "qa", "difficulty": 3, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "What do we call two lines that meet at a right angle?", "answer": "Perpendicular lines", "acceptableAnswers": ["perpendicular"] }
+    { "id": "li-4", "kind": "qa", "difficulty": 3, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "What do we call two lines that meet at a right angle?", "answer": "Perpendicular lines", "acceptableAnswers": ["perpendicular"] },
+    { "id": "li-5", "kind": "mcq", "difficulty": 2, "strand": "Lines", "objectiveCodes": ["Y3-G-4"], "prompt": "Which of these is the best example of parallel lines?", "options": ["the two rails of a train track", "the hands of a clock at 3 o'clock", "the corner of a window", "the letter T"], "correctIndex": 0 }
   ]
 }

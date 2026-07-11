@@ -36,6 +36,7 @@
     { "id": "cm-2", "kind": "mcq", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["diffrent", "diferent", "different", "differant"], "correctIndex": 2 },
     { "id": "cm-3", "kind": "mcq", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["favourite", "faverite", "favorit", "favourit"], "correctIndex": 0 },
     { "id": "cm-4", "kind": "truefalse", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "statement": "The word 'friend' is spelt f-r-i-e-n-d.", "isTrue": true },
-    { "id": "cm-5", "kind": "qa", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Spell the word that means the opposite of 'question', beginning with 'a'.", "answer": "answer", "acceptableAnswers": ["answer"] }
+    { "id": "cm-5", "kind": "qa", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Spell the word that means the opposite of 'question', beginning with 'a'.", "answer": "answer", "acceptableAnswers": ["answer"] },
+    { "id": "ho-6", "kind": "truefalse", "difficulty": 1, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "statement": "'Hear' and 'here' sound the same but are spelt differently.", "isTrue": true }
   ]
 }

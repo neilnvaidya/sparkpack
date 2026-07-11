@@ -40,6 +40,8 @@
     { "id": "ti-3", "kind": "mcq", "difficulty": 2, "strand": "Time", "objectiveCodes": ["Y3-M-4"], "prompt": "On a clock face with Roman numerals, what number does XII stand for?", "options": ["2", "7", "10", "12"], "correctIndex": 3 },
     { "id": "ti-4", "kind": "truefalse", "difficulty": 2, "strand": "Time", "objectiveCodes": ["Y3-M-4"], "statement": "15:00 on a 24-hour clock is 3 o'clock in the afternoon.", "isTrue": true },
     { "id": "ti-5", "kind": "qa", "difficulty": 3, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "How many days are in a leap year?", "answer": "366", "acceptableAnswers": ["366 days"] },
-    { "id": "ti-6", "kind": "mcq", "difficulty": 3, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "Which of these months has exactly 30 days?", "options": ["January", "February", "April", "December"], "correctIndex": 2 }
+    { "id": "ti-6", "kind": "mcq", "difficulty": 3, "strand": "Time", "objectiveCodes": ["Y3-M-6"], "prompt": "Which of these months has exactly 30 days?", "options": ["January", "February", "April", "December"], "correctIndex": 2 },
+    { "id": "l-5", "kind": "truefalse", "difficulty": 1, "strand": "Length", "objectiveCodes": ["Y3-M-1"], "statement": "A door is about 2 metres tall.", "isTrue": true },
+    { "id": "mo-5", "kind": "truefalse", "difficulty": 2, "strand": "Money", "objectiveCodes": ["Y3-M-3"], "statement": "Ten 10p coins make £1.", "isTrue": true }
   ]
 }

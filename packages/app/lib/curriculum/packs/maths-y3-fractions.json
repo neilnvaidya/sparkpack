@@ -40,6 +40,7 @@
     { "id": "ec-3", "kind": "truefalse", "difficulty": 3, "strand": "Equivalents and comparing", "objectiveCodes": ["Y3-F-6"], "statement": "1/3 is bigger than 1/4.", "isTrue": true },
     { "id": "ec-4", "kind": "mcq", "difficulty": 3, "strand": "Equivalents and comparing", "objectiveCodes": ["Y3-F-6"], "prompt": "Which fraction is the smallest?", "options": ["1/2", "1/3", "1/5", "1/4"], "correctIndex": 2 },
     { "id": "ec-5", "kind": "truefalse", "difficulty": 2, "strand": "Equivalents and comparing", "objectiveCodes": ["Y3-F-6"], "statement": "3/8 is bigger than 5/8.", "isTrue": false },
-    { "id": "ec-6", "kind": "qa", "difficulty": 3, "strand": "Equivalents and comparing", "objectiveCodes": ["Y3-F-6"], "prompt": "Order these fractions from smallest to largest: 3/6, 1/6, 5/6.", "answer": "1/6, 3/6, 5/6" }
+    { "id": "ec-6", "kind": "qa", "difficulty": 3, "strand": "Equivalents and comparing", "objectiveCodes": ["Y3-F-6"], "prompt": "Order these fractions from smallest to largest: 3/6, 1/6, 5/6.", "answer": "1/6, 3/6, 5/6" },
+    { "id": "t-5", "kind": "truefalse", "difficulty": 1, "strand": "Tenths", "objectiveCodes": ["Y3-F-1"], "statement": "If you cut a pizza into 10 equal slices, each slice is one tenth of the pizza.", "isTrue": true }
   ]
 }

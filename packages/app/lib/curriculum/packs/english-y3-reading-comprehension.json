@@ -17,11 +17,13 @@
     { "id": "sy-2", "kind": "mcq", "difficulty": 2, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which word is a synonym for 'big'?", "options": ["tiny", "enormous", "quiet", "fast"], "correctIndex": 1 },
     { "id": "sy-3", "kind": "truefalse", "difficulty": 1, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "Synonyms are words that have a similar meaning.", "isTrue": true },
     { "id": "sy-4", "kind": "mcq", "difficulty": 3, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "A writer wants a stronger word than 'sad'. Which is the best choice?", "options": ["fine", "miserable", "calm", "busy"], "correctIndex": 1 },
+    { "id": "sy-5", "kind": "qa", "difficulty": 2, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Give a synonym for 'quick'.", "answer": "Any of: fast, speedy, rapid, swift", "acceptableAnswers": ["fast", "speedy", "rapid", "swift"] },
 
     { "id": "an-1", "kind": "qa", "difficulty": 1, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Give an antonym (a word that means the opposite) for 'hot'.", "answer": "cold", "acceptableAnswers": ["cold", "cool", "freezing"] },
     { "id": "an-2", "kind": "mcq", "difficulty": 2, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which word is an antonym for 'ancient'?", "options": ["old", "modern", "huge", "dark"], "correctIndex": 1 },
     { "id": "an-3", "kind": "truefalse", "difficulty": 2, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "An antonym is a word that means the opposite of another word.", "isTrue": true },
     { "id": "an-4", "kind": "mcq", "difficulty": 3, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which pair are antonyms?", "options": ["begin and start", "brave and fearless", "generous and mean", "happy and glad"], "correctIndex": 2 },
+    { "id": "an-5", "kind": "truefalse", "difficulty": 1, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "'Light' is an antonym of 'dark'.", "isTrue": true },
 
     { "id": "id-1", "kind": "mcq", "difficulty": 2, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "prompt": "What does the idiom 'it's raining cats and dogs' mean?", "options": ["animals are falling from the sky", "it is raining very heavily", "the weather is sunny", "pets are outside"], "correctIndex": 1 },
     { "id": "id-2", "kind": "mcq", "difficulty": 2, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "prompt": "If someone says 'break a leg' before a show, they mean...", "options": ["hurt yourself", "good luck", "run away", "sit down"], "correctIndex": 1 },
@@ -32,6 +34,7 @@
     { "id": "dc-1", "kind": "qa", "difficulty": 1, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "In what order are words listed in a dictionary?", "answer": "Alphabetical order", "acceptableAnswers": ["alphabetical order", "a to z", "alphabetically"] },
     { "id": "dc-2", "kind": "mcq", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "Which word would come first in a dictionary?", "options": ["orange", "apple", "melon", "pear"], "correctIndex": 1 },
     { "id": "dc-3", "kind": "mcq", "difficulty": 3, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "Both 'plant' and 'plate' start with 'pla'. Which comes first in a dictionary?", "options": ["plant", "plate", "they are the same", "it does not matter"], "correctIndex": 0 },
-    { "id": "dc-4", "kind": "truefalse", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "statement": "A dictionary tells you what a word means.", "isTrue": true }
+    { "id": "dc-4", "kind": "truefalse", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "statement": "A dictionary tells you what a word means.", "isTrue": true },
+    { "id": "dc-5", "kind": "mcq", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "You read a word you do not understand. What is the best way to check its meaning?", "options": ["skip the whole page", "look it up in a dictionary", "guess and move on without checking", "read the word louder"], "correctIndex": 1 }
   ]
 }

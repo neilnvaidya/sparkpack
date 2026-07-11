@@ -29,22 +29,25 @@
 
 ## Phase 0 — Housekeeping (unblock git)
 
-- [ ] Commit the pending Humanities packs + map/loader/WORKPLAN changes.
-- [ ] Add this plan doc; point WORKPLAN.md at it.
+- [x] Commit the pending Humanities packs + map/loader/WORKPLAN changes.
+- [x] Add this plan doc; point WORKPLAN.md at it.
 
 ## Phase 1 — Content top-up (~20 per topic + T/F availability)
 
 Author items per `lib/curriculum/schema.ts` (kinds `equation`/`qa`/`mcq`/`truefalse`,
 difficulty 1–3, `objectiveCodes`, unique ids). Validate after each pack.
 
-- [ ] maths-y3-statistics +8 (include ≥2 truefalse)
-- [ ] maths-y3-geometry-shapes +4
-- [ ] science-y3-rocks +4
-- [ ] english-y3-reading-comprehension +3
-- [ ] science-y3-light +1
-- [ ] Truefalse-only top-ups to unlock True/False Showdown (needs 5):
+- [x] maths-y3-statistics +8 (include ≥2 truefalse)
+- [x] maths-y3-geometry-shapes +4
+- [x] science-y3-rocks +4
+- [x] english-y3-reading-comprehension +3
+- [x] science-y3-light +1
+- [x] Truefalse-only top-ups to unlock True/False Showdown (needs 5):
       maths-y3-measurement +2, maths-y3-addition-subtraction +1,
       maths-y3-fractions +1, english-y3-spelling +1
+
+All 19 packs now have ≥20 items and every pack powers True/False Showdown
+(validate-packs green, 2026-07-11).
 
 ## Phase 2 — Game flow foundation
 
