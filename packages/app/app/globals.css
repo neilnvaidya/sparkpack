@@ -4,55 +4,55 @@
 
 @layer base {
   :root {
-    /* shadcn theme tokens (kept for UI components) */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* shadcn theme tokens (dark ink, kept for UI components) */
+    --background: 240 11% 7%;
+    --foreground: 240 12% 94%;
+    --card: 240 11% 10%;
+    --card-foreground: 240 12% 94%;
+    --popover: 240 11% 10%;
+    --popover-foreground: 240 12% 94%;
+    --primary: 41 77% 60%;
+    --primary-foreground: 240 11% 7%;
+    --secondary: 240 9% 15%;
+    --secondary-foreground: 240 12% 94%;
+    --muted: 240 9% 15%;
+    --muted-foreground: 240 5% 62%;
+    --accent: 240 9% 15%;
+    --accent-foreground: 240 12% 94%;
+    --destructive: 348 55% 55%;
+    --destructive-foreground: 240 12% 94%;
+    --border: 240 9% 16%;
+    --input: 240 9% 16%;
+    --ring: 41 77% 60%;
     --radius: 0.5rem;
 
-    /* === Strategy Board Quiz design tokens === */
+    /* === Game design tokens (ink theme, see lib/ui/theme.ts) === */
     /* Base surfaces */
-    --color-bg: #F5F6FA;
-    --color-surface: #FFFFFF;
-    --color-surface-alt: #EEF0F8;
-    --color-border: #D1D5E8;
-    --color-border-strong: #9EA6C8;
+    --color-bg: #101014;
+    --color-surface: #17171d;
+    --color-surface-alt: #1e1e26;
+    --color-border: #26262e;
+    --color-border-strong: #34343e;
 
     /* Text */
-    --color-text-primary: #1A1D2E;
-    --color-text-muted: #6B7399;
-    --color-text-inverse: #FFFFFF;
+    --color-text-primary: #ececf1;
+    --color-text-muted: #9a9aa3;
+    --color-text-inverse: #101014;
 
     /* Accent */
-    --color-accent: #4F46E5;
-    --color-accent-light: #EEF2FF;
+    --color-accent: #e8b64c;
+    --color-accent-light: #2a2418;
 
     /* Phase / semantic colours */
-    --color-discussion: #2563EB;
-    --color-discussion-bg: #EFF6FF;
-    --color-steal: #D97706;
-    --color-steal-bg: #FFFBEB;
-    --color-correct: #059669;
-    --color-correct-bg: #ECFDF5;
-    --color-incorrect: #DC2626;
-    --color-incorrect-bg: #FEF2F2;
-    --color-warning: #DC2626;
+    --color-discussion: #7f9df5;
+    --color-discussion-bg: #191d2c;
+    --color-steal: #d98a68;
+    --color-steal-bg: #251b16;
+    --color-correct: #5bb361;
+    --color-correct-bg: #17211a;
+    --color-incorrect: #cb4d68;
+    --color-incorrect-bg: #241419;
+    --color-warning: #cb4d68;
 
     /* Team colours (mapped to existing TeamColor values) */
     --team-red: #E84545;
@@ -176,8 +176,9 @@
   }
 
   .sbq-teacher-bar {
-    background-color: var(--color-text-primary);
-    color: var(--color-text-inverse);
+    background-color: var(--color-surface-alt);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
   }
 
   .sbq-phase-pill {

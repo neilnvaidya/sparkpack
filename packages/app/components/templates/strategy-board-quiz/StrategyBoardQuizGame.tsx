@@ -162,6 +162,12 @@ export default function StrategyBoardQuizGame() {
               >
                 <span className="text-xs font-bold uppercase tracking-wide">{muted ? 'Muted' : 'Sound'}</span>
               </Button>
+              <Link
+                href="/library"
+                className="inline-flex h-9 items-center rounded-md border border-border bg-surface-alt px-3 text-xs font-bold uppercase tracking-wide text-text-muted hover:bg-surface"
+              >
+                Exit
+              </Link>
             </div>
           </div>
         </header>
@@ -319,7 +325,7 @@ export default function StrategyBoardQuizGame() {
                         size="sm"
                         className="px-5 bg-[var(--color-accent)] hover:bg-indigo-700 text-white font-semibold rounded-full"
                       >
-                        <Link href="/generate">Create new game</Link>
+                        <Link href="/library">Back to Library</Link>
                       </Button>
                       <Button
                         asChild

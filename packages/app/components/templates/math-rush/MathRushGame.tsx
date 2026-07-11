@@ -216,6 +216,12 @@ export default function MathRushGame() {
               >
                 <span className="text-xs font-bold uppercase tracking-wide">{muted ? 'Muted' : 'Sound'}</span>
               </Button>
+              <Link
+                href="/library"
+                className="inline-flex h-9 items-center rounded-md border border-border bg-surface-alt px-3 text-xs font-bold uppercase tracking-wide text-text-muted hover:bg-surface"
+              >
+                Exit
+              </Link>
             </div>
           </div>
         </header>
@@ -331,15 +337,7 @@ export default function MathRushGame() {
                       size="sm"
                       className="px-5 bg-[var(--color-accent)] hover:bg-indigo-700 text-white font-semibold rounded-full"
                     >
-                      <Link href="/create/math-rush">New Math Rush</Link>
-                    </Button>
-                    <Button
-                      asChild
-                      size="sm"
-                      variant="outline"
-                      className="px-5 rounded-full border border-color-border bg-surface-alt text-text-primary hover:bg-color-border"
-                    >
-                      <Link href="/generate">Board quiz</Link>
+                      <Link href="/library">Back to Library</Link>
                     </Button>
                     <Button
                       asChild

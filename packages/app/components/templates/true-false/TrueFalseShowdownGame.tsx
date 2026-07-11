@@ -142,12 +142,21 @@ export default function TrueFalseShowdownGame() {
             True or False Showdown
           </span>
         </span>
-        <span style={{
-          background: INK.surface, border: `1px solid ${INK.border}`,
-          borderRadius: '8px', padding: '6px 14px', fontWeight: 700, fontSize: '13px',
-          color: INK.textDim,
-        }}>
-          {idx + 1} of {total}
+        <span style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <span style={{
+            background: INK.surface, border: `1px solid ${INK.border}`,
+            borderRadius: '8px', padding: '6px 14px', fontWeight: 700, fontSize: '13px',
+            color: INK.textDim,
+          }}>
+            {idx + 1} of {total}
+          </span>
+          <Link href="/library" style={{
+            border: `1px solid ${INK.border}`, borderRadius: '8px',
+            padding: '6px 14px', fontWeight: 700, fontSize: '13px',
+            color: INK.textDim, textDecoration: 'none',
+          }}>
+            Exit
+          </Link>
         </span>
       </div>
 

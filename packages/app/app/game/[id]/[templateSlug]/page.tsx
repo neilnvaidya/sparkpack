@@ -68,109 +68,58 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         :root {
-          --yellow: #FFE234; --orange: #FF7A1A;
-          --pink:   #FF3D77; --purple: #3B1F5E;
-          --cream:  #FFF8E7;
-          --font-display: 'Fredoka', sans-serif;
-          --font-body:    'Plus Jakarta Sans', sans-serif;
+          --ink-bg: #101014; --ink-surface: #17171d; --ink-border: #26262e;
+          --ink-border-strong: #34343e;
+          --ink-text: #ececf1; --ink-dim: #9a9aa3; --ink-faint: #63636e;
+          --ink-accent: #e8b64c;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         @keyframes spin  { to { transform: rotate(360deg); } }
-        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
         @keyframes popIn {
-          from { opacity: 0; transform: scale(0.85) translateY(20px); }
+          from { opacity: 0; transform: scale(0.97) translateY(12px); }
           to   { opacity: 1; transform: scale(1)    translateY(0); }
         }
-        @keyframes floatY {
-          0%,100% { transform: translateY(0); }
-          50%      { transform: translateY(-12px); }
-        }
-        @keyframes shimmer {
-          0%   { background-position: -200% center; }
-          100% { background-position:  200% center; }
-        }
-        @keyframes glow {
-          0%,100% { box-shadow: 0 0 30px rgba(255,226,52,0.3), 0 0 60px rgba(255,122,26,0.15); }
-          50%      { box-shadow: 0 0 50px rgba(255,226,52,0.55), 0 0 90px rgba(255,122,26,0.3); }
-        }
-        @keyframes drift {
-          0%   { transform: translateY(0) translateX(0); opacity: 0; }
-          10%  { opacity: 0.5; }
-          90%  { opacity: 0.5; }
-          100% { transform: translateY(-100vh) translateX(30px); opacity: 0; }
-        }
 
-        .sp-shimmer-logo {
-          background: linear-gradient(120deg, var(--yellow) 0%, var(--orange) 30%, #fff 50%, var(--orange) 70%, var(--pink) 100%);
-          background-size: 200% auto;
-          -webkit-background-clip: text; background-clip: text;
-          -webkit-text-fill-color: transparent;
-          animation: shimmer 3s linear infinite;
-        }
-        .sp-pop    { animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1) both; }
-        .sp-float  { animation: floatY 3s ease-in-out infinite; }
+        .sp-pop { animation: popIn 0.4s ease-out both; }
 
         .sp-primary-btn {
           display: inline-flex; align-items: center; gap: 10px;
-          padding: 18px 52px;
-          background: linear-gradient(135deg, var(--yellow) 0%, var(--orange) 100%);
-          border: none; border-radius: 100px;
-          font-size: 1.15rem; font-weight: 700;
-          font-family: var(--font-display);
-          color: #2a0f4a; cursor: pointer; letter-spacing: 0.03em;
-          box-shadow: 0 7px 0 #7a3300, 0 12px 35px rgba(255,122,26,0.45);
-          transition: transform 0.08s, box-shadow 0.08s, filter 0.15s;
-          animation: glow 2.5s ease-in-out infinite;
+          padding: 15px 44px;
+          background: var(--ink-accent);
+          border: none; border-radius: 10px;
+          font-size: 1.05rem; font-weight: 800;
+          font-family: inherit;
+          color: var(--ink-bg); cursor: pointer; letter-spacing: 0.01em;
+          transition: transform 0.1s ease, filter 0.15s ease;
         }
-        .sp-primary-btn:hover { filter: brightness(1.06); }
-        .sp-primary-btn:active {
-          transform: translateY(5px);
-          box-shadow: 0 2px 0 #7a3300, 0 4px 12px rgba(255,122,26,0.3);
-        }
+        .sp-primary-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
+        .sp-primary-btn:active { transform: translateY(0); }
 
         .sp-ghost-btn {
           display: inline-flex; align-items: center; gap: 6px;
           padding: 10px 22px;
-          background: rgba(255,255,255,0.07);
-          border: 1.5px solid rgba(255,255,255,0.18);
-          border-radius: 100px;
+          background: transparent;
+          border: 1px solid var(--ink-border-strong);
+          border-radius: 8px;
           font-size: 13px; font-weight: 600;
-          font-family: var(--font-body);
-          color: rgba(255,251,232,0.65);
+          font-family: inherit;
+          color: var(--ink-dim);
           cursor: pointer; text-decoration: none;
-          transition: background 0.15s, border-color 0.15s, color 0.15s;
+          transition: border-color 0.15s, color 0.15s;
         }
-        .sp-ghost-btn:hover {
-          background: rgba(255,255,255,0.13);
-          color: #fffbe8; border-color: rgba(255,255,255,0.35);
-        }
+        .sp-ghost-btn:hover { color: var(--ink-text); border-color: var(--ink-faint); }
       `}</style>
 
       <div style={{
         minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center',
-        background: 'radial-gradient(ellipse at 30% 20%, #4a1a7a 0%, #2e1252 40%, #160830 100%)',
-        fontFamily: 'var(--font-body)', position: 'relative', overflow: 'hidden',
+        background: 'var(--ink-bg)', color: 'var(--ink-text)',
+        fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif",
       }}>
-        <div aria-hidden="true" style={{
-          position: 'absolute', inset: 0, pointerEvents: 'none',
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-          backgroundSize: '48px 48px',
-        }} />
-        <div aria-hidden="true" style={{ position: 'absolute', top: '-10%', left: '-5%', width: '40vw', height: '40vw', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,122,26,0.2) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
-        <div aria-hidden="true" style={{ position: 'absolute', bottom: '0%', right: '-10%', width: '45vw', height: '45vw', borderRadius: '50%', background: 'radial-gradient(circle, rgba(255,61,119,0.18) 0%, transparent 70%)', filter: 'blur(50px)', pointerEvents: 'none' }} />
-        {[...Array(10)].map((_, i) => (
-          <div key={i} aria-hidden="true" style={{
-            position: 'absolute', left: `${(i * 11 + 5) % 100}%`, bottom: '-8px',
-            width: `${5 + (i % 3) * 3}px`, height: `${5 + (i % 3) * 3}px`,
-            borderRadius: '50%', opacity: 0,
-            background: i % 3 === 0 ? 'var(--yellow)' : i % 3 === 1 ? 'var(--pink)' : 'var(--orange)',
-            animation: `drift ${9 + (i * 1.4) % 7}s ${(i * 0.7) % 5}s linear infinite`,
-          }} />
-        ))}
-        <div style={{ position: 'relative', zIndex: 1 }}>{children}</div>
+        {children}
       </div>
     </>
   )
@@ -181,16 +130,16 @@ function LoadingScreen() {
     <SparkScreen>
       <div style={{ textAlign: 'center', padding: '20px' }}>
         <div style={{
-          width: '72px', height: '72px', borderRadius: '50%',
-          border: '4px solid rgba(255,255,255,0.08)',
-          borderTop: '4px solid var(--yellow)',
-          margin: '0 auto 28px',
+          width: '56px', height: '56px', borderRadius: '50%',
+          border: '3px solid var(--ink-border)',
+          borderTop: '3px solid var(--ink-accent)',
+          margin: '0 auto 24px',
           animation: 'spin 0.9s linear infinite',
         }} />
-        <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.8rem', fontWeight: 700, color: '#fffbe8', marginBottom: '8px', animation: 'pulse 1.5s ease-in-out infinite' }}>
-          Loading game…
+        <div style={{ fontSize: '1.4rem', fontWeight: 800, marginBottom: '6px', animation: 'pulse 1.5s ease-in-out infinite' }}>
+          Loading game
         </div>
-        <p style={{ fontSize: '13px', color: 'rgba(255,251,232,0.4)' }}>Setting up the board</p>
+        <p style={{ fontSize: '13px', color: 'var(--ink-faint)' }}>Setting up the board</p>
       </div>
     </SparkScreen>
   )
@@ -200,14 +149,14 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '420px', padding: '20px' }}>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700, color: '#ff8db3', marginBottom: '10px' }}>
+        <h1 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#d97a8f', marginBottom: '12px' }}>
           Something went wrong
         </h1>
-        <p style={{ fontSize: '14px', color: 'rgba(255,251,232,0.5)', lineHeight: 1.6, marginBottom: '32px', background: 'rgba(255,61,119,0.1)', border: '1px solid rgba(255,61,119,0.25)', borderRadius: '10px', padding: '12px 16px' }}>
+        <p style={{ fontSize: '14px', color: 'var(--ink-dim)', lineHeight: 1.6, marginBottom: '28px', background: 'var(--ink-surface)', border: '1px solid var(--ink-border)', borderRadius: '10px', padding: '12px 16px' }}>
           {message}
         </p>
         <button className="sp-ghost-btn" onClick={onBack} style={{ marginBottom: '12px' }}>
-          ← Back to game selector
+          Back to Library
         </button>
       </div>
     </SparkScreen>
@@ -229,55 +178,45 @@ function SetupScreen({ onStart }: { onStart: () => void }) {
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '560px', padding: '20px' }}>
-        <div style={{ marginBottom: '24px' }}>
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: '2rem', fontWeight: 700 }}>
-            <span className="sp-shimmer-logo">Spark</span>
-            <span style={{ background: 'linear-gradient(135deg, #ffffff 0%, #c9a0ff 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>Pack</span>
-          </span>
-        </div>
-        <div style={{
-          display: 'inline-flex', alignItems: 'center', gap: '8px',
-          background: 'rgba(255,226,52,0.12)', border: '1px solid rgba(255,226,52,0.3)',
-          borderRadius: '100px', padding: '6px 16px', marginBottom: '28px',
+        <p style={{
+          fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+          textTransform: 'uppercase', color: 'var(--ink-faint)', marginBottom: '24px',
         }}>
-          <span style={{ fontSize: '12px', fontWeight: 700, color: 'var(--yellow)', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Game Ready</span>
-        </div>
+          SparkPack · Game ready
+        </p>
 
         {countdown === null ? (
           <>
-            <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 6vw, 3rem)', fontWeight: 700, color: '#fffbe8', lineHeight: 1.1, marginBottom: '14px' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 6vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '14px', letterSpacing: '-0.02em' }}>
               Ready to play?
             </h1>
-            <p style={{ fontSize: '15px', color: 'rgba(255,251,232,0.55)', lineHeight: 1.7, maxWidth: '380px', margin: '0 auto 36px' }}>
+            <p style={{ fontSize: '15px', color: 'var(--ink-dim)', lineHeight: 1.7, maxWidth: '380px', margin: '0 auto 32px' }}>
               Make sure your projector is on and all teams are looking at the screen.
             </p>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '40px' }}>
-              {[{ text: 'Projector on' }, { text: 'Teams watching' }, { text: 'Volume up' }].map(({ text }) => (
+            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '36px' }}>
+              {['Projector on', 'Teams watching', 'Volume up'].map((text) => (
                 <div key={text} style={{
-                  display: 'flex', alignItems: 'center', gap: '7px',
-                  background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)',
-                  borderRadius: '10px', padding: '8px 14px', fontSize: '13px', color: 'rgba(255,251,232,0.6)', fontWeight: 500,
+                  background: 'var(--ink-surface)', border: '1px solid var(--ink-border)',
+                  borderRadius: '8px', padding: '8px 14px', fontSize: '13px', color: 'var(--ink-dim)', fontWeight: 600,
                 }}>
-                  <span>{text}</span>
+                  {text}
                 </div>
               ))}
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
               <button className="sp-primary-btn" onClick={handleStart}>
-                <span>Start Game</span>
+                Start Game
               </button>
-              <Link href="/" className="sp-ghost-btn">← Back to Home</Link>
+              <Link href="/library" className="sp-ghost-btn">Back to Library</Link>
             </div>
           </>
         ) : (
           <div style={{ padding: '20px 0' }}>
-            <p style={{ fontSize: '14px', color: 'rgba(255,251,232,0.5)', marginBottom: '20px', letterSpacing: '0.06em', textTransform: 'uppercase', fontWeight: 600 }}>Starting in…</p>
+            <p style={{ fontSize: '13px', color: 'var(--ink-faint)', marginBottom: '20px', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700 }}>Starting in</p>
             <div key={countdown} style={{
-              fontFamily: 'var(--font-display)', fontSize: 'clamp(5rem, 20vw, 9rem)', fontWeight: 700, lineHeight: 1,
-              background: countdown === 1 ? 'linear-gradient(135deg, var(--pink), var(--orange))' : countdown === 2 ? 'linear-gradient(135deg, var(--orange), var(--yellow))' : 'linear-gradient(135deg, var(--yellow), #fff)',
-              WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent',
-              animation: 'popIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both',
-              filter: 'drop-shadow(0 0 40px rgba(255,226,52,0.5))',
+              fontSize: 'clamp(5rem, 20vw, 8rem)', fontWeight: 800, lineHeight: 1,
+              color: 'var(--ink-accent)',
+              animation: 'popIn 0.3s ease-out both',
             }}>
               {countdown}
             </div>
@@ -362,7 +301,7 @@ export default function GameRunPage() {
     return (
       <ErrorScreen
         message={error}
-        onBack={() => router.push(`/game/${gameId}`)}
+        onBack={() => router.push('/library')}
       />
     )
   }
