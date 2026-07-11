@@ -13,9 +13,9 @@ import { trueFalseContentSchema } from '@/lib/templates/true-false'
 import { getTeamColorDef } from '@/lib/constants/team-colors'
 import { INK, FONT_BODY } from '@/lib/ui/theme'
 
-const ACCENT = '#e8b64c'
-const TRUE_GREEN = '#5bb361'
-const FALSE_RED = '#cb4d68'
+const ACCENT = '#7c3aed'
+const TRUE_GREEN = '#26890c'
+const FALSE_RED = '#d81b43'
 
 const shell: React.CSSProperties = {
   minHeight: '100vh',
@@ -50,7 +50,7 @@ export default function TrueFalseShowdownGame() {
     return (
       <div style={shell}>
         <style>{globalCss}</style>
-        <p style={{ margin: 'auto', color: '#d97a8f' }}>
+        <p style={{ margin: 'auto', color: '#d81b43' }}>
           This game&apos;s content could not be loaded.
         </p>
       </div>

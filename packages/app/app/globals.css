@@ -4,55 +4,55 @@
 
 @layer base {
   :root {
-    /* shadcn theme tokens (dark ink, kept for UI components) */
-    --background: 240 11% 7%;
-    --foreground: 240 12% 94%;
-    --card: 240 11% 10%;
-    --card-foreground: 240 12% 94%;
-    --popover: 240 11% 10%;
-    --popover-foreground: 240 12% 94%;
-    --primary: 41 77% 60%;
-    --primary-foreground: 240 11% 7%;
-    --secondary: 240 9% 15%;
-    --secondary-foreground: 240 12% 94%;
-    --muted: 240 9% 15%;
-    --muted-foreground: 240 5% 62%;
-    --accent: 240 9% 15%;
-    --accent-foreground: 240 12% 94%;
-    --destructive: 348 55% 55%;
-    --destructive-foreground: 240 12% 94%;
-    --border: 240 9% 16%;
-    --input: 240 9% 16%;
-    --ring: 41 77% 60%;
+    /* shadcn theme tokens (light, playful) */
+    --background: 225 40% 97%;
+    --foreground: 228 27% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 27% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 27% 16%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 225 30% 94%;
+    --secondary-foreground: 228 27% 16%;
+    --muted: 225 30% 94%;
+    --muted-foreground: 227 13% 41%;
+    --accent: 225 30% 94%;
+    --accent-foreground: 228 27% 16%;
+    --destructive: 349 78% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 226 32% 91%;
+    --input: 226 32% 91%;
+    --ring: 262 83% 58%;
     --radius: 0.5rem;
 
-    /* === Game design tokens (ink theme, see lib/ui/theme.ts) === */
+    /* === Game design tokens (light theme, see lib/ui/theme.ts) === */
     /* Base surfaces */
-    --color-bg: #101014;
-    --color-surface: #17171d;
-    --color-surface-alt: #1e1e26;
-    --color-border: #26262e;
-    --color-border-strong: #34343e;
+    --color-bg: #f4f5fb;
+    --color-surface: #ffffff;
+    --color-surface-alt: #eceef8;
+    --color-border: #e1e4f0;
+    --color-border-strong: #c7cce0;
 
     /* Text */
-    --color-text-primary: #ececf1;
-    --color-text-muted: #9a9aa3;
-    --color-text-inverse: #101014;
+    --color-text-primary: #1e2333;
+    --color-text-muted: #5a6072;
+    --color-text-inverse: #ffffff;
 
     /* Accent */
-    --color-accent: #e8b64c;
-    --color-accent-light: #2a2418;
+    --color-accent: #7c3aed;
+    --color-accent-light: #ede7fd;
 
     /* Phase / semantic colours */
-    --color-discussion: #7f9df5;
-    --color-discussion-bg: #191d2c;
-    --color-steal: #d98a68;
-    --color-steal-bg: #251b16;
-    --color-correct: #5bb361;
-    --color-correct-bg: #17211a;
-    --color-incorrect: #cb4d68;
-    --color-incorrect-bg: #241419;
-    --color-warning: #cb4d68;
+    --color-discussion: #1368ce;
+    --color-discussion-bg: #e3eefb;
+    --color-steal: #f4511e;
+    --color-steal-bg: #fde7dd;
+    --color-correct: #26890c;
+    --color-correct-bg: #e2f3dc;
+    --color-incorrect: #d81b43;
+    --color-incorrect-bg: #fbe0e6;
+    --color-warning: #d81b43;
 
     /* Team colours (mapped to existing TeamColor values) */
     --team-red: #E84545;
@@ -176,9 +176,11 @@
   }
 
   .sbq-teacher-bar {
-    background-color: var(--color-surface-alt);
-    color: var(--color-text-primary);
-    border: 1px solid var(--color-border);
+    /* Deliberately dark: the teacher controls strip stands apart from the
+       light class-facing display, and its labels are white. */
+    background-color: #262b3f;
+    color: #ffffff;
+    border: 1px solid #262b3f;
   }
 
   .sbq-phase-pill {

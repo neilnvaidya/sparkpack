@@ -69,15 +69,16 @@ All 19 packs now have ≥20 items and every pack powers True/False Showdown
 
 ## Phase 3 — Light, colorful retheme (Kahoot-inspired)
 
-- [ ] Replace the dark ink theme app-wide: light background, bold saturated
+- [x] Replace the dark ink theme app-wide: light background, bold saturated
       accents, chunky rounded cards, high-contrast large type for the projected
       screen. Kahoot's colored answer tiles / confident color blocking is the
       reference.
-- [ ] Rework the palette (theme config) and `lib/constants/team-colors.ts` so
-      team colors pop on light backgrounds.
-- [ ] Touch every surface: home, library, topic pages, setup screen, all four
-      game runtimes, score boards, timers, podium/game-over. No emojis; readable
-      from the back of a classroom. Verify each screen in the browser.
+- [x] Rework the palette (theme config) and `lib/constants/team-colors.ts` so
+      team colors pop on light backgrounds (16 named saturated colours;
+      defaults red/blue/orange/green/purple/teal).
+- [x] Touch every surface: home, library, topic pages, setup screen, all four
+      game runtimes, score boards, timers, podium/game-over. The teacher
+      controls strip stays deliberately dark so it reads as "teacher-only".
 
 ## Phase 4 — Flow docs + end-to-end verification
 

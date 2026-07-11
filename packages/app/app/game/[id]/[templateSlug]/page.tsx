@@ -70,10 +70,10 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
         :root {
-          --ink-bg: #101014; --ink-surface: #17171d; --ink-border: #26262e;
-          --ink-border-strong: #34343e;
-          --ink-text: #ececf1; --ink-dim: #9a9aa3; --ink-faint: #63636e;
-          --ink-accent: #e8b64c;
+          --ink-bg: #f4f5fb; --ink-surface: #ffffff; --ink-border: #e1e4f0;
+          --ink-border-strong: #c7cce0;
+          --ink-text: #1e2333; --ink-dim: #5a6072; --ink-faint: #8a90a6;
+          --ink-accent: #7c3aed;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -93,7 +93,7 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
           border: none; border-radius: 10px;
           font-size: 1.05rem; font-weight: 800;
           font-family: inherit;
-          color: var(--ink-bg); cursor: pointer; letter-spacing: 0.01em;
+          color: #ffffff; cursor: pointer; letter-spacing: 0.01em;
           transition: transform 0.1s ease, filter 0.15s ease;
         }
         .sp-primary-btn:hover { filter: brightness(1.06); transform: translateY(-1px); }
@@ -162,7 +162,7 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   return (
     <SparkScreen>
       <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '420px', padding: '20px' }}>
-        <h1 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#d97a8f', marginBottom: '12px' }}>
+        <h1 style={{ fontSize: '1.8rem', fontWeight: 800, color: '#d81b43', marginBottom: '12px' }}>
           Something went wrong
         </h1>
         <p style={{ fontSize: '14px', color: 'var(--ink-dim)', lineHeight: 1.6, marginBottom: '28px', background: 'var(--ink-surface)', border: '1px solid var(--ink-border)', borderRadius: '10px', padding: '12px 16px' }}>

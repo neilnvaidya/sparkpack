@@ -327,7 +327,7 @@ export default function StrategyBoardQuizGame() {
                       <Button
                         asChild
                         size="sm"
-                        className="px-5 bg-[var(--color-accent)] hover:brightness-110 text-[#1a1508] font-semibold rounded-full"
+                        className="px-5 bg-[var(--color-accent)] hover:brightness-110 text-white font-semibold rounded-full"
                       >
                         <Link href="/library">Back to Library</Link>
                       </Button>

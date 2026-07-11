@@ -63,8 +63,8 @@ export default function HomePage() {
                 <span className="home-cta" style={{
                   display: 'inline-block',
                   padding: '14px 32px',
-                  background: '#e8b64c',
-                  color: INK.bg,
+                  background: '#7c3aed',
+                  color: '#ffffff',
                   fontWeight: 800,
                   fontSize: '15px',
                   borderRadius: '10px',

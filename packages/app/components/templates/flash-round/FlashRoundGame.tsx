@@ -13,7 +13,7 @@ import { flashRoundContentSchema } from '@/lib/templates/flash-round'
 import { getTeamColorDef } from '@/lib/constants/team-colors'
 import { INK, FONT_BODY } from '@/lib/ui/theme'
 
-const ACCENT = '#e8b64c'
+const ACCENT = '#7c3aed'
 
 const shell: React.CSSProperties = {
   minHeight: '100vh',
@@ -47,7 +47,7 @@ export default function FlashRoundGame() {
     return (
       <div style={shell}>
         <style>{globalCss}</style>
-        <p style={{ margin: 'auto', color: '#d97a8f' }}>
+        <p style={{ margin: 'auto', color: '#d81b43' }}>
           This game&apos;s content could not be loaded.
         </p>
       </div>
