@@ -99,9 +99,8 @@ function buildMathRush(pack: CurriculumPack): z.infer<typeof mathRushContentSche
   }))
   return mathRushContentSchema.parse({
     title: pack.title,
-    problemSetIds: [],
     questionsPerRound: 4,
-    customQuestions: questions,
+    questions,
   })
 }
 
@@ -202,10 +201,8 @@ function buildTrueFalse(pack: CurriculumPack): z.infer<typeof trueFalseContentSc
   const items = itemsOfKind(pack, ['truefalse'])
   return trueFalseContentSchema.parse({
     title: pack.title,
-    statements: items.map((item) =>
-      item.kind === 'truefalse'
-        ? { statement: item.statement, isTrue: item.isTrue }
-        : { statement: '', isTrue: false }
+    statements: items.flatMap((item) =>
+      item.kind === 'truefalse' ? [{ statement: item.statement, isTrue: item.isTrue }] : []
     ),
   })
 }

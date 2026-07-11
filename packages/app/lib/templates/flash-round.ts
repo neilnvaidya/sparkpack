@@ -29,6 +29,12 @@ const flashRound: GameTemplate<FlashRoundContent> = {
   name: 'Flash Round',
   description:
     'Rapid-fire questions for the whole class — reveal, award, next',
+  howToPlay: [
+    'One question at a time — teams race to answer first.',
+    'The teacher reveals the answer and gives the point to the quickest correct team.',
+    'Questions get harder as the round goes on.',
+    'After the last question, the team with the most points wins.',
+  ],
   category: 'relay',
   durationOptions: [5, 10, 15],
   teamRange: [2, 6],

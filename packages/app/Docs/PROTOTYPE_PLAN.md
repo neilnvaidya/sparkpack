@@ -51,7 +51,7 @@ All 19 packs now have ≥20 items and every pack powers True/False Showdown
 
 ## Phase 2 — Game flow foundation
 
-- [ ] **2a. Setup phase for every game.** Replace the bare "Ready to play?" screen
+- [x] **2a. Setup phase for every game.** Replace the bare "Ready to play?" screen
       with a shared `components/shared/GameSetup.tsx`:
       how-to-play panel (3–5 bullets from a new `howToPlay` field in template
       metadata, `lib/templates/*.ts`); team configuration (2–6 teams, editable
@@ -59,10 +59,10 @@ All 19 packs now have ≥20 items and every pack powers True/False Showdown
       already-supported `settings` before `initializeGame`; then the 3-2-1
       countdown. *Later (not now): session-level team reuse — set up once, reuse
       across games.*
-- [ ] **2b. Math Rush natural ending.** Total rounds = ceil(deck / 4), capped ~5;
+- [x] **2b. Math Rush natural ending.** Total rounds = ceil(deck / 4), capped ~5;
       after the final round "Next round" becomes "Finish" → existing `game_over`
       podium; "Round X of Y" shown in the UI; keep "End game" as early exit.
-- [ ] **2c. Dead-code cleanup.** Delete the built-in Math Rush problem-set path,
+- [x] **2c. Dead-code cleanup.** Delete the built-in Math Rush problem-set path,
       `default-game-content.ts` + `.bak`, stray README, unreachable
       `buildTrueFalse` branch; play `steal_correct` on steal success (or delete
       the cue); don't start the tick interval for Flash Round / True-False.

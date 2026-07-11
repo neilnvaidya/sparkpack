@@ -29,6 +29,12 @@ const trueFalseShowdown: GameTemplate<TrueFalseContent> = {
   name: 'True or False Showdown',
   description:
     'Teams pick TRUE or FALSE before the big reveal — right calls score',
+  howToPlay: [
+    'A statement appears — each team decides together: TRUE or FALSE?',
+    'Teams commit to their answer before the reveal.',
+    'The teacher reveals the answer and gives a point to every team that called it right.',
+    'After the last statement, the team with the most points wins.',
+  ],
   category: 'discussion',
   durationOptions: [5, 10],
   teamRange: [2, 6],

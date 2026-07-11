@@ -9,8 +9,7 @@ import type { StrategyBoardQuizContent } from '@/lib/templates/strategy-board-qu
 import type { TeamColorId } from '@/lib/constants/team-colors'
 import { DEFAULT_TEAM_COLORS } from '@/lib/constants/team-colors'
 import { mathRushContentSchema } from '@/lib/math-rush/content'
-import { loadMathRushQuestions, shuffleDeck } from '@/lib/math-rush/load-problem-sets'
-import type { MathRushQuestion } from '@/lib/math-rush/question'
+import { shuffleDeck, type MathRushQuestion } from '@/lib/math-rush/question'
 
 /** Template-validated content; shape depends on template. */
 export type GameContent = unknown
@@ -87,7 +86,13 @@ export interface MathRushState {
   activeCards: MathRushActiveCard[]
   openCardIndex: number | null
   lastAward: { teamIndex: number; points: number; teamName: string } | null
+  /** 1-based current round; 0 before the first deal. */
+  round: number
+  totalRounds: number
 }
+
+/** Rounds are capped so a big deck still gives a game that ends. */
+const MATH_RUSH_MAX_ROUNDS = 5
 
 function defaultBoardCell(): BoardCell {
   return {
@@ -131,17 +136,19 @@ function initializeBoardState(content: unknown): StrategyBoardState {
 function initializeMathRushTemplateState(content: unknown): MathRushState | null {
   const parsed = mathRushContentSchema.safeParse(content)
   if (!parsed.success) return null
-  const pool = loadMathRushQuestions(
-    parsed.data.problemSetIds,
-    parsed.data.customQuestions ?? []
+  const deck = shuffleDeck(parsed.data.questions.map((q) => ({ ...q })))
+  const totalRounds = Math.max(
+    1,
+    Math.min(MATH_RUSH_MAX_ROUNDS, Math.ceil(deck.length / parsed.data.questionsPerRound))
   )
-  const deck = shuffleDeck(pool.map((q) => ({ ...q })))
   return {
     deck,
     discard: [],
     activeCards: [],
     openCardIndex: null,
     lastAward: null,
+    round: 0,
+    totalRounds,
   }
 }
 
@@ -172,13 +179,10 @@ function dealMathRushRound(
   }
   ts.activeCards = []
   ts.openCardIndex = null
+  ts.round = isFirstDeal ? 1 : ts.round + 1
 
   const n = content.questionsPerRound
   while (ts.activeCards.length < n) {
-    if (ts.deck.length === 0 && ts.discard.length > 0) {
-      ts.deck = shuffleDeck(ts.discard)
-      ts.discard = []
-    }
     if (ts.deck.length === 0) break
     const q = ts.deck.shift()!
     ts.activeCards.push({
@@ -565,6 +569,13 @@ export const useGameStore = create<GameStore>()(
     mathRushNextRound: () => {
       set((state) => {
         if (state.templateId !== 'math_rush' || state.phase !== 'math_rush_round') return
+        const ts = state.templateState as MathRushState | null
+        if (ts && ts.round >= ts.totalRounds) {
+          state.phase = 'game_over'
+          state.timer = null
+          state.modal = null
+          return
+        }
         dealMathRushRound(state, false)
       })
     },

@@ -12,6 +12,12 @@ const mathRush: GameTemplate<MathRushContent> = {
   name: 'Math Rush',
   description:
     'Several math cards at once—teams claim bounties; reveal answers when you choose',
+  howToPlay: [
+    'Four number cards appear at once — every team races to solve them.',
+    'When a team calls an answer, the teacher opens that card and awards it to the fastest correct team.',
+    'Claimed cards lock in that team’s colour; a new set is dealt each round.',
+    'After the final round, the team with the most points wins.',
+  ],
   category: 'relay',
   durationOptions: [10, 15, 20],
   teamRange: [2, 6],

@@ -20,6 +20,8 @@ export interface GameTemplate<T = unknown> {
   slug: string
   name: string
   description: string
+  /** Short teacher-facing rules shown on the setup screen (3–5 bullets). */
+  howToPlay: string[]
   category: 'board' | 'relay' | 'discussion'
   durationOptions: number[]
   teamRange: [number, number]

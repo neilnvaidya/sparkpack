@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
 import { useParams, useRouter } from 'next/navigation'
 import { useGameStore } from '@/lib/store/game-store'
-import { getGame } from '@/lib/utils/storage'
+import { getGame, saveGame } from '@/lib/utils/storage'
 import { getTemplate, getTemplateBySlug } from '@/lib/templates/registry'
+import GameSetup, { type GameSetupSettings } from '@/components/shared/GameSetup'
 import type { GameTemplate } from '@/lib/templates/types'
 import type { TeamColorId } from '@/lib/constants/team-colors'
 import type { StoredGame } from '@/lib/utils/storage'
@@ -112,6 +112,19 @@ function SparkScreen({ children }: { children: React.ReactNode }) {
           transition: border-color 0.15s, color 0.15s;
         }
         .sp-ghost-btn:hover { color: var(--ink-text); border-color: var(--ink-faint); }
+
+        .sp-step-btn {
+          width: 30px; height: 30px;
+          display: inline-flex; align-items: center; justify-content: center;
+          background: var(--ink-bg);
+          border: 1px solid var(--ink-border-strong);
+          border-radius: 8px;
+          font-size: 16px; font-weight: 800; font-family: inherit;
+          color: var(--ink-text); cursor: pointer;
+          transition: border-color 0.15s;
+        }
+        .sp-step-btn:hover:not(:disabled) { border-color: var(--ink-faint); }
+        .sp-step-btn:disabled { opacity: 0.35; cursor: default; }
       `}</style>
 
       <div style={{
@@ -163,70 +176,6 @@ function ErrorScreen({ message, onBack }: { message: string; onBack: () => void 
   )
 }
 
-function SetupScreen({ onStart }: { onStart: () => void }) {
-  const [countdown, setCountdown] = useState<number | null>(null)
-
-  const handleStart = () => setCountdown(3)
-
-  useEffect(() => {
-    if (countdown === null) return
-    if (countdown === 0) { onStart(); return }
-    const t = setTimeout(() => setCountdown((c) => (c ?? 1) - 1), 900)
-    return () => clearTimeout(t)
-  }, [countdown, onStart])
-
-  return (
-    <SparkScreen>
-      <div className="sp-pop" style={{ textAlign: 'center', maxWidth: '560px', padding: '20px' }}>
-        <p style={{
-          fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
-          textTransform: 'uppercase', color: 'var(--ink-faint)', marginBottom: '24px',
-        }}>
-          SparkPack · Game ready
-        </p>
-
-        {countdown === null ? (
-          <>
-            <h1 style={{ fontSize: 'clamp(2rem, 6vw, 2.8rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '14px', letterSpacing: '-0.02em' }}>
-              Ready to play?
-            </h1>
-            <p style={{ fontSize: '15px', color: 'var(--ink-dim)', lineHeight: 1.7, maxWidth: '380px', margin: '0 auto 32px' }}>
-              Make sure your projector is on and all teams are looking at the screen.
-            </p>
-            <div style={{ display: 'flex', gap: '10px', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '36px' }}>
-              {['Projector on', 'Teams watching', 'Volume up'].map((text) => (
-                <div key={text} style={{
-                  background: 'var(--ink-surface)', border: '1px solid var(--ink-border)',
-                  borderRadius: '8px', padding: '8px 14px', fontSize: '13px', color: 'var(--ink-dim)', fontWeight: 600,
-                }}>
-                  {text}
-                </div>
-              ))}
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '14px' }}>
-              <button className="sp-primary-btn" onClick={handleStart}>
-                Start Game
-              </button>
-              <Link href="/library" className="sp-ghost-btn">Back to Library</Link>
-            </div>
-          </>
-        ) : (
-          <div style={{ padding: '20px 0' }}>
-            <p style={{ fontSize: '13px', color: 'var(--ink-faint)', marginBottom: '20px', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 700 }}>Starting in</p>
-            <div key={countdown} style={{
-              fontSize: 'clamp(5rem, 20vw, 8rem)', fontWeight: 800, lineHeight: 1,
-              color: 'var(--ink-accent)',
-              animation: 'popIn 0.3s ease-out both',
-            }}>
-              {countdown}
-            </div>
-          </div>
-        )}
-      </div>
-    </SparkScreen>
-  )
-}
-
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function GameRunPage() {
@@ -236,6 +185,7 @@ export default function GameRunPage() {
   const templateSlug = typeof params.templateSlug === 'string' ? params.templateSlug : ''
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [storedGame, setStoredGame] = useState<StoredGame | null>(null)
   const tickInterval = useRef<ReturnType<typeof setInterval> | null>(null)
 
   const initializeGame = useGameStore((s) => s.initializeGame)
@@ -280,6 +230,7 @@ export default function GameRunPage() {
         teamColors: configuredTeamColors.length ? configuredTeamColors : undefined,
         content: stored.content,
       })
+      setStoredGame(stored)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load game')
     }
@@ -289,12 +240,15 @@ export default function GameRunPage() {
   useEffect(() => {
     if (phase === 'setup' || phase === 'game_over' || loading) return
     if (phase === 'math_rush_round') return
+    // Flash Round and True/False Showdown run on local component state with
+    // no store timers, so they don't need the tick loop.
+    if (templateId === 'flash_round' || templateId === 'true_false_showdown') return
     const store = useGameStore.getState()
     tickInterval.current = setInterval(() => store.tick(), 100)
     return () => {
       if (tickInterval.current) { clearInterval(tickInterval.current); tickInterval.current = null }
     }
-  }, [phase, loading])
+  }, [phase, loading, templateId])
 
   if (loading) return <LoadingScreen />
   if (error) {
@@ -305,7 +259,35 @@ export default function GameRunPage() {
       />
     )
   }
-  if (phase === 'setup') return <SetupScreen onStart={startGame} />
+  if (phase === 'setup') {
+    const setupTemplate = getTemplate(templateId)
+    const contentTitle = (storedGame?.content as { title?: string } | null)?.title
+    const handleLaunch = (settings: GameSetupSettings) => {
+      if (!storedGame) return
+      const updated: StoredGame = { ...storedGame, settings }
+      saveGame(updated)
+      setStoredGame(updated)
+      initializeGame({
+        gameId: updated.gameId,
+        templateId: updated.templateId,
+        numTeams: settings.numTeams,
+        teamNames: settings.teamNames,
+        teamColors: settings.teamColors,
+        content: updated.content,
+      })
+      startGame()
+    }
+    return (
+      <SparkScreen>
+        <GameSetup
+          template={setupTemplate}
+          gameTitle={contentTitle}
+          initialNumTeams={storedGame ? resolveNumTeams(storedGame, setupTemplate) : 4}
+          onLaunch={handleLaunch}
+        />
+      </SparkScreen>
+    )
+  }
 
   const template = getTemplate(templateId)
   const RuntimeComponent = template.RuntimeComponent

@@ -194,6 +194,9 @@ export default function MathRushGame() {
     (templateState?.activeCards.length ?? 0) > 0 &&
     templateState!.activeCards.every((c) => c.answerRevealed)
 
+  const isFinalRound =
+    templateState !== null && templateState.round >= templateState.totalRounds
+
   useEffect(() => {
     if (phase === 'game_over') playSound('game_end')
   }, [phase, playSound])
@@ -363,9 +366,11 @@ export default function MathRushGame() {
             <div className="sbq-teacher-bar flex-shrink-0 min-h-[64px] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 md:px-6 py-3 rounded-[var(--radius-xl)]">
               <div className="flex flex-col gap-1">
                 <div className="text-xs font-mono uppercase tracking-[0.16em] text-white/60">
-                  Math Rush
+                  Math Rush{templateState ? ` · Round ${Math.max(1, templateState.round)} of ${templateState.totalRounds}` : ''}
                 </div>
-                <div className="text-sm font-mono text-white/90">Claim bounties · Next round when ready</div>
+                <div className="text-sm font-mono text-white/90">
+                  {isFinalRound ? 'Final round · Finish when every card is claimed' : 'Claim bounties · Next round when ready'}
+                </div>
               </div>
               <div className="flex flex-wrap items-center justify-end gap-2">
                 <Button
@@ -382,7 +387,7 @@ export default function MathRushGame() {
                   onClick={() => mathRushNextRound()}
                   className="bg-surface-alt border border-border text-text-primary hover:bg-surface"
                 >
-                  Next round
+                  {isFinalRound ? 'Finish' : 'Next round'}
                 </Button>
                 <Button
                   size="sm"

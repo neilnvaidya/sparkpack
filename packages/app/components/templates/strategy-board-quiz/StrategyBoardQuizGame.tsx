@@ -373,7 +373,7 @@ export default function StrategyBoardQuizGame() {
                     <Button
                       size="sm"
                       onClick={() => {
-                        playSound('correct')
+                        playSound(phase === 'steal_phase' ? 'steal_correct' : 'correct')
                         markCorrect()
                       }}
                       className="bg-[var(--color-correct)] hover:bg-emerald-700 text-white px-4 py-2 text-[var(--text-base)] font-semibold rounded-[var(--radius-md)]"
