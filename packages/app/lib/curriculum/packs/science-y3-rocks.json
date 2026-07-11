@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "science-y3-rocks",
+  "subject": "science",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "rocks",
+  "title": "Rocks",
+  "description": "Comparing and grouping rocks by their appearance and properties, how fossils are formed, and how soil is made from rocks and organic matter.",
+  "objectives": [
+    { "code": "Y3-R-1", "statement": "Compare and group together different kinds of rocks on the basis of their appearance and simple physical properties." },
+    { "code": "Y3-R-2", "statement": "Describe in simple terms how fossils are formed when things that have lived are trapped within rock." },
+    { "code": "Y3-R-3", "statement": "Recognise that soils are made from rocks and organic matter." }
+  ],
+  "items": [
+    { "id": "rk-1", "kind": "qa", "difficulty": 1, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "Name one property you could use to compare two rocks.", "answer": "Any of: hardness, colour, whether it is shiny or dull, whether it lets water through", "acceptableAnswers": ["hardness", "colour", "how hard it is", "whether it soaks up water"] },
+    { "id": "rk-2", "kind": "mcq", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "A rock that lets water soak into it is described as...", "options": ["waterproof", "permeable", "shiny", "magnetic"], "correctIndex": 1 },
+    { "id": "rk-3", "kind": "truefalse", "difficulty": 1, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "statement": "All rocks are exactly the same hardness.", "isTrue": false },
+    { "id": "rk-4", "kind": "truefalse", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "statement": "Some rocks are hard and used for buildings, while others are soft and crumble easily.", "isTrue": true },
+    { "id": "rk-5", "kind": "mcq", "difficulty": 3, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "To test which of two rocks is harder, you could...", "options": ["weigh them on scales", "see which one scratches the other", "measure how long they are", "count their colours"], "correctIndex": 1 },
+    { "id": "rk-6", "kind": "qa", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "Why is a hard, waterproof rock like granite good for building?", "answer": "It is strong and does not let water soak in, so it lasts a long time", "acceptableAnswers": ["it is strong and waterproof", "it is hard and lasts a long time"] },
+
+    { "id": "fo-1", "kind": "qa", "difficulty": 1, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "What is a fossil?", "answer": "The remains or shape of a living thing that lived long ago, preserved in rock", "acceptableAnswers": ["the remains of a dead animal or plant in rock", "the shape of an old living thing in rock"] },
+    { "id": "fo-2", "kind": "mcq", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "Fossils are usually found inside which of these?", "options": ["metal", "rock", "plastic", "glass"], "correctIndex": 1 },
+    { "id": "fo-3", "kind": "mcq", "difficulty": 3, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "Which of these best describes how a fossil forms?", "options": ["an animal is trapped in rock and its shape is preserved over a very long time", "an animal turns to stone in a few days", "a rock grows legs and moves", "a plant is painted onto a rock"], "correctIndex": 0 },
+    { "id": "fo-4", "kind": "truefalse", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "statement": "Fossils can teach us about animals and plants that lived millions of years ago.", "isTrue": true },
+    { "id": "fo-5", "kind": "truefalse", "difficulty": 3, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "statement": "Fossils form very quickly, in just a few hours.", "isTrue": false },
+
+    { "id": "so-1", "kind": "qa", "difficulty": 1, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "What are soils made from?", "answer": "Tiny pieces of rock mixed with organic matter (rotted plants and animals)", "acceptableAnswers": ["broken up rock and rotted plants", "rock and organic matter"] },
+    { "id": "so-2", "kind": "qa", "difficulty": 2, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "What is the name for the rotted plant and animal material found in soil?", "answer": "Organic matter", "acceptableAnswers": ["organic matter", "humus"] },
+    { "id": "so-3", "kind": "mcq", "difficulty": 2, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "Where do the tiny pieces of rock in soil come from?", "options": ["they are made in factories", "larger rocks broken down over a long time", "they fall from the sky as rain", "they grow from seeds"], "correctIndex": 1 },
+    { "id": "so-4", "kind": "truefalse", "difficulty": 1, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "statement": "Soil contains pieces of broken-down rock.", "isTrue": true },
+    { "id": "so-5", "kind": "truefalse", "difficulty": 3, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "statement": "Soil is made only of water and nothing else.", "isTrue": false }
+  ]
+}
