@@ -82,24 +82,28 @@ All 19 packs now have ≥20 items and every pack powers True/False Showdown
 
 ## Phase 4 — Flow docs + end-to-end verification
 
-- [ ] `Docs/flows/`: one short teacher-facing doc per game (strategy-board-quiz,
+- [x] `Docs/flows/`: one short teacher-facing doc per game (strategy-board-quiz,
       math-rush, flash-round, true-false-showdown): who it's for, launching from
       the library, the setup step, the round loop, how it ends. Matches actual
       on-screen labels post-retheme.
-- [ ] Verify: validate-packs + typecheck green; play one full round of each game
-      from `/library` to the end screen (incl. a non-maths pack); confirm setup
-      configures teams, Math Rush self-terminates, topped-up packs show all
-      applicable game cards; screenshots as proof.
+- [x] Verify (partial — full playthroughs deferred to Neil): validate-packs +
+      typecheck green; setup screen configures teams end-to-end (3 teams +
+      custom name reached a live T/F game); Math Rush shows Round X of Y and a
+      Finish button on the last round; topped-up statistics pack shows the T/F
+      card; home, topic, setup, board, and question screens spot-checked on the
+      light theme.
+- [ ] Neil: play one full round of each of the 4 games from `/library` to the
+      end screen, incl. one non-maths pack.
 
 ## Phase 5 — Design docs for 3 new games (no code)
 
-- [ ] `Docs/designs/three-in-a-row.md` — territory strategy: 4×4 grid of
+- [x] `Docs/designs/three-in-a-row.md` — territory strategy: 4×4 grid of
       face-down questions (qa/mcq/tf); teams claim cells by answering;
       3-in-a-row wins (or most cells). Blocking tactics instead of points.
-- [ ] `Docs/designs/summit-climb.md` — difficulty ladder: teams climb a shared
+- [x] `Docs/designs/summit-climb.md` — difficulty ladder: teams climb a shared
       7-rung mountain; safe (difficulty 1, +1 rung) or risky (difficulty 3, +2,
       slip 1 on a miss). Surfaces per-item `difficulty`.
-- [ ] `Docs/designs/risk-it.md` — confidence wagering: teams wager Low/Med/High
+- [x] `Docs/designs/risk-it.md` — confidence wagering: teams wager Low/Med/High
       before the reveal; right adds the wager, wrong loses it; 10 questions then
       podium.
 
