@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "english-y3-grammar-punctuation",
+  "subject": "english",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "grammar-punctuation",
+  "title": "Grammar and Punctuation",
+  "description": "Lower Key Stage 2 grammar and punctuation: word classes, conjunctions, the a/an rule, inverted commas for speech, and paragraphs (English Appendix 2, Years 3 and 4).",
+  "objectives": [
+    { "code": "Y34-GP-1", "statement": "Identify word classes: nouns, verbs, adjectives and adverbs." },
+    { "code": "Y34-GP-2", "statement": "Express time, place and cause using conjunctions, adverbs and prepositions." },
+    { "code": "Y34-GP-3", "statement": "Use the forms 'a' or 'an' according to whether the next word begins with a consonant or a vowel sound." },
+    { "code": "Y34-GP-4", "statement": "Use and punctuate direct speech with inverted commas (speech marks)." },
+    { "code": "Y34-GP-5", "statement": "Use paragraphs to organise ideas around a theme." }
+  ],
+  "items": [
+    { "id": "wc-1", "kind": "qa", "difficulty": 1, "strand": "Word classes", "objectiveCodes": ["Y34-GP-1"], "prompt": "What word class is 'dog' — a naming word for a person, place or thing?", "answer": "A noun", "acceptableAnswers": ["noun"] },
+    { "id": "wc-2", "kind": "qa", "difficulty": 1, "strand": "Word classes", "objectiveCodes": ["Y34-GP-1"], "prompt": "What word class is 'run' — a doing or being word?", "answer": "A verb", "acceptableAnswers": ["verb"] },
+    { "id": "wc-3", "kind": "mcq", "difficulty": 2, "strand": "Word classes", "objectiveCodes": ["Y34-GP-1"], "prompt": "In 'the fluffy cat', which word is the adjective?", "options": ["the", "fluffy", "cat", "none of them"], "correctIndex": 1 },
+    { "id": "wc-4", "kind": "mcq", "difficulty": 3, "strand": "Word classes", "objectiveCodes": ["Y34-GP-1"], "prompt": "In 'She sang loudly', which word is the adverb?", "options": ["She", "sang", "loudly", "none of them"], "correctIndex": 2 },
+    { "id": "wc-5", "kind": "truefalse", "difficulty": 2, "strand": "Word classes", "objectiveCodes": ["Y34-GP-1"], "statement": "An adjective is a word that describes a noun.", "isTrue": true },
+
+    { "id": "cj-1", "kind": "qa", "difficulty": 2, "strand": "Conjunctions", "objectiveCodes": ["Y34-GP-2"], "prompt": "Which joining word fits: 'We stayed inside ___ it was raining.'", "answer": "because", "acceptableAnswers": ["because", "as", "since"] },
+    { "id": "cj-2", "kind": "mcq", "difficulty": 2, "strand": "Conjunctions", "objectiveCodes": ["Y34-GP-2"], "prompt": "Which word is a conjunction (a joining word)?", "options": ["quickly", "although", "table", "green"], "correctIndex": 1 },
+    { "id": "cj-3", "kind": "mcq", "difficulty": 3, "strand": "Conjunctions", "objectiveCodes": ["Y34-GP-2"], "prompt": "Which conjunction best shows time: 'I brushed my teeth ___ I went to bed.'", "options": ["because", "before", "but", "or"], "correctIndex": 1 },
+    { "id": "cj-4", "kind": "truefalse", "difficulty": 2, "strand": "Conjunctions", "objectiveCodes": ["Y34-GP-2"], "statement": "A conjunction is used to join two parts of a sentence.", "isTrue": true },
+    { "id": "cj-5", "kind": "qa", "difficulty": 3, "strand": "Conjunctions", "objectiveCodes": ["Y34-GP-2"], "prompt": "Name the word class of 'under' in 'the cat sat under the table' (it shows position).", "answer": "A preposition", "acceptableAnswers": ["preposition"] },
+
+    { "id": "aa-1", "kind": "mcq", "difficulty": 1, "strand": "A or an", "objectiveCodes": ["Y34-GP-3"], "prompt": "Choose the correct word: 'I ate ___ apple.'", "options": ["a", "an"], "correctIndex": 1 },
+    { "id": "aa-2", "kind": "mcq", "difficulty": 1, "strand": "A or an", "objectiveCodes": ["Y34-GP-3"], "prompt": "Choose the correct word: 'She has ___ dog.'", "options": ["a", "an"], "correctIndex": 0 },
+    { "id": "aa-3", "kind": "truefalse", "difficulty": 2, "strand": "A or an", "objectiveCodes": ["Y34-GP-3"], "statement": "We use 'an' before a word that begins with a vowel sound.", "isTrue": true },
+    { "id": "aa-4", "kind": "mcq", "difficulty": 3, "strand": "A or an", "objectiveCodes": ["Y34-GP-3"], "prompt": "Choose the correct word: 'It was ___ hour long.'", "options": ["a", "an"], "correctIndex": 1 },
+
+    { "id": "sp-1", "kind": "mcq", "difficulty": 2, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-4"], "prompt": "Which sentence uses inverted commas (speech marks) correctly?", "options": ["\"Hello,\" said Ben.", "Hello, said Ben.", "\"Hello, said Ben.", "Hello,\" said Ben."], "correctIndex": 0 },
+    { "id": "sp-2", "kind": "qa", "difficulty": 2, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-4"], "prompt": "What punctuation marks go around the exact words a character says out loud?", "answer": "Inverted commas (speech marks)", "acceptableAnswers": ["inverted commas", "speech marks", "quotation marks"] },
+    { "id": "sp-3", "kind": "truefalse", "difficulty": 3, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-4"], "statement": "Inverted commas go around the exact words that a person speaks.", "isTrue": true },
+    { "id": "sp-4", "kind": "qa", "difficulty": 2, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-5"], "prompt": "What do we call a group of sentences about one idea or theme in a piece of writing?", "answer": "A paragraph", "acceptableAnswers": ["paragraph"] },
+    { "id": "sp-5", "kind": "truefalse", "difficulty": 2, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-5"], "statement": "We usually start a new paragraph when we change idea, time or place.", "isTrue": true },
+    { "id": "sp-6", "kind": "mcq", "difficulty": 3, "strand": "Speech and paragraphs", "objectiveCodes": ["Y34-GP-4"], "prompt": "Where should the comma go in this line of speech: '\"Wait for me [ ]\" she called.'", "options": ["outside the speech marks", "inside the speech marks, before them closing", "there should be no comma", "after 'she'"], "correctIndex": 1 }
+  ]
+}

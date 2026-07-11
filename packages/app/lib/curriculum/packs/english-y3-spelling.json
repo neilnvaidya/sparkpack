@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "english-y3-spelling",
+  "subject": "english",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "spelling",
+  "title": "Spelling",
+  "description": "Lower Key Stage 2 spelling: prefixes and suffixes, common homophones, and words that are often misspelt (English Appendix 1, Years 3 and 4).",
+  "objectives": [
+    { "code": "Y34-SP-1", "statement": "Use further prefixes and understand how to add them (for example, un–, dis–, mis–, in–, re–, sub–, super–, anti–, auto–)." },
+    { "code": "Y34-SP-2", "statement": "Use further suffixes and understand how to add them (for example, –ation, –ly, –ous)." },
+    { "code": "Y34-SP-3", "statement": "Spell words that are often confused, including common homophones (for example, there/their/they're, here/hear)." },
+    { "code": "Y34-SP-4", "statement": "Spell words from the Year 3 and 4 list of commonly misspelt words." }
+  ],
+  "items": [
+    { "id": "pr-1", "kind": "qa", "difficulty": 1, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Add the prefix 'un' to 'happy' to make a word meaning 'not happy'.", "answer": "unhappy", "acceptableAnswers": ["unhappy"] },
+    { "id": "pr-2", "kind": "qa", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Add the prefix 're' to 'build' to make a word meaning 'build again'.", "answer": "rebuild", "acceptableAnswers": ["rebuild"] },
+    { "id": "pr-3", "kind": "mcq", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Which prefix makes 'behave' mean 'behave badly'?", "options": ["un–", "mis–", "re–", "dis–"], "correctIndex": 1 },
+    { "id": "pr-4", "kind": "mcq", "difficulty": 3, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Which word uses the prefix 'dis' correctly?", "options": ["disappear", "dissappear", "disapear", "dizappear"], "correctIndex": 0 },
+    { "id": "pr-5", "kind": "truefalse", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "statement": "A prefix is added to the beginning of a word to change its meaning.", "isTrue": true },
+
+    { "id": "su-1", "kind": "qa", "difficulty": 1, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Add the suffix 'ly' to 'quick' to describe how something is done.", "answer": "quickly", "acceptableAnswers": ["quickly"] },
+    { "id": "su-2", "kind": "mcq", "difficulty": 2, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "How do you correctly add 'ly' to 'gentle'?", "options": ["gentlely", "gently", "gentley", "gentlly"], "correctIndex": 1 },
+    { "id": "su-3", "kind": "mcq", "difficulty": 3, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Which is the correct spelling when 'ation' is added to 'inform'?", "options": ["informnation", "informashun", "information", "informaton"], "correctIndex": 2 },
+    { "id": "su-4", "kind": "truefalse", "difficulty": 2, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "statement": "A suffix is a letter or group of letters added to the end of a word.", "isTrue": true },
+    { "id": "su-5", "kind": "qa", "difficulty": 3, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Add the suffix 'ous' to 'poison' to make an adjective.", "answer": "poisonous", "acceptableAnswers": ["poisonous"] },
+
+    { "id": "ho-1", "kind": "mcq", "difficulty": 1, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: 'The dog wagged ___ tail.'", "options": ["there", "their", "they're"], "correctIndex": 1 },
+    { "id": "ho-2", "kind": "mcq", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: 'Can you ___ the music?'", "options": ["hear", "here"], "correctIndex": 0 },
+    { "id": "ho-3", "kind": "mcq", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: '___ going to the park later.'", "options": ["There", "Their", "They're"], "correctIndex": 2 },
+    { "id": "ho-4", "kind": "truefalse", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "statement": "Homophones are words that sound the same but have different meanings and spellings.", "isTrue": true },
+    { "id": "ho-5", "kind": "qa", "difficulty": 3, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Which spelling means a number: 'two', 'too' or 'to'?", "answer": "two", "acceptableAnswers": ["two"] },
+
+    { "id": "cm-1", "kind": "mcq", "difficulty": 1, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["becuase", "because", "becuse", "becaus"], "correctIndex": 1 },
+    { "id": "cm-2", "kind": "mcq", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["diffrent", "diferent", "different", "differant"], "correctIndex": 2 },
+    { "id": "cm-3", "kind": "mcq", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["favourite", "faverite", "favorit", "favourit"], "correctIndex": 0 },
+    { "id": "cm-4", "kind": "truefalse", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "statement": "The word 'friend' is spelt f-r-i-e-n-d.", "isTrue": true },
+    { "id": "cm-5", "kind": "qa", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Spell the word that means the opposite of 'question', beginning with 'a'.", "answer": "answer", "acceptableAnswers": ["answer"] }
+  ]
+}

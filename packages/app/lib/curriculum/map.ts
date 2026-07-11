@@ -91,6 +91,23 @@ export const CURRICULUM_MAP: SubjectEntry[] = [
       },
     ],
   },
+  {
+    subject: 'english',
+    label: 'English',
+    blurb:
+      'Spelling, grammar and punctuation, and reading comprehension, following the lower and upper Key Stage 2 programmes of study.',
+    years: [
+      {
+        year: 3,
+        keyStage: 'KS2',
+        topics: [
+          { topicId: 'spelling', title: 'Spelling', packId: 'english-y3-spelling' },
+          { topicId: 'grammar-punctuation', title: 'Grammar and Punctuation', packId: 'english-y3-grammar-punctuation' },
+          { topicId: 'reading-comprehension', title: 'Reading Comprehension', packId: 'english-y3-reading-comprehension' },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getSubjectEntry(subject: string): SubjectEntry | null {
