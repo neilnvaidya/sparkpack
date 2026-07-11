@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "history-y3-stone-age-iron-age",
+  "subject": "history",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "stone-age-iron-age",
+  "title": "Stone Age to Iron Age",
+  "description": "Changes in Britain from the Stone Age to the Iron Age: hunter-gatherers and early farmers, Bronze Age technology and monuments, and Iron Age hill forts and tribes.",
+  "objectives": [
+    { "code": "Y3-SAIA-1", "statement": "Understand the change from late Neolithic hunter-gatherers to early farmers, for example Skara Brae." },
+    { "code": "Y3-SAIA-2", "statement": "Describe Bronze Age religion, technology and travel, for example Stonehenge and the use of metal." },
+    { "code": "Y3-SAIA-3", "statement": "Describe Iron Age hill forts, tribal kingdoms, farming, art and culture." },
+    { "code": "Y3-SAIA-4", "statement": "Understand how we find out about prehistory from archaeology and artefacts, and place the periods on a timeline." }
+  ],
+  "items": [
+    { "id": "sa-1", "kind": "qa", "difficulty": 1, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "prompt": "In the early Stone Age, people moved around to find food. What do we call people who hunt animals and gather plants?", "answer": "Hunter-gatherers", "acceptableAnswers": ["hunter-gatherers", "hunter gatherers"] },
+    { "id": "sa-2", "kind": "mcq", "difficulty": 1, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "prompt": "What were most Stone Age tools and weapons made from?", "options": ["plastic", "stone, wood and bone", "iron", "gold"], "correctIndex": 1 },
+    { "id": "sa-3", "kind": "mcq", "difficulty": 2, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "prompt": "Skara Brae in Scotland is a famous example of what?", "options": ["a Stone Age village", "a Roman fort", "a modern city", "a Bronze Age mine"], "correctIndex": 0 },
+    { "id": "sa-4", "kind": "truefalse", "difficulty": 2, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "statement": "Towards the end of the Stone Age, people began to farm and settle in one place.", "isTrue": true },
+    { "id": "sa-5", "kind": "qa", "difficulty": 3, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "prompt": "Give one big change that happened when Stone Age people started farming instead of only hunting.", "answer": "They settled in one place, built homes, and grew crops and kept animals", "acceptableAnswers": ["they stopped moving around", "they built permanent homes", "they grew crops and kept animals"] },
+    { "id": "sa-6", "kind": "truefalse", "difficulty": 1, "strand": "Stone Age", "objectiveCodes": ["Y3-SAIA-1"], "statement": "Stone Age people used metal tools like iron swords.", "isTrue": false },
+
+    { "id": "ba-1", "kind": "qa", "difficulty": 1, "strand": "Bronze Age", "objectiveCodes": ["Y3-SAIA-2"], "prompt": "The Bronze Age is named after a metal. What metal is bronze mostly made from mixing?", "answer": "Copper (mixed with tin)", "acceptableAnswers": ["copper", "copper and tin"] },
+    { "id": "ba-2", "kind": "mcq", "difficulty": 2, "strand": "Bronze Age", "objectiveCodes": ["Y3-SAIA-2"], "prompt": "Which famous monument on Salisbury Plain was completed during the Bronze Age?", "options": ["the Tower of London", "Stonehenge", "Hadrian's Wall", "Buckingham Palace"], "correctIndex": 1 },
+    { "id": "ba-3", "kind": "truefalse", "difficulty": 2, "strand": "Bronze Age", "objectiveCodes": ["Y3-SAIA-2"], "statement": "Bronze is harder and longer-lasting than tools made only of stone.", "isTrue": true },
+    { "id": "ba-4", "kind": "mcq", "difficulty": 3, "strand": "Bronze Age", "objectiveCodes": ["Y3-SAIA-2"], "prompt": "Why was learning to make bronze such an important change?", "options": ["it could be made into stronger tools and weapons than stone", "it was used to make paper", "it made people move around more", "it was used only for decoration"], "correctIndex": 0 },
+    { "id": "ba-5", "kind": "truefalse", "difficulty": 3, "strand": "Bronze Age", "objectiveCodes": ["Y3-SAIA-2"], "statement": "People believe Stonehenge may have been used for ceremonies and to track the seasons.", "isTrue": true },
+
+    { "id": "ia-1", "kind": "qa", "difficulty": 1, "strand": "Iron Age", "objectiveCodes": ["Y3-SAIA-3"], "prompt": "The Iron Age is named after which metal that people learned to use for tools?", "answer": "Iron", "acceptableAnswers": ["iron"] },
+    { "id": "ia-2", "kind": "mcq", "difficulty": 2, "strand": "Iron Age", "objectiveCodes": ["Y3-SAIA-3"], "prompt": "What was an Iron Age hill fort?", "options": ["a settlement on a hill defended by banks and ditches", "a stone castle with a moat", "a small farm in a valley", "a Roman army camp"], "correctIndex": 0 },
+    { "id": "ia-3", "kind": "truefalse", "difficulty": 2, "strand": "Iron Age", "objectiveCodes": ["Y3-SAIA-3"], "statement": "In the Iron Age, Britain was divided into areas ruled by different tribes.", "isTrue": true },
+    { "id": "ia-4", "kind": "mcq", "difficulty": 3, "strand": "Iron Age", "objectiveCodes": ["Y3-SAIA-3"], "prompt": "Why did Iron Age people build hill forts?", "options": ["for holidays by the sea", "to protect their people and animals from attack", "to grow crops indoors", "to store bronze"], "correctIndex": 1 },
+    { "id": "ia-5", "kind": "truefalse", "difficulty": 3, "strand": "Iron Age", "objectiveCodes": ["Y3-SAIA-3"], "statement": "Iron Age people were skilled at metalwork and made decorated jewellery and art.", "isTrue": true },
+
+    { "id": "ti-1", "kind": "mcq", "difficulty": 1, "strand": "Timeline and evidence", "objectiveCodes": ["Y3-SAIA-4"], "prompt": "Which order are these periods in, from earliest to latest?", "options": ["Stone Age → Bronze Age → Iron Age", "Iron Age → Bronze Age → Stone Age", "Bronze Age → Stone Age → Iron Age"], "correctIndex": 0 },
+    { "id": "ti-2", "kind": "qa", "difficulty": 2, "strand": "Timeline and evidence", "objectiveCodes": ["Y3-SAIA-4"], "prompt": "What do we call the study of the past by digging up and examining objects people left behind?", "answer": "Archaeology", "acceptableAnswers": ["archaeology"] },
+    { "id": "ti-3", "kind": "qa", "difficulty": 2, "strand": "Timeline and evidence", "objectiveCodes": ["Y3-SAIA-4"], "prompt": "What is the word for an object made by people in the past, such as a tool or pot, that we can study today?", "answer": "An artefact", "acceptableAnswers": ["artefact", "artifact"] },
+    { "id": "ti-4", "kind": "truefalse", "difficulty": 3, "strand": "Timeline and evidence", "objectiveCodes": ["Y3-SAIA-4"], "statement": "We call the time before written records 'prehistory'.", "isTrue": true },
+    { "id": "ti-5", "kind": "truefalse", "difficulty": 3, "strand": "Timeline and evidence", "objectiveCodes": ["Y3-SAIA-4"], "statement": "Because there are no written records from the Stone Age, we learn about it mainly from objects found in the ground.", "isTrue": true }
+  ]
+}

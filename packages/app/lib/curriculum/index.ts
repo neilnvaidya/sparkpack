@@ -20,6 +20,8 @@ import scienceY3ForcesMagnets from './packs/science-y3-forces-magnets.json'
 import englishY3Spelling from './packs/english-y3-spelling.json'
 import englishY3GrammarPunctuation from './packs/english-y3-grammar-punctuation.json'
 import englishY3ReadingComprehension from './packs/english-y3-reading-comprehension.json'
+import historyY3StoneAgeIronAge from './packs/history-y3-stone-age-iron-age.json'
+import geographyY3Uk from './packs/geography-y3-uk.json'
 import {
   curriculumPackSchema,
   type CurriculumPack,
@@ -45,6 +47,8 @@ const RAW_PACKS: unknown[] = [
   englishY3Spelling,
   englishY3GrammarPunctuation,
   englishY3ReadingComprehension,
+  historyY3StoneAgeIronAge,
+  geographyY3Uk,
 ]
 
 let cache: CurriculumPack[] | null = null

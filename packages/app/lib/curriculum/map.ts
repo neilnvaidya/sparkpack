@@ -108,6 +108,36 @@ export const CURRICULUM_MAP: SubjectEntry[] = [
       },
     ],
   },
+  {
+    subject: 'history',
+    label: 'History',
+    blurb:
+      'British, local and world history studied through the units set out in the Key Stage 2 programme of study.',
+    years: [
+      {
+        year: 3,
+        keyStage: 'KS2',
+        topics: [
+          { topicId: 'stone-age-iron-age', title: 'Stone Age to Iron Age', packId: 'history-y3-stone-age-iron-age' },
+        ],
+      },
+    ],
+  },
+  {
+    subject: 'geography',
+    label: 'Geography',
+    blurb:
+      'Locational knowledge, place knowledge and human and physical geography from the Key Stage 2 programme of study.',
+    years: [
+      {
+        year: 3,
+        keyStage: 'KS2',
+        topics: [
+          { topicId: 'uk', title: 'The United Kingdom', packId: 'geography-y3-uk' },
+        ],
+      },
+    ],
+  },
 ]
 
 export function getSubjectEntry(subject: string): SubjectEntry | null {
