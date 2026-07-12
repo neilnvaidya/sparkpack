@@ -76,42 +76,8 @@ export default function TopicPage() {
         </p>
       </header>
 
-      {/* Learning objectives */}
-      <section style={{ marginBottom: '40px' }}>
-        <h2 style={{
-          fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
-          textTransform: 'uppercase', color: INK.textFaint, margin: '0 0 14px',
-        }}>
-          Learning objectives
-        </h2>
-        <ol style={{
-          margin: 0, padding: 0, listStyle: 'none',
-          display: 'flex', flexDirection: 'column', gap: '8px',
-        }}>
-          {pack.objectives.map((objective, i) => (
-            <li key={objective.code} style={{
-              display: 'flex', gap: '14px', alignItems: 'baseline',
-              background: INK.surface,
-              border: `1px solid ${INK.border}`,
-              borderRadius: '10px',
-              padding: '13px 18px',
-            }}>
-              <span style={{
-                fontSize: '12.5px', fontWeight: 800, color: accent,
-                minWidth: '20px', textAlign: 'right',
-              }}>
-                {i + 1}
-              </span>
-              <span style={{ fontSize: '14px', lineHeight: 1.55, color: INK.text }}>
-                {objective.statement}
-              </span>
-            </li>
-          ))}
-        </ol>
-      </section>
-
       {/* Games */}
-      <section>
+      <section style={{ marginBottom: '40px' }}>
         <h2 style={{
           fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
           textTransform: 'uppercase', color: INK.textFaint, margin: '0 0 14px',
@@ -153,6 +119,40 @@ export default function TopicPage() {
             )
           })}
         </div>
+      </section>
+
+      {/* Learning objectives */}
+      <section>
+        <h2 style={{
+          fontSize: '12px', fontWeight: 700, letterSpacing: '0.12em',
+          textTransform: 'uppercase', color: INK.textFaint, margin: '0 0 14px',
+        }}>
+          Learning objectives
+        </h2>
+        <ol style={{
+          margin: 0, padding: 0, listStyle: 'none',
+          display: 'flex', flexDirection: 'column', gap: '8px',
+        }}>
+          {pack.objectives.map((objective, i) => (
+            <li key={objective.code} style={{
+              display: 'flex', gap: '14px', alignItems: 'baseline',
+              background: INK.surface,
+              border: `1px solid ${INK.border}`,
+              borderRadius: '10px',
+              padding: '13px 18px',
+            }}>
+              <span style={{
+                fontSize: '12.5px', fontWeight: 800, color: accent,
+                minWidth: '20px', textAlign: 'right',
+              }}>
+                {i + 1}
+              </span>
+              <span style={{ fontSize: '14px', lineHeight: 1.55, color: INK.text }}>
+                {objective.statement}
+              </span>
+            </li>
+          ))}
+        </ol>
       </section>
     </LibraryShell>
   )

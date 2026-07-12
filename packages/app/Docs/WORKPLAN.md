@@ -1,13 +1,61 @@
 # Workplan — current session state and next steps
 
-> **Active plan: see [PROTOTYPE_PLAN.md](./PROTOTYPE_PLAN.md)** (2026-07-11) —
-> content top-up to ~20/topic, per-game setup phase, light Kahoot-style retheme,
-> dead-code cleanup, flow docs, 3 new game designs.
+> **Latest: Game UX overhaul (2026-07-12) — done.** All 7 games (the 4
+> existing ones + the 3 designed-only games from the prior session) now
+> share one layout via `components/shared/GameShell.tsx`: a square-ish game
+> area, a vertical `TeamsPanel` sidebar (awarding is always "tap a team
+> here"), and a bottom action bar with a plain-English hint strip plus
+> fixed-order buttons. Exactly one thing glows at a time (`.next-action` /
+> `.next-action--soft` in `globals.css`), a spotlight `TutorialOverlay` runs
+> on first play of each game (reopenable via "Show me how"), and the
+> library topic page shows games above objectives. Three in a Row, Summit
+> Climb and Risk It are now built and playable, not just designed — see
+> `Docs/designs/*.md` (status flipped to "built") and the new
+> `Docs/flows/{three-in-a-row,summit-climb,risk-it}.md`.
 >
-> Updated 2026-07-11 at end of the execution session.
+> Superseded: **[PROTOTYPE_PLAN.md](./PROTOTYPE_PLAN.md)** (2026-07-11) —
+> content top-up to ~20/topic, per-game setup phase, light Kahoot-style
+> retheme, dead-code cleanup, flow docs, 3 new game designs. Fully done;
+> kept for history.
+>
 > Context: curated-library pivot (no runtime AI), objectives-first curriculum,
-> contained navigation (subjects → year/topics → topic → game), ink theme
-> (`lib/ui/theme.ts`), **no emojis anywhere**, Math Rush = exactly one unknown.
+> contained navigation (subjects → year/topics → topic → game), light
+> Kahoot-style theme (`app/globals.css` design tokens), **no emojis
+> anywhere**, Math Rush = exactly one unknown per card.
+
+---
+
+## DONE — Game UX overhaul (2026-07-12)
+
+- **Shared `GameShell`** (`components/shared/GameShell.tsx`): header (title
+  · game name · progress · "Show me how" · Exit), game-area slot, always-
+  mounted action buttons in a fixed vocabulary order
+  (`show, reveal, correct, incorrect, next, end`) so a button never moves
+  between games, and a hint strip that always names the next step.
+- **`TeamsPanel`** (`components/shared/TeamsPanel.tsx`): `display | award |
+  toggle` modes. Awarding a point is *always* "tap a team in the sidebar" —
+  removed Flash Round's old award bar and Math Rush's in-card team picker.
+- **`TutorialOverlay`** (`components/shared/TutorialOverlay.tsx`):
+  spotlights live `data-tutorial` elements, dims the rest, auto-opens on
+  first live question per game (`localStorage['sp-tutorial-<id>']`),
+  reopenable any time.
+- **`GameOverPanel`** (`components/shared/GameOverPanel.tsx`) replaces 4
+  duplicated per-game end screens; deleted `ScoreBoard.tsx`.
+- Migrated Flash Round, True/False Showdown, Strategy Board Quiz, Math Rush
+  onto the shell. Fixed Strategy Board Quiz topic-chip text clipping
+  (measured header height instead of a fixed allowance).
+- **3 new games built**: Three in a Row (`three_in_a_row`), Summit Climb
+  (`summit_climb`), Risk It (`risk_it`) — templates, content schemas,
+  `GAME_SLICES` entries in `lib/games/slices.ts` (incl. a
+  `minPerDifficulty` extension for Summit's 8-easy/8-hard requirement),
+  registered in `lib/templates/registry.ts`. Host tick-loop guard in
+  `app/game/[id]/[templateSlug]/page.tsx` inverted to an allowlist
+  (`strategy_board_quiz` only needs it) so new local-state games don't
+  start the timer loop.
+- Library topic page: games grid now sits above learning objectives.
+- Verified in-browser: all 7 games played end-to-end (win conditions,
+  scoring, sidebar awarding, tutorial auto-open/reopen); typecheck and
+  console clean.
 
 ---
 

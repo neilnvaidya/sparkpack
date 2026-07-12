@@ -20,13 +20,22 @@ import { mathRushContentSchema } from '@/lib/math-rush/content'
 import { contentSchema as boardQuizContentSchema } from '@/lib/templates/strategy-board-quiz'
 import { flashRoundContentSchema } from '@/lib/templates/flash-round'
 import { trueFalseContentSchema } from '@/lib/templates/true-false'
+import { threeInARowContentSchema } from '@/lib/templates/three-in-a-row'
+import { summitClimbContentSchema } from '@/lib/templates/summit-climb'
+import { riskItContentSchema } from '@/lib/templates/risk-it'
+import { shuffleDeck } from '@/lib/math-rush/question'
 
 export interface GameSlice {
   templateId: string
   slug: string
   name: string
   tagline: string
-  requires: { kinds: CurriculumItemKind[]; min: number }
+  requires: {
+    kinds: CurriculumItemKind[]
+    min: number
+    /** Optional per-difficulty floor; difficulty-2 items backfill short buckets. */
+    minPerDifficulty?: Partial<Record<1 | 2 | 3, number>>
+  }
   /** Build template content from a pack. Only call when isAvailable(). */
   build: (pack: CurriculumPack) => unknown
 }
@@ -207,6 +216,78 @@ function buildTrueFalse(pack: CurriculumPack): z.infer<typeof trueFalseContentSc
   })
 }
 
+// ─── Three in a Row ───────────────────────────────────────────────────────────
+
+const STRATEGY_KINDS: CurriculumItemKind[] = ['qa', 'mcq', 'truefalse']
+
+function buildThreeInARow(pack: CurriculumPack): z.infer<typeof threeInARowContentSchema> {
+  const items = shuffleDeck(itemsOfKind(pack, STRATEGY_KINDS))
+  return threeInARowContentSchema.parse({
+    title: pack.title,
+    questions: items.map((item) => {
+      const { prompt, answer } = asQuestionAnswer(item)
+      return { prompt, answer }
+    }),
+  })
+}
+
+// ─── Summit Climb ─────────────────────────────────────────────────────────────
+
+function buildSummitClimb(pack: CurriculumPack): z.infer<typeof summitClimbContentSchema> {
+  const items = itemsOfKind(pack, STRATEGY_KINDS)
+  const diff1 = shuffleDeck(items.filter((i) => i.difficulty === 1))
+  const diff3 = shuffleDeck(items.filter((i) => i.difficulty === 3))
+  const diff2 = shuffleDeck(items.filter((i) => i.difficulty === 2))
+
+  // Backfill each pool toward 8 with core (difficulty-2) items; split any leftovers.
+  const need1 = Math.max(0, 8 - diff1.length)
+  const need3 = Math.max(0, 8 - diff3.length)
+  const easyItems = [...diff1, ...diff2.slice(0, need1)]
+  const hardItems = [...diff3, ...diff2.slice(need1, need1 + need3)]
+  const leftover = diff2.slice(need1 + need3)
+  leftover.forEach((item, i) => (i % 2 === 0 ? easyItems : hardItems).push(item))
+
+  const toQA = (item: CurriculumItem) => {
+    const { prompt, answer } = asQuestionAnswer(item)
+    return { prompt, answer }
+  }
+  return summitClimbContentSchema.parse({
+    title: pack.title,
+    easy: easyItems.map(toQA),
+    hard: hardItems.map(toQA),
+  })
+}
+
+// ─── Risk It ──────────────────────────────────────────────────────────────────
+
+function buildRiskIt(pack: CurriculumPack): z.infer<typeof riskItContentSchema> {
+  const usable = itemsOfKind(pack, STRATEGY_KINDS)
+  const groups = [...itemsByStrand(usable, pack.title).values()].map((list) => shuffleDeck(list))
+
+  // Round-robin across strands so the ten questions span the topic.
+  const picked: CurriculumItem[] = []
+  let progressed = true
+  while (picked.length < 10 && progressed) {
+    progressed = false
+    for (const list of groups) {
+      const item = list.shift()
+      if (item) {
+        picked.push(item)
+        progressed = true
+        if (picked.length >= 10) break
+      }
+    }
+  }
+
+  return riskItContentSchema.parse({
+    title: pack.title,
+    questions: picked.slice(0, 10).map((item) => {
+      const { prompt, answer } = asQuestionAnswer(item)
+      return { prompt, answer, hint: item.strand ?? pack.title }
+    }),
+  })
+}
+
 // ─── Registry ─────────────────────────────────────────────────────────────────
 
 export const GAME_SLICES: GameSlice[] = [
@@ -242,6 +323,30 @@ export const GAME_SLICES: GameSlice[] = [
     requires: { kinds: ['truefalse'], min: 5 },
     build: buildTrueFalse,
   },
+  {
+    templateId: 'three_in_a_row',
+    slug: 'three-in-a-row',
+    name: 'Three in a Row',
+    tagline: 'Claim squares to line up three in your colour',
+    requires: { kinds: STRATEGY_KINDS, min: 16 },
+    build: buildThreeInARow,
+  },
+  {
+    templateId: 'summit_climb',
+    slug: 'summit-climb',
+    name: 'Summit Climb',
+    tagline: 'Play it safe or gamble on hard questions to climb faster',
+    requires: { kinds: STRATEGY_KINDS, min: 16, minPerDifficulty: { 1: 8, 3: 8 } },
+    build: buildSummitClimb,
+  },
+  {
+    templateId: 'risk_it',
+    slug: 'risk-it',
+    name: 'Risk It',
+    tagline: 'Wager points on how sure you are before each question',
+    requires: { kinds: STRATEGY_KINDS, min: 10 },
+    build: buildRiskIt,
+  },
 ]
 
 export function usableItemCount(pack: CurriculumPack, slice: GameSlice): number {
@@ -249,7 +354,23 @@ export function usableItemCount(pack: CurriculumPack, slice: GameSlice): number 
 }
 
 export function isSliceAvailable(pack: CurriculumPack, slice: GameSlice): boolean {
-  return usableItemCount(pack, slice) >= slice.requires.min
+  const usable = itemsOfKind(pack, slice.requires.kinds)
+  if (usable.length < slice.requires.min) return false
+
+  const perDiff = slice.requires.minPerDifficulty
+  if (perDiff) {
+    const count = (d: 1 | 2 | 3) => usable.filter((i) => i.difficulty === d).length
+    let backfill = count(2)
+    for (const d of [1, 3] as const) {
+      const need = perDiff[d] ?? 0
+      const have = count(d)
+      if (have >= need) continue
+      const shortfall = need - have
+      if (shortfall > backfill) return false
+      backfill -= shortfall
+    }
+  }
+  return true
 }
 
 export function availableSlices(pack: CurriculumPack): GameSlice[] {

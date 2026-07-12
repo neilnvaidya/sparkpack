@@ -1,12 +1,13 @@
-# Risk It — game design (not yet built)
+# Risk It — game design (built)
 
 ## Concept
 
 Confidence wagering. Before each question is revealed, every team wagers
-part of its bank — **Low (10), Medium (25) or High (50)** — knowing only
-the subtopic (e.g. "Fossils"). Then the question appears, every team
-answers, and the teacher marks each team right or wrong: right adds the
-wager, wrong loses it. Ten questions, then the podium.
+from its bank — **1, 3 or 5** — knowing only the subtopic (e.g. "Fossils").
+Then the question appears, every team answers, and the teacher marks each
+team right or wrong: right adds the wager, wrong loses it. Every team starts
+with a bank of **10**; a bank can never go below 0. Ten questions, then the
+podium. The **final question always forces a wager of 5**.
 
 **Why it's different:** every team plays every question (like True/False
 Showdown), but the scoring rewards *knowing what you know*. The wager
@@ -24,15 +25,16 @@ swings keep the game alive to the final question.
 ## Flow
 
 1. **Setup** (shared GameSetup screen): rules, 2–6 teams, names, colours.
-   Every team starts with a bank of 100.
+   Every team starts with a bank of 10.
 2. **Question loop** (×10):
    - **Wager stage**: the screen shows only "Question 4 of 10 · Fossils".
-     Each team commits Low / Medium / High; the teacher taps each team's
-     chip to record it (tap cycles L → M → H).
+     Each team commits 1 / 3 / 5; the teacher taps each team's row in the
+     sidebar to record it (tap cycles 1 → 3 → 5). The final question locks
+     every wager to 5.
    - **Answer stage**: the question appears; teams write or say answers.
    - **Reveal**: teacher shows the answer, then toggles each team
-     right/wrong (reuses the Showdown multi-team marking pattern). Banks
-     update with a +/− flash. A team can never go below 0.
+     right/wrong in the sidebar (reuses the Showdown multi-team marking
+     pattern). Banks update on Next. A team can never go below 0.
 3. **End**: after question 10, podium ranked by bank.
 
 ## Teacher controls
@@ -45,8 +47,9 @@ End game.
 Setup → wager screen (subtopic + 10-question progress + team wager chips)
 → question screen → reveal + marking → bank update → podium.
 
-## Open questions
+## Resolved decisions
 
-- Fixed wagers (10/25/50) or percentage of bank (riskier, harder maths)?
-- One "All in" allowed per team per game as a comeback mechanic?
-- Should the final question force a minimum Medium wager for drama?
+- **Wager values:** point-based **1 / 3 / 5** (not a percentage of bank).
+- **Starting bank:** 10, floor 0. No "all in" mechanic — the 5 wager is the
+  riskier play.
+- **Final question:** always forces a wager of 5 ("everyone risks 5").

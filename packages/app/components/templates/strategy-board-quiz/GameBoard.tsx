@@ -15,6 +15,7 @@ export function GameBoard() {
   const playSound = useSoundStore((s) => s.play)
 
   const containerRef = useRef<HTMLDivElement | null>(null)
+  const headerRef = useRef<HTMLDivElement | null>(null)
   const [cellSize, setCellSize] = useState<number | null>(null)
 
   if (!templateState?.board?.length) return null
@@ -35,7 +36,9 @@ export function GameBoard() {
 
       const rows = board.length
       const gap = 8 // gap-2 between cells
-      const topicRowAllowance = 48 // column header chips + margin
+      // Measure the actual header row (topics can wrap) instead of guessing.
+      const headerHeight = headerRef.current?.offsetHeight ?? 44
+      const topicRowAllowance = headerHeight + 8 // header + mb-2
       const maxCellWidth = (rect.width - gap * (cols - 1)) / cols
       const maxCellHeight =
         (rect.height - topicRowAllowance - gap * (rows - 1)) / rows
@@ -53,6 +56,7 @@ export function GameBoard() {
     <div ref={containerRef} className="w-full h-full flex flex-col items-center justify-center">
       {/* Column headers: one topic per column */}
       <div
+        ref={headerRef}
         className="grid gap-2 mb-2"
         style={
           cellSize
@@ -62,7 +66,10 @@ export function GameBoard() {
       >
         {columnTopics.map((topic, c) => (
           <div key={c} className="sbq-topic-chip px-2 py-1.5 text-center flex items-center justify-center">
-            <span className="text-[11px] md:text-xs font-semibold text-text-primary tracking-[0.06em] uppercase leading-tight line-clamp-2 break-words">
+            <span
+              className="font-semibold text-text-primary tracking-[0.06em] uppercase leading-tight break-words"
+              style={{ fontSize: 'clamp(0.6rem, 1vw, 0.75rem)' }}
+            >
               {topic}
             </span>
           </div>
@@ -115,7 +122,7 @@ export function GameBoard() {
                   'flex items-center justify-center overflow-hidden',
                   isAvailable &&
                     (canSelect
-                      ? 'sbq-cell--available bg-surface border-[var(--color-border)] text-[var(--color-accent)] shadow-[var(--shadow-cell)] cursor-pointer'
+                      ? 'sbq-cell--available next-action--soft bg-surface border-[var(--color-border)] text-[var(--color-accent)] shadow-[var(--shadow-cell)] cursor-pointer'
                       : 'bg-surfaceAlt border-[var(--color-border)] text-text-muted cursor-not-allowed opacity-60'),
                   isSelected &&
                     'sbq-cell--selected bg-[var(--color-accent-light)] border-[var(--color-accent)] text-[var(--color-accent)] cursor-default',

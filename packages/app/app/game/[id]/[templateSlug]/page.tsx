@@ -240,9 +240,10 @@ export default function GameRunPage() {
   useEffect(() => {
     if (phase === 'setup' || phase === 'game_over' || loading) return
     if (phase === 'math_rush_round') return
-    // Flash Round and True/False Showdown run on local component state with
-    // no store timers, so they don't need the tick loop.
-    if (templateId === 'flash_round' || templateId === 'true_false_showdown') return
+    // Only the store-driven, timer-based games need the tick loop. Every other
+    // template (Flash Round, True/False, and the local-state games) runs on
+    // local component state with no store timers.
+    if (templateId !== 'strategy_board_quiz') return
     const store = useGameStore.getState()
     tickInterval.current = setInterval(() => store.tick(), 100)
     return () => {

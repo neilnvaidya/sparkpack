@@ -1,4 +1,4 @@
-# Three in a Row — game design (not yet built)
+# Three in a Row — game design (built)
 
 ## Concept
 
@@ -44,9 +44,11 @@ pass the turn, which keeps rounds fast.
 Setup → grid (16 face-down cards, team chips + "Team X's turn" banner) →
 question overlay with timer → grid updates with colour fill → podium.
 
-## Open questions
+## Resolved decisions
 
-- 3×3 variant for a quicker game (min 9 items, 2 teams)?
-- Should a wrong answer lock the cell for that team only (prevents
-  grinding the same cell)?
-- Diagonals on or off for younger classes?
+- **Grid size:** 4×4 only — no 3×3 variant built.
+- **Wrong answers:** the cell stays open for any team on a future turn (not
+  locked to a particular team); the question is swapped for an unused
+  spare when the pack has extras beyond the 16 on the grid.
+- **Diagonals:** on, for every class — line detection checks rows, columns
+  and both diagonal directions.

@@ -1,4 +1,4 @@
-# Summit Climb — game design (not yet built)
+# Summit Climb — game design (built)
 
 ## Concept
 
@@ -49,9 +49,12 @@ Setup → mountain view (7 rungs, one coloured climber chip per team, "Team
 X's turn — choose your path") → question overlay with a Steady/Risky badge
 → climb/slip animation → summit podium.
 
-## Open questions
+## Resolved decisions
 
-- Can a team at rung 0 take the risky path (nothing to lose) — or should
-  slipping below 0 cost a skipped turn?
-- Show remaining question counts per pool so teachers can pace the game?
-- Sudden-death tiebreak if the question cap hits with two leaders level?
+- **Rung 0 risky play:** allowed — a team at Base can take the risky path;
+  a wrong answer simply keeps it at rung 0 (height is clamped at 0, no
+  skipped turn).
+- **Remaining question counts:** not shown — each turn draws the next item
+  from the easy/hard pool and cycles once exhausted.
+- **Tiebreak at the question cap:** teams tied for the highest rung are
+  all ranked as winners on the podium (no sudden death).
