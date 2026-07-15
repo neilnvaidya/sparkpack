@@ -6,15 +6,14 @@
 
 import { z } from 'zod'
 import { GameTemplate } from './types'
+import { renderedQuestionSchema } from './question-content'
 import RiskItGame from '@/components/templates/risk-it/RiskItGame'
 
 export const riskItContentSchema = z.object({
   title: z.string(),
   questions: z
     .array(
-      z.object({
-        prompt: z.string(),
-        answer: z.string(),
+      renderedQuestionSchema.extend({
         /** Subtopic shown at the wager stage before the question. */
         hint: z.string(),
       })

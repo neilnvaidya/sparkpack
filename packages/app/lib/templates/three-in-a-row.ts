@@ -5,19 +5,13 @@
 
 import { z } from 'zod'
 import { GameTemplate } from './types'
+import { renderedQuestionSchema } from './question-content'
 import ThreeInARowGame from '@/components/templates/three-in-a-row/ThreeInARowGame'
 
 export const threeInARowContentSchema = z.object({
   title: z.string(),
   /** First 16 fill the grid; any extras are spares swapped in on a miss. */
-  questions: z
-    .array(
-      z.object({
-        prompt: z.string(),
-        answer: z.string(),
-      })
-    )
-    .min(16),
+  questions: z.array(renderedQuestionSchema).min(16),
 })
 
 export type ThreeInARowContent = z.infer<typeof threeInARowContentSchema>

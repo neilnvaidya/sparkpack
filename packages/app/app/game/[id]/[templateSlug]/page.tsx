@@ -14,7 +14,7 @@ import type { StoredGame } from '@/lib/utils/storage'
 
 function deriveNumTeams(template: GameTemplate, content: unknown): number {
   const [minT, maxT] = template.teamRange
-  if (template.id === 'math_rush') {
+  if (template.id === 'question_rush') {
     return Math.min(maxT, Math.max(minT, 4))
   }
   try {
@@ -239,7 +239,7 @@ export default function GameRunPage() {
 
   useEffect(() => {
     if (phase === 'setup' || phase === 'game_over' || loading) return
-    if (phase === 'math_rush_round') return
+    if (phase === 'question_rush_round') return
     // Only the store-driven, timer-based games need the tick loop. Every other
     // template (Flash Round, True/False, and the local-state games) runs on
     // local component state with no store timers.

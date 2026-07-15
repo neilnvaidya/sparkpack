@@ -5,7 +5,7 @@
 
 import { GameTemplate } from './types'
 import strategyBoardQuiz from './strategy-board-quiz'
-import mathRush from './math-rush'
+import questionRush from './question-rush'
 import flashRound from './flash-round'
 import trueFalseShowdown from './true-false'
 import threeInARow from './three-in-a-row'
@@ -14,7 +14,7 @@ import riskIt from './risk-it'
 
 export const templateRegistry: Record<string, GameTemplate> = {
   strategy_board_quiz: strategyBoardQuiz,
-  math_rush: mathRush,
+  question_rush: questionRush,
   flash_round: flashRound,
   true_false_showdown: trueFalseShowdown,
   three_in_a_row: threeInARow,

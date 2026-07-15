@@ -11,6 +11,7 @@ import { useGameStore } from '@/lib/store/game-store'
 import { flashRoundContentSchema } from '@/lib/templates/flash-round'
 import { GameShell, type ShellAction } from '@/components/shared/GameShell'
 import { GameOverPanel } from '@/components/shared/GameOverPanel'
+import { QuestionView } from '@/components/shared/QuestionView'
 import type { TutorialStep } from '@/components/shared/TutorialOverlay'
 
 const TUTORIAL_STEPS: TutorialStep[] = [
@@ -104,28 +105,8 @@ export default function FlashRoundGame() {
       }}
       tutorial={{ id: 'flash_round', steps: TUTORIAL_STEPS }}
     >
-      <div key={idx} className="flex w-full flex-col items-center justify-center gap-8 text-center">
-        <div
-          data-tutorial="question"
-          className="max-h-full overflow-y-auto font-display font-extrabold leading-tight tracking-tight"
-          style={{ fontSize: 'clamp(1.8rem, 4.5vw, 3.2rem)', maxWidth: '900px' }}
-        >
-          {question.prompt}
-        </div>
-
-        {revealed && (
-          <div>
-            <div
-              className="font-display font-extrabold tracking-tight"
-              style={{ fontSize: 'clamp(2rem, 5.5vw, 3.6rem)', color: 'var(--color-accent)' }}
-            >
-              {question.answer}
-            </div>
-            {question.detail && (
-              <p className="mt-3 text-base text-text-muted">{question.detail}</p>
-            )}
-          </div>
-        )}
+      <div key={idx} className="flex w-full flex-col items-center justify-center">
+        <QuestionView question={question} revealed={revealed} variant="hero" />
       </div>
     </GameShell>
   )

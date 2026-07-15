@@ -12,6 +12,7 @@ import { summitClimbContentSchema } from '@/lib/templates/summit-climb'
 import { getTeamColorDef } from '@/lib/constants/team-colors'
 import { GameShell, type ShellAction } from '@/components/shared/GameShell'
 import { GameOverPanel } from '@/components/shared/GameOverPanel'
+import { QuestionView } from '@/components/shared/QuestionView'
 import type { TutorialStep } from '@/components/shared/TutorialOverlay'
 
 const SUMMIT = 7
@@ -214,9 +215,7 @@ export default function SummitClimbGame() {
                 >
                   {path === 'risky' ? 'Risky path' : 'Steady path'}
                 </div>
-                <h2 className="break-words font-display font-bold leading-tight text-text-primary" style={{ fontSize: 'clamp(1.2rem, 2.4vw, 1.9rem)' }}>
-                  {currentQ.prompt}
-                </h2>
+                <QuestionView question={currentQ} revealed={revealed} variant="compact" showAnswer={false} />
                 {revealed && (
                   <div className="mt-4 border-t border-border pt-3">
                     <span className="sbq-answers-chip px-3 py-1 text-sm font-semibold text-text-primary">

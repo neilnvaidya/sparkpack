@@ -3,34 +3,12 @@
  * @see Docs/04-template-system.md
  */
 
-import { z } from 'zod'
 import { GameTemplate } from './types'
+import { contentSchema, type StrategyBoardQuizContent } from './strategy-board-quiz-content'
 import StrategyBoardQuizGame from '@/components/templates/strategy-board-quiz/StrategyBoardQuizGame'
 
-export const contentSchema = z.object({
-  title: z.string(),
-  learningFocus: z.string(),
-  topics: z.array(z.string()),
-  board: z.object({
-    rows: z.number(),
-    cols: z.number(),
-    pointsPerRow: z.array(z.number()),
-    cells: z.array(
-      z.object({
-        topic: z.string(),
-        points: z.number(),
-        prompt: z.string(),
-        acceptableAnswers: z.array(z.string()),
-      })
-    ),
-  }),
-  teacherScript: z.array(z.string()),
-  studentInstructions: z.array(z.string()),
-  fastFinisherExtension: z.string(),
-})
-
-/** Strategy Board Quiz content type – use for form state and runtime. */
-export type StrategyBoardQuizContent = z.infer<typeof contentSchema>
+export { contentSchema }
+export type { StrategyBoardQuizContent }
 
 const strategyBoardQuiz: GameTemplate<StrategyBoardQuizContent> = {
   id: 'strategy_board_quiz',

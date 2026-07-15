@@ -1,6 +1,58 @@
 # Workplan — current session state and next steps
 
-> **Latest: Game UX overhaul (2026-07-12) — done.** All 7 games (the 4
+> **Latest: multi-form questions, steps 1–2 (2026-07-15) — done.** Plan:
+> `~/.claude/plans/points-to-address-1-starry-pillow.md`. Steps 1 and 2 of 5 are
+> complete and verified in-browser; they ship the two user-visible wins with **no
+> schema change and no content migration**.
+>
+> **Step 1 — rendering spine.** `asQuestionAnswer` flattened every question into a
+> `{prompt, answer}` string pair before any component saw it, so an MCQ became
+> `"...?   A: x   B: y"` and a true/false became `"True or false: <statement>"`.
+> Structure now survives to the component via `lib/questions/render.ts`
+> (`RenderedQuestion`) and `components/shared/QuestionView.tsx`, which generalises
+> True/False Showdown's data-driven panels to MCQ. **492 `"True or false:"`
+> prefixes → 0; 1,993 structured options now reach renderers.** The dead `detail`
+> field (declared, schema'd, rendered, never assigned) is resurrected as
+> `answerDetail`. Board Quiz's `initializeBoardState` used to cast without parsing
+> — stale content produced a *blank board* rather than an error; it now safeParses
+> and returns null. `StoredGame` gained `contentVersion` (CONTENT_VERSION = 2);
+> mismatches are dropped on read.
+>
+> **Step 2 — Question Rush** (was Math Rush). Now takes any question kind, so it
+> runs on **19/19 packs, up from 4** (only 4 packs have equations). Three cards per
+> round, each named by a reserved colour — **Yellow, Pink and Brown are removed
+> from `TEAM_COLOR_OPTIONS`** so no team can share a card's colour and "the yellow
+> one" means exactly one thing. That reservation is what lets MCQ live in Rush
+> without an A/B/C label collision. Equations keep their rotating hidden part and
+> render identically. `TeamColorId` lost `c7`/`c9`/`c13`.
+>
+> **New: a test framework.** The repo had none. `vitest` + `lib/games/slices-dump.test.ts`
+> snapshots every pack × every game with a seeded RNG — the regression net for the
+> remaining steps. **Step 3a's acceptance test is that this snapshot does not move.**
+>
+> **Next: steps 3–5** (schema v2 + codemod, two-axis scoring, factKey dedupe) and
+> the content pass. See "The content cost" in the plan: ~2,085 distractors and 417
+> claim frames, AI-drafted and human-reviewed, pack by pack.
+>
+> **Earlier: validator + docs sync (2026-07-15) — done.** `scripts/validate-packs.mjs`
+> had drifted: it hardcoded a 4-game list and reported every pack as powering at most
+> 4 of the 7 built games, so a pack that failed a newer game's requirements passed
+> validation and just silently showed no card. Requirements now live in
+> `lib/games/slice-requirements.ts` — a dependency-free module (type-only imports, no
+> JSON, no React) that both `slices.ts` and the validator import, so tooling can never
+> fall behind the app again. **Keep that module import-free** or the validator breaks.
+> `01-MASTER-PLAN.md` was refreshed (its Current State predated four games, the
+> library and the retheme); a false "pending commit" note here was cleared — Year 3
+> Humanities landed as `8c683d4`.
+>
+> This surfaced one real content gap: **`maths-y3-multiplication-division` offers 5
+> games, not 7** — 15 strategy items (needs 16) and only 2 difficulty-1 items (Summit
+> Climb needs 8 easy after backfill). Adding ~2 easy qa/mcq/truefalse items fixes both.
+>
+> **Next up: Neil is play-testing the 7 games**, then deciding the points system and
+> depth-vs-breadth (see 01-MASTER-PLAN Phase 5).
+>
+> **Earlier: Game UX overhaul (2026-07-12) — done.** All 7 games (the 4
 > existing ones + the 3 designed-only games from the prior session) now
 > share one layout via `components/shared/GameShell.tsx`: a square-ish game
 > area, a vertical `TeamsPanel` sidebar (awarding is always "tap a team
@@ -67,9 +119,7 @@ Commits (newest first):
 - `74b5729` validate-packs script + content audit
 - `8f7dd12` Visual audit: retheme team colours, board sizing, drop legacy routes
 - `8b652ca` Retheme run screens to ink; exit affordances; dev-env fixes
-- **PENDING COMMIT**: Year 3 Humanities (history Stone Age→Iron Age, geography UK) —
-  files are written and staged; the commit was blocked by a transient safety-
-  classifier outage. **Re-run the commit** (see below) when picking this up.
+- `8c683d4` Year 3 Humanities (history Stone Age→Iron Age, geography UK)
 
 ### Step 1 — small fixes ✅
 - ErrorScreen back button → `/library`.
@@ -111,25 +161,24 @@ spelling, grammar-punctuation, reading-comprehension. Lower-KS2 programme of stu
 → objectives use `Y34-*` codes, packs filed under year 3. Added the `english`
 SubjectEntry to map.ts.
 
-### Step 2c — Year 3 Humanities ✅ content, ⚠ commit pending
+### Step 2c — Year 3 Humanities ✅ (committed as `8c683d4`)
 - `history-y3-stone-age-iron-age` (21 items, 4 strands: Stone/Bronze/Iron Age +
   timeline/evidence).
 - `geography-y3-uk` (20 items, 4 strands: countries, capitals, seas/coasts,
   physical features). Chose UK over volcanoes so items stand alone without maps.
 - Added `history` + `geography` SubjectEntry to map.ts; registered both in the
   loader. validate-packs + tsc pass; history topic page verified in browser.
-- **TO FINISH**: run this commit (files already staged):
-  ```
-  cd /Users/neilvaidya/Documents/sparkpack
-  git commit -m "Add Year 3 Humanities: Stone Age to Iron Age (history) and The UK (geography)"
-  ```
 
 ---
 
 ## Parked / known issues (do not lose)
 
 - **Points system is weak** — Neil flagged; game-level concern, revisit later
-  (currently difficulty × 100/150/200 in `lib/games/slices.ts`).
+  (currently difficulty × 100/150/200 in `lib/games/slices.ts`). Worth settling
+  before mass-producing content — retuning across 100+ packs is much harder.
+- **`maths-y3-multiplication-division` powers only 5 of 7 games** — 15 strategy
+  items (needs 16) and 2 difficulty-1 items (Summit needs 8 easy incl. backfill).
+  The only pack with this gap; adding ~2 easy items fixes it.
 - Y2 packs (`maths-y2-*`, `science-y2-*`) have no per-item `objectiveCodes` — a
   soft gap the validator does not flag. Backfill when convenient.
 - Item ids are reused across packs (e.g. every pack has `eq-1`). Harmless — ids

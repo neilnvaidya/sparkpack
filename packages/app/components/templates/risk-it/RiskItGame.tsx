@@ -11,6 +11,7 @@ import { useGameStore } from '@/lib/store/game-store'
 import { riskItContentSchema } from '@/lib/templates/risk-it'
 import { GameShell, type ShellAction } from '@/components/shared/GameShell'
 import { GameOverPanel } from '@/components/shared/GameOverPanel'
+import { QuestionView } from '@/components/shared/QuestionView'
 import type { TutorialStep } from '@/components/shared/TutorialOverlay'
 
 const START_BANK = 10
@@ -159,20 +160,7 @@ export default function RiskItGame() {
           </>
         ) : (
           <>
-            <div
-              className="max-h-full overflow-y-auto break-words font-display font-extrabold leading-tight tracking-tight"
-              style={{ fontSize: 'clamp(1.6rem, 4vw, 3rem)', maxWidth: '900px' }}
-            >
-              {question.prompt}
-            </div>
-            {stage === 'reveal' && (
-              <div
-                className="font-display font-extrabold tracking-tight"
-                style={{ fontSize: 'clamp(1.6rem, 4.5vw, 3rem)', color: 'var(--color-accent)' }}
-              >
-                {question.answer}
-              </div>
-            )}
+            <QuestionView question={question} revealed={stage === 'reveal'} variant="hero" />
           </>
         )}
       </div>

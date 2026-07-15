@@ -5,16 +5,15 @@
 
 import { z } from 'zod'
 import { GameTemplate } from './types'
+import { renderedQuestionSchema } from './question-content'
 import SummitClimbGame from '@/components/templates/summit-climb/SummitClimbGame'
-
-const questionSchema = z.object({ prompt: z.string(), answer: z.string() })
 
 export const summitClimbContentSchema = z.object({
   title: z.string(),
   /** Steady path pool (easier). */
-  easy: z.array(questionSchema).min(1),
+  easy: z.array(renderedQuestionSchema).min(1),
   /** Risky path pool (harder). */
-  hard: z.array(questionSchema).min(1),
+  hard: z.array(renderedQuestionSchema).min(1),
 })
 
 export type SummitClimbContent = z.infer<typeof summitClimbContentSchema>

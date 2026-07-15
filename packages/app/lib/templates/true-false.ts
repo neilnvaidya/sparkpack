@@ -5,20 +5,17 @@
 
 import { z } from 'zod'
 import { GameTemplate } from './types'
+import { renderedQuestionSchema } from './question-content'
 import TrueFalseShowdownGame from '@/components/templates/true-false/TrueFalseShowdownGame'
 
 export const trueFalseContentSchema = z.object({
   title: z.string(),
-  statements: z
-    .array(
-      z.object({
-        statement: z.string(),
-        isTrue: z.boolean(),
-        /** Optional explanation shown after the reveal. */
-        note: z.string().optional(),
-      })
-    )
-    .min(5),
+  questions: z
+    .array(renderedQuestionSchema)
+    .min(5)
+    .refine((qs) => qs.every((q) => q.form === 'truefalse'), {
+      message: 'True or False Showdown only accepts truefalse questions',
+    }),
 })
 
 export type TrueFalseContent = z.infer<typeof trueFalseContentSchema>

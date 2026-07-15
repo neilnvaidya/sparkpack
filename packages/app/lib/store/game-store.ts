@@ -5,11 +5,12 @@
 
 import { create } from 'zustand'
 import { immer } from 'zustand/middleware/immer'
-import type { StrategyBoardQuizContent } from '@/lib/templates/strategy-board-quiz'
+import { contentSchema as boardQuizContentSchema } from '@/lib/templates/strategy-board-quiz-content'
+import type { RenderedQuestionContent } from '@/lib/templates/question-content'
 import type { TeamColorId } from '@/lib/constants/team-colors'
 import { DEFAULT_TEAM_COLORS } from '@/lib/constants/team-colors'
-import { mathRushContentSchema } from '@/lib/math-rush/content'
-import { shuffleDeck, type MathRushQuestion } from '@/lib/math-rush/question'
+import { questionRushContentSchema } from '@/lib/question-rush/content'
+import { shuffleDeck, type QuestionRushQuestion } from '@/lib/question-rush/question'
 
 /** Template-validated content; shape depends on template. */
 export type GameContent = unknown
@@ -22,7 +23,7 @@ export type GamePhase =
   | 'answer_waiting'
   | 'steal_phase'
   | 'round_complete'
-  | 'math_rush_round'
+  | 'question_rush_round'
   | 'game_over'
 
 export type TeamColor = TeamColorId
@@ -59,8 +60,7 @@ export interface ModalState {
 export interface BoardCell {
   topic: string
   points: number
-  prompt: string
-  acceptableAnswers: string[]
+  question: RenderedQuestionContent
   state: 'available' | 'selected' | 'answered' | 'disabled'
   /** When state is 'answered', which team index won this cell (for showing team color on grid). */
   answeredByTeamIndex?: number
@@ -73,17 +73,17 @@ export interface StrategyBoardState {
   currentStealIndex: number
 }
 
-/** Math Rush – bounty cards */
-export interface MathRushActiveCard {
-  question: MathRushQuestion
+/** Question Rush – claimable cards */
+export interface QuestionRushActiveCard {
+  question: QuestionRushQuestion
   claimedByTeamIndex: number | null
   answerRevealed: boolean
 }
 
-export interface MathRushState {
-  deck: MathRushQuestion[]
-  discard: MathRushQuestion[]
-  activeCards: MathRushActiveCard[]
+export interface QuestionRushState {
+  deck: QuestionRushQuestion[]
+  discard: QuestionRushQuestion[]
+  activeCards: QuestionRushActiveCard[]
   openCardIndex: number | null
   lastAward: { teamIndex: number; points: number; teamName: string } | null
   /** 1-based current round; 0 before the first deal. */
@@ -92,32 +92,37 @@ export interface MathRushState {
 }
 
 /** Rounds are capped so a big deck still gives a game that ends. */
-const MATH_RUSH_MAX_ROUNDS = 5
+const QUESTION_RUSH_MAX_ROUNDS = 5
 
 function defaultBoardCell(): BoardCell {
   return {
     topic: '',
     points: 0,
-    prompt: '',
-    acceptableAnswers: [],
+    question: { form: 'open', prompt: '', answer: '', acceptableAnswers: [] },
     state: 'disabled',
   }
 }
 
-function initializeBoardState(content: unknown): StrategyBoardState {
-  const c = content as StrategyBoardQuizContent
-  const { rows, cols, cells } = c.board
+/**
+ * Returns null when the stored content does not match the current schema —
+ * this used to cast blindly, which turned stale content into a silently blank
+ * board rather than the "content could not be loaded" message every other game
+ * shows.
+ */
+function initializeBoardState(content: unknown): StrategyBoardState | null {
+  const parsed = boardQuizContentSchema.safeParse(content)
+  if (!parsed.success) return null
+  const { rows, cols, cells } = parsed.data.board
   const board: BoardCell[][] = []
   for (let r = 0; r < rows; r++) {
     const row: BoardCell[] = []
     for (let col = 0; col < cols; col++) {
       const raw = cells[r * cols + col]
-      const cell = raw
+      const cell: BoardCell = raw
         ? {
             topic: raw.topic,
             points: raw.points,
-            prompt: raw.prompt,
-            acceptableAnswers: [...raw.acceptableAnswers],
+            question: raw.question,
             state: 'available' as const,
           }
         : { ...defaultBoardCell(), state: 'disabled' as const }
@@ -133,13 +138,13 @@ function initializeBoardState(content: unknown): StrategyBoardState {
   }
 }
 
-function initializeMathRushTemplateState(content: unknown): MathRushState | null {
-  const parsed = mathRushContentSchema.safeParse(content)
+function initializeQuestionRushTemplateState(content: unknown): QuestionRushState | null {
+  const parsed = questionRushContentSchema.safeParse(content)
   if (!parsed.success) return null
   const deck = shuffleDeck(parsed.data.questions.map((q) => ({ ...q })))
   const totalRounds = Math.max(
     1,
-    Math.min(MATH_RUSH_MAX_ROUNDS, Math.ceil(deck.length / parsed.data.questionsPerRound))
+    Math.min(QUESTION_RUSH_MAX_ROUNDS, Math.ceil(deck.length / parsed.data.questionsPerRound))
   )
   return {
     deck,
@@ -152,7 +157,7 @@ function initializeMathRushTemplateState(content: unknown): MathRushState | null
   }
 }
 
-function dealMathRushRound(
+function dealQuestionRushRound(
   state: {
     templateState: unknown
     content: unknown
@@ -160,13 +165,13 @@ function dealMathRushRound(
   },
   isFirstDeal: boolean
 ) {
-  const parsed = mathRushContentSchema.safeParse(state.content)
+  const parsed = questionRushContentSchema.safeParse(state.content)
   if (!parsed.success) {
     state.phase = 'game_over'
     return
   }
   const content = parsed.data
-  const ts = state.templateState as MathRushState | null
+  const ts = state.templateState as QuestionRushState | null
   if (!ts) {
     state.phase = 'game_over'
     return
@@ -232,12 +237,12 @@ export interface GameStore {
   endGame: () => void
   tick: () => void
   closeModal: () => void
-  mathRushOpenCard: (index: number | null) => void
-  mathRushAwardCard: (cardIndex: number, teamIndex: number) => void
-  mathRushRevealCard: (cardIndex: number) => void
-  mathRushRevealAllAnswers: () => void
-  mathRushNextRound: () => void
-  mathRushClearLastAward: () => void
+  questionRushOpenCard: (index: number | null) => void
+  questionRushAwardCard: (cardIndex: number, teamIndex: number) => void
+  questionRushRevealCard: (cardIndex: number) => void
+  questionRushRevealAllAnswers: () => void
+  questionRushNextRound: () => void
+  questionRushClearLastAward: () => void
 }
 
 export const useGameStore = create<GameStore>()(
@@ -283,8 +288,8 @@ export const useGameStore = create<GameStore>()(
 
         if (params.templateId === 'strategy_board_quiz') {
           state.templateState = initializeBoardState(params.content)
-        } else if (params.templateId === 'math_rush') {
-          state.templateState = initializeMathRushTemplateState(params.content)
+        } else if (params.templateId === 'question_rush') {
+          state.templateState = initializeQuestionRushTemplateState(params.content)
         } else {
           state.templateState = null
         }
@@ -293,9 +298,9 @@ export const useGameStore = create<GameStore>()(
 
     startGame: () => {
       set((state) => {
-        if (state.templateId === 'math_rush') {
-          state.phase = 'math_rush_round'
-          dealMathRushRound(state, true)
+        if (state.templateId === 'question_rush') {
+          state.phase = 'question_rush_round'
+          dealQuestionRushRound(state, true)
           return
         }
         state.phase = 'team_selecting'
@@ -498,8 +503,8 @@ export const useGameStore = create<GameStore>()(
     closeModal: () => {
       set((state) => {
         state.modal = null
-        if (state.templateId === 'math_rush') {
-          const ts = state.templateState as MathRushState
+        if (state.templateId === 'question_rush') {
+          const ts = state.templateState as QuestionRushState
           if (ts) ts.openCardIndex = null
           return
         }
@@ -514,10 +519,10 @@ export const useGameStore = create<GameStore>()(
       })
     },
 
-    mathRushOpenCard: (index) => {
+    questionRushOpenCard: (index) => {
       set((state) => {
-        if (state.templateId !== 'math_rush') return
-        const ts = state.templateState as MathRushState
+        if (state.templateId !== 'question_rush') return
+        const ts = state.templateState as QuestionRushState
         if (!ts) return
         if (index !== null) {
           const card = ts.activeCards[index]
@@ -527,10 +532,10 @@ export const useGameStore = create<GameStore>()(
       })
     },
 
-    mathRushAwardCard: (cardIndex, teamIndex) => {
+    questionRushAwardCard: (cardIndex, teamIndex) => {
       set((state) => {
-        if (state.templateId !== 'math_rush') return
-        const ts = state.templateState as MathRushState
+        if (state.templateId !== 'question_rush') return
+        const ts = state.templateState as QuestionRushState
         if (!ts) return
         const card = ts.activeCards[cardIndex]
         const team = state.teams[teamIndex]
@@ -544,20 +549,20 @@ export const useGameStore = create<GameStore>()(
       })
     },
 
-    mathRushRevealCard: (cardIndex) => {
+    questionRushRevealCard: (cardIndex) => {
       set((state) => {
-        if (state.templateId !== 'math_rush') return
-        const ts = state.templateState as MathRushState
+        if (state.templateId !== 'question_rush') return
+        const ts = state.templateState as QuestionRushState
         if (!ts) return
         const card = ts.activeCards[cardIndex]
         if (card) card.answerRevealed = !card.answerRevealed
       })
     },
 
-    mathRushRevealAllAnswers: () => {
+    questionRushRevealAllAnswers: () => {
       set((state) => {
-        if (state.templateId !== 'math_rush') return
-        const ts = state.templateState as MathRushState
+        if (state.templateId !== 'question_rush') return
+        const ts = state.templateState as QuestionRushState
         if (!ts) return
         const allOn = ts.activeCards.length > 0 && ts.activeCards.every((c) => c.answerRevealed)
         for (const c of ts.activeCards) {
@@ -566,24 +571,24 @@ export const useGameStore = create<GameStore>()(
       })
     },
 
-    mathRushNextRound: () => {
+    questionRushNextRound: () => {
       set((state) => {
-        if (state.templateId !== 'math_rush' || state.phase !== 'math_rush_round') return
-        const ts = state.templateState as MathRushState | null
+        if (state.templateId !== 'question_rush' || state.phase !== 'question_rush_round') return
+        const ts = state.templateState as QuestionRushState | null
         if (ts && ts.round >= ts.totalRounds) {
           state.phase = 'game_over'
           state.timer = null
           state.modal = null
           return
         }
-        dealMathRushRound(state, false)
+        dealQuestionRushRound(state, false)
       })
     },
 
-    mathRushClearLastAward: () => {
+    questionRushClearLastAward: () => {
       set((state) => {
-        if (state.templateId !== 'math_rush') return
-        const ts = state.templateState as MathRushState
+        if (state.templateId !== 'question_rush') return
+        const ts = state.templateState as QuestionRushState
         if (ts) ts.lastAward = null
       })
     },

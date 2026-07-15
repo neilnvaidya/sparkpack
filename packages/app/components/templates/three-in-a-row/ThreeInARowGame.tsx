@@ -9,10 +9,12 @@
 import { useState } from 'react'
 import { useGameStore } from '@/lib/store/game-store'
 import { threeInARowContentSchema } from '@/lib/templates/three-in-a-row'
+import type { RenderedQuestionContent } from '@/lib/templates/question-content'
 import { getTeamColorDef } from '@/lib/constants/team-colors'
 import { cn } from '@/lib/utils/cn'
 import { GameShell, type ShellAction } from '@/components/shared/GameShell'
 import { GameOverPanel } from '@/components/shared/GameOverPanel'
+import { QuestionView } from '@/components/shared/QuestionView'
 import type { TutorialStep } from '@/components/shared/TutorialOverlay'
 
 const SIZE = 4
@@ -42,8 +44,15 @@ const TUTORIAL_STEPS: TutorialStep[] = [
 ]
 
 interface Cell {
-  question: { prompt: string; answer: string }
+  question: RenderedQuestionContent
   owner: number | null
+}
+
+const BLANK_QUESTION: RenderedQuestionContent = {
+  form: 'open',
+  prompt: '',
+  answer: '',
+  acceptableAnswers: [],
 }
 
 function lineWinner(cells: Cell[]): number | null {
@@ -62,7 +71,7 @@ export default function ThreeInARowGame() {
 
   const [cells, setCells] = useState<Cell[]>(() => {
     const qs = parsed.success ? parsed.data.questions : []
-    return Array.from({ length: CELLS }, (_, i) => ({ question: qs[i] ?? { prompt: '', answer: '' }, owner: null }))
+    return Array.from({ length: CELLS }, (_, i) => ({ question: qs[i] ?? BLANK_QUESTION, owner: null }))
   })
   const [spares] = useState(() => (parsed.success ? parsed.data.questions.slice(CELLS) : []))
   const [spareIdx, setSpareIdx] = useState(0)
@@ -200,9 +209,7 @@ export default function ThreeInARowGame() {
               <div className="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-text-muted">
                 {activeTeamName}&apos;s question
               </div>
-              <h2 className="break-words font-display font-bold leading-tight text-text-primary" style={{ fontSize: 'clamp(1.2rem, 2.4vw, 1.9rem)' }}>
-                {openQuestion.prompt}
-              </h2>
+              <QuestionView question={openQuestion} revealed={revealed} variant="compact" showAnswer={false} />
               {revealed && (
                 <div className="mt-4 border-t border-border pt-3">
                   <span className="sbq-answers-chip px-3 py-1 text-sm font-semibold text-text-primary">

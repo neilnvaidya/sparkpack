@@ -5,20 +5,12 @@
 
 import { z } from 'zod'
 import { GameTemplate } from './types'
+import { renderedQuestionSchema } from './question-content'
 import FlashRoundGame from '@/components/templates/flash-round/FlashRoundGame'
 
 export const flashRoundContentSchema = z.object({
   title: z.string(),
-  questions: z
-    .array(
-      z.object({
-        prompt: z.string(),
-        answer: z.string(),
-        /** Optional extra detail shown under the answer (e.g. options recap). */
-        detail: z.string().optional(),
-      })
-    )
-    .min(5),
+  questions: z.array(renderedQuestionSchema).min(5),
 })
 
 export type FlashRoundContent = z.infer<typeof flashRoundContentSchema>

@@ -8,6 +8,8 @@ export interface StoredGame {
   templateId: string
   content: unknown
   createdAt: string
+  /** Shape of `content`. Games from an older shape are dropped on read. */
+  contentVersion?: number
   settings?: {
     numTeams?: number
     teamNames?: string[]
@@ -17,11 +19,18 @@ export interface StoredGame {
 
 const STORAGE_KEY = 'sparkpack_games'
 
+/**
+ * Bump whenever the built template content shape changes. Stored games carry the
+ * version they were created with; mismatches are discarded rather than fed to a
+ * runtime that can no longer read them.
+ */
+export const CONTENT_VERSION = 2
+
 export function saveGame(game: StoredGame): void {
   try {
     if (typeof window === 'undefined') return
     const games = getAllGames()
-    games[game.gameId] = game
+    games[game.gameId] = { ...game, contentVersion: game.contentVersion ?? CONTENT_VERSION }
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(games))
   } catch (error) {
     console.error('Failed to save game:', error)
@@ -32,7 +41,13 @@ export function getGame(gameId: string): StoredGame | null {
   try {
     if (typeof window === 'undefined') return null
     const games = getAllGames()
-    return games[gameId] ?? null
+    const game = games[gameId]
+    if (!game) return null
+    if (game.contentVersion !== CONTENT_VERSION) {
+      deleteGame(gameId)
+      return null
+    }
+    return game
   } catch (error) {
     console.error('Failed to get game:', error)
     return null

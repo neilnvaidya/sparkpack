@@ -8,6 +8,7 @@ import type { StrategyBoardState } from '@/lib/store/game-store'
 import { TimerDisplay } from '@/components/shared/TimerDisplay'
 import { GameBoard } from './GameBoard'
 import { GameShell, type ShellAction } from '@/components/shared/GameShell'
+import { QuestionView } from '@/components/shared/QuestionView'
 import { GameOverPanel } from '@/components/shared/GameOverPanel'
 import type { TutorialStep } from '@/components/shared/TutorialOverlay'
 
@@ -197,13 +198,13 @@ export default function StrategyBoardQuizGame() {
                 </div>
               </div>
 
-              <div className="mx-auto max-w-[600px] text-center">
-                <h2
-                  className="break-words font-display font-bold leading-tight text-text-primary"
-                  style={{ fontSize: 'clamp(1.3rem, 2.6vw, 2rem)' }}
-                >
-                  {selectedCell.prompt}
-                </h2>
+              <div className="mx-auto max-w-[900px]">
+                <QuestionView
+                  question={selectedCell.question}
+                  revealed={answersRevealed}
+                  variant="compact"
+                  showAnswer={false}
+                />
               </div>
 
               {timer && (
@@ -218,7 +219,7 @@ export default function StrategyBoardQuizGame() {
                     Acceptable answers:
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {selectedCell.acceptableAnswers.map((answer, index) => (
+                    {selectedCell.question.acceptableAnswers.map((answer, index) => (
                       <span
                         key={`${answer}-${index}`}
                         className="sbq-answers-chip px-3 py-1 text-sm font-semibold text-text-primary"

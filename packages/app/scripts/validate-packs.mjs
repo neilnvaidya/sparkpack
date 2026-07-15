@@ -8,21 +8,18 @@
  *   - pack id matches "<subject>-y<year>-<topicId>" and the filename
  *   - board-quiz fit: strand grouping produces a 2–4 column board
  *   - which game slices each pack can power (informational)
+ *
+ * Game availability comes from lib/games/slice-requirements.ts — the same data
+ * the app uses — so a new game is covered here the moment it is registered.
  */
 
 import { readdirSync, readFileSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { curriculumPackSchema } from '../lib/curriculum/schema.ts'
+import { GAME_SLICE_META, isRequirementMet } from '../lib/games/slice-requirements.ts'
 
 const packsDir = join(dirname(fileURLToPath(import.meta.url)), '../lib/curriculum/packs')
-
-const SLICE_MINIMUMS = [
-  { name: 'Math Rush', kinds: ['equation'], min: 6 },
-  { name: 'Strategy Board Quiz', kinds: ['qa', 'mcq', 'truefalse'], min: 8 },
-  { name: 'Flash Round', kinds: ['equation', 'qa', 'mcq', 'truefalse'], min: 5 },
-  { name: 'True or False Showdown', kinds: ['truefalse'], min: 5 },
-]
 
 let errorCount = 0
 
@@ -107,9 +104,9 @@ for (const file of files) {
   }
 
   const kindCounts = pack.items.reduce((acc, i) => ((acc[i.kind] = (acc[i.kind] ?? 0) + 1), acc), {})
-  const games = SLICE_MINIMUMS.filter(
-    (s) => pack.items.filter((i) => s.kinds.includes(i.kind)).length >= s.min
-  ).map((s) => s.name)
+  const games = GAME_SLICE_META.filter((s) => isRequirementMet(pack, s.requires)).map(
+    (s) => s.name
+  )
   console.log(
     `  ok ${file} — ${pack.items.length} items (${Object.entries(kindCounts)
       .map(([k, n]) => `${n} ${k}`)
