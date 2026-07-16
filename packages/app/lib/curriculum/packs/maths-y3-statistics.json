@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "maths-y3-statistics",
   "subject": "maths",
   "keyStage": "KS2",
@@ -8,31 +8,471 @@
   "title": "Statistics",
   "description": "Interpreting and presenting data in bar charts, pictograms and tables, including one-step and two-step questions.",
   "objectives": [
-    { "code": "Y3-S-1", "statement": "Interpret and present data using bar charts, pictograms and tables." },
-    { "code": "Y3-S-2", "statement": "Solve one-step and two-step questions (for example, 'How many more?' and 'How many fewer?') using information presented in scaled bar charts and pictograms and tables." }
+    {
+      "code": "Y3-S-1",
+      "statement": "Interpret and present data using bar charts, pictograms and tables."
+    },
+    {
+      "code": "Y3-S-2",
+      "statement": "Solve one-step and two-step questions (for example, 'How many more?' and 'How many fewer?') using information presented in scaled bar charts and pictograms and tables."
+    }
   ],
-  "items": [
-    { "id": "pi-1", "kind": "qa", "difficulty": 1, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "prompt": "In a pictogram, one apple symbol stands for 2 apples. What do 3 symbols stand for?", "answer": "6 apples", "acceptableAnswers": ["6"] },
-    { "id": "pi-2", "kind": "qa", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1", "Y3-S-2"], "prompt": "In a pictogram, one star stands for 5 points. A team has 4 stars. How many points is that?", "answer": "20 points", "acceptableAnswers": ["20"] },
-    { "id": "pi-3", "kind": "mcq", "difficulty": 3, "strand": "Pictograms", "objectiveCodes": ["Y3-S-2"], "prompt": "In a pictogram, one circle stands for 10 books. How many circles are needed to show 35 books?", "options": ["3", "3 and a half", "4", "35"], "correctIndex": 1 },
-    { "id": "pi-4", "kind": "truefalse", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "statement": "In a pictogram, half a symbol can stand for half the value of a whole symbol.", "isTrue": true },
-    { "id": "pi-5", "kind": "qa", "difficulty": 1, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "prompt": "In a pictogram, one sun symbol stands for 4 sunny days. What do 2 symbols stand for?", "answer": "8 sunny days", "acceptableAnswers": ["8"] },
-    { "id": "pi-6", "kind": "truefalse", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-1"], "statement": "Every pictogram symbol always stands for exactly 1, no matter what the key says.", "isTrue": false },
-    { "id": "pi-7", "kind": "mcq", "difficulty": 2, "strand": "Pictograms", "objectiveCodes": ["Y3-S-2"], "prompt": "In a pictogram, one square stands for 2 goals. Team A has 5 squares and Team B has 3 squares. How many more goals did Team A score?", "options": ["2", "4", "8", "10"], "correctIndex": 1 },
-
-    { "id": "ba-1", "kind": "truefalse", "difficulty": 1, "strand": "Bar charts", "objectiveCodes": ["Y3-S-1"], "statement": "On a bar chart, the taller the bar, the bigger the number it shows.", "isTrue": true },
-    { "id": "ba-2", "kind": "qa", "difficulty": 2, "strand": "Bar charts", "objectiveCodes": ["Y3-S-2"], "prompt": "A bar chart shows 8 children chose cats and 12 chose dogs. How many more chose dogs than cats?", "answer": "4 more", "acceptableAnswers": ["4"] },
-    { "id": "ba-3", "kind": "mcq", "difficulty": 3, "strand": "Bar charts", "objectiveCodes": ["Y3-S-1", "Y3-S-2"], "prompt": "On a bar chart, the scale goes up in steps of 2. A bar reaches halfway between 6 and 8. What is its value?", "options": ["6", "7", "8", "9"], "correctIndex": 1 },
-    { "id": "ba-4", "kind": "qa", "difficulty": 3, "strand": "Bar charts", "objectiveCodes": ["Y3-S-2"], "prompt": "A bar chart shows favourite colours: red 15, blue 9, green 6. How many children voted in total?", "answer": "30 children", "acceptableAnswers": ["30"] },
-    { "id": "ba-5", "kind": "mcq", "difficulty": 1, "strand": "Bar charts", "objectiveCodes": ["Y3-S-1"], "prompt": "A bar chart shows favourite fruits: apples 10, bananas 14, grapes 7. Which fruit was the most popular?", "options": ["Apples", "Bananas", "Grapes", "They are equal"], "correctIndex": 1 },
-    { "id": "ba-6", "kind": "qa", "difficulty": 2, "strand": "Bar charts", "objectiveCodes": ["Y3-S-2"], "prompt": "A bar chart shows 20 children walk to school and 13 come by car. How many fewer come by car?", "answer": "7 fewer", "acceptableAnswers": ["7"] },
-
-    { "id": "ta-1", "kind": "qa", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows laps run: Monday 25, Tuesday 32. How many laps were run altogether?", "answer": "57 laps", "acceptableAnswers": ["57"] },
-    { "id": "ta-2", "kind": "qa", "difficulty": 3, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows Class A read 48 books and Class B read 29 books. How many fewer books did Class B read?", "answer": "19 fewer", "acceptableAnswers": ["19"] },
-    { "id": "ta-3", "kind": "truefalse", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-1"], "statement": "In a tally chart, a group of five is drawn as four lines with a fifth line across them.", "isTrue": true },
-    { "id": "ta-4", "kind": "mcq", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-1"], "prompt": "A tally shows two full groups of five and two extra marks. What number is that?", "options": ["7", "10", "12", "52"], "correctIndex": 2 },
-    { "id": "ta-5", "kind": "qa", "difficulty": 1, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows ice creams sold: Saturday 30, Sunday 40. On which day were more ice creams sold?", "answer": "Sunday", "acceptableAnswers": ["sunday"] },
-    { "id": "ta-6", "kind": "mcq", "difficulty": 3, "strand": "Tables", "objectiveCodes": ["Y3-S-2"], "prompt": "A table shows stickers collected: Amy 24, Ben 18, Cara 30. How many do Amy and Ben have altogether?", "options": ["32", "42", "48", "72"], "correctIndex": 1 },
-    { "id": "ta-7", "kind": "truefalse", "difficulty": 2, "strand": "Tables", "objectiveCodes": ["Y3-S-1"], "statement": "A table with rows and columns can show the same information as a bar chart.", "isTrue": true }
+  "questions": [
+    {
+      "id": "pi-1",
+      "factKey": "pi-1",
+      "difficulty": 1,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In a pictogram, one apple symbol stands for 2 apples. What do 3 symbols stand for?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "6 apples",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "6"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pi-2",
+      "factKey": "pi-2",
+      "difficulty": 2,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-1",
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In a pictogram, one star stands for 5 points. A team has 4 stars. How many points is that?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "20 points",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "20"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pi-3",
+      "factKey": "pi-3",
+      "difficulty": 3,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "In a pictogram, one circle stands for 10 books. How many circles are needed to show 35 books?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "3 and a half",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "3 and a half"
+      ],
+      "distractors": [
+        "3",
+        "4",
+        "35"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pi-4",
+      "factKey": "pi-4",
+      "difficulty": 2,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "In a pictogram, half a symbol can stand for half the value of a whole symbol.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pi-5",
+      "factKey": "pi-5",
+      "difficulty": 1,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In a pictogram, one sun symbol stands for 4 sunny days. What do 2 symbols stand for?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "8 sunny days",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "8"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pi-6",
+      "factKey": "pi-6",
+      "difficulty": 2,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Every pictogram symbol always stands for exactly 1, no matter what the key says.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pi-7",
+      "factKey": "pi-7",
+      "difficulty": 2,
+      "strand": "Pictograms",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "In a pictogram, one square stands for 2 goals. Team A has 5 squares and Team B has 3 squares. How many more goals did Team A score?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "4",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "4"
+      ],
+      "distractors": [
+        "2",
+        "8",
+        "10"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ba-1",
+      "factKey": "ba-1",
+      "difficulty": 1,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "On a bar chart, the taller the bar, the bigger the number it shows.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ba-2",
+      "factKey": "ba-2",
+      "difficulty": 2,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A bar chart shows 8 children chose cats and 12 chose dogs. How many more chose dogs than cats?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "4 more",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "4"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ba-3",
+      "factKey": "ba-3",
+      "difficulty": 3,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-1",
+        "Y3-S-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "On a bar chart, the scale goes up in steps of 2. A bar reaches halfway between 6 and 8. What is its value?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "7",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "7"
+      ],
+      "distractors": [
+        "6",
+        "8",
+        "9"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ba-4",
+      "factKey": "ba-4",
+      "difficulty": 3,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A bar chart shows favourite colours: red 15, blue 9, green 6. How many children voted in total?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "30 children",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "30"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ba-5",
+      "factKey": "ba-5",
+      "difficulty": 1,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A bar chart shows favourite fruits: apples 10, bananas 14, grapes 7. Which fruit was the most popular?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Bananas",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "Bananas"
+      ],
+      "distractors": [
+        "Apples",
+        "Grapes",
+        "They are equal"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ba-6",
+      "factKey": "ba-6",
+      "difficulty": 2,
+      "strand": "Bar charts",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A bar chart shows 20 children walk to school and 13 come by car. How many fewer come by car?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "7 fewer",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "7"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ta-1",
+      "factKey": "ta-1",
+      "difficulty": 2,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A table shows laps run: Monday 25, Tuesday 32. How many laps were run altogether?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "57 laps",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "57"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ta-2",
+      "factKey": "ta-2",
+      "difficulty": 3,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A table shows Class A read 48 books and Class B read 29 books. How many fewer books did Class B read?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "19 fewer",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "19"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ta-3",
+      "factKey": "ta-3",
+      "difficulty": 2,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "In a tally chart, a group of five is drawn as four lines with a fifth line across them.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ta-4",
+      "factKey": "ta-4",
+      "difficulty": 2,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A tally shows two full groups of five and two extra marks. What number is that?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "12",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "12"
+      ],
+      "distractors": [
+        "7",
+        "10",
+        "52"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ta-5",
+      "factKey": "ta-5",
+      "difficulty": 1,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A table shows ice creams sold: Saturday 30, Sunday 40. On which day were more ice creams sold?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Sunday",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "sunday"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ta-6",
+      "factKey": "ta-6",
+      "difficulty": 3,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A table shows stickers collected: Amy 24, Ben 18, Cara 30. How many do Amy and Ben have altogether?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "42",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "42"
+      ],
+      "distractors": [
+        "32",
+        "48",
+        "72"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ta-7",
+      "factKey": "ta-7",
+      "difficulty": 2,
+      "strand": "Tables",
+      "objectiveCodes": [
+        "Y3-S-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A table with rows and columns can show the same information as a bar chart.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
   ]
 }

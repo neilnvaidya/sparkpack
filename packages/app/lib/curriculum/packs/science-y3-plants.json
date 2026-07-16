@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "science-y3-plants",
   "subject": "science",
   "keyStage": "KS2",
@@ -8,35 +8,503 @@
   "title": "Plants",
   "description": "The functions of the parts of flowering plants, what plants need to grow, how water travels through a plant, and the life cycle from pollination to seed dispersal.",
   "objectives": [
-    { "code": "Y3-P-1", "statement": "Identify and describe the functions of different parts of flowering plants: roots, stem/trunk, leaves and flowers." },
-    { "code": "Y3-P-2", "statement": "Explore the requirements of plants for life and growth (air, light, water, nutrients from soil, and room to grow) and how they vary from plant to plant." },
-    { "code": "Y3-P-3", "statement": "Investigate the way in which water is transported within plants." },
-    { "code": "Y3-P-4", "statement": "Explore the part that flowers play in the life cycle of flowering plants, including pollination, seed formation and seed dispersal." }
+    {
+      "code": "Y3-P-1",
+      "statement": "Identify and describe the functions of different parts of flowering plants: roots, stem/trunk, leaves and flowers."
+    },
+    {
+      "code": "Y3-P-2",
+      "statement": "Explore the requirements of plants for life and growth (air, light, water, nutrients from soil, and room to grow) and how they vary from plant to plant."
+    },
+    {
+      "code": "Y3-P-3",
+      "statement": "Investigate the way in which water is transported within plants."
+    },
+    {
+      "code": "Y3-P-4",
+      "statement": "Explore the part that flowers play in the life cycle of flowering plants, including pollination, seed formation and seed dispersal."
+    }
   ],
-  "items": [
-    { "id": "pp-1", "kind": "qa", "difficulty": 1, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1"], "prompt": "Which part of a plant takes in water and holds the plant in the ground?", "answer": "The roots", "acceptableAnswers": ["roots", "root"] },
-    { "id": "pp-2", "kind": "qa", "difficulty": 1, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1"], "prompt": "Which part of a plant makes food using sunlight?", "answer": "The leaves", "acceptableAnswers": ["leaves", "leaf"] },
-    { "id": "pp-3", "kind": "mcq", "difficulty": 2, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1"], "prompt": "What is the main job of the stem?", "options": ["to make seeds", "to hold the plant up and carry water", "to take in sunlight", "to attract insects"], "correctIndex": 1 },
-    { "id": "pp-4", "kind": "mcq", "difficulty": 2, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1", "Y3-P-4"], "prompt": "Which part of the plant helps it to make seeds?", "options": ["the roots", "the flower", "the stem", "the leaves"], "correctIndex": 1 },
-    { "id": "pp-5", "kind": "truefalse", "difficulty": 1, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1"], "statement": "Roots usually grow downwards into the soil.", "isTrue": true },
-    { "id": "pp-6", "kind": "truefalse", "difficulty": 2, "strand": "Parts of a plant", "objectiveCodes": ["Y3-P-1"], "statement": "The leaves hold the plant firmly in the ground.", "isTrue": false },
-
-    { "id": "rq-1", "kind": "qa", "difficulty": 1, "strand": "What plants need", "objectiveCodes": ["Y3-P-2"], "prompt": "Name two things a plant needs to grow well.", "answer": "Any two of: light, water, air, nutrients from soil, room to grow", "acceptableAnswers": ["water and light", "light and water", "water and nutrients"] },
-    { "id": "rq-2", "kind": "mcq", "difficulty": 2, "strand": "What plants need", "objectiveCodes": ["Y3-P-2"], "prompt": "Which of these do plants get from the soil?", "options": ["sunlight", "nutrients", "air", "sound"], "correctIndex": 1 },
-    { "id": "rq-3", "kind": "truefalse", "difficulty": 1, "strand": "What plants need", "objectiveCodes": ["Y3-P-2"], "statement": "A plant kept in a dark cupboard with no light will grow just as well as one on a sunny windowsill.", "isTrue": false },
-    { "id": "rq-4", "kind": "truefalse", "difficulty": 2, "strand": "What plants need", "objectiveCodes": ["Y3-P-2"], "statement": "Different plants can need different amounts of water and light.", "isTrue": true },
-    { "id": "rq-5", "kind": "mcq", "difficulty": 3, "strand": "What plants need", "objectiveCodes": ["Y3-P-2"], "prompt": "A class grows two identical plants. One is given water and the other is not. Everything else is kept the same. What is this test finding out?", "options": ["whether the plant needs light", "whether the plant needs water", "whether the plant needs soil", "how tall the plant can grow"], "correctIndex": 1 },
-
-    { "id": "wt-1", "kind": "qa", "difficulty": 2, "strand": "Water transport", "objectiveCodes": ["Y3-P-3"], "prompt": "How does water get from the soil to the leaves of a plant?", "answer": "It is taken in by the roots and travels up through the stem", "acceptableAnswers": ["through the stem", "up the stem from the roots"] },
-    { "id": "wt-2", "kind": "truefalse", "difficulty": 2, "strand": "Water transport", "objectiveCodes": ["Y3-P-3"], "statement": "Water travels up a plant through the stem.", "isTrue": true },
-    { "id": "wt-3", "kind": "mcq", "difficulty": 3, "strand": "Water transport", "objectiveCodes": ["Y3-P-3"], "prompt": "A white flower is placed in water dyed blue. After a day the petals turn blue. What does this show?", "options": ["flowers can change colour on their own", "water travels up the stem into the flower", "the water has evaporated", "petals are made of dye"], "correctIndex": 1 },
-    { "id": "wt-4", "kind": "truefalse", "difficulty": 3, "strand": "Water transport", "objectiveCodes": ["Y3-P-3"], "statement": "Plants lose some water from their leaves into the air.", "isTrue": true },
-
-    { "id": "lc-1", "kind": "qa", "difficulty": 2, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "prompt": "What is it called when pollen is carried from one flower to another?", "answer": "Pollination", "acceptableAnswers": ["pollination"] },
-    { "id": "lc-2", "kind": "mcq", "difficulty": 2, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "prompt": "Which of these often helps to carry pollen between flowers?", "options": ["fish", "bees", "worms", "spiders"], "correctIndex": 1 },
-    { "id": "lc-3", "kind": "mcq", "difficulty": 3, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "prompt": "Put these stages in the correct order.", "options": ["pollination → seed formation → seed dispersal → new plant grows", "seed dispersal → pollination → new plant grows → seed formation", "new plant grows → pollination → seed dispersal → seed formation"], "correctIndex": 0 },
-    { "id": "lc-4", "kind": "qa", "difficulty": 3, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "prompt": "Why is it useful for seeds to be spread far away from the parent plant?", "answer": "So the new plants have space, light and water and do not have to compete with the parent plant", "acceptableAnswers": ["so they have room to grow", "so they don't compete for light and water"] },
-    { "id": "lc-5", "kind": "truefalse", "difficulty": 2, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "statement": "Some seeds are spread by the wind.", "isTrue": true },
-    { "id": "lc-6", "kind": "truefalse", "difficulty": 3, "strand": "Life cycle", "objectiveCodes": ["Y3-P-4"], "statement": "Seed dispersal means the seed turning into a flower while still inside the parent plant.", "isTrue": false }
+  "questions": [
+    {
+      "id": "pp-1",
+      "factKey": "pp-1",
+      "difficulty": 1,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Which part of a plant takes in water and holds the plant in the ground?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "The roots",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "roots",
+        "root"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pp-2",
+      "factKey": "pp-2",
+      "difficulty": 1,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Which part of a plant makes food using sunlight?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "The leaves",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "leaves",
+        "leaf"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pp-3",
+      "factKey": "pp-3",
+      "difficulty": 2,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What is the main job of the stem?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "to hold the plant up and carry water",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "to hold the plant up and carry water"
+      ],
+      "distractors": [
+        "to make seeds",
+        "to take in sunlight",
+        "to attract insects"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pp-4",
+      "factKey": "pp-4",
+      "difficulty": 2,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1",
+        "Y3-P-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which part of the plant helps it to make seeds?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the flower",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the flower"
+      ],
+      "distractors": [
+        "the roots",
+        "the stem",
+        "the leaves"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pp-5",
+      "factKey": "pp-5",
+      "difficulty": 1,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Roots usually grow downwards into the soil.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pp-6",
+      "factKey": "pp-6",
+      "difficulty": 2,
+      "strand": "Parts of a plant",
+      "objectiveCodes": [
+        "Y3-P-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "The leaves hold the plant firmly in the ground.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rq-1",
+      "factKey": "rq-1",
+      "difficulty": 1,
+      "strand": "What plants need",
+      "objectiveCodes": [
+        "Y3-P-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Name two things a plant needs to grow well.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Any two of: light, water, air, nutrients from soil, room to grow",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "water and light",
+        "light and water",
+        "water and nutrients"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rq-2",
+      "factKey": "rq-2",
+      "difficulty": 2,
+      "strand": "What plants need",
+      "objectiveCodes": [
+        "Y3-P-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these do plants get from the soil?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "nutrients",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "nutrients"
+      ],
+      "distractors": [
+        "sunlight",
+        "air",
+        "sound"
+      ],
+      "equation": null
+    },
+    {
+      "id": "rq-3",
+      "factKey": "rq-3",
+      "difficulty": 1,
+      "strand": "What plants need",
+      "objectiveCodes": [
+        "Y3-P-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A plant kept in a dark cupboard with no light will grow just as well as one on a sunny windowsill.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rq-4",
+      "factKey": "rq-4",
+      "difficulty": 2,
+      "strand": "What plants need",
+      "objectiveCodes": [
+        "Y3-P-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Different plants can need different amounts of water and light.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rq-5",
+      "factKey": "rq-5",
+      "difficulty": 3,
+      "strand": "What plants need",
+      "objectiveCodes": [
+        "Y3-P-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A class grows two identical plants. One is given water and the other is not. Everything else is kept the same. What is this test finding out?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "whether the plant needs water",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "whether the plant needs water"
+      ],
+      "distractors": [
+        "whether the plant needs light",
+        "whether the plant needs soil",
+        "how tall the plant can grow"
+      ],
+      "equation": null
+    },
+    {
+      "id": "wt-1",
+      "factKey": "wt-1",
+      "difficulty": 2,
+      "strand": "Water transport",
+      "objectiveCodes": [
+        "Y3-P-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How does water get from the soil to the leaves of a plant?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "It is taken in by the roots and travels up through the stem",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "through the stem",
+        "up the stem from the roots"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "wt-2",
+      "factKey": "wt-2",
+      "difficulty": 2,
+      "strand": "Water transport",
+      "objectiveCodes": [
+        "Y3-P-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Water travels up a plant through the stem.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "wt-3",
+      "factKey": "wt-3",
+      "difficulty": 3,
+      "strand": "Water transport",
+      "objectiveCodes": [
+        "Y3-P-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A white flower is placed in water dyed blue. After a day the petals turn blue. What does this show?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "water travels up the stem into the flower",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "water travels up the stem into the flower"
+      ],
+      "distractors": [
+        "flowers can change colour on their own",
+        "the water has evaporated",
+        "petals are made of dye"
+      ],
+      "equation": null
+    },
+    {
+      "id": "wt-4",
+      "factKey": "wt-4",
+      "difficulty": 3,
+      "strand": "Water transport",
+      "objectiveCodes": [
+        "Y3-P-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Plants lose some water from their leaves into the air.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "lc-1",
+      "factKey": "lc-1",
+      "difficulty": 2,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is it called when pollen is carried from one flower to another?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Pollination",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "pollination"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "lc-2",
+      "factKey": "lc-2",
+      "difficulty": 2,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these often helps to carry pollen between flowers?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "bees",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "bees"
+      ],
+      "distractors": [
+        "fish",
+        "worms",
+        "spiders"
+      ],
+      "equation": null
+    },
+    {
+      "id": "lc-3",
+      "factKey": "lc-3",
+      "difficulty": 3,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Put these stages in the correct order.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "pollination → seed formation → seed dispersal → new plant grows",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "pollination → seed formation → seed dispersal → new plant grows"
+      ],
+      "distractors": [
+        "seed dispersal → pollination → new plant grows → seed formation",
+        "new plant grows → pollination → seed dispersal → seed formation"
+      ],
+      "equation": null
+    },
+    {
+      "id": "lc-4",
+      "factKey": "lc-4",
+      "difficulty": 3,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Why is it useful for seeds to be spread far away from the parent plant?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "So the new plants have space, light and water and do not have to compete with the parent plant",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "so they have room to grow",
+        "so they don't compete for light and water"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "lc-5",
+      "factKey": "lc-5",
+      "difficulty": 2,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Some seeds are spread by the wind.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "lc-6",
+      "factKey": "lc-6",
+      "difficulty": 3,
+      "strand": "Life cycle",
+      "objectiveCodes": [
+        "Y3-P-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Seed dispersal means the seed turning into a flower while still inside the parent plant.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
   ]
 }

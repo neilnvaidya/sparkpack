@@ -1,63 +1,35 @@
 /**
  * Pack validator – run with `npm run validate-packs`.
  *
- * Zod-parses every pack in lib/curriculum/packs/ against the real schema,
- * then applies content checks the schema can't express:
- *   - equation arithmetic is correct
- *   - MCQ options are unique (no two defensible answers by duplication)
+ * Zod-parses every pack in lib/curriculum/packs/ against the real schema (which
+ * already checks equation arithmetic, distractor uniqueness and per-form data),
+ * then applies what the schema cannot express:
  *   - pack id matches "<subject>-y<year>-<topicId>" and the filename
  *   - board-quiz fit: strand grouping produces a 2–4 column board
  *   - which game slices each pack can power (informational)
  *
  * Game availability comes from lib/games/slice-requirements.ts — the same data
  * the app uses — so a new game is covered here the moment it is registered.
+ *
+ * Warnings are the enrichment worklist: they do not fail the build, because the
+ * corpus is migrating to multi-form questions one pack at a time. Once every
+ * pack is enriched, promote them to errors.
  */
 
 import { readdirSync, readFileSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { curriculumPackSchema } from '../lib/curriculum/schema.ts'
+import { curriculumPackSchema, DISTRACTOR_TARGET } from '../lib/curriculum/schema.ts'
 import { GAME_SLICE_META, isRequirementMet } from '../lib/games/slice-requirements.ts'
 
 const packsDir = join(dirname(fileURLToPath(import.meta.url)), '../lib/curriculum/packs')
 
 let errorCount = 0
+const warnings = { partialForms: 0, thinDistractors: 0, slotlessClaims: 0, noFactKey: 0 }
 
 function fail(file, message) {
   errorCount++
   console.error(`  ERROR ${file}: ${message}`)
-}
-
-/** Parse "3" or "3/5" into [numerator, denominator]. */
-function toRational(value) {
-  const fraction = /^(-?\d+)\s*\/\s*(\d+)$/.exec(value)
-  if (fraction) return [Number(fraction[1]), Number(fraction[2])]
-  const n = Number(value)
-  return Number.isNaN(n) ? null : [n, 1]
-}
-
-function checkEquation(file, item) {
-  const l = toRational(item.left)
-  const r = toRational(item.right)
-  const res = toRational(item.result)
-  if (!l || !r || !res) {
-    fail(file, `${item.id}: unparseable equation part`)
-    return
-  }
-  // expected = l op r, as a rational [num, den]
-  const [ln, ld] = l
-  const [rn, rd] = r
-  const expected = {
-    '+': [ln * rd + rn * ld, ld * rd],
-    '-': [ln * rd - rn * ld, ld * rd],
-    '×': [ln * rn, ld * rd],
-    '÷': [ln * rd, ld * rn],
-  }[item.operator]
-  const [en, ed] = expected
-  const [an, ad] = res
-  if (en * ad !== an * ed) {
-    fail(file, `${item.id}: ${item.left} ${item.operator} ${item.right} = ${item.result} (wrong)`)
-  }
 }
 
 const files = readdirSync(packsDir).filter((f) => f.endsWith('.json')).sort()
@@ -80,35 +52,34 @@ for (const file of files) {
     fail(file, `pack id "${pack.id}" != "${pack.subject}-y${pack.year}-${pack.topicId}"`)
   }
 
-  // Note: item ids only need to be unique within a pack; the schema enforces that.
-  for (const item of pack.items) {
-    if (item.kind === 'equation') checkEquation(file, item)
-    if (item.kind === 'mcq') {
-      const unique = new Set(item.options.map((o) => o.trim().toLowerCase()))
-      if (unique.size !== item.options.length) {
-        fail(file, `${item.id}: duplicate MCQ options`)
-      }
+  for (const q of pack.questions) {
+    if (q.forms.length < 3) warnings.partialForms++
+    if (q.forms.includes('mcq') && q.distractors.length < DISTRACTOR_TARGET) {
+      warnings.thinDistractors++
     }
+    if (q.claimIsTrue !== null) warnings.slotlessClaims++
+    if (q.factKey === q.id) warnings.noFactKey++
   }
 
-  // Board fit: strands among board-usable items.
-  const boardItems = pack.items.filter((i) => ['qa', 'mcq', 'truefalse'].includes(i.kind))
+  // Board fit: strands among the questions a board can use.
+  const boardQuestions = pack.questions.filter((q) => q.equation === null)
   const strandCounts = new Map()
-  for (const item of boardItems) {
-    const strand = item.strand ?? '(none)'
+  for (const q of boardQuestions) {
+    const strand = q.strand || '(none)'
     strandCounts.set(strand, (strandCounts.get(strand) ?? 0) + 1)
   }
   const strandsWith2Plus = [...strandCounts.values()].filter((n) => n >= 2).length
-  if (boardItems.length >= 8 && strandsWith2Plus < 2) {
-    fail(file, `board-quiz eligible but only ${strandsWith2Plus} strand(s) have 2+ items (needs 2–4 for a good board)`)
+  if (boardQuestions.length >= 8 && strandsWith2Plus < 2) {
+    fail(file, `board-quiz eligible but only ${strandsWith2Plus} strand(s) have 2+ questions (needs 2–4)`)
   }
 
-  const kindCounts = pack.items.reduce((acc, i) => ((acc[i.kind] = (acc[i.kind] ?? 0) + 1), acc), {})
-  const games = GAME_SLICE_META.filter((s) => isRequirementMet(pack, s.requires)).map(
-    (s) => s.name
-  )
+  const formCounts = pack.questions.reduce((acc, q) => {
+    for (const f of q.forms) acc[f] = (acc[f] ?? 0) + 1
+    return acc
+  }, {})
+  const games = GAME_SLICE_META.filter((s) => isRequirementMet(pack, s.requires)).map((s) => s.name)
   console.log(
-    `  ok ${file} — ${pack.items.length} items (${Object.entries(kindCounts)
+    `  ok ${file} — ${pack.questions.length} questions (${Object.entries(formCounts)
       .map(([k, n]) => `${n} ${k}`)
       .join(', ')}) → ${games.length ? games.join(', ') : 'NO GAMES AVAILABLE'}`
   )
@@ -120,4 +91,9 @@ if (errorCount > 0) {
   console.error(`${errorCount} error(s) found.`)
   process.exit(1)
 }
-console.log('All packs valid.')
+console.log('All packs valid.\n')
+console.log('Enrichment worklist (warnings, not failures):')
+console.log(`  ${warnings.partialForms} questions offer fewer than 3 forms`)
+console.log(`  ${warnings.thinDistractors} MCQ questions have fewer than ${DISTRACTOR_TARGET} distractors`)
+console.log(`  ${warnings.slotlessClaims} claims are slotless (fixed polarity — cannot vary true/false)`)
+console.log(`  ${warnings.noFactKey} questions have no shared factKey yet (each is its own fact)`)

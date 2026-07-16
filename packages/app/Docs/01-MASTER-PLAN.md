@@ -4,6 +4,7 @@
 > Last updated: 2026-07-15.
 >
 > This is the strategy doc. For live task state see [WORKPLAN.md](./WORKPLAN.md);
+> **for the rules every content pack must follow see [CONTENT-RULES.md](./CONTENT-RULES.md)**;
 > for per-game teacher flows see `flows/`, for game designs see `designs/`.
 
 ## Executive Summary
@@ -93,13 +94,20 @@ Deployment:   Vercel
 Persistence:  localStorage (session state only)
 ```
 
-### Content model (built)
+### Content model (built — schemaVersion 2)
 
 The shipped model differs from the original sketch in one important way: **packs are
-template-agnostic**. One pack per topic holds mixed items (`equation`, `qa`, `mcq`,
-`truefalse`, each with a difficulty and a strand), and *game slices* adapt that pack
-into each template's content. A pack therefore powers every game whose requirements
-it meets, instead of one pack per template.
+template-agnostic**. One pack per topic holds questions, and *game slices* adapt that
+pack into each template's content. A pack therefore powers every game whose
+requirements it meets, instead of one pack per template.
+
+**One question = one fact, in up to three forms** (`open`, `mcq`, `truefalse`), so a
+fact is authored once and presented at the difficulty a game needs. Two surfaces plus
+one answer set: `ask` (interrogative) drives open and MCQ, `claim` (declarative, one
+`{}` slot) drives true/false, and `answer` + `distractors` supply the MCQ options, the
+false claim fills, and the replay variety. **[CONTENT-RULES.md](./CONTENT-RULES.md) is
+the authoring contract** — the uniform shape, the distractor rules, what the machine
+checks and what only human review can.
 
 - **Curriculum taxonomy** (`lib/curriculum/map.ts`): Key Stage → Year → Subject →
   Topic, aligned to the UK National Curriculum. A topic points at a pack or `null`.
@@ -108,10 +116,19 @@ it meets, instead of one pack per template.
   statutory NC objectives verbatim (objectives-first).
 - **Game slices** (`lib/games/slices.ts`): requirements live in
   `slice-requirements.ts` (shared with the validator); builders adapt packs to templates.
+- **Rendering** (`lib/questions/render.ts` → `components/shared/QuestionView.tsx`): one
+  path for every game. Distractor selection and true/false polarity are chosen here,
+  once per game build, so replaying a topic gives fresh options while a stored game
+  stays fixed.
 - **Library UI** (`app/library/`): browse-and-play. Replaced `/generate`.
 
-Items never reference visuals renderers yet — every item must stand alone on a
+Questions never reference visuals renderers yet — every question must stand alone on a
 projector without a picture.
+
+**Migration status:** the corpus is lifted to v2 (417 questions) but not yet enriched —
+every question currently offers exactly one form, so the *capability* is in place and
+the *content* is not. Enrichment is the bulk of the remaining work: ~2,085 distractors
+and 417 claim frames, AI-drafted and human-reviewed, pack by pack.
 
 ### Dev-time content pipeline (to build)
 

@@ -81,7 +81,7 @@ export default function SubjectPage() {
                     <div>
                       <div style={{ fontSize: '15px', fontWeight: 700 }}>{topic.title}</div>
                       <div style={{ fontSize: '12.5px', color: INK.textDim, marginTop: '3px' }}>
-                        {pack.objectives.length} objectives · {pack.items.length} questions
+                        {pack.objectives.length} objectives · {pack.questions.length} questions
                       </div>
                     </div>
                     <span style={{ fontSize: '13px', fontWeight: 700, color: accent, whiteSpace: 'nowrap' }}>

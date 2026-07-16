@@ -1,25 +1,31 @@
 /**
- * Rendering a curriculum item into the shape a game actually displays.
+ * Rendering a curriculum question into the shape a game displays.
  *
- * This replaces the old `asQuestionAnswer`, which collapsed everything into a
+ * Replaces the old `asQuestionAnswer`, which collapsed everything into a
  * `{prompt, answer}` string pair — an MCQ became "prompt   A: x   B: y" and a
- * true/false became "True or false: <statement>". Options and `isTrue` never
- * reached a renderer, so no component could lay them out. Structure now survives
- * to the component, which is what lets `QuestionView` draw option panels.
+ * true/false became "True or false: <statement>", so options and `isTrue` never
+ * reached a component. Structure now survives to the renderer.
  *
- * Pure and React-free: `slices.ts` and the pack validator both reach it, and the
+ * A question can offer several forms; the game picks one, and this turns that
+ * choice into concrete text. Selection of *which* distractors and *which*
+ * polarity happens here too, driven by an injected Rng — so it happens once per
+ * game build (a teacher pressing Play), not per render. Play a topic twice and
+ * the options differ; re-open the same stored game and they do not.
+ *
+ * Pure and React-free: slices.ts and the pack validator both reach it, and the
  * validator runs under plain Node.
- *
- * Under schema v1 an item's kind determines its form one-to-one. Schema v2 gives
- * a question several forms and a game picks one; `RenderedQuestion` is already
- * shaped for that, so the components will not change again.
  */
 
-import type { CurriculumItem } from '@/lib/curriculum/schema'
+import type { CurriculumQuestion, QuestionForm } from '@/lib/curriculum/schema'
 
-export type QuestionForm = 'open' | 'mcq' | 'truefalse'
+export type { QuestionForm }
 
 export const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E']
+
+/** How many options an MCQ shows: the answer plus three distractors. */
+export const MCQ_OPTION_COUNT = 4
+
+export type Rng = () => number
 
 export interface RenderedOption {
   label: string
@@ -37,50 +43,136 @@ export interface RenderedQuestion {
   answerDetail?: string
   /** Phrasings the teacher may accept for a spoken answer. */
   acceptableAnswers: string[]
-  /** mcq only. */
+  /** mcq only. Already selected, shuffled and lettered. */
   options?: RenderedOption[]
   /** truefalse only. */
   isTrue?: boolean
 }
 
-export function renderItem(item: CurriculumItem): RenderedQuestion {
-  switch (item.kind) {
-    case 'equation':
-      // Hide the result: "24 + 16 = ?"
-      return {
-        form: 'open',
-        prompt: `${item.left} ${item.operator} ${item.right} = ?`,
-        answer: item.result,
-        acceptableAnswers: [item.result],
-      }
-    case 'qa':
-      return {
-        form: 'open',
-        prompt: item.prompt,
-        answer: item.answer,
-        acceptableAnswers: [item.answer, ...item.acceptableAnswers],
-      }
-    case 'mcq': {
-      const options = item.options.map((text, i) => ({
-        label: OPTION_LABELS[i],
-        text,
-        correct: i === item.correctIndex,
-      }))
-      return {
-        form: 'mcq',
-        prompt: item.prompt,
-        answer: item.options[item.correctIndex],
-        acceptableAnswers: [item.options[item.correctIndex]],
-        options,
-      }
-    }
-    case 'truefalse':
-      return {
-        form: 'truefalse',
-        prompt: item.statement,
-        answer: item.isTrue ? 'True' : 'False',
-        acceptableAnswers: [item.isTrue ? 'True' : 'False'],
-        isTrue: item.isTrue,
-      }
+function shuffle<T>(items: T[], rng: Rng): T[] {
+  const arr = [...items]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
   }
+  return arr
+}
+
+/** The number sentence with one part replaced by "?" — always exactly one unknown. */
+export function formatEquation(
+  equation: NonNullable<CurriculumQuestion['equation']>,
+  hidden: 'left' | 'right' | 'result'
+): string {
+  const show = (part: 'left' | 'right' | 'result') =>
+    hidden === part ? '?' : equation[part]
+  return `${show('left')} ${equation.operator} ${show('right')} = ${show('result')}`
+}
+
+function renderOpen(q: CurriculumQuestion): RenderedQuestion {
+  if (q.equation) {
+    // Hide the result unless a game has asked for otherwise (Question Rush
+    // rotates the hidden part itself and overrides these fields).
+    return {
+      form: 'open',
+      prompt: formatEquation(q.equation, 'result'),
+      answer: q.equation.result,
+      acceptableAnswers: [q.equation.result],
+    }
+  }
+  return {
+    form: 'open',
+    prompt: q.ask,
+    answer: q.answer,
+    // Spread rather than set undefined: an explicit undefined key still
+    // serialises into stored content and the dump.
+    ...(q.answerDetail ? { answerDetail: q.answerDetail } : {}),
+    acceptableAnswers: [q.answer, ...q.acceptableAnswers],
+  }
+}
+
+function renderMcq(q: CurriculumQuestion, rng: Rng): RenderedQuestion {
+  // Draw a fresh subset of the distractor pool, then shuffle in the answer, so
+  // the same question dealt twice looks different.
+  const drawn = shuffle(q.distractors, rng).slice(0, MCQ_OPTION_COUNT - 1)
+  const options = shuffle([q.answer, ...drawn], rng).map((text, i) => ({
+    label: OPTION_LABELS[i],
+    text,
+    correct: text === q.answer,
+  }))
+  return {
+    form: 'mcq',
+    prompt: q.ask,
+    answer: q.answer,
+    ...(q.answerDetail ? { answerDetail: q.answerDetail } : {}),
+    acceptableAnswers: [q.answer],
+    options,
+  }
+}
+
+function renderTrueFalse(q: CurriculumQuestion, rng: Rng): RenderedQuestion {
+  // Slotless claims carry an authored polarity and cannot flip. Slotted ones
+  // choose: fill with the answer for TRUE, a distractor for FALSE. That makes
+  // balance a deal-time decision instead of an authoring habit.
+  if (q.claimIsTrue !== null) {
+    return {
+      form: 'truefalse',
+      prompt: q.claim,
+      answer: q.claimIsTrue ? 'True' : 'False',
+      ...(q.answerDetail ? { answerDetail: q.answerDetail } : {}),
+      acceptableAnswers: [q.claimIsTrue ? 'True' : 'False'],
+      isTrue: q.claimIsTrue,
+    }
+  }
+  const canBeFalse = q.distractors.length > 0
+  const isTrue = canBeFalse ? rng() < 0.5 : true
+  const fill = isTrue ? q.answer : shuffle(q.distractors, rng)[0]
+  return {
+    form: 'truefalse',
+    prompt: q.claim.replace('{}', fill),
+    answer: isTrue ? 'True' : 'False',
+    // A false claim needs the correction spelled out on reveal.
+    ...(isTrue
+      ? q.answerDetail
+        ? { answerDetail: q.answerDetail }
+        : {}
+      : { answerDetail: `Actually: ${q.claim.replace('{}', q.answer)}` }),
+    acceptableAnswers: [isTrue ? 'True' : 'False'],
+    isTrue,
+  }
+}
+
+export function renderQuestion(
+  q: CurriculumQuestion,
+  form: QuestionForm,
+  rng: Rng = Math.random
+): RenderedQuestion {
+  switch (form) {
+    case 'open':
+      return renderOpen(q)
+    case 'mcq':
+      return renderMcq(q, rng)
+    case 'truefalse':
+      return renderTrueFalse(q, rng)
+  }
+}
+
+/**
+ * Render in the first of `preference` the question actually offers.
+ *
+ * The direction matters: falling back from `open` to `truefalse` silently makes
+ * a question easier, so games that care about difficulty must order this
+ * deliberately rather than accept any form.
+ */
+export function renderBest(
+  q: CurriculumQuestion,
+  preference: QuestionForm[],
+  rng: Rng = Math.random
+): RenderedQuestion | null {
+  const form = preference.find((f) => q.forms.includes(f))
+  return form ? renderQuestion(q, form, rng) : null
+}
+
+/** The form a question offers, when it offers exactly one (true across the corpus pre-enrichment). */
+export function soleForm(q: CurriculumQuestion): QuestionForm {
+  return q.forms[0]
 }

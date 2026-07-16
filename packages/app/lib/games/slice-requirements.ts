@@ -12,19 +12,24 @@
  */
 
 import type {
-  CurriculumItem,
-  CurriculumItemKind,
   CurriculumPack,
+  CurriculumQuestion,
+  QuestionForm,
 } from '@/lib/curriculum/schema'
 
-export const BOARD_KINDS: CurriculumItemKind[] = ['qa', 'mcq', 'truefalse']
-export const FLASH_KINDS: CurriculumItemKind[] = ['equation', 'qa', 'mcq', 'truefalse']
-export const STRATEGY_KINDS: CurriculumItemKind[] = ['qa', 'mcq', 'truefalse']
+export const ALL_FORMS: QuestionForm[] = ['open', 'mcq', 'truefalse']
 
 export interface SliceRequirement {
-  kinds: CurriculumItemKind[]
+  /** A question counts if it offers any of these forms. */
+  forms: QuestionForm[]
   min: number
-  /** Optional per-difficulty floor; difficulty-2 items backfill short buckets. */
+  /**
+   * Exclude number sentences. Board-style games want prose with a strand to
+   * file under; `forms` cannot express this, because an equation and a plain
+   * question both declare `open`.
+   */
+  textOnly?: boolean
+  /** Optional per-difficulty floor; difficulty-2 questions backfill short buckets. */
   minPerDifficulty?: Partial<Record<1 | 2 | 3, number>>
 }
 
@@ -36,16 +41,20 @@ export interface GameSliceMeta {
   requires: SliceRequirement
 }
 
-/** Items of the given kinds, in pack order. */
-export function itemsMatchingKinds(
+/** Questions a requirement can actually use, in pack order. */
+export function questionsMatching(
   pack: CurriculumPack,
-  kinds: CurriculumItemKind[]
-): CurriculumItem[] {
-  return pack.items.filter((item) => kinds.includes(item.kind))
+  requires: SliceRequirement
+): CurriculumQuestion[] {
+  return pack.questions.filter(
+    (q) =>
+      (!requires.textOnly || q.equation === null) &&
+      q.forms.some((f) => requires.forms.includes(f))
+  )
 }
 
 export function isRequirementMet(pack: CurriculumPack, requires: SliceRequirement): boolean {
-  const usable = itemsMatchingKinds(pack, requires.kinds)
+  const usable = questionsMatching(pack, requires)
   if (usable.length < requires.min) return false
 
   const perDiff = requires.minPerDifficulty
@@ -71,48 +80,48 @@ export const GAME_SLICE_META: GameSliceMeta[] = [
     name: 'Question Rush',
     tagline: 'Three cards at once — call the colour, claim the card',
     // Any kind: this used to be equation-only, which meant 4 packs of 19.
-    requires: { kinds: FLASH_KINDS, min: 6 },
+    requires: { forms: ALL_FORMS, min: 6 },
   },
   {
     templateId: 'strategy_board_quiz',
     slug: 'strategy-board-quiz',
     name: 'Strategy Board Quiz',
     tagline: 'Jeopardy-style board with steals',
-    requires: { kinds: BOARD_KINDS, min: 8 },
+    requires: { forms: ALL_FORMS, min: 8, textOnly: true },
   },
   {
     templateId: 'flash_round',
     slug: 'flash-round',
     name: 'Flash Round',
     tagline: 'Rapid-fire questions, first team to answer scores',
-    requires: { kinds: FLASH_KINDS, min: 5 },
+    requires: { forms: ALL_FORMS, min: 5 },
   },
   {
     templateId: 'true_false_showdown',
     slug: 'true-false-showdown',
     name: 'True or False Showdown',
     tagline: 'Commit to TRUE or FALSE before the reveal',
-    requires: { kinds: ['truefalse'], min: 5 },
+    requires: { forms: ['truefalse'], min: 5 },
   },
   {
     templateId: 'three_in_a_row',
     slug: 'three-in-a-row',
     name: 'Three in a Row',
     tagline: 'Claim squares to line up three in your colour',
-    requires: { kinds: STRATEGY_KINDS, min: 16 },
+    requires: { forms: ALL_FORMS, min: 16, textOnly: true },
   },
   {
     templateId: 'summit_climb',
     slug: 'summit-climb',
     name: 'Summit Climb',
     tagline: 'Play it safe or gamble on hard questions to climb faster',
-    requires: { kinds: STRATEGY_KINDS, min: 16, minPerDifficulty: { 1: 8, 3: 8 } },
+    requires: { forms: ALL_FORMS, min: 16, textOnly: true, minPerDifficulty: { 1: 8, 3: 8 } },
   },
   {
     templateId: 'risk_it',
     slug: 'risk-it',
     name: 'Risk It',
     tagline: 'Wager points on how sure you are before each question',
-    requires: { kinds: STRATEGY_KINDS, min: 10 },
+    requires: { forms: ALL_FORMS, min: 10, textOnly: true },
   },
 ]

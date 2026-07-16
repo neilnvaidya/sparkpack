@@ -8,20 +8,14 @@
  */
 
 import type { z } from 'zod'
-import {
-  type CurriculumPack,
-  type CurriculumItem,
-  type EquationItem,
-} from '@/lib/curriculum/schema'
-import { itemsOfKind, itemsByStrand } from '@/lib/curriculum'
-import { renderItem } from '@/lib/questions/render'
+import type { CurriculumPack, CurriculumQuestion } from '@/lib/curriculum/schema'
+import { textQuestions, questionsWithForm, questionsByStrand } from '@/lib/curriculum'
+import { renderQuestion, renderBest, soleForm, formatEquation } from '@/lib/questions/render'
 import { CARD_COLOR_OPTIONS } from '@/lib/constants/team-colors'
 import {
-  BOARD_KINDS,
-  FLASH_KINDS,
-  STRATEGY_KINDS,
   GAME_SLICE_META,
   isRequirementMet,
+  questionsMatching,
   type GameSliceMeta,
 } from '@/lib/games/slice-requirements'
 import { questionRushContentSchema } from '@/lib/question-rush/content'
@@ -52,42 +46,32 @@ const HIDDEN_PARTS = ['result', 'right', 'left'] as const
 /** Cards are named by colour, so a round can hold as many as there are colours. */
 const RUSH_CARDS_PER_ROUND = CARD_COLOR_OPTIONS.length
 
-function equationCard(item: EquationItem, i: number) {
+function equationCard(q: CurriculumQuestion, i: number) {
+  const equation = q.equation!
   const hidden = HIDDEN_PARTS[i % HIDDEN_PARTS.length]
-  const shown = (part: 'left' | 'right' | 'result') =>
-    hidden === part ? '?' : item[part]
   return {
-    prompt: `${shown('left')} ${item.operator} ${shown('right')} = ${shown('result')}`,
-    answer: item[hidden],
-    equation: {
-      operator: item.operator,
-      left: item.left,
-      right: item.right,
-      result: item.result,
-      hidden,
-    },
+    prompt: formatEquation(equation, hidden),
+    answer: equation[hidden],
+    equation: { ...equation, hidden },
   }
 }
 
 function buildQuestionRush(pack: CurriculumPack): z.infer<typeof questionRushContentSchema> {
   let equationIndex = 0
-  const questions = itemsOfKind(pack, FLASH_KINDS).map((item) => {
-    const base = {
-      id: item.id,
-      points: POINTS_BY_DIFFICULTY[item.difficulty],
-    }
-    if (item.kind === 'equation') {
-      const card = equationCard(item, equationIndex++)
+  const questions = pack.questions.map((q) => {
+    const base = { id: q.id, points: POINTS_BY_DIFFICULTY[q.difficulty] }
+    if (q.equation) {
+      const card = equationCard(q, equationIndex++)
       return {
         ...base,
-        ...renderItem(item),
+        ...renderQuestion(q, 'open'),
         prompt: card.prompt,
         answer: card.answer,
         acceptableAnswers: [card.answer],
         equation: card.equation,
       }
     }
-    return { ...base, ...renderItem(item) }
+    return { ...base, ...renderQuestion(q, soleForm(q)) }
   })
 
   return questionRushContentSchema.parse({
@@ -102,8 +86,8 @@ function buildQuestionRush(pack: CurriculumPack): z.infer<typeof questionRushCon
 const BOARD_POINTS = [100, 200, 300, 400]
 
 function buildBoardQuiz(pack: CurriculumPack): z.infer<typeof boardQuizContentSchema> {
-  const usable = itemsOfKind(pack, BOARD_KINDS)
-  const groups = itemsByStrand(usable, pack.title)
+  const usable = textQuestions(pack)
+  const groups = questionsByStrand(usable, pack.title)
 
   // Columns = strands with the most items (2–4); rows = what every column can fill (2–4).
   const strands = [...groups.entries()]
@@ -139,7 +123,7 @@ function buildBoardQuiz(pack: CurriculumPack): z.infer<typeof boardQuizContentSc
       cells.push({
         topic: col.topic,
         points: BOARD_POINTS[r],
-        question: renderItem(col.items[r]),
+        question: renderQuestion(col.items[r], soleForm(col.items[r])),
       })
     }
   }
@@ -171,39 +155,38 @@ function buildBoardQuiz(pack: CurriculumPack): z.infer<typeof boardQuizContentSc
 // ─── Flash Round ──────────────────────────────────────────────────────────────
 
 function buildFlashRound(pack: CurriculumPack): z.infer<typeof flashRoundContentSchema> {
-  const items = itemsOfKind(pack, FLASH_KINDS)
   // Easy → hard keeps the round feeling like a ramp-up.
-  const sorted = [...items].sort((a, b) => a.difficulty - b.difficulty)
+  const sorted = [...pack.questions].sort((a, b) => a.difficulty - b.difficulty)
   return flashRoundContentSchema.parse({
     title: pack.title,
-    questions: sorted.map(renderItem),
+    questions: sorted.map((q) => renderQuestion(q, soleForm(q))),
   })
 }
 
 // ─── True or False Showdown ───────────────────────────────────────────────────
 
 function buildTrueFalse(pack: CurriculumPack): z.infer<typeof trueFalseContentSchema> {
-  const items = itemsOfKind(pack, ['truefalse'])
+  const usable = questionsWithForm(pack, ['truefalse'])
   return trueFalseContentSchema.parse({
     title: pack.title,
-    questions: items.map(renderItem),
+    questions: usable.map((q) => renderQuestion(q, 'truefalse')),
   })
 }
 
 // ─── Three in a Row ───────────────────────────────────────────────────────────
 
 function buildThreeInARow(pack: CurriculumPack): z.infer<typeof threeInARowContentSchema> {
-  const items = shuffleDeck(itemsOfKind(pack, STRATEGY_KINDS))
+  const usable = shuffleDeck(textQuestions(pack))
   return threeInARowContentSchema.parse({
     title: pack.title,
-    questions: items.map(renderItem),
+    questions: usable.map((q) => renderQuestion(q, soleForm(q))),
   })
 }
 
 // ─── Summit Climb ─────────────────────────────────────────────────────────────
 
 function buildSummitClimb(pack: CurriculumPack): z.infer<typeof summitClimbContentSchema> {
-  const items = itemsOfKind(pack, STRATEGY_KINDS)
+  const items = textQuestions(pack)
   const diff1 = shuffleDeck(items.filter((i) => i.difficulty === 1))
   const diff3 = shuffleDeck(items.filter((i) => i.difficulty === 3))
   const diff2 = shuffleDeck(items.filter((i) => i.difficulty === 2))
@@ -218,19 +201,19 @@ function buildSummitClimb(pack: CurriculumPack): z.infer<typeof summitClimbConte
 
   return summitClimbContentSchema.parse({
     title: pack.title,
-    easy: easyItems.map(renderItem),
-    hard: hardItems.map(renderItem),
+    easy: easyItems.map((q) => renderQuestion(q, soleForm(q))),
+    hard: hardItems.map((q) => renderQuestion(q, soleForm(q))),
   })
 }
 
 // ─── Risk It ──────────────────────────────────────────────────────────────────
 
 function buildRiskIt(pack: CurriculumPack): z.infer<typeof riskItContentSchema> {
-  const usable = itemsOfKind(pack, STRATEGY_KINDS)
-  const groups = [...itemsByStrand(usable, pack.title).values()].map((list) => shuffleDeck(list))
+  const usable = textQuestions(pack)
+  const groups = [...questionsByStrand(usable, pack.title).values()].map((list) => shuffleDeck(list))
 
   // Round-robin across strands so the ten questions span the topic.
-  const picked: CurriculumItem[] = []
+  const picked: CurriculumQuestion[] = []
   let progressed = true
   while (picked.length < 10 && progressed) {
     progressed = false
@@ -246,9 +229,9 @@ function buildRiskIt(pack: CurriculumPack): z.infer<typeof riskItContentSchema> 
 
   return riskItContentSchema.parse({
     title: pack.title,
-    questions: picked.slice(0, 10).map((item) => ({
-      ...renderItem(item),
-      hint: item.strand ?? pack.title,
+    questions: picked.slice(0, 10).map((q) => ({
+      ...renderQuestion(q, soleForm(q)),
+      hint: q.strand || pack.title,
     })),
   })
 }
@@ -271,8 +254,9 @@ export const GAME_SLICES: GameSlice[] = GAME_SLICE_META.map((meta) => {
   return { ...meta, build }
 })
 
+/** How many questions this pack can actually feed the game — the library's count. */
 export function usableItemCount(pack: CurriculumPack, slice: GameSlice): number {
-  return itemsOfKind(pack, slice.requires.kinds).length
+  return questionsMatching(pack, slice.requires).length
 }
 
 export function isSliceAvailable(pack: CurriculumPack, slice: GameSlice): boolean {

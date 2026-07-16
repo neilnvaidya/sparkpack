@@ -1,6 +1,47 @@
 # Workplan — current session state and next steps
 
-> **Latest: multi-form questions, steps 1–2 (2026-07-15) — done.** Plan:
+> **Latest: schema v2 lift, step 3a (2026-07-16) — done.** Packs are now
+> `schemaVersion: 2` — **417 items → 417 questions**, one per item, no content
+> invented. **The authoring contract is written up in
+> [CONTENT-RULES.md](./CONTENT-RULES.md) — read that before touching a pack.**
+>
+> **Acceptance held.** The whole-corpus dump changed in exactly one way: 2,871
+> lines removed, 2,871 added, **all of them MCQ option `text`/`correct`** — the
+> deliberate new shuffle. No prompt, answer, board layout, true/false or equation
+> moved. The lift is a provable no-op apart from the intended change.
+>
+> **Options now vary per game.** `renderQuestion(q, form, rng)` draws 3 of the
+> distractor pool and shuffles, at game build (each press of Play), not per
+> render — so playing a topic twice differs, but re-opening a stored game mid
+> lesson does not. Ten unit tests in `lib/questions/render.test.ts` cover it.
+>
+> **Three forced deviations from the approved plan — all documented in
+> CONTENT-RULES.md:**
+> 1. **`claimIsTrue` exists, transitionally.** A v1 true/false ("Dark is simply the
+>    absence of light.") cannot be slotted mechanically — deriving the frame and
+>    answer is authoring, not a codemod. 118 claims are slotless; enrichment
+>    rewrites them and then the field is deleted.
+> 2. **`textOnly` on `SliceRequirement`.** A lifted qa and a lifted equation both
+>    declare `open`, so `forms` alone cannot reproduce the old BOARD/STRATEGY kind
+>    filter. Board-style games set `textOnly: true`.
+> 3. **The ≥5 distractor rule is a warning, not an error.** Existing MCQs have 3
+>    (and the a/an items are genuine 2-option questions with 1). Enforcing it now
+>    would fail 124 questions or force the codemod to invent content. The schema
+>    enforces the structural floor; the validator warns below the target of 5.
+>
+> **Enrichment worklist** (`npm run validate-packs`, warnings not failures):
+> 417 questions offer <3 forms · 124 MCQs have <5 distractors · 118 slotless
+> claims · 417 questions have no shared factKey.
+>
+> **Not yet done:** step 3b (the content pass — see "The content cost" in the
+> plan), step 4 (two-axis scoring: `FORM_SCAFFOLD`, replaces `POINTS_BY_DIFFICULTY`),
+> step 5 (`factKey` dedupe + `factReuse` for Three in a Row).
+> **Not yet verified in-browser by Neil** — he is doing a pass.
+> `scripts/migrate-packs-v2.mjs` and the v1 schema (`curriculumPackV1Schema`,
+> `curriculumItemSchema` and friends) are kept only so this commit is
+> reproducible; **delete both once the migration is reviewed.**
+>
+> **Earlier: multi-form questions, steps 1–2 (2026-07-15) — done.** Plan:
 > `~/.claude/plans/points-to-address-1-starry-pillow.md`. Steps 1 and 2 of 5 are
 > complete and verified in-browser; they ship the two user-visible wins with **no
 > schema change and no content migration**.

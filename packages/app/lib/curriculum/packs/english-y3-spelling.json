@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "english-y3-spelling",
   "subject": "english",
   "keyStage": "KS2",
@@ -8,35 +8,511 @@
   "title": "Spelling",
   "description": "Lower Key Stage 2 spelling: prefixes and suffixes, common homophones, and words that are often misspelt (English Appendix 1, Years 3 and 4).",
   "objectives": [
-    { "code": "Y34-SP-1", "statement": "Use further prefixes and understand how to add them (for example, un–, dis–, mis–, in–, re–, sub–, super–, anti–, auto–)." },
-    { "code": "Y34-SP-2", "statement": "Use further suffixes and understand how to add them (for example, –ation, –ly, –ous)." },
-    { "code": "Y34-SP-3", "statement": "Spell words that are often confused, including common homophones (for example, there/their/they're, here/hear)." },
-    { "code": "Y34-SP-4", "statement": "Spell words from the Year 3 and 4 list of commonly misspelt words." }
+    {
+      "code": "Y34-SP-1",
+      "statement": "Use further prefixes and understand how to add them (for example, un–, dis–, mis–, in–, re–, sub–, super–, anti–, auto–)."
+    },
+    {
+      "code": "Y34-SP-2",
+      "statement": "Use further suffixes and understand how to add them (for example, –ation, –ly, –ous)."
+    },
+    {
+      "code": "Y34-SP-3",
+      "statement": "Spell words that are often confused, including common homophones (for example, there/their/they're, here/hear)."
+    },
+    {
+      "code": "Y34-SP-4",
+      "statement": "Spell words from the Year 3 and 4 list of commonly misspelt words."
+    }
   ],
-  "items": [
-    { "id": "pr-1", "kind": "qa", "difficulty": 1, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Add the prefix 'un' to 'happy' to make a word meaning 'not happy'.", "answer": "unhappy", "acceptableAnswers": ["unhappy"] },
-    { "id": "pr-2", "kind": "qa", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Add the prefix 're' to 'build' to make a word meaning 'build again'.", "answer": "rebuild", "acceptableAnswers": ["rebuild"] },
-    { "id": "pr-3", "kind": "mcq", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Which prefix makes 'behave' mean 'behave badly'?", "options": ["un–", "mis–", "re–", "dis–"], "correctIndex": 1 },
-    { "id": "pr-4", "kind": "mcq", "difficulty": 3, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "prompt": "Which word uses the prefix 'dis' correctly?", "options": ["disappear", "dissappear", "disapear", "dizappear"], "correctIndex": 0 },
-    { "id": "pr-5", "kind": "truefalse", "difficulty": 2, "strand": "Prefixes", "objectiveCodes": ["Y34-SP-1"], "statement": "A prefix is added to the beginning of a word to change its meaning.", "isTrue": true },
-
-    { "id": "su-1", "kind": "qa", "difficulty": 1, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Add the suffix 'ly' to 'quick' to describe how something is done.", "answer": "quickly", "acceptableAnswers": ["quickly"] },
-    { "id": "su-2", "kind": "mcq", "difficulty": 2, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "How do you correctly add 'ly' to 'gentle'?", "options": ["gentlely", "gently", "gentley", "gentlly"], "correctIndex": 1 },
-    { "id": "su-3", "kind": "mcq", "difficulty": 3, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Which is the correct spelling when 'ation' is added to 'inform'?", "options": ["informnation", "informashun", "information", "informaton"], "correctIndex": 2 },
-    { "id": "su-4", "kind": "truefalse", "difficulty": 2, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "statement": "A suffix is a letter or group of letters added to the end of a word.", "isTrue": true },
-    { "id": "su-5", "kind": "qa", "difficulty": 3, "strand": "Suffixes", "objectiveCodes": ["Y34-SP-2"], "prompt": "Add the suffix 'ous' to 'poison' to make an adjective.", "answer": "poisonous", "acceptableAnswers": ["poisonous"] },
-
-    { "id": "ho-1", "kind": "mcq", "difficulty": 1, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: 'The dog wagged ___ tail.'", "options": ["there", "their", "they're"], "correctIndex": 1 },
-    { "id": "ho-2", "kind": "mcq", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: 'Can you ___ the music?'", "options": ["hear", "here"], "correctIndex": 0 },
-    { "id": "ho-3", "kind": "mcq", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Choose the correct word: '___ going to the park later.'", "options": ["There", "Their", "They're"], "correctIndex": 2 },
-    { "id": "ho-4", "kind": "truefalse", "difficulty": 2, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "statement": "Homophones are words that sound the same but have different meanings and spellings.", "isTrue": true },
-    { "id": "ho-5", "kind": "qa", "difficulty": 3, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "prompt": "Which spelling means a number: 'two', 'too' or 'to'?", "answer": "two", "acceptableAnswers": ["two"] },
-
-    { "id": "cm-1", "kind": "mcq", "difficulty": 1, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["becuase", "because", "becuse", "becaus"], "correctIndex": 1 },
-    { "id": "cm-2", "kind": "mcq", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["diffrent", "diferent", "different", "differant"], "correctIndex": 2 },
-    { "id": "cm-3", "kind": "mcq", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Which is the correct spelling?", "options": ["favourite", "faverite", "favorit", "favourit"], "correctIndex": 0 },
-    { "id": "cm-4", "kind": "truefalse", "difficulty": 2, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "statement": "The word 'friend' is spelt f-r-i-e-n-d.", "isTrue": true },
-    { "id": "cm-5", "kind": "qa", "difficulty": 3, "strand": "Commonly misspelt", "objectiveCodes": ["Y34-SP-4"], "prompt": "Spell the word that means the opposite of 'question', beginning with 'a'.", "answer": "answer", "acceptableAnswers": ["answer"] },
-    { "id": "ho-6", "kind": "truefalse", "difficulty": 1, "strand": "Homophones", "objectiveCodes": ["Y34-SP-3"], "statement": "'Hear' and 'here' sound the same but are spelt differently.", "isTrue": true }
+  "questions": [
+    {
+      "id": "pr-1",
+      "factKey": "pr-1",
+      "difficulty": 1,
+      "strand": "Prefixes",
+      "objectiveCodes": [
+        "Y34-SP-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Add the prefix 'un' to 'happy' to make a word meaning 'not happy'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "unhappy",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "unhappy"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pr-2",
+      "factKey": "pr-2",
+      "difficulty": 2,
+      "strand": "Prefixes",
+      "objectiveCodes": [
+        "Y34-SP-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Add the prefix 're' to 'build' to make a word meaning 'build again'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "rebuild",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "rebuild"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pr-3",
+      "factKey": "pr-3",
+      "difficulty": 2,
+      "strand": "Prefixes",
+      "objectiveCodes": [
+        "Y34-SP-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which prefix makes 'behave' mean 'behave badly'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "mis–",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "mis–"
+      ],
+      "distractors": [
+        "un–",
+        "re–",
+        "dis–"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pr-4",
+      "factKey": "pr-4",
+      "difficulty": 3,
+      "strand": "Prefixes",
+      "objectiveCodes": [
+        "Y34-SP-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which word uses the prefix 'dis' correctly?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "disappear",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "disappear"
+      ],
+      "distractors": [
+        "dissappear",
+        "disapear",
+        "dizappear"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pr-5",
+      "factKey": "pr-5",
+      "difficulty": 2,
+      "strand": "Prefixes",
+      "objectiveCodes": [
+        "Y34-SP-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A prefix is added to the beginning of a word to change its meaning.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-1",
+      "factKey": "su-1",
+      "difficulty": 1,
+      "strand": "Suffixes",
+      "objectiveCodes": [
+        "Y34-SP-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Add the suffix 'ly' to 'quick' to describe how something is done.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "quickly",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "quickly"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-2",
+      "factKey": "su-2",
+      "difficulty": 2,
+      "strand": "Suffixes",
+      "objectiveCodes": [
+        "Y34-SP-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "How do you correctly add 'ly' to 'gentle'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "gently",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "gently"
+      ],
+      "distractors": [
+        "gentlely",
+        "gentley",
+        "gentlly"
+      ],
+      "equation": null
+    },
+    {
+      "id": "su-3",
+      "factKey": "su-3",
+      "difficulty": 3,
+      "strand": "Suffixes",
+      "objectiveCodes": [
+        "Y34-SP-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which is the correct spelling when 'ation' is added to 'inform'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "information",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "information"
+      ],
+      "distractors": [
+        "informnation",
+        "informashun",
+        "informaton"
+      ],
+      "equation": null
+    },
+    {
+      "id": "su-4",
+      "factKey": "su-4",
+      "difficulty": 2,
+      "strand": "Suffixes",
+      "objectiveCodes": [
+        "Y34-SP-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A suffix is a letter or group of letters added to the end of a word.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-5",
+      "factKey": "su-5",
+      "difficulty": 3,
+      "strand": "Suffixes",
+      "objectiveCodes": [
+        "Y34-SP-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Add the suffix 'ous' to 'poison' to make an adjective.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "poisonous",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "poisonous"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ho-1",
+      "factKey": "ho-1",
+      "difficulty": 1,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Choose the correct word: 'The dog wagged ___ tail.'",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "their",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "their"
+      ],
+      "distractors": [
+        "there",
+        "they're"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ho-2",
+      "factKey": "ho-2",
+      "difficulty": 2,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Choose the correct word: 'Can you ___ the music?'",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "hear",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "hear"
+      ],
+      "distractors": [
+        "here"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ho-3",
+      "factKey": "ho-3",
+      "difficulty": 2,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Choose the correct word: '___ going to the park later.'",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "They're",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "They're"
+      ],
+      "distractors": [
+        "There",
+        "Their"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ho-4",
+      "factKey": "ho-4",
+      "difficulty": 2,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Homophones are words that sound the same but have different meanings and spellings.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ho-5",
+      "factKey": "ho-5",
+      "difficulty": 3,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Which spelling means a number: 'two', 'too' or 'to'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "two",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "two"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "cm-1",
+      "factKey": "cm-1",
+      "difficulty": 1,
+      "strand": "Commonly misspelt",
+      "objectiveCodes": [
+        "Y34-SP-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which is the correct spelling?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "because",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "because"
+      ],
+      "distractors": [
+        "becuase",
+        "becuse",
+        "becaus"
+      ],
+      "equation": null
+    },
+    {
+      "id": "cm-2",
+      "factKey": "cm-2",
+      "difficulty": 2,
+      "strand": "Commonly misspelt",
+      "objectiveCodes": [
+        "Y34-SP-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which is the correct spelling?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "different",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "different"
+      ],
+      "distractors": [
+        "diffrent",
+        "diferent",
+        "differant"
+      ],
+      "equation": null
+    },
+    {
+      "id": "cm-3",
+      "factKey": "cm-3",
+      "difficulty": 3,
+      "strand": "Commonly misspelt",
+      "objectiveCodes": [
+        "Y34-SP-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which is the correct spelling?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "favourite",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "favourite"
+      ],
+      "distractors": [
+        "faverite",
+        "favorit",
+        "favourit"
+      ],
+      "equation": null
+    },
+    {
+      "id": "cm-4",
+      "factKey": "cm-4",
+      "difficulty": 2,
+      "strand": "Commonly misspelt",
+      "objectiveCodes": [
+        "Y34-SP-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "The word 'friend' is spelt f-r-i-e-n-d.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "cm-5",
+      "factKey": "cm-5",
+      "difficulty": 3,
+      "strand": "Commonly misspelt",
+      "objectiveCodes": [
+        "Y34-SP-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Spell the word that means the opposite of 'question', beginning with 'a'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "answer",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "answer"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ho-6",
+      "factKey": "ho-6",
+      "difficulty": 1,
+      "strand": "Homophones",
+      "objectiveCodes": [
+        "Y34-SP-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "'Hear' and 'here' sound the same but are spelt differently.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
   ]
 }

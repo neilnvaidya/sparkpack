@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "science-y3-light",
   "subject": "science",
   "keyStage": "KS2",
@@ -8,35 +8,486 @@
   "title": "Light",
   "description": "That we need light to see, how light reflects from surfaces, protecting eyes from the Sun, and how shadows are formed and change.",
   "objectives": [
-    { "code": "Y3-L-1", "statement": "Recognise that they need light in order to see things and that dark is the absence of light." },
-    { "code": "Y3-L-2", "statement": "Notice that light is reflected from surfaces." },
-    { "code": "Y3-L-3", "statement": "Recognise that light from the sun can be dangerous and that there are ways to protect their eyes." },
-    { "code": "Y3-L-4", "statement": "Recognise that shadows are formed when the light from a light source is blocked by an opaque object." },
-    { "code": "Y3-L-5", "statement": "Find patterns in the way that the size of shadows change." }
+    {
+      "code": "Y3-L-1",
+      "statement": "Recognise that they need light in order to see things and that dark is the absence of light."
+    },
+    {
+      "code": "Y3-L-2",
+      "statement": "Notice that light is reflected from surfaces."
+    },
+    {
+      "code": "Y3-L-3",
+      "statement": "Recognise that light from the sun can be dangerous and that there are ways to protect their eyes."
+    },
+    {
+      "code": "Y3-L-4",
+      "statement": "Recognise that shadows are formed when the light from a light source is blocked by an opaque object."
+    },
+    {
+      "code": "Y3-L-5",
+      "statement": "Find patterns in the way that the size of shadows change."
+    }
   ],
-  "items": [
-    { "id": "se-1", "kind": "qa", "difficulty": 1, "strand": "Seeing and darkness", "objectiveCodes": ["Y3-L-1"], "prompt": "What do we need in order to see things?", "answer": "Light", "acceptableAnswers": ["we need light"] },
-    { "id": "se-2", "kind": "truefalse", "difficulty": 1, "strand": "Seeing and darkness", "objectiveCodes": ["Y3-L-1"], "statement": "Dark is simply the absence of light.", "isTrue": true },
-    { "id": "se-3", "kind": "mcq", "difficulty": 2, "strand": "Seeing and darkness", "objectiveCodes": ["Y3-L-1"], "prompt": "In a room with no light at all, how well can you see the objects around you?", "options": ["perfectly well", "you cannot see them", "only the red ones", "better than in daylight"], "correctIndex": 1 },
-    { "id": "se-4", "kind": "mcq", "difficulty": 2, "strand": "Seeing and darkness", "objectiveCodes": ["Y3-L-1"], "prompt": "Which of these is a source of light?", "options": ["a mirror", "the Sun", "a book", "a wall"], "correctIndex": 1 },
-    { "id": "se-5", "kind": "truefalse", "difficulty": 3, "strand": "Seeing and darkness", "objectiveCodes": ["Y3-L-1"], "statement": "A cat can see in a room that has absolutely no light at all.", "isTrue": false },
-
-    { "id": "re-1", "kind": "qa", "difficulty": 1, "strand": "Reflection", "objectiveCodes": ["Y3-L-2"], "prompt": "What happens to light when it hits a mirror?", "answer": "It is reflected (it bounces off)", "acceptableAnswers": ["it reflects", "it bounces off", "it is reflected"] },
-    { "id": "re-2", "kind": "mcq", "difficulty": 2, "strand": "Reflection", "objectiveCodes": ["Y3-L-2"], "prompt": "Which surface reflects light the best?", "options": ["a shiny mirror", "a piece of black cloth", "a rough wooden plank", "a dark carpet"], "correctIndex": 0 },
-    { "id": "re-3", "kind": "truefalse", "difficulty": 2, "strand": "Reflection", "objectiveCodes": ["Y3-L-2"], "statement": "Shiny, smooth surfaces reflect light better than dull, rough ones.", "isTrue": true },
-    { "id": "re-4", "kind": "mcq", "difficulty": 3, "strand": "Reflection", "objectiveCodes": ["Y3-L-2"], "prompt": "Why do cyclists wear reflective strips at night?", "options": ["to look colourful", "so light from car headlights bounces back and drivers can see them", "to keep warm", "to go faster"], "correctIndex": 1 },
-    { "id": "re-5", "kind": "truefalse", "difficulty": 3, "strand": "Reflection", "objectiveCodes": ["Y3-L-2"], "statement": "A mirror makes its own light.", "isTrue": false },
-
-    { "id": "su-1", "kind": "truefalse", "difficulty": 1, "strand": "Sun safety", "objectiveCodes": ["Y3-L-3"], "statement": "It is safe to look straight at the Sun for a long time.", "isTrue": false },
-    { "id": "su-2", "kind": "qa", "difficulty": 2, "strand": "Sun safety", "objectiveCodes": ["Y3-L-3"], "prompt": "Name one way you can protect your eyes from the Sun.", "answer": "Wear sunglasses or a sun hat, and never look straight at the Sun", "acceptableAnswers": ["wear sunglasses", "wear a hat", "don't look at the sun"] },
-    { "id": "su-3", "kind": "mcq", "difficulty": 2, "strand": "Sun safety", "objectiveCodes": ["Y3-L-3"], "prompt": "Which of these helps protect your eyes on a very bright, sunny day?", "options": ["sunglasses", "a torch", "a mirror", "closing the curtains inside"], "correctIndex": 0 },
-    { "id": "su-4", "kind": "truefalse", "difficulty": 2, "strand": "Sun safety", "objectiveCodes": ["Y3-L-3"], "statement": "Light from the Sun can damage your eyes.", "isTrue": true },
-
-    { "id": "sh-1", "kind": "qa", "difficulty": 1, "strand": "Shadows", "objectiveCodes": ["Y3-L-4"], "prompt": "What makes a shadow form?", "answer": "An opaque object blocks light from a light source", "acceptableAnswers": ["something blocks the light", "an object blocks the light"] },
-    { "id": "sh-2", "kind": "mcq", "difficulty": 2, "strand": "Shadows", "objectiveCodes": ["Y3-L-4"], "prompt": "Which kind of object makes the darkest shadow?", "options": ["a see-through (transparent) object", "an opaque object that blocks all light", "a clear glass of water", "a window"], "correctIndex": 1 },
-    { "id": "sh-3", "kind": "truefalse", "difficulty": 2, "strand": "Shadows", "objectiveCodes": ["Y3-L-4"], "statement": "A shadow forms on the same side as the light source.", "isTrue": false },
-    { "id": "sh-4", "kind": "mcq", "difficulty": 3, "strand": "Shadows", "objectiveCodes": ["Y3-L-5"], "prompt": "What happens to an object's shadow as you move the light source closer to it?", "options": ["the shadow gets smaller", "the shadow gets larger", "the shadow disappears", "the shadow changes colour"], "correctIndex": 1 },
-    { "id": "sh-5", "kind": "truefalse", "difficulty": 3, "strand": "Shadows", "objectiveCodes": ["Y3-L-5"], "statement": "Moving an object further from a light source can change the size of its shadow.", "isTrue": true },
-    { "id": "sh-6", "kind": "qa", "difficulty": 3, "strand": "Shadows", "objectiveCodes": ["Y3-L-4", "Y3-L-5"], "prompt": "Why does a shadow have roughly the same shape as the object that makes it?", "answer": "Because the object blocks the light in that shape", "acceptableAnswers": ["the object blocks the light in its shape", "the light is blocked in the shape of the object"] }
+  "questions": [
+    {
+      "id": "se-1",
+      "factKey": "se-1",
+      "difficulty": 1,
+      "strand": "Seeing and darkness",
+      "objectiveCodes": [
+        "Y3-L-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What do we need in order to see things?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Light",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "we need light"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-2",
+      "factKey": "se-2",
+      "difficulty": 1,
+      "strand": "Seeing and darkness",
+      "objectiveCodes": [
+        "Y3-L-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Dark is simply the absence of light.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-3",
+      "factKey": "se-3",
+      "difficulty": 2,
+      "strand": "Seeing and darkness",
+      "objectiveCodes": [
+        "Y3-L-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "In a room with no light at all, how well can you see the objects around you?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "you cannot see them",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "you cannot see them"
+      ],
+      "distractors": [
+        "perfectly well",
+        "only the red ones",
+        "better than in daylight"
+      ],
+      "equation": null
+    },
+    {
+      "id": "se-4",
+      "factKey": "se-4",
+      "difficulty": 2,
+      "strand": "Seeing and darkness",
+      "objectiveCodes": [
+        "Y3-L-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is a source of light?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the Sun",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the Sun"
+      ],
+      "distractors": [
+        "a mirror",
+        "a book",
+        "a wall"
+      ],
+      "equation": null
+    },
+    {
+      "id": "se-5",
+      "factKey": "se-5",
+      "difficulty": 3,
+      "strand": "Seeing and darkness",
+      "objectiveCodes": [
+        "Y3-L-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A cat can see in a room that has absolutely no light at all.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "re-1",
+      "factKey": "re-1",
+      "difficulty": 1,
+      "strand": "Reflection",
+      "objectiveCodes": [
+        "Y3-L-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What happens to light when it hits a mirror?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "It is reflected (it bounces off)",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it reflects",
+        "it bounces off",
+        "it is reflected"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "re-2",
+      "factKey": "re-2",
+      "difficulty": 2,
+      "strand": "Reflection",
+      "objectiveCodes": [
+        "Y3-L-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which surface reflects light the best?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "a shiny mirror",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "a shiny mirror"
+      ],
+      "distractors": [
+        "a piece of black cloth",
+        "a rough wooden plank",
+        "a dark carpet"
+      ],
+      "equation": null
+    },
+    {
+      "id": "re-3",
+      "factKey": "re-3",
+      "difficulty": 2,
+      "strand": "Reflection",
+      "objectiveCodes": [
+        "Y3-L-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Shiny, smooth surfaces reflect light better than dull, rough ones.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "re-4",
+      "factKey": "re-4",
+      "difficulty": 3,
+      "strand": "Reflection",
+      "objectiveCodes": [
+        "Y3-L-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Why do cyclists wear reflective strips at night?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "so light from car headlights bounces back and drivers can see them",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "so light from car headlights bounces back and drivers can see them"
+      ],
+      "distractors": [
+        "to look colourful",
+        "to keep warm",
+        "to go faster"
+      ],
+      "equation": null
+    },
+    {
+      "id": "re-5",
+      "factKey": "re-5",
+      "difficulty": 3,
+      "strand": "Reflection",
+      "objectiveCodes": [
+        "Y3-L-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A mirror makes its own light.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-1",
+      "factKey": "su-1",
+      "difficulty": 1,
+      "strand": "Sun safety",
+      "objectiveCodes": [
+        "Y3-L-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "It is safe to look straight at the Sun for a long time.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-2",
+      "factKey": "su-2",
+      "difficulty": 2,
+      "strand": "Sun safety",
+      "objectiveCodes": [
+        "Y3-L-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Name one way you can protect your eyes from the Sun.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Wear sunglasses or a sun hat, and never look straight at the Sun",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "wear sunglasses",
+        "wear a hat",
+        "don't look at the sun"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "su-3",
+      "factKey": "su-3",
+      "difficulty": 2,
+      "strand": "Sun safety",
+      "objectiveCodes": [
+        "Y3-L-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these helps protect your eyes on a very bright, sunny day?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "sunglasses",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "sunglasses"
+      ],
+      "distractors": [
+        "a torch",
+        "a mirror",
+        "closing the curtains inside"
+      ],
+      "equation": null
+    },
+    {
+      "id": "su-4",
+      "factKey": "su-4",
+      "difficulty": 2,
+      "strand": "Sun safety",
+      "objectiveCodes": [
+        "Y3-L-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Light from the Sun can damage your eyes.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-1",
+      "factKey": "sh-1",
+      "difficulty": 1,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What makes a shadow form?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "An opaque object blocks light from a light source",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "something blocks the light",
+        "an object blocks the light"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-2",
+      "factKey": "sh-2",
+      "difficulty": 2,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which kind of object makes the darkest shadow?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "an opaque object that blocks all light",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "an opaque object that blocks all light"
+      ],
+      "distractors": [
+        "a see-through (transparent) object",
+        "a clear glass of water",
+        "a window"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sh-3",
+      "factKey": "sh-3",
+      "difficulty": 2,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A shadow forms on the same side as the light source.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-4",
+      "factKey": "sh-4",
+      "difficulty": 3,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-5"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What happens to an object's shadow as you move the light source closer to it?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the shadow gets larger",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the shadow gets larger"
+      ],
+      "distractors": [
+        "the shadow gets smaller",
+        "the shadow disappears",
+        "the shadow changes colour"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sh-5",
+      "factKey": "sh-5",
+      "difficulty": 3,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-5"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Moving an object further from a light source can change the size of its shadow.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-6",
+      "factKey": "sh-6",
+      "difficulty": 3,
+      "strand": "Shadows",
+      "objectiveCodes": [
+        "Y3-L-4",
+        "Y3-L-5"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Why does a shadow have roughly the same shape as the object that makes it?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Because the object blocks the light in that shape",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the object blocks the light in its shape",
+        "the light is blocked in the shape of the object"
+      ],
+      "distractors": [],
+      "equation": null
+    }
   ]
 }

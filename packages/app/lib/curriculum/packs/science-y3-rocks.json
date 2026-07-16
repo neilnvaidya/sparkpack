@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "science-y3-rocks",
   "subject": "science",
   "keyStage": "KS2",
@@ -8,32 +8,487 @@
   "title": "Rocks",
   "description": "Comparing and grouping rocks by their appearance and properties, how fossils are formed, and how soil is made from rocks and organic matter.",
   "objectives": [
-    { "code": "Y3-R-1", "statement": "Compare and group together different kinds of rocks on the basis of their appearance and simple physical properties." },
-    { "code": "Y3-R-2", "statement": "Describe in simple terms how fossils are formed when things that have lived are trapped within rock." },
-    { "code": "Y3-R-3", "statement": "Recognise that soils are made from rocks and organic matter." }
+    {
+      "code": "Y3-R-1",
+      "statement": "Compare and group together different kinds of rocks on the basis of their appearance and simple physical properties."
+    },
+    {
+      "code": "Y3-R-2",
+      "statement": "Describe in simple terms how fossils are formed when things that have lived are trapped within rock."
+    },
+    {
+      "code": "Y3-R-3",
+      "statement": "Recognise that soils are made from rocks and organic matter."
+    }
   ],
-  "items": [
-    { "id": "rk-1", "kind": "qa", "difficulty": 1, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "Name one property you could use to compare two rocks.", "answer": "Any of: hardness, colour, whether it is shiny or dull, whether it lets water through", "acceptableAnswers": ["hardness", "colour", "how hard it is", "whether it soaks up water"] },
-    { "id": "rk-2", "kind": "mcq", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "A rock that lets water soak into it is described as...", "options": ["waterproof", "permeable", "shiny", "magnetic"], "correctIndex": 1 },
-    { "id": "rk-3", "kind": "truefalse", "difficulty": 1, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "statement": "All rocks are exactly the same hardness.", "isTrue": false },
-    { "id": "rk-4", "kind": "truefalse", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "statement": "Some rocks are hard and used for buildings, while others are soft and crumble easily.", "isTrue": true },
-    { "id": "rk-5", "kind": "mcq", "difficulty": 3, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "To test which of two rocks is harder, you could...", "options": ["weigh them on scales", "see which one scratches the other", "measure how long they are", "count their colours"], "correctIndex": 1 },
-    { "id": "rk-6", "kind": "qa", "difficulty": 2, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "Why is a hard, waterproof rock like granite good for building?", "answer": "It is strong and does not let water soak in, so it lasts a long time", "acceptableAnswers": ["it is strong and waterproof", "it is hard and lasts a long time"] },
-    { "id": "rk-7", "kind": "mcq", "difficulty": 1, "strand": "Comparing rocks", "objectiveCodes": ["Y3-R-1"], "prompt": "Chalk is a soft rock. What happens if you rub it along the ground?", "options": ["nothing at all", "it leaves a mark and wears away", "it gets harder", "it turns into water"], "correctIndex": 1 },
-
-    { "id": "fo-1", "kind": "qa", "difficulty": 1, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "What is a fossil?", "answer": "The remains or shape of a living thing that lived long ago, preserved in rock", "acceptableAnswers": ["the remains of a dead animal or plant in rock", "the shape of an old living thing in rock"] },
-    { "id": "fo-2", "kind": "mcq", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "Fossils are usually found inside which of these?", "options": ["metal", "rock", "plastic", "glass"], "correctIndex": 1 },
-    { "id": "fo-3", "kind": "mcq", "difficulty": 3, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "Which of these best describes how a fossil forms?", "options": ["an animal is trapped in rock and its shape is preserved over a very long time", "an animal turns to stone in a few days", "a rock grows legs and moves", "a plant is painted onto a rock"], "correctIndex": 0 },
-    { "id": "fo-4", "kind": "truefalse", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "statement": "Fossils can teach us about animals and plants that lived millions of years ago.", "isTrue": true },
-    { "id": "fo-5", "kind": "truefalse", "difficulty": 3, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "statement": "Fossils form very quickly, in just a few hours.", "isTrue": false },
-    { "id": "fo-6", "kind": "qa", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "What is the name of a scientist who studies fossils?", "answer": "A palaeontologist", "acceptableAnswers": ["palaeontologist", "paleontologist"] },
-    { "id": "fo-7", "kind": "mcq", "difficulty": 2, "strand": "Fossils", "objectiveCodes": ["Y3-R-2"], "prompt": "Which part of an animal is most likely to become a fossil?", "options": ["its soft skin", "its hard bones or shell", "its breath", "its footsteps in the air"], "correctIndex": 1 },
-
-    { "id": "so-1", "kind": "qa", "difficulty": 1, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "What are soils made from?", "answer": "Tiny pieces of rock mixed with organic matter (rotted plants and animals)", "acceptableAnswers": ["broken up rock and rotted plants", "rock and organic matter"] },
-    { "id": "so-2", "kind": "qa", "difficulty": 2, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "What is the name for the rotted plant and animal material found in soil?", "answer": "Organic matter", "acceptableAnswers": ["organic matter", "humus"] },
-    { "id": "so-3", "kind": "mcq", "difficulty": 2, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "Where do the tiny pieces of rock in soil come from?", "options": ["they are made in factories", "larger rocks broken down over a long time", "they fall from the sky as rain", "they grow from seeds"], "correctIndex": 1 },
-    { "id": "so-4", "kind": "truefalse", "difficulty": 1, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "statement": "Soil contains pieces of broken-down rock.", "isTrue": true },
-    { "id": "so-5", "kind": "truefalse", "difficulty": 3, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "statement": "Soil is made only of water and nothing else.", "isTrue": false },
-    { "id": "so-6", "kind": "mcq", "difficulty": 2, "strand": "Soil", "objectiveCodes": ["Y3-R-3"], "prompt": "Why is soil important for plants?", "options": ["it gives their roots somewhere to grow and holds water and nutrients", "it keeps them cold", "it stops them growing", "plants do not need soil for anything"], "correctIndex": 0 }
+  "questions": [
+    {
+      "id": "rk-1",
+      "factKey": "rk-1",
+      "difficulty": 1,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Name one property you could use to compare two rocks.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Any of: hardness, colour, whether it is shiny or dull, whether it lets water through",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "hardness",
+        "colour",
+        "how hard it is",
+        "whether it soaks up water"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rk-2",
+      "factKey": "rk-2",
+      "difficulty": 2,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A rock that lets water soak into it is described as...",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "permeable",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "permeable"
+      ],
+      "distractors": [
+        "waterproof",
+        "shiny",
+        "magnetic"
+      ],
+      "equation": null
+    },
+    {
+      "id": "rk-3",
+      "factKey": "rk-3",
+      "difficulty": 1,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "All rocks are exactly the same hardness.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rk-4",
+      "factKey": "rk-4",
+      "difficulty": 2,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Some rocks are hard and used for buildings, while others are soft and crumble easily.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rk-5",
+      "factKey": "rk-5",
+      "difficulty": 3,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "To test which of two rocks is harder, you could...",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "see which one scratches the other",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "see which one scratches the other"
+      ],
+      "distractors": [
+        "weigh them on scales",
+        "measure how long they are",
+        "count their colours"
+      ],
+      "equation": null
+    },
+    {
+      "id": "rk-6",
+      "factKey": "rk-6",
+      "difficulty": 2,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Why is a hard, waterproof rock like granite good for building?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "It is strong and does not let water soak in, so it lasts a long time",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it is strong and waterproof",
+        "it is hard and lasts a long time"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "rk-7",
+      "factKey": "rk-7",
+      "difficulty": 1,
+      "strand": "Comparing rocks",
+      "objectiveCodes": [
+        "Y3-R-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Chalk is a soft rock. What happens if you rub it along the ground?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "it leaves a mark and wears away",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it leaves a mark and wears away"
+      ],
+      "distractors": [
+        "nothing at all",
+        "it gets harder",
+        "it turns into water"
+      ],
+      "equation": null
+    },
+    {
+      "id": "fo-1",
+      "factKey": "fo-1",
+      "difficulty": 1,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is a fossil?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "The remains or shape of a living thing that lived long ago, preserved in rock",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the remains of a dead animal or plant in rock",
+        "the shape of an old living thing in rock"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "fo-2",
+      "factKey": "fo-2",
+      "difficulty": 2,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Fossils are usually found inside which of these?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "rock",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "rock"
+      ],
+      "distractors": [
+        "metal",
+        "plastic",
+        "glass"
+      ],
+      "equation": null
+    },
+    {
+      "id": "fo-3",
+      "factKey": "fo-3",
+      "difficulty": 3,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these best describes how a fossil forms?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "an animal is trapped in rock and its shape is preserved over a very long time",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "an animal is trapped in rock and its shape is preserved over a very long time"
+      ],
+      "distractors": [
+        "an animal turns to stone in a few days",
+        "a rock grows legs and moves",
+        "a plant is painted onto a rock"
+      ],
+      "equation": null
+    },
+    {
+      "id": "fo-4",
+      "factKey": "fo-4",
+      "difficulty": 2,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Fossils can teach us about animals and plants that lived millions of years ago.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "fo-5",
+      "factKey": "fo-5",
+      "difficulty": 3,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Fossils form very quickly, in just a few hours.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "fo-6",
+      "factKey": "fo-6",
+      "difficulty": 2,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is the name of a scientist who studies fossils?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "A palaeontologist",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "palaeontologist",
+        "paleontologist"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "fo-7",
+      "factKey": "fo-7",
+      "difficulty": 2,
+      "strand": "Fossils",
+      "objectiveCodes": [
+        "Y3-R-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which part of an animal is most likely to become a fossil?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "its hard bones or shell",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "its hard bones or shell"
+      ],
+      "distractors": [
+        "its soft skin",
+        "its breath",
+        "its footsteps in the air"
+      ],
+      "equation": null
+    },
+    {
+      "id": "so-1",
+      "factKey": "so-1",
+      "difficulty": 1,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What are soils made from?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Tiny pieces of rock mixed with organic matter (rotted plants and animals)",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "broken up rock and rotted plants",
+        "rock and organic matter"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "so-2",
+      "factKey": "so-2",
+      "difficulty": 2,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is the name for the rotted plant and animal material found in soil?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Organic matter",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "organic matter",
+        "humus"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "so-3",
+      "factKey": "so-3",
+      "difficulty": 2,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Where do the tiny pieces of rock in soil come from?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "larger rocks broken down over a long time",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "larger rocks broken down over a long time"
+      ],
+      "distractors": [
+        "they are made in factories",
+        "they fall from the sky as rain",
+        "they grow from seeds"
+      ],
+      "equation": null
+    },
+    {
+      "id": "so-4",
+      "factKey": "so-4",
+      "difficulty": 1,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Soil contains pieces of broken-down rock.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "so-5",
+      "factKey": "so-5",
+      "difficulty": 3,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Soil is made only of water and nothing else.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "so-6",
+      "factKey": "so-6",
+      "difficulty": 2,
+      "strand": "Soil",
+      "objectiveCodes": [
+        "Y3-R-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Why is soil important for plants?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "it gives their roots somewhere to grow and holds water and nutrients",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it gives their roots somewhere to grow and holds water and nutrients"
+      ],
+      "distractors": [
+        "it keeps them cold",
+        "it stops them growing",
+        "plants do not need soil for anything"
+      ],
+      "equation": null
+    }
   ]
 }

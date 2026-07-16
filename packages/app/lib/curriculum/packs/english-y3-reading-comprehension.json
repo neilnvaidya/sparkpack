@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "english-y3-reading-comprehension",
   "subject": "english",
   "keyStage": "KS2",
@@ -8,33 +8,496 @@
   "title": "Reading Comprehension",
   "description": "Lower Key Stage 2 word meaning and comprehension: synonyms and antonyms, common idioms and figurative language, and dictionary skills for checking word meanings.",
   "objectives": [
-    { "code": "Y34-RC-1", "statement": "Use knowledge of synonyms and antonyms to understand and choose words that capture the writer's meaning." },
-    { "code": "Y34-RC-2", "statement": "Recognise some common idioms and figurative language and understand that their meaning is not literal." },
-    { "code": "Y34-RC-3", "statement": "Use dictionaries to check the meaning of words they have read." }
+    {
+      "code": "Y34-RC-1",
+      "statement": "Use knowledge of synonyms and antonyms to understand and choose words that capture the writer's meaning."
+    },
+    {
+      "code": "Y34-RC-2",
+      "statement": "Recognise some common idioms and figurative language and understand that their meaning is not literal."
+    },
+    {
+      "code": "Y34-RC-3",
+      "statement": "Use dictionaries to check the meaning of words they have read."
+    }
   ],
-  "items": [
-    { "id": "sy-1", "kind": "qa", "difficulty": 1, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Give a synonym (a word that means the same) for 'happy'.", "answer": "Any of: glad, cheerful, pleased, joyful", "acceptableAnswers": ["glad", "cheerful", "pleased", "joyful", "delighted"] },
-    { "id": "sy-2", "kind": "mcq", "difficulty": 2, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which word is a synonym for 'big'?", "options": ["tiny", "enormous", "quiet", "fast"], "correctIndex": 1 },
-    { "id": "sy-3", "kind": "truefalse", "difficulty": 1, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "Synonyms are words that have a similar meaning.", "isTrue": true },
-    { "id": "sy-4", "kind": "mcq", "difficulty": 3, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "A writer wants a stronger word than 'sad'. Which is the best choice?", "options": ["fine", "miserable", "calm", "busy"], "correctIndex": 1 },
-    { "id": "sy-5", "kind": "qa", "difficulty": 2, "strand": "Synonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Give a synonym for 'quick'.", "answer": "Any of: fast, speedy, rapid, swift", "acceptableAnswers": ["fast", "speedy", "rapid", "swift"] },
-
-    { "id": "an-1", "kind": "qa", "difficulty": 1, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Give an antonym (a word that means the opposite) for 'hot'.", "answer": "cold", "acceptableAnswers": ["cold", "cool", "freezing"] },
-    { "id": "an-2", "kind": "mcq", "difficulty": 2, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which word is an antonym for 'ancient'?", "options": ["old", "modern", "huge", "dark"], "correctIndex": 1 },
-    { "id": "an-3", "kind": "truefalse", "difficulty": 2, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "An antonym is a word that means the opposite of another word.", "isTrue": true },
-    { "id": "an-4", "kind": "mcq", "difficulty": 3, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "prompt": "Which pair are antonyms?", "options": ["begin and start", "brave and fearless", "generous and mean", "happy and glad"], "correctIndex": 2 },
-    { "id": "an-5", "kind": "truefalse", "difficulty": 1, "strand": "Antonyms", "objectiveCodes": ["Y34-RC-1"], "statement": "'Light' is an antonym of 'dark'.", "isTrue": true },
-
-    { "id": "id-1", "kind": "mcq", "difficulty": 2, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "prompt": "What does the idiom 'it's raining cats and dogs' mean?", "options": ["animals are falling from the sky", "it is raining very heavily", "the weather is sunny", "pets are outside"], "correctIndex": 1 },
-    { "id": "id-2", "kind": "mcq", "difficulty": 2, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "prompt": "If someone says 'break a leg' before a show, they mean...", "options": ["hurt yourself", "good luck", "run away", "sit down"], "correctIndex": 1 },
-    { "id": "id-3", "kind": "truefalse", "difficulty": 2, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "statement": "An idiom is a phrase whose meaning is different from the literal meaning of its words.", "isTrue": true },
-    { "id": "id-4", "kind": "qa", "difficulty": 3, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "prompt": "What does someone mean if they say a task is 'a piece of cake'?", "answer": "It is very easy", "acceptableAnswers": ["it is easy", "very easy", "simple"] },
-    { "id": "id-5", "kind": "truefalse", "difficulty": 3, "strand": "Idioms", "objectiveCodes": ["Y34-RC-2"], "statement": "If a story says a character 'let the cat out of the bag', it means they told a secret.", "isTrue": true },
-
-    { "id": "dc-1", "kind": "qa", "difficulty": 1, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "In what order are words listed in a dictionary?", "answer": "Alphabetical order", "acceptableAnswers": ["alphabetical order", "a to z", "alphabetically"] },
-    { "id": "dc-2", "kind": "mcq", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "Which word would come first in a dictionary?", "options": ["orange", "apple", "melon", "pear"], "correctIndex": 1 },
-    { "id": "dc-3", "kind": "mcq", "difficulty": 3, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "Both 'plant' and 'plate' start with 'pla'. Which comes first in a dictionary?", "options": ["plant", "plate", "they are the same", "it does not matter"], "correctIndex": 0 },
-    { "id": "dc-4", "kind": "truefalse", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "statement": "A dictionary tells you what a word means.", "isTrue": true },
-    { "id": "dc-5", "kind": "mcq", "difficulty": 2, "strand": "Dictionary skills", "objectiveCodes": ["Y34-RC-3"], "prompt": "You read a word you do not understand. What is the best way to check its meaning?", "options": ["skip the whole page", "look it up in a dictionary", "guess and move on without checking", "read the word louder"], "correctIndex": 1 }
+  "questions": [
+    {
+      "id": "sy-1",
+      "factKey": "sy-1",
+      "difficulty": 1,
+      "strand": "Synonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Give a synonym (a word that means the same) for 'happy'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Any of: glad, cheerful, pleased, joyful",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "glad",
+        "cheerful",
+        "pleased",
+        "joyful",
+        "delighted"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sy-2",
+      "factKey": "sy-2",
+      "difficulty": 2,
+      "strand": "Synonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which word is a synonym for 'big'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "enormous",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "enormous"
+      ],
+      "distractors": [
+        "tiny",
+        "quiet",
+        "fast"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sy-3",
+      "factKey": "sy-3",
+      "difficulty": 1,
+      "strand": "Synonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Synonyms are words that have a similar meaning.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sy-4",
+      "factKey": "sy-4",
+      "difficulty": 3,
+      "strand": "Synonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A writer wants a stronger word than 'sad'. Which is the best choice?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "miserable",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "miserable"
+      ],
+      "distractors": [
+        "fine",
+        "calm",
+        "busy"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sy-5",
+      "factKey": "sy-5",
+      "difficulty": 2,
+      "strand": "Synonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Give a synonym for 'quick'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Any of: fast, speedy, rapid, swift",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "fast",
+        "speedy",
+        "rapid",
+        "swift"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-1",
+      "factKey": "an-1",
+      "difficulty": 1,
+      "strand": "Antonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Give an antonym (a word that means the opposite) for 'hot'.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "cold",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "cold",
+        "cool",
+        "freezing"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-2",
+      "factKey": "an-2",
+      "difficulty": 2,
+      "strand": "Antonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which word is an antonym for 'ancient'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "modern",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "modern"
+      ],
+      "distractors": [
+        "old",
+        "huge",
+        "dark"
+      ],
+      "equation": null
+    },
+    {
+      "id": "an-3",
+      "factKey": "an-3",
+      "difficulty": 2,
+      "strand": "Antonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "An antonym is a word that means the opposite of another word.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-4",
+      "factKey": "an-4",
+      "difficulty": 3,
+      "strand": "Antonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which pair are antonyms?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "generous and mean",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "generous and mean"
+      ],
+      "distractors": [
+        "begin and start",
+        "brave and fearless",
+        "happy and glad"
+      ],
+      "equation": null
+    },
+    {
+      "id": "an-5",
+      "factKey": "an-5",
+      "difficulty": 1,
+      "strand": "Antonyms",
+      "objectiveCodes": [
+        "Y34-RC-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "'Light' is an antonym of 'dark'.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "id-1",
+      "factKey": "id-1",
+      "difficulty": 2,
+      "strand": "Idioms",
+      "objectiveCodes": [
+        "Y34-RC-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What does the idiom 'it's raining cats and dogs' mean?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "it is raining very heavily",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it is raining very heavily"
+      ],
+      "distractors": [
+        "animals are falling from the sky",
+        "the weather is sunny",
+        "pets are outside"
+      ],
+      "equation": null
+    },
+    {
+      "id": "id-2",
+      "factKey": "id-2",
+      "difficulty": 2,
+      "strand": "Idioms",
+      "objectiveCodes": [
+        "Y34-RC-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "If someone says 'break a leg' before a show, they mean...",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "good luck",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "good luck"
+      ],
+      "distractors": [
+        "hurt yourself",
+        "run away",
+        "sit down"
+      ],
+      "equation": null
+    },
+    {
+      "id": "id-3",
+      "factKey": "id-3",
+      "difficulty": 2,
+      "strand": "Idioms",
+      "objectiveCodes": [
+        "Y34-RC-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "An idiom is a phrase whose meaning is different from the literal meaning of its words.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "id-4",
+      "factKey": "id-4",
+      "difficulty": 3,
+      "strand": "Idioms",
+      "objectiveCodes": [
+        "Y34-RC-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What does someone mean if they say a task is 'a piece of cake'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "It is very easy",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "it is easy",
+        "very easy",
+        "simple"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "id-5",
+      "factKey": "id-5",
+      "difficulty": 3,
+      "strand": "Idioms",
+      "objectiveCodes": [
+        "Y34-RC-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "If a story says a character 'let the cat out of the bag', it means they told a secret.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "dc-1",
+      "factKey": "dc-1",
+      "difficulty": 1,
+      "strand": "Dictionary skills",
+      "objectiveCodes": [
+        "Y34-RC-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In what order are words listed in a dictionary?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Alphabetical order",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "alphabetical order",
+        "a to z",
+        "alphabetically"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "dc-2",
+      "factKey": "dc-2",
+      "difficulty": 2,
+      "strand": "Dictionary skills",
+      "objectiveCodes": [
+        "Y34-RC-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which word would come first in a dictionary?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "apple",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "apple"
+      ],
+      "distractors": [
+        "orange",
+        "melon",
+        "pear"
+      ],
+      "equation": null
+    },
+    {
+      "id": "dc-3",
+      "factKey": "dc-3",
+      "difficulty": 3,
+      "strand": "Dictionary skills",
+      "objectiveCodes": [
+        "Y34-RC-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Both 'plant' and 'plate' start with 'pla'. Which comes first in a dictionary?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "plant",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "plant"
+      ],
+      "distractors": [
+        "plate",
+        "they are the same",
+        "it does not matter"
+      ],
+      "equation": null
+    },
+    {
+      "id": "dc-4",
+      "factKey": "dc-4",
+      "difficulty": 2,
+      "strand": "Dictionary skills",
+      "objectiveCodes": [
+        "Y34-RC-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A dictionary tells you what a word means.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "dc-5",
+      "factKey": "dc-5",
+      "difficulty": 2,
+      "strand": "Dictionary skills",
+      "objectiveCodes": [
+        "Y34-RC-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "You read a word you do not understand. What is the best way to check its meaning?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "look it up in a dictionary",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "look it up in a dictionary"
+      ],
+      "distractors": [
+        "skip the whole page",
+        "guess and move on without checking",
+        "read the word louder"
+      ],
+      "equation": null
+    }
   ]
 }

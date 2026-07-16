@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "geography-y3-uk",
   "subject": "geography",
   "keyStage": "KS2",
@@ -8,34 +8,486 @@
   "title": "The United Kingdom",
   "description": "The countries, capital cities and surrounding seas of the United Kingdom, and its human and physical features such as rivers, mountains and cities.",
   "objectives": [
-    { "code": "Y3-UK-1", "statement": "Name and locate the four countries of the United Kingdom and their capital cities." },
-    { "code": "Y3-UK-2", "statement": "Name and locate the seas surrounding the United Kingdom." },
-    { "code": "Y3-UK-3", "statement": "Identify key physical features of the UK, such as mountains, rivers and coasts." },
-    { "code": "Y3-UK-4", "statement": "Identify key human features of the UK, such as cities, capitals and landmarks." }
+    {
+      "code": "Y3-UK-1",
+      "statement": "Name and locate the four countries of the United Kingdom and their capital cities."
+    },
+    {
+      "code": "Y3-UK-2",
+      "statement": "Name and locate the seas surrounding the United Kingdom."
+    },
+    {
+      "code": "Y3-UK-3",
+      "statement": "Identify key physical features of the UK, such as mountains, rivers and coasts."
+    },
+    {
+      "code": "Y3-UK-4",
+      "statement": "Identify key human features of the UK, such as cities, capitals and landmarks."
+    }
   ],
-  "items": [
-    { "id": "co-1", "kind": "qa", "difficulty": 1, "strand": "Countries", "objectiveCodes": ["Y3-UK-1"], "prompt": "Name the four countries that make up the United Kingdom.", "answer": "England, Scotland, Wales and Northern Ireland", "acceptableAnswers": ["england, scotland, wales, northern ireland", "england scotland wales northern ireland"] },
-    { "id": "co-2", "kind": "mcq", "difficulty": 1, "strand": "Countries", "objectiveCodes": ["Y3-UK-1"], "prompt": "Which of these is NOT one of the four countries of the UK?", "options": ["England", "Ireland", "Scotland", "Wales"], "correctIndex": 1 },
-    { "id": "co-3", "kind": "truefalse", "difficulty": 2, "strand": "Countries", "objectiveCodes": ["Y3-UK-1"], "statement": "Scotland is one of the four countries of the United Kingdom.", "isTrue": true },
-    { "id": "co-4", "kind": "mcq", "difficulty": 2, "strand": "Countries", "objectiveCodes": ["Y3-UK-1"], "prompt": "Which country is the largest of the four UK countries?", "options": ["Wales", "Northern Ireland", "England", "Scotland"], "correctIndex": 2 },
-    { "id": "co-5", "kind": "truefalse", "difficulty": 3, "strand": "Countries", "objectiveCodes": ["Y3-UK-1"], "statement": "'Great Britain' means the same thing as 'the United Kingdom'.", "isTrue": false },
-
-    { "id": "ca-1", "kind": "qa", "difficulty": 1, "strand": "Capital cities", "objectiveCodes": ["Y3-UK-1", "Y3-UK-4"], "prompt": "What is the capital city of England?", "answer": "London", "acceptableAnswers": ["london"] },
-    { "id": "ca-2", "kind": "qa", "difficulty": 2, "strand": "Capital cities", "objectiveCodes": ["Y3-UK-1", "Y3-UK-4"], "prompt": "What is the capital city of Scotland?", "answer": "Edinburgh", "acceptableAnswers": ["edinburgh"] },
-    { "id": "ca-3", "kind": "mcq", "difficulty": 2, "strand": "Capital cities", "objectiveCodes": ["Y3-UK-1", "Y3-UK-4"], "prompt": "What is the capital city of Wales?", "options": ["Swansea", "Cardiff", "Newport", "Bangor"], "correctIndex": 1 },
-    { "id": "ca-4", "kind": "mcq", "difficulty": 3, "strand": "Capital cities", "objectiveCodes": ["Y3-UK-1", "Y3-UK-4"], "prompt": "Belfast is the capital city of which country?", "options": ["Scotland", "Wales", "Northern Ireland", "England"], "correctIndex": 2 },
-    { "id": "ca-5", "kind": "truefalse", "difficulty": 1, "strand": "Capital cities", "objectiveCodes": ["Y3-UK-4"], "statement": "London is the capital city of the United Kingdom.", "isTrue": true },
-
-    { "id": "se-1", "kind": "qa", "difficulty": 2, "strand": "Seas and coasts", "objectiveCodes": ["Y3-UK-2"], "prompt": "The UK is surrounded by water. What do we call a large area of salt water like the one between the UK and France?", "answer": "A sea (the English Channel)", "acceptableAnswers": ["a sea", "sea", "the english channel"] },
-    { "id": "se-2", "kind": "mcq", "difficulty": 2, "strand": "Seas and coasts", "objectiveCodes": ["Y3-UK-2"], "prompt": "Which sea lies between the east coast of England and mainland Europe?", "options": ["the North Sea", "the Red Sea", "the Black Sea", "the Dead Sea"], "correctIndex": 0 },
-    { "id": "se-3", "kind": "truefalse", "difficulty": 1, "strand": "Seas and coasts", "objectiveCodes": ["Y3-UK-2"], "statement": "The United Kingdom is an island nation surrounded by sea.", "isTrue": true },
-    { "id": "se-4", "kind": "qa", "difficulty": 3, "strand": "Seas and coasts", "objectiveCodes": ["Y3-UK-3"], "prompt": "What do we call the place where the land meets the sea?", "answer": "The coast", "acceptableAnswers": ["coast", "coastline", "the coastline"] },
-    { "id": "se-5", "kind": "truefalse", "difficulty": 3, "strand": "Seas and coasts", "objectiveCodes": ["Y3-UK-2"], "statement": "The Irish Sea lies between Great Britain and Ireland.", "isTrue": true },
-
-    { "id": "pf-1", "kind": "qa", "difficulty": 2, "strand": "Physical features", "objectiveCodes": ["Y3-UK-3"], "prompt": "What is the name for a large natural stream of water that flows into the sea, like the Thames or the Severn?", "answer": "A river", "acceptableAnswers": ["river"] },
-    { "id": "pf-2", "kind": "mcq", "difficulty": 3, "strand": "Physical features", "objectiveCodes": ["Y3-UK-3"], "prompt": "Which of these is the longest river in the United Kingdom?", "options": ["the Thames", "the Severn", "the Mersey", "the Tyne"], "correctIndex": 1 },
-    { "id": "pf-3", "kind": "mcq", "difficulty": 3, "strand": "Physical features", "objectiveCodes": ["Y3-UK-3"], "prompt": "Ben Nevis, the highest mountain in the UK, is found in which country?", "options": ["Wales", "England", "Scotland", "Northern Ireland"], "correctIndex": 2 },
-    { "id": "pf-4", "kind": "truefalse", "difficulty": 2, "strand": "Physical features", "objectiveCodes": ["Y3-UK-3"], "statement": "A mountain is a physical feature, made by nature rather than by people.", "isTrue": true },
-    { "id": "pf-5", "kind": "truefalse", "difficulty": 3, "strand": "Physical features", "objectiveCodes": ["Y3-UK-4"], "statement": "A city is a human feature because it is built by people.", "isTrue": true }
+  "questions": [
+    {
+      "id": "co-1",
+      "factKey": "co-1",
+      "difficulty": 1,
+      "strand": "Countries",
+      "objectiveCodes": [
+        "Y3-UK-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Name the four countries that make up the United Kingdom.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "England, Scotland, Wales and Northern Ireland",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "england, scotland, wales, northern ireland",
+        "england scotland wales northern ireland"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "co-2",
+      "factKey": "co-2",
+      "difficulty": 1,
+      "strand": "Countries",
+      "objectiveCodes": [
+        "Y3-UK-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is NOT one of the four countries of the UK?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Ireland",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "Ireland"
+      ],
+      "distractors": [
+        "England",
+        "Scotland",
+        "Wales"
+      ],
+      "equation": null
+    },
+    {
+      "id": "co-3",
+      "factKey": "co-3",
+      "difficulty": 2,
+      "strand": "Countries",
+      "objectiveCodes": [
+        "Y3-UK-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Scotland is one of the four countries of the United Kingdom.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "co-4",
+      "factKey": "co-4",
+      "difficulty": 2,
+      "strand": "Countries",
+      "objectiveCodes": [
+        "Y3-UK-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which country is the largest of the four UK countries?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "England",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "England"
+      ],
+      "distractors": [
+        "Wales",
+        "Northern Ireland",
+        "Scotland"
+      ],
+      "equation": null
+    },
+    {
+      "id": "co-5",
+      "factKey": "co-5",
+      "difficulty": 3,
+      "strand": "Countries",
+      "objectiveCodes": [
+        "Y3-UK-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "'Great Britain' means the same thing as 'the United Kingdom'.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ca-1",
+      "factKey": "ca-1",
+      "difficulty": 1,
+      "strand": "Capital cities",
+      "objectiveCodes": [
+        "Y3-UK-1",
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is the capital city of England?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "London",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "london"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ca-2",
+      "factKey": "ca-2",
+      "difficulty": 2,
+      "strand": "Capital cities",
+      "objectiveCodes": [
+        "Y3-UK-1",
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is the capital city of Scotland?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Edinburgh",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "edinburgh"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ca-3",
+      "factKey": "ca-3",
+      "difficulty": 2,
+      "strand": "Capital cities",
+      "objectiveCodes": [
+        "Y3-UK-1",
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What is the capital city of Wales?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Cardiff",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "Cardiff"
+      ],
+      "distractors": [
+        "Swansea",
+        "Newport",
+        "Bangor"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ca-4",
+      "factKey": "ca-4",
+      "difficulty": 3,
+      "strand": "Capital cities",
+      "objectiveCodes": [
+        "Y3-UK-1",
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Belfast is the capital city of which country?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Northern Ireland",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "Northern Ireland"
+      ],
+      "distractors": [
+        "Scotland",
+        "Wales",
+        "England"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ca-5",
+      "factKey": "ca-5",
+      "difficulty": 1,
+      "strand": "Capital cities",
+      "objectiveCodes": [
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "London is the capital city of the United Kingdom.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-1",
+      "factKey": "se-1",
+      "difficulty": 2,
+      "strand": "Seas and coasts",
+      "objectiveCodes": [
+        "Y3-UK-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "The UK is surrounded by water. What do we call a large area of salt water like the one between the UK and France?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "A sea (the English Channel)",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "a sea",
+        "sea",
+        "the english channel"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-2",
+      "factKey": "se-2",
+      "difficulty": 2,
+      "strand": "Seas and coasts",
+      "objectiveCodes": [
+        "Y3-UK-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which sea lies between the east coast of England and mainland Europe?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the North Sea",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the North Sea"
+      ],
+      "distractors": [
+        "the Red Sea",
+        "the Black Sea",
+        "the Dead Sea"
+      ],
+      "equation": null
+    },
+    {
+      "id": "se-3",
+      "factKey": "se-3",
+      "difficulty": 1,
+      "strand": "Seas and coasts",
+      "objectiveCodes": [
+        "Y3-UK-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "The United Kingdom is an island nation surrounded by sea.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-4",
+      "factKey": "se-4",
+      "difficulty": 3,
+      "strand": "Seas and coasts",
+      "objectiveCodes": [
+        "Y3-UK-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What do we call the place where the land meets the sea?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "The coast",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "coast",
+        "coastline",
+        "the coastline"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "se-5",
+      "factKey": "se-5",
+      "difficulty": 3,
+      "strand": "Seas and coasts",
+      "objectiveCodes": [
+        "Y3-UK-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "The Irish Sea lies between Great Britain and Ireland.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pf-1",
+      "factKey": "pf-1",
+      "difficulty": 2,
+      "strand": "Physical features",
+      "objectiveCodes": [
+        "Y3-UK-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What is the name for a large natural stream of water that flows into the sea, like the Thames or the Severn?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "A river",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "river"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pf-2",
+      "factKey": "pf-2",
+      "difficulty": 3,
+      "strand": "Physical features",
+      "objectiveCodes": [
+        "Y3-UK-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is the longest river in the United Kingdom?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the Severn",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the Severn"
+      ],
+      "distractors": [
+        "the Thames",
+        "the Mersey",
+        "the Tyne"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pf-3",
+      "factKey": "pf-3",
+      "difficulty": 3,
+      "strand": "Physical features",
+      "objectiveCodes": [
+        "Y3-UK-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Ben Nevis, the highest mountain in the UK, is found in which country?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Scotland",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "Scotland"
+      ],
+      "distractors": [
+        "Wales",
+        "England",
+        "Northern Ireland"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pf-4",
+      "factKey": "pf-4",
+      "difficulty": 2,
+      "strand": "Physical features",
+      "objectiveCodes": [
+        "Y3-UK-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A mountain is a physical feature, made by nature rather than by people.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pf-5",
+      "factKey": "pf-5",
+      "difficulty": 3,
+      "strand": "Physical features",
+      "objectiveCodes": [
+        "Y3-UK-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A city is a human feature because it is built by people.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
   ]
 }
