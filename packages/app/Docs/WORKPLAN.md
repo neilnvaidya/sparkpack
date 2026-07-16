@@ -1,6 +1,39 @@
 # Workplan — current session state and next steps
 
-> **Latest: the authoring tool, step 3b-0 (2026-07-16) — built, unreviewed.**
+> **Latest: step 4 done early — `difficulty` is deleted (2026-07-16).**
+> **Form is the difficulty ladder.** `lib/questions/scoring.ts` is new:
+> `FORM_POINTS` (open 300 / mcq 200 / truefalse 100) plus the `EASIEST_FIRST` /
+> `HARDEST_FIRST` preference ladders. The `difficulty` field is **gone from the
+> schema and all 19 packs** (417 questions; the codemod diff was 417 deletions
+> and 0 additions), and `minPerDifficulty` is gone with it. Pulled in front of 3b
+> so the content pass writes packs in their final shape instead of rewriting all
+> 19 again straight after enriching them.
+>
+> **`scripts/migrate-packs-v2.mjs` and the v1 schema are deleted** — step 5's
+> cleanup, forced early, because the migration script emitted `difficulty` and
+> would now write invalid packs. `Docs/packs-archive/2026-07-16/` plus git history
+> cover reproducibility.
+>
+> **Accepted short-term cost:** until 3b, most questions offer one form, so both
+> ladders fall back to it — a steady Summit rung can still be an open question and
+> the board's gradient is inert. `difficulty` did give a real split today, so this
+> is a genuine regression in Summit's feel that resolves as packs are enriched, no
+> further code change needed.
+>
+> **Correction to an earlier claim:** this did **not** give
+> `maths-y3-multiplication-division` back its 2 missing games. It had two blockers
+> and only the difficulty one is cleared; **15 of its 27 questions are text-only
+> and Three in a Row / Summit need 16.** It still powers 5 of 7. **One** more
+> non-equation question fixes it — not two, as stated below.
+>
+> Verified: build + tsc clean, 26 tests, all packs valid, four enrichment warnings
+> unchanged. The slice snapshot moved and was checked rather than accepted —
+> Question Rush / Risk It / Three in a Row / T/F Showdown untouched, Flash Round
+> and Summit reordered with identical question sets, Board Quiz picks different
+> questions in 16 of 19 packs (expected: it takes the top N per strand and the
+> sort key changed).
+>
+> **Earlier: the authoring tool, step 3b-0 (2026-07-16) — built, unreviewed.**
 > Dev-only tool at **`/dev/authoring`** (`npm run dev`): pick a topic from the
 > curriculum tree, expand a question, see its three forms side by side, edit,
 > and hit Write. Spec and build notes:

@@ -15,7 +15,6 @@ function seeded(seed: number): Rng {
 const wales: CurriculumQuestion = {
   id: 'ca-wales',
   factKey: 'capital-wales',
-  difficulty: 2,
   strand: 'Capital cities',
   objectiveCodes: [],
   forms: ['open', 'mcq', 'truefalse'],

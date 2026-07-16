@@ -29,7 +29,6 @@
     {
       "id": "co-1",
       "factKey": "co-1",
-      "difficulty": 1,
       "strand": "Countries",
       "objectiveCodes": [
         "Y3-UK-1"
@@ -52,7 +51,6 @@
     {
       "id": "co-2",
       "factKey": "co-2",
-      "difficulty": 1,
       "strand": "Countries",
       "objectiveCodes": [
         "Y3-UK-1"
@@ -78,7 +76,6 @@
     {
       "id": "co-3",
       "factKey": "co-3",
-      "difficulty": 2,
       "strand": "Countries",
       "objectiveCodes": [
         "Y3-UK-1"
@@ -98,7 +95,6 @@
     {
       "id": "co-4",
       "factKey": "co-4",
-      "difficulty": 2,
       "strand": "Countries",
       "objectiveCodes": [
         "Y3-UK-1"
@@ -124,7 +120,6 @@
     {
       "id": "co-5",
       "factKey": "co-5",
-      "difficulty": 3,
       "strand": "Countries",
       "objectiveCodes": [
         "Y3-UK-1"
@@ -144,7 +139,6 @@
     {
       "id": "ca-1",
       "factKey": "ca-1",
-      "difficulty": 1,
       "strand": "Capital cities",
       "objectiveCodes": [
         "Y3-UK-1",
@@ -167,7 +161,6 @@
     {
       "id": "ca-2",
       "factKey": "ca-2",
-      "difficulty": 2,
       "strand": "Capital cities",
       "objectiveCodes": [
         "Y3-UK-1",
@@ -190,7 +183,6 @@
     {
       "id": "ca-3",
       "factKey": "ca-3",
-      "difficulty": 2,
       "strand": "Capital cities",
       "objectiveCodes": [
         "Y3-UK-1",
@@ -217,7 +209,6 @@
     {
       "id": "ca-4",
       "factKey": "ca-4",
-      "difficulty": 3,
       "strand": "Capital cities",
       "objectiveCodes": [
         "Y3-UK-1",
@@ -244,7 +235,6 @@
     {
       "id": "ca-5",
       "factKey": "ca-5",
-      "difficulty": 1,
       "strand": "Capital cities",
       "objectiveCodes": [
         "Y3-UK-4"
@@ -264,7 +254,6 @@
     {
       "id": "se-1",
       "factKey": "se-1",
-      "difficulty": 2,
       "strand": "Seas and coasts",
       "objectiveCodes": [
         "Y3-UK-2"
@@ -288,7 +277,6 @@
     {
       "id": "se-2",
       "factKey": "se-2",
-      "difficulty": 2,
       "strand": "Seas and coasts",
       "objectiveCodes": [
         "Y3-UK-2"
@@ -314,7 +302,6 @@
     {
       "id": "se-3",
       "factKey": "se-3",
-      "difficulty": 1,
       "strand": "Seas and coasts",
       "objectiveCodes": [
         "Y3-UK-2"
@@ -334,7 +321,6 @@
     {
       "id": "se-4",
       "factKey": "se-4",
-      "difficulty": 3,
       "strand": "Seas and coasts",
       "objectiveCodes": [
         "Y3-UK-3"
@@ -358,7 +344,6 @@
     {
       "id": "se-5",
       "factKey": "se-5",
-      "difficulty": 3,
       "strand": "Seas and coasts",
       "objectiveCodes": [
         "Y3-UK-2"
@@ -378,7 +363,6 @@
     {
       "id": "pf-1",
       "factKey": "pf-1",
-      "difficulty": 2,
       "strand": "Physical features",
       "objectiveCodes": [
         "Y3-UK-3"
@@ -400,7 +384,6 @@
     {
       "id": "pf-2",
       "factKey": "pf-2",
-      "difficulty": 3,
       "strand": "Physical features",
       "objectiveCodes": [
         "Y3-UK-3"
@@ -426,7 +409,6 @@
     {
       "id": "pf-3",
       "factKey": "pf-3",
-      "difficulty": 3,
       "strand": "Physical features",
       "objectiveCodes": [
         "Y3-UK-3"
@@ -452,7 +434,6 @@
     {
       "id": "pf-4",
       "factKey": "pf-4",
-      "difficulty": 2,
       "strand": "Physical features",
       "objectiveCodes": [
         "Y3-UK-3"
@@ -472,7 +453,6 @@
     {
       "id": "pf-5",
       "factKey": "pf-5",
-      "difficulty": 3,
       "strand": "Physical features",
       "objectiveCodes": [
         "Y3-UK-4"

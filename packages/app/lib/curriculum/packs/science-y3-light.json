@@ -33,7 +33,6 @@
     {
       "id": "se-1",
       "factKey": "se-1",
-      "difficulty": 1,
       "strand": "Seeing and darkness",
       "objectiveCodes": [
         "Y3-L-1"
@@ -55,7 +54,6 @@
     {
       "id": "se-2",
       "factKey": "se-2",
-      "difficulty": 1,
       "strand": "Seeing and darkness",
       "objectiveCodes": [
         "Y3-L-1"
@@ -75,7 +73,6 @@
     {
       "id": "se-3",
       "factKey": "se-3",
-      "difficulty": 2,
       "strand": "Seeing and darkness",
       "objectiveCodes": [
         "Y3-L-1"
@@ -101,7 +98,6 @@
     {
       "id": "se-4",
       "factKey": "se-4",
-      "difficulty": 2,
       "strand": "Seeing and darkness",
       "objectiveCodes": [
         "Y3-L-1"
@@ -127,7 +123,6 @@
     {
       "id": "se-5",
       "factKey": "se-5",
-      "difficulty": 3,
       "strand": "Seeing and darkness",
       "objectiveCodes": [
         "Y3-L-1"
@@ -147,7 +142,6 @@
     {
       "id": "re-1",
       "factKey": "re-1",
-      "difficulty": 1,
       "strand": "Reflection",
       "objectiveCodes": [
         "Y3-L-2"
@@ -171,7 +165,6 @@
     {
       "id": "re-2",
       "factKey": "re-2",
-      "difficulty": 2,
       "strand": "Reflection",
       "objectiveCodes": [
         "Y3-L-2"
@@ -197,7 +190,6 @@
     {
       "id": "re-3",
       "factKey": "re-3",
-      "difficulty": 2,
       "strand": "Reflection",
       "objectiveCodes": [
         "Y3-L-2"
@@ -217,7 +209,6 @@
     {
       "id": "re-4",
       "factKey": "re-4",
-      "difficulty": 3,
       "strand": "Reflection",
       "objectiveCodes": [
         "Y3-L-2"
@@ -243,7 +234,6 @@
     {
       "id": "re-5",
       "factKey": "re-5",
-      "difficulty": 3,
       "strand": "Reflection",
       "objectiveCodes": [
         "Y3-L-2"
@@ -263,7 +253,6 @@
     {
       "id": "su-1",
       "factKey": "su-1",
-      "difficulty": 1,
       "strand": "Sun safety",
       "objectiveCodes": [
         "Y3-L-3"
@@ -283,7 +272,6 @@
     {
       "id": "su-2",
       "factKey": "su-2",
-      "difficulty": 2,
       "strand": "Sun safety",
       "objectiveCodes": [
         "Y3-L-3"
@@ -307,7 +295,6 @@
     {
       "id": "su-3",
       "factKey": "su-3",
-      "difficulty": 2,
       "strand": "Sun safety",
       "objectiveCodes": [
         "Y3-L-3"
@@ -333,7 +320,6 @@
     {
       "id": "su-4",
       "factKey": "su-4",
-      "difficulty": 2,
       "strand": "Sun safety",
       "objectiveCodes": [
         "Y3-L-3"
@@ -353,7 +339,6 @@
     {
       "id": "sh-1",
       "factKey": "sh-1",
-      "difficulty": 1,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-4"
@@ -376,7 +361,6 @@
     {
       "id": "sh-2",
       "factKey": "sh-2",
-      "difficulty": 2,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-4"
@@ -402,7 +386,6 @@
     {
       "id": "sh-3",
       "factKey": "sh-3",
-      "difficulty": 2,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-4"
@@ -422,7 +405,6 @@
     {
       "id": "sh-4",
       "factKey": "sh-4",
-      "difficulty": 3,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-5"
@@ -448,7 +430,6 @@
     {
       "id": "sh-5",
       "factKey": "sh-5",
-      "difficulty": 3,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-5"
@@ -468,7 +449,6 @@
     {
       "id": "sh-6",
       "factKey": "sh-6",
-      "difficulty": 3,
       "strand": "Shadows",
       "objectiveCodes": [
         "Y3-L-4",

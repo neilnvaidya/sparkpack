@@ -15,7 +15,6 @@ import type { CurriculumPack, CurriculumQuestion } from '@/lib/curriculum/schema
 const QUESTION_KEY_ORDER: (keyof CurriculumQuestion)[] = [
   'id',
   'factKey',
-  'difficulty',
   'strand',
   'objectiveCodes',
   'forms',
@@ -76,7 +75,6 @@ export function blankQuestion(id: string): CurriculumQuestion {
   return {
     id,
     factKey: id,
-    difficulty: 2,
     strand: '',
     objectiveCodes: [],
     forms: ['open'],

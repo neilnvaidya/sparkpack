@@ -29,7 +29,6 @@
     {
       "id": "pr-1",
       "factKey": "pr-1",
-      "difficulty": 1,
       "strand": "Prefixes",
       "objectiveCodes": [
         "Y34-SP-1"
@@ -51,7 +50,6 @@
     {
       "id": "pr-2",
       "factKey": "pr-2",
-      "difficulty": 2,
       "strand": "Prefixes",
       "objectiveCodes": [
         "Y34-SP-1"
@@ -73,7 +71,6 @@
     {
       "id": "pr-3",
       "factKey": "pr-3",
-      "difficulty": 2,
       "strand": "Prefixes",
       "objectiveCodes": [
         "Y34-SP-1"
@@ -99,7 +96,6 @@
     {
       "id": "pr-4",
       "factKey": "pr-4",
-      "difficulty": 3,
       "strand": "Prefixes",
       "objectiveCodes": [
         "Y34-SP-1"
@@ -125,7 +121,6 @@
     {
       "id": "pr-5",
       "factKey": "pr-5",
-      "difficulty": 2,
       "strand": "Prefixes",
       "objectiveCodes": [
         "Y34-SP-1"
@@ -145,7 +140,6 @@
     {
       "id": "su-1",
       "factKey": "su-1",
-      "difficulty": 1,
       "strand": "Suffixes",
       "objectiveCodes": [
         "Y34-SP-2"
@@ -167,7 +161,6 @@
     {
       "id": "su-2",
       "factKey": "su-2",
-      "difficulty": 2,
       "strand": "Suffixes",
       "objectiveCodes": [
         "Y34-SP-2"
@@ -193,7 +186,6 @@
     {
       "id": "su-3",
       "factKey": "su-3",
-      "difficulty": 3,
       "strand": "Suffixes",
       "objectiveCodes": [
         "Y34-SP-2"
@@ -219,7 +211,6 @@
     {
       "id": "su-4",
       "factKey": "su-4",
-      "difficulty": 2,
       "strand": "Suffixes",
       "objectiveCodes": [
         "Y34-SP-2"
@@ -239,7 +230,6 @@
     {
       "id": "su-5",
       "factKey": "su-5",
-      "difficulty": 3,
       "strand": "Suffixes",
       "objectiveCodes": [
         "Y34-SP-2"
@@ -261,7 +251,6 @@
     {
       "id": "ho-1",
       "factKey": "ho-1",
-      "difficulty": 1,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"
@@ -286,7 +275,6 @@
     {
       "id": "ho-2",
       "factKey": "ho-2",
-      "difficulty": 2,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"
@@ -310,7 +298,6 @@
     {
       "id": "ho-3",
       "factKey": "ho-3",
-      "difficulty": 2,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"
@@ -335,7 +322,6 @@
     {
       "id": "ho-4",
       "factKey": "ho-4",
-      "difficulty": 2,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"
@@ -355,7 +341,6 @@
     {
       "id": "ho-5",
       "factKey": "ho-5",
-      "difficulty": 3,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"
@@ -377,7 +362,6 @@
     {
       "id": "cm-1",
       "factKey": "cm-1",
-      "difficulty": 1,
       "strand": "Commonly misspelt",
       "objectiveCodes": [
         "Y34-SP-4"
@@ -403,7 +387,6 @@
     {
       "id": "cm-2",
       "factKey": "cm-2",
-      "difficulty": 2,
       "strand": "Commonly misspelt",
       "objectiveCodes": [
         "Y34-SP-4"
@@ -429,7 +412,6 @@
     {
       "id": "cm-3",
       "factKey": "cm-3",
-      "difficulty": 3,
       "strand": "Commonly misspelt",
       "objectiveCodes": [
         "Y34-SP-4"
@@ -455,7 +437,6 @@
     {
       "id": "cm-4",
       "factKey": "cm-4",
-      "difficulty": 2,
       "strand": "Commonly misspelt",
       "objectiveCodes": [
         "Y34-SP-4"
@@ -475,7 +456,6 @@
     {
       "id": "cm-5",
       "factKey": "cm-5",
-      "difficulty": 3,
       "strand": "Commonly misspelt",
       "objectiveCodes": [
         "Y34-SP-4"
@@ -497,7 +477,6 @@
     {
       "id": "ho-6",
       "factKey": "ho-6",
-      "difficulty": 1,
       "strand": "Homophones",
       "objectiveCodes": [
         "Y34-SP-3"

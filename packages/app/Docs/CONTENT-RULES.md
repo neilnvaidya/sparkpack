@@ -9,7 +9,8 @@
 ## The one idea
 
 **One question = one fact, expressible in up to three forms.** You author the fact
-once; the games present it at the difficulty they need.
+once; the games present it at the difficulty they need. **The form is the
+difficulty** — there is no difficulty rating to set.
 
 | Form | Example | Scaffolding |
 |---|---|---|
@@ -35,7 +36,6 @@ Two surfaces plus one answer set:
 {
   "id": "ca-wales",
   "factKey": "capital-wales",
-  "difficulty": 2,
   "strand": "Capital cities",
   "objectiveCodes": ["Y3-UK-1", "Y3-UK-4"],
   "forms": ["open", "mcq", "truefalse"],
@@ -121,16 +121,27 @@ distractor is worse than no game.
 - The validator warns on `forms.length < 3`; that warning *is* the enrichment
   worklist.
 
-### `difficulty` and points — two axes
+### Difficulty is the form — there is no difficulty field
 
-- `difficulty` (1 easy / 2 core / 3 stretch) is the **intrinsic hardness of the
-  fact**, independent of form. Set it for the fact, not the presentation.
-- The form applies a scaffolding multiplier. Points = difficulty × form.
-- The axes are orthogonal: an easy fact asked open is worth the same as a core
-  fact as true/false. That is the intended statement.
+**You do not rate a question's difficulty.** How hard a
+question is *is* how it is asked: open with nothing on screen, versus one of four
+options, versus a 50/50 true-or-false. Author the fact three ways and the ladder
+exists.
 
-*(Planned, step 4: `open` ×1.0, `mcq` ×0.7, `truefalse` ×0.5 → 100/200/300,
-70/140/210, 50/100/150. Values are guesses until a classroom trial.)*
+- Points follow the form it is dealt in: `open` 300, `mcq` 200, `truefalse` 100
+  (`lib/questions/scoring.ts` — values are a guess until a classroom trial).
+- Games order by form. Flash Round ramps true/false → open; the board puts the
+  gentlest asking in its lowest-point rows; Summit Climb asks a steady rung the
+  easiest way it can and a risky rung the hardest.
+- **A question that offers all three forms is easy, medium and hard.** That is
+  the point of the whole schema, and it is why enrichment matters more than any
+  rating would.
+
+*(Removed 2026-07-16. An authored `difficulty` field, 1/2/3, rated the intrinsic
+hardness of the fact independent of form; two axes were more precision than the
+content could carry, and the values were never authored on that basis anyway.
+Deleting it also retired Summit Climb's `minPerDifficulty` floor, which existed
+only because content had to carry the whole easy-to-hard spread.)*
 
 ### `factKey`
 

@@ -6,7 +6,7 @@
  *   → content-drafts/geography-y3-uk.skeleton.json
  *
  * The skeleton carries the STRUCTURAL fields through untouched (id, strand,
- * objectiveCodes, difficulty, equation) and blanks the AUTHORED ones (ask,
+ * objectiveCodes, equation) and blanks the AUTHORED ones (ask,
  * claim, answer, distractors, ...). That split is the whole point: the drafter
  * can only write prose. It cannot invent a strand, drop an objective, or
  * renumber an id, because those values are already sitting in the file it is
@@ -45,7 +45,6 @@ const skeleton = {
     // --- carried through: the drafter must not change these ---
     id: q.id,
     factKey: q.id,
-    difficulty: q.difficulty,
     strand: q.strand,
     objectiveCodes: q.objectiveCodes,
     // --- to be written ---

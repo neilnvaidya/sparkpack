@@ -37,7 +37,6 @@
     {
       "id": "fo-1",
       "factKey": "fo-1",
-      "difficulty": 1,
       "strand": "Forces and surfaces",
       "objectiveCodes": [
         "Y3-FM-1"
@@ -59,7 +58,6 @@
     {
       "id": "fo-2",
       "factKey": "fo-2",
-      "difficulty": 2,
       "strand": "Forces and surfaces",
       "objectiveCodes": [
         "Y3-FM-1"
@@ -85,7 +83,6 @@
     {
       "id": "fo-3",
       "factKey": "fo-3",
-      "difficulty": 2,
       "strand": "Forces and surfaces",
       "objectiveCodes": [
         "Y3-FM-1"
@@ -105,7 +102,6 @@
     {
       "id": "fo-4",
       "factKey": "fo-4",
-      "difficulty": 1,
       "strand": "Forces and surfaces",
       "objectiveCodes": [
         "Y3-FM-1"
@@ -125,7 +121,6 @@
     {
       "id": "fo-5",
       "factKey": "fo-5",
-      "difficulty": 3,
       "strand": "Forces and surfaces",
       "objectiveCodes": [
         "Y3-FM-1"
@@ -148,7 +143,6 @@
     {
       "id": "co-1",
       "factKey": "co-1",
-      "difficulty": 2,
       "strand": "Contact and distance",
       "objectiveCodes": [
         "Y3-FM-2"
@@ -172,7 +166,6 @@
     {
       "id": "co-2",
       "factKey": "co-2",
-      "difficulty": 2,
       "strand": "Contact and distance",
       "objectiveCodes": [
         "Y3-FM-2"
@@ -198,7 +191,6 @@
     {
       "id": "co-3",
       "factKey": "co-3",
-      "difficulty": 2,
       "strand": "Contact and distance",
       "objectiveCodes": [
         "Y3-FM-2"
@@ -218,7 +210,6 @@
     {
       "id": "co-4",
       "factKey": "co-4",
-      "difficulty": 3,
       "strand": "Contact and distance",
       "objectiveCodes": [
         "Y3-FM-2"
@@ -238,7 +229,6 @@
     {
       "id": "ma-1",
       "factKey": "ma-1",
-      "difficulty": 1,
       "strand": "Magnetic materials",
       "objectiveCodes": [
         "Y3-FM-3",
@@ -262,7 +252,6 @@
     {
       "id": "ma-2",
       "factKey": "ma-2",
-      "difficulty": 2,
       "strand": "Magnetic materials",
       "objectiveCodes": [
         "Y3-FM-4"
@@ -288,7 +277,6 @@
     {
       "id": "ma-3",
       "factKey": "ma-3",
-      "difficulty": 2,
       "strand": "Magnetic materials",
       "objectiveCodes": [
         "Y3-FM-4"
@@ -308,7 +296,6 @@
     {
       "id": "ma-4",
       "factKey": "ma-4",
-      "difficulty": 1,
       "strand": "Magnetic materials",
       "objectiveCodes": [
         "Y3-FM-4"
@@ -328,7 +315,6 @@
     {
       "id": "ma-5",
       "factKey": "ma-5",
-      "difficulty": 3,
       "strand": "Magnetic materials",
       "objectiveCodes": [
         "Y3-FM-4"
@@ -354,7 +340,6 @@
     {
       "id": "po-1",
       "factKey": "po-1",
-      "difficulty": 1,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-5"
@@ -378,7 +363,6 @@
     {
       "id": "po-2",
       "factKey": "po-2",
-      "difficulty": 2,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-6"
@@ -404,7 +388,6 @@
     {
       "id": "po-3",
       "factKey": "po-3",
-      "difficulty": 2,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-6"
@@ -430,7 +413,6 @@
     {
       "id": "po-4",
       "factKey": "po-4",
-      "difficulty": 2,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-6"
@@ -450,7 +432,6 @@
     {
       "id": "po-5",
       "factKey": "po-5",
-      "difficulty": 3,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-6"
@@ -470,7 +451,6 @@
     {
       "id": "po-6",
       "factKey": "po-6",
-      "difficulty": 3,
       "strand": "Poles",
       "objectiveCodes": [
         "Y3-FM-6"

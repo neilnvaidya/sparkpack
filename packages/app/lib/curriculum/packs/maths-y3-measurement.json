@@ -37,7 +37,6 @@
     {
       "id": "l-1",
       "factKey": "l-1",
-      "difficulty": 1,
       "strand": "Length",
       "objectiveCodes": [
         "Y3-M-1"
@@ -60,7 +59,6 @@
     {
       "id": "l-2",
       "factKey": "l-2",
-      "difficulty": 2,
       "strand": "Length",
       "objectiveCodes": [
         "Y3-M-1"
@@ -83,7 +81,6 @@
     {
       "id": "l-3",
       "factKey": "l-3",
-      "difficulty": 2,
       "strand": "Length",
       "objectiveCodes": [
         "Y3-M-1"
@@ -109,7 +106,6 @@
     {
       "id": "l-4",
       "factKey": "l-4",
-      "difficulty": 3,
       "strand": "Length",
       "objectiveCodes": [
         "Y3-M-1"
@@ -132,7 +128,6 @@
     {
       "id": "p-1",
       "factKey": "p-1",
-      "difficulty": 2,
       "strand": "Perimeter",
       "objectiveCodes": [
         "Y3-M-2"
@@ -155,7 +150,6 @@
     {
       "id": "p-2",
       "factKey": "p-2",
-      "difficulty": 3,
       "strand": "Perimeter",
       "objectiveCodes": [
         "Y3-M-2"
@@ -178,7 +172,6 @@
     {
       "id": "p-3",
       "factKey": "p-3",
-      "difficulty": 1,
       "strand": "Perimeter",
       "objectiveCodes": [
         "Y3-M-2"
@@ -198,7 +191,6 @@
     {
       "id": "mc-1",
       "factKey": "mc-1",
-      "difficulty": 1,
       "strand": "Mass and capacity",
       "objectiveCodes": [
         "Y3-M-1"
@@ -221,7 +213,6 @@
     {
       "id": "mc-2",
       "factKey": "mc-2",
-      "difficulty": 1,
       "strand": "Mass and capacity",
       "objectiveCodes": [
         "Y3-M-1"
@@ -244,7 +235,6 @@
     {
       "id": "mc-3",
       "factKey": "mc-3",
-      "difficulty": 2,
       "strand": "Mass and capacity",
       "objectiveCodes": [
         "Y3-M-1"
@@ -270,7 +260,6 @@
     {
       "id": "mc-4",
       "factKey": "mc-4",
-      "difficulty": 3,
       "strand": "Mass and capacity",
       "objectiveCodes": [
         "Y3-M-1"
@@ -290,7 +279,6 @@
     {
       "id": "mo-1",
       "factKey": "mo-1",
-      "difficulty": 2,
       "strand": "Money",
       "objectiveCodes": [
         "Y3-M-3"
@@ -313,7 +301,6 @@
     {
       "id": "mo-2",
       "factKey": "mo-2",
-      "difficulty": 2,
       "strand": "Money",
       "objectiveCodes": [
         "Y3-M-3"
@@ -339,7 +326,6 @@
     {
       "id": "mo-3",
       "factKey": "mo-3",
-      "difficulty": 3,
       "strand": "Money",
       "objectiveCodes": [
         "Y3-M-3"
@@ -363,7 +349,6 @@
     {
       "id": "mo-4",
       "factKey": "mo-4",
-      "difficulty": 3,
       "strand": "Money",
       "objectiveCodes": [
         "Y3-M-3"
@@ -386,7 +371,6 @@
     {
       "id": "ti-1",
       "factKey": "ti-1",
-      "difficulty": 1,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-6"
@@ -408,7 +392,6 @@
     {
       "id": "ti-2",
       "factKey": "ti-2",
-      "difficulty": 1,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-5"
@@ -430,7 +413,6 @@
     {
       "id": "ti-3",
       "factKey": "ti-3",
-      "difficulty": 2,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-4"
@@ -456,7 +438,6 @@
     {
       "id": "ti-4",
       "factKey": "ti-4",
-      "difficulty": 2,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-4"
@@ -476,7 +457,6 @@
     {
       "id": "ti-5",
       "factKey": "ti-5",
-      "difficulty": 3,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-6"
@@ -498,7 +478,6 @@
     {
       "id": "ti-6",
       "factKey": "ti-6",
-      "difficulty": 3,
       "strand": "Time",
       "objectiveCodes": [
         "Y3-M-6"
@@ -524,7 +503,6 @@
     {
       "id": "l-5",
       "factKey": "l-5",
-      "difficulty": 1,
       "strand": "Length",
       "objectiveCodes": [
         "Y3-M-1"
@@ -544,7 +522,6 @@
     {
       "id": "mo-5",
       "factKey": "mo-5",
-      "difficulty": 2,
       "strand": "Money",
       "objectiveCodes": [
         "Y3-M-3"

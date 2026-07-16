@@ -29,8 +29,6 @@ export interface SliceRequirement {
    * question both declare `open`.
    */
   textOnly?: boolean
-  /** Optional per-difficulty floor; difficulty-2 questions backfill short buckets. */
-  minPerDifficulty?: Partial<Record<1 | 2 | 3, number>>
 }
 
 export interface GameSliceMeta {
@@ -54,23 +52,7 @@ export function questionsMatching(
 }
 
 export function isRequirementMet(pack: CurriculumPack, requires: SliceRequirement): boolean {
-  const usable = questionsMatching(pack, requires)
-  if (usable.length < requires.min) return false
-
-  const perDiff = requires.minPerDifficulty
-  if (perDiff) {
-    const count = (d: 1 | 2 | 3) => usable.filter((i) => i.difficulty === d).length
-    let backfill = count(2)
-    for (const d of [1, 3] as const) {
-      const need = perDiff[d] ?? 0
-      const have = count(d)
-      if (have >= need) continue
-      const shortfall = need - have
-      if (shortfall > backfill) return false
-      backfill -= shortfall
-    }
-  }
-  return true
+  return questionsMatching(pack, requires).length >= requires.min
 }
 
 export const GAME_SLICE_META: GameSliceMeta[] = [
@@ -115,7 +97,10 @@ export const GAME_SLICE_META: GameSliceMeta[] = [
     slug: 'summit-climb',
     name: 'Summit Climb',
     tagline: 'Play it safe or gamble on hard questions to climb faster',
-    requires: { forms: ALL_FORMS, min: 16, textOnly: true, minPerDifficulty: { 1: 8, 3: 8 } },
+    // 16 splits into two pools of 8. There is no per-difficulty floor any more:
+    // steady vs risky is how a question is asked, not which questions the pack
+    // happens to own, so no pack can be short of "easy content".
+    requires: { forms: ALL_FORMS, min: 16, textOnly: true },
   },
   {
     templateId: 'risk_it',

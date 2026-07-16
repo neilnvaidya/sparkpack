@@ -29,7 +29,6 @@
     {
       "id": "sa-1",
       "factKey": "sa-1",
-      "difficulty": 1,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -52,7 +51,6 @@
     {
       "id": "sa-2",
       "factKey": "sa-2",
-      "difficulty": 1,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -78,7 +76,6 @@
     {
       "id": "sa-3",
       "factKey": "sa-3",
-      "difficulty": 2,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -104,7 +101,6 @@
     {
       "id": "sa-4",
       "factKey": "sa-4",
-      "difficulty": 2,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -124,7 +120,6 @@
     {
       "id": "sa-5",
       "factKey": "sa-5",
-      "difficulty": 3,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -148,7 +143,6 @@
     {
       "id": "sa-6",
       "factKey": "sa-6",
-      "difficulty": 1,
       "strand": "Stone Age",
       "objectiveCodes": [
         "Y3-SAIA-1"
@@ -168,7 +162,6 @@
     {
       "id": "ba-1",
       "factKey": "ba-1",
-      "difficulty": 1,
       "strand": "Bronze Age",
       "objectiveCodes": [
         "Y3-SAIA-2"
@@ -191,7 +184,6 @@
     {
       "id": "ba-2",
       "factKey": "ba-2",
-      "difficulty": 2,
       "strand": "Bronze Age",
       "objectiveCodes": [
         "Y3-SAIA-2"
@@ -217,7 +209,6 @@
     {
       "id": "ba-3",
       "factKey": "ba-3",
-      "difficulty": 2,
       "strand": "Bronze Age",
       "objectiveCodes": [
         "Y3-SAIA-2"
@@ -237,7 +228,6 @@
     {
       "id": "ba-4",
       "factKey": "ba-4",
-      "difficulty": 3,
       "strand": "Bronze Age",
       "objectiveCodes": [
         "Y3-SAIA-2"
@@ -263,7 +253,6 @@
     {
       "id": "ba-5",
       "factKey": "ba-5",
-      "difficulty": 3,
       "strand": "Bronze Age",
       "objectiveCodes": [
         "Y3-SAIA-2"
@@ -283,7 +272,6 @@
     {
       "id": "ia-1",
       "factKey": "ia-1",
-      "difficulty": 1,
       "strand": "Iron Age",
       "objectiveCodes": [
         "Y3-SAIA-3"
@@ -305,7 +293,6 @@
     {
       "id": "ia-2",
       "factKey": "ia-2",
-      "difficulty": 2,
       "strand": "Iron Age",
       "objectiveCodes": [
         "Y3-SAIA-3"
@@ -331,7 +318,6 @@
     {
       "id": "ia-3",
       "factKey": "ia-3",
-      "difficulty": 2,
       "strand": "Iron Age",
       "objectiveCodes": [
         "Y3-SAIA-3"
@@ -351,7 +337,6 @@
     {
       "id": "ia-4",
       "factKey": "ia-4",
-      "difficulty": 3,
       "strand": "Iron Age",
       "objectiveCodes": [
         "Y3-SAIA-3"
@@ -377,7 +362,6 @@
     {
       "id": "ia-5",
       "factKey": "ia-5",
-      "difficulty": 3,
       "strand": "Iron Age",
       "objectiveCodes": [
         "Y3-SAIA-3"
@@ -397,7 +381,6 @@
     {
       "id": "ti-1",
       "factKey": "ti-1",
-      "difficulty": 1,
       "strand": "Timeline and evidence",
       "objectiveCodes": [
         "Y3-SAIA-4"
@@ -422,7 +405,6 @@
     {
       "id": "ti-2",
       "factKey": "ti-2",
-      "difficulty": 2,
       "strand": "Timeline and evidence",
       "objectiveCodes": [
         "Y3-SAIA-4"
@@ -444,7 +426,6 @@
     {
       "id": "ti-3",
       "factKey": "ti-3",
-      "difficulty": 2,
       "strand": "Timeline and evidence",
       "objectiveCodes": [
         "Y3-SAIA-4"
@@ -467,7 +448,6 @@
     {
       "id": "ti-4",
       "factKey": "ti-4",
-      "difficulty": 3,
       "strand": "Timeline and evidence",
       "objectiveCodes": [
         "Y3-SAIA-4"
@@ -487,7 +467,6 @@
     {
       "id": "ti-5",
       "factKey": "ti-5",
-      "difficulty": 3,
       "strand": "Timeline and evidence",
       "objectiveCodes": [
         "Y3-SAIA-4"

@@ -37,13 +37,19 @@ Three decisions (Neil, 2026-07-16) reshape that:
    than no game. The review surface has to exist before the content does.
 2. **Step 4 mostly collapses.** Intrinsic content difficulty is not worth the
    effort right now. Three forms is enough of a ladder: points rank by form
-   alone. The `difficulty` field stays in the schema (Summit Climb still pools by
-   it) but stops driving points.
+   alone.
 3. **Step 5 is a verify pass, not a feature.** It is entirely downstream of 3b —
    `factKey` grouping is a thing you *author*, so dedupe is just consuming what
    3b produced, plus tightening the schema.
 
 So: **tool → content → forms-only scoring → verify.**
+
+**Then step 4 was pulled in front of 3b** (Neil, same day, on seeing the
+difficulty control in the tool and asking why it was there at all). Deleting the
+field *after* 3b would mean rewriting all 19 packs immediately after enriching
+them; deleting it first means 3b writes packs in their final shape. **Step 4 is
+done** — see below. The running order is now: **tool → forms-only scoring →
+content → verify → objectives.**
 
 ---
 
@@ -113,7 +119,9 @@ the first bug report is "the answer is always A".
 Above the panels, per question: `forms` (three checkboxes, each disabled with a
 reason when its data is missing — this teaches the contract better than any doc),
 `factKey`, `strand`, `objectiveCodes` (picked from the pack's declared
-objectives, not free text), `difficulty`, and `equation` when non-null.
+objectives, not free text), and `equation` when non-null. **No difficulty
+control** — the field was deleted in step 4, which this tool's existence
+prompted.
 
 Per question: delete. Per pack: add question (seeded with the CONTENT-RULES
 skeleton), and **Write** — one explicit button, no autosave. Autosave plus a
@@ -199,7 +207,7 @@ For each pack, in the order below:
 
 1. **Skeleton.** `npm run make-skeleton <packId>` emits a target file into
    `content-drafts/`: every existing question's `id`,
-   `strand`, `objectiveCodes`, `difficulty` and `equation` carried over, and the
+   `strand`, `objectiveCodes` and `equation` carried over, and the
    authored fields (`ask`, `claim`, `answer`, `distractors`, `factKey`) blanked
    to the CONTENT-RULES skeleton. The existing v2 pack is the **source** the
    drafter reads; the skeleton is what it fills. Carrying the structural fields
@@ -308,9 +316,11 @@ two known Y2 defects below.
 
 ### Two known defects to fix in passing
 
-- `maths-y3-multiplication-division` **powers 5 of 7 games**, not 7: 15 strategy
-  items (needs 16) and 2 difficulty-1 items (Summit needs 8 easy after backfill).
-  ~2 easy questions fixes both. It is the only pack with this gap.
+- `maths-y3-multiplication-division` **powers 5 of 7 games**, not 7. It had two
+  blockers; step 4 cleared one (the difficulty floor is gone). The one that
+  remains: **only 15 of its 27 questions are text-only** (12 are equations), and
+  Three in a Row and Summit Climb need 16. **One** more non-equation question
+  fixes it. It is the only pack with this gap.
 - The two Y2 packs (`maths-y2-addition-subtraction`,
   `science-y2-animals-including-humans`) **tag zero `objectiveCodes`**, so their
   declared objectives are unreachable. And `maths-y2-addition-subtraction` mixes a
@@ -324,63 +334,89 @@ exit criterion, and it is why the warnings were built that way.
 
 ---
 
-## Step 4 — points by form
+## Step 4 — points by form — DONE (2026-07-16)
 
-Collapsed, per Neil: **rank by form, ignore intrinsic difficulty.** The three
-forms are the difficulty ladder.
+**Brought forward and completed**, out of sequence, at Neil's call: if the field
+were deleted in step 4 as planned, all 19 packs would be rewritten *again* right
+after 3b had just enriched them. Deleting it first means 3b writes packs in their
+final shape.
 
-- `lib/questions/scoring.ts`: `FORM_POINTS = { open: 300, mcq: 200, truefalse: 100 }`,
-  `pointsFor(form)`. Replaces `POINTS_BY_DIFFICULTY` (`slices.ts:35`), used at
-  `slices.ts:62`.
-- The plan's `FORM_SCAFFOLD` multiplier and `challenge()` are **dropped** — they
-  only existed to combine the two axes, and there is now one axis.
-- Games declare an ordered **form preference ladder** and take the first form a
-  question offers: Summit "steady" → truefalse-first, "risky" → open-first; board
-  rows 1-2 → easiest form available, rows 3-4 → hardest; Flash Round ramps by
-  form; T/F Showdown requires `truefalse` with no fallback. **This only becomes
-  meaningful after 3b** — a single-form question has nothing to prefer.
+Shipped:
 
-### `difficulty` is deleted here, not kept
+- **`lib/questions/scoring.ts`** — `FORM_POINTS` (open 300, mcq 200, truefalse
+  100), `pointsFor(form)`, `FORM_RANK`, and the `EASIEST_FIRST` / `HARDEST_FIRST`
+  preference ladders. `POINTS_BY_DIFFICULTY` is gone. `FORM_SCAFFOLD` and
+  `challenge()` were never built — they existed only to combine two axes.
+- **`difficulty` deleted from the schema and from all 19 packs** (417 questions).
+  The codemod diff was **417 deletions, 0 additions** — the field left and nothing
+  else moved.
+- **`minPerDifficulty` deleted** from `SliceRequirement` and Summit Climb.
+- Games order by form: Flash Round ramps by `FORM_RANK`, the board sorts by it and
+  asks low rows the easiest way / high rows the hardest, Summit deals two pools
+  from one shuffled deck and asks steady rungs `EASIEST_FIRST`, risky rungs
+  `HARDEST_FIRST`.
+- **v1 remnants deleted early** (`scripts/migrate-packs-v2.mjs`,
+  `curriculumPackV1Schema`, `curriculumItemSchema` and friends — 115 lines). This
+  was step 5's cleanup, forced: the migration script emitted `difficulty` and so
+  would have written invalid packs. Its purpose — making 3a reproducible — is
+  served by `Docs/packs-archive/2026-07-16/` and git history.
 
-Corrected 2026-07-16, on Neil noticing the field looked out of place in the
-authoring tool. The earlier note here said difficulty "stays in the schema and
-stays authored" so the two-axis idea could be revived. That undersold it: **the
-form ladder replaces every remaining use of the field, so step 4 removes it.**
+### Why the field could go, in full
 
-It is load-bearing *today*, in four places that have nothing to do with points —
-which is why it could not simply be dropped when scoring collapsed:
+It was load-bearing in four places, none of them points — which is why scoring
+collapsing did not free it on its own:
 
-| Use | Where | Replaced by |
+| Use | Was | Now |
 |---|---|---|
-| Summit's easy/hard rungs | `slices.ts:190-194` | steady → truefalse, risky → open |
-| Board's row gradient | `slices.ts:117` | easiest form in low rows, hardest in high |
-| Flash Round's ramp | `slices.ts:159` | sort by form |
-| Gates which packs offer Summit | `slice-requirements.ts:62` (`minPerDifficulty`) | **nothing — it dissolves** |
+| Summit's easy/hard rungs | pools filtered by difficulty 1 / 3, backfilled with 2 | one shuffled deck dealt into two pools; the *asking* differs, not the content |
+| Board's row gradient | sort by difficulty | sort by `FORM_RANK` |
+| Flash Round's ramp | sort by difficulty | sort by `FORM_RANK` |
+| Gated Summit availability | `minPerDifficulty: {1: 8, 3: 8}` | **deleted** |
 
-That last row is the one that matters. `minPerDifficulty: {1: 8, 3: 8}` exists
-only because *content* had to carry the whole easy-to-hard spread, so a pack
-needed eight genuinely easy facts and eight genuinely hard ones. After 3b every
-question offers all three forms, so **any** question can be a steady rung
-(true/false) or a risky one (open). The requirement is satisfied by every pack
-trivially, which means it should be deleted rather than relaxed — and with it
-goes the `maths-y3-multiplication-division` "only 2 difficulty-1 items" defect,
-without authoring anything.
+The Summit row is the interesting one. The old floor demanded a pack own eight
+genuinely easy facts and eight genuinely hard ones, because *content* carried the
+whole spread. Difficulty is a property of the asking, so any fact can be either
+rung — no pack can be short of "easy content" again.
 
-Until step 4 lands the field must keep a valid value, so the authoring tool
-**collapses it into a "legacy" line** rather than removing the control: never
-prompted for, still fixable, clearly marked for deletion. The skeleton generator
-carries it through untouched and DRAFTER-INSTRUCTIONS forbids the drafter from
-changing it.
+### Accepted cost, stated plainly
 
-If the two-axis idea is ever wanted back, it is a schema addition and a
-re-authoring pass — not something this field's continued existence would have
-saved, since its values were never authored on the "intrinsic hardness" basis the
-two-axis model assumed.
+Until 3b, most questions offer one form, so both ladders fall back to it: **a
+steady Summit rung can still be an open question**, and the board's gradient is
+inert. Today's `difficulty` values did give a real split, so this is a genuine
+short-term regression in Summit's steady-vs-risky feel. It resolves as packs are
+enriched, with no further code change.
+
+### Correction: this did NOT fix maths-y3-multiplication-division
+
+I claimed dropping `minPerDifficulty` would hand that pack back its two missing
+games. **It did not, and I was wrong.** The workplan listed two blockers and I
+conflated them. Removing the floor cleared the difficulty one; the other stands:
+
+- 27 questions, but **only 15 are text-only** (12 are equations) — and Three in a
+  Row and Summit Climb need **16**.
+
+So it still powers 5 of 7 games. The fix is **one** more non-equation question
+(not two, as the workplan says). Verified after the change:
+`ok maths-y3-multiplication-division.json — 27 questions → Question Rush, Strategy
+Board Quiz, Flash Round, True or False Showdown, Risk It`.
+
+### Verification
+
+The slice-dump snapshot moved, as expected, and was checked rather than accepted.
+Comparing old vs new per pack × game (131 keys):
+
+| Games | Result |
+|---|---|
+| Question Rush, Risk It, Three in a Row, T/F Showdown | **untouched** — never ordered by difficulty |
+| Flash Round (19), Summit Climb (18) | **reordered only** — identical question sets |
+| Strategy Board Quiz (16 of 19) | **different questions chosen** — expected: it takes the top N per strand and the sort key changed |
+
+Points moved 100/150/200 → 100/200/300. No question's rendered content changed.
+26 tests pass; `tsc`, `build` and `validate-packs` clean; the four enrichment
+warnings are unchanged, so the corpus is otherwise untouched.
 
 Only Question Rush and Board Quiz consume points; Flash Round and T/F Showdown
 keep flat +1 for their speed feel.
-
----
 
 ## Step 5 — verify and tighten
 
@@ -403,9 +439,11 @@ The final pass, entirely downstream of 3b.
     are in `content-quarantine/form-resistant.json` waiting on the multi-select
     form rather than eroding the rule from inside the corpus. No `formsRationale`
     field, no per-question exemption to review.
-- **Delete the v1 remnants**: `scripts/migrate-packs-v2.mjs`,
-  `curriculumPackV1Schema`, `curriculumItemSchema` and friends. They exist only so
-  3a is reproducible.
+- ~~Delete the v1 remnants~~ **— done early in step 4.**
+  `scripts/migrate-packs-v2.mjs` and `curriculumPackV1Schema` /
+  `curriculumItemSchema` and friends are gone (115 lines). Forced: the migration
+  script emitted `difficulty` and would have written invalid packs. Reproducibility
+  of 3a now rests on `Docs/packs-archive/2026-07-16/` and git history.
 - **Resolve `textOnly`** — the deviation forced in 3a because a lifted qa and a
   lifted equation both declare `open`, so `forms` alone could not reproduce the
   v1 BOARD/STRATEGY filter. After 3b, check whether `equation === null` is now

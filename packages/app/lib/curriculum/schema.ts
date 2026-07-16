@@ -56,6 +56,12 @@ export const questionEquationSchema = z.object({
  * game). Authoring two strings, an answer and five distractors yields three
  * difficulty levels.
  *
+ * FORM IS THE DIFFICULTY LADDER — there is no `difficulty` field. It existed,
+ * rating the intrinsic hardness of a fact independent of the asking, and was
+ * removed: two axes were more precision than the content could carry, and the
+ * values were never authored on that basis anyway. Games order by form via
+ * lib/questions/scoring.ts.
+ *
  * EVERY KEY IS ALWAYS PRESENT — no .optional(), no .default(). Blanks are "" or
  * [] or null. This uniformity is deliberate: a content authoring tool is meant
  * to be generated from this schema, and a shape that varies per question is not
@@ -65,8 +71,6 @@ export const curriculumQuestionSchema = z.object({
   id: z.string(),
   /** Questions sharing a factKey test the same fact; games avoid dealing both. */
   factKey: z.string(),
-  /** INTRINSIC difficulty of the fact, independent of how much the form helps. */
-  difficulty: z.union([z.literal(1), z.literal(2), z.literal(3)]),
   /** Sub-topic grouping, e.g. board-quiz categories. "" only for equations. */
   strand: z.string(),
   objectiveCodes: z.array(z.string()),
@@ -98,121 +102,6 @@ export const curriculumQuestionSchema = z.object({
 })
 
 export type CurriculumQuestion = z.infer<typeof curriculumQuestionSchema>
-
-/** Fields shared by every item kind. */
-const baseItemFields = {
-  id: z.string(),
-  /** 1 = easy, 2 = core, 3 = stretch. Drives points/ordering in games. */
-  difficulty: z.union([z.literal(1), z.literal(2), z.literal(3)]).default(2),
-  /** Sub-topic grouping, e.g. board-quiz categories. */
-  strand: z.string().optional(),
-  /** Objective codes (from the pack's objectives) this item assesses. */
-  objectiveCodes: z.array(z.string()).default([]),
-}
-
-/** A number sentence, e.g. 24 + 16 = 40. Games choose what to hide. */
-export const equationItemSchema = z.object({
-  ...baseItemFields,
-  kind: z.literal('equation'),
-  operator: z.enum(['+', '-', '×', '÷']),
-  left: z.string(),
-  right: z.string(),
-  result: z.string(),
-})
-
-/** An open question with a model answer (teacher validates). */
-export const qaItemSchema = z.object({
-  ...baseItemFields,
-  kind: z.literal('qa'),
-  prompt: z.string(),
-  answer: z.string(),
-  /** Alternative phrasings the teacher may accept. */
-  acceptableAnswers: z.array(z.string()).default([]),
-})
-
-/** Multiple choice. */
-export const mcqItemSchema = z.object({
-  ...baseItemFields,
-  kind: z.literal('mcq'),
-  prompt: z.string(),
-  options: z.array(z.string()).min(2).max(5),
-  correctIndex: z.number().int().min(0),
-})
-
-/** A statement that is true or false. */
-export const trueFalseItemSchema = z.object({
-  ...baseItemFields,
-  kind: z.literal('truefalse'),
-  statement: z.string(),
-  isTrue: z.boolean(),
-})
-
-export const curriculumItemSchema = z.discriminatedUnion('kind', [
-  equationItemSchema,
-  qaItemSchema,
-  mcqItemSchema,
-  trueFalseItemSchema,
-])
-
-export type CurriculumItem = z.infer<typeof curriculumItemSchema>
-export type CurriculumItemKind = CurriculumItem['kind']
-export type EquationItem = z.infer<typeof equationItemSchema>
-export type QaItem = z.infer<typeof qaItemSchema>
-export type McqItem = z.infer<typeof mcqItemSchema>
-export type TrueFalseItem = z.infer<typeof trueFalseItemSchema>
-
-/**
- * v1 packs — items keyed by `kind`. Retained ONLY so scripts/migrate-packs-v2.mjs
- * can read the pre-migration corpus. Delete once the migration is committed.
- */
-export const curriculumPackV1Schema = z
-  .object({
-    schemaVersion: z.literal(1),
-    /** Globally unique, kebab-case: "<subject>-y<year>-<topicId>". */
-    id: z.string(),
-    subject: subjectSchema,
-    keyStage: keyStageSchema,
-    year: z.number().int().min(1).max(6),
-    /** Topic within the subject's curriculum, kebab-case. */
-    topicId: z.string(),
-    title: z.string(),
-    description: z.string(),
-    /** The statutory objectives this pack covers, curriculum wording intact. */
-    objectives: z.array(objectiveSchema).min(1),
-    items: z.array(curriculumItemSchema).min(1),
-  })
-  .superRefine((pack, ctx) => {
-    const objectiveCodes = new Set(pack.objectives.map((o) => o.code))
-    const ids = new Set<string>()
-    pack.items.forEach((item, i) => {
-      for (const code of item.objectiveCodes) {
-        if (!objectiveCodes.has(code)) {
-          ctx.addIssue({
-            code: 'custom',
-            path: ['items', i, 'objectiveCodes'],
-            message: `Unknown objective code "${code}"`,
-          })
-        }
-      }
-      if (ids.has(item.id)) {
-        ctx.addIssue({
-          code: 'custom',
-          path: ['items', i, 'id'],
-          message: `Duplicate item id "${item.id}"`,
-        })
-      }
-      ids.add(item.id)
-      if (item.kind === 'mcq' && item.correctIndex >= item.options.length) {
-        ctx.addIssue({
-          code: 'custom',
-          path: ['items', i, 'correctIndex'],
-          message: 'correctIndex out of range',
-        })
-      }
-    })
-  })
-
-export type CurriculumPackV1 = z.infer<typeof curriculumPackV1Schema>
 
 /**
  * The floor for an MCQ to be a choice at all: the answer plus one wrong option.

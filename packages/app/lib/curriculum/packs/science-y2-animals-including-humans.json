@@ -25,7 +25,6 @@
     {
       "id": "gu-1",
       "factKey": "gu-1",
-      "difficulty": 1,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -45,7 +44,6 @@
     {
       "id": "gu-2",
       "factKey": "gu-2",
-      "difficulty": 1,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -65,7 +63,6 @@
     {
       "id": "gu-3",
       "factKey": "gu-3",
-      "difficulty": 2,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -88,7 +85,6 @@
     {
       "id": "gu-4",
       "factKey": "gu-4",
-      "difficulty": 1,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -112,7 +108,6 @@
     {
       "id": "gu-5",
       "factKey": "gu-5",
-      "difficulty": 1,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -130,7 +125,6 @@
     {
       "id": "gu-6",
       "factKey": "gu-6",
-      "difficulty": 2,
       "strand": "Growing up",
       "objectiveCodes": [],
       "forms": [
@@ -148,7 +142,6 @@
     {
       "id": "bn-1",
       "factKey": "bn-1",
-      "difficulty": 2,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -169,7 +162,6 @@
     {
       "id": "bn-2",
       "factKey": "bn-2",
-      "difficulty": 2,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -190,7 +182,6 @@
     {
       "id": "bn-3",
       "factKey": "bn-3",
-      "difficulty": 1,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -214,7 +205,6 @@
     {
       "id": "bn-4",
       "factKey": "bn-4",
-      "difficulty": 2,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -237,7 +227,6 @@
     {
       "id": "bn-5",
       "factKey": "bn-5",
-      "difficulty": 1,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -255,7 +244,6 @@
     {
       "id": "bn-6",
       "factKey": "bn-6",
-      "difficulty": 1,
       "strand": "Basic needs",
       "objectiveCodes": [],
       "forms": [
@@ -273,7 +261,6 @@
     {
       "id": "hl-1",
       "factKey": "hl-1",
-      "difficulty": 2,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -294,7 +281,6 @@
     {
       "id": "hl-2",
       "factKey": "hl-2",
-      "difficulty": 2,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -314,7 +300,6 @@
     {
       "id": "hl-3",
       "factKey": "hl-3",
-      "difficulty": 1,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -337,7 +322,6 @@
     {
       "id": "hl-4",
       "factKey": "hl-4",
-      "difficulty": 1,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -360,7 +344,6 @@
     {
       "id": "hl-5",
       "factKey": "hl-5",
-      "difficulty": 1,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -378,7 +361,6 @@
     {
       "id": "hl-6",
       "factKey": "hl-6",
-      "difficulty": 2,
       "strand": "Healthy living",
       "objectiveCodes": [],
       "forms": [
@@ -396,7 +378,6 @@
     {
       "id": "aa-1",
       "factKey": "aa-1",
-      "difficulty": 3,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [
@@ -416,7 +397,6 @@
     {
       "id": "aa-2",
       "factKey": "aa-2",
-      "difficulty": 3,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [
@@ -436,7 +416,6 @@
     {
       "id": "aa-3",
       "factKey": "aa-3",
-      "difficulty": 2,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [
@@ -460,7 +439,6 @@
     {
       "id": "aa-4",
       "factKey": "aa-4",
-      "difficulty": 1,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [
@@ -484,7 +462,6 @@
     {
       "id": "aa-5",
       "factKey": "aa-5",
-      "difficulty": 2,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [
@@ -502,7 +479,6 @@
     {
       "id": "aa-6",
       "factKey": "aa-6",
-      "difficulty": 3,
       "strand": "Amazing animals",
       "objectiveCodes": [],
       "forms": [

@@ -16,7 +16,7 @@
    existing content. It is correct. It is your only source of facts.
 2. **The skeleton** — `content-drafts/<packId>.skeleton.json`. This is what you
    fill in. It already contains every question's `id`, `strand`,
-   `objectiveCodes`, `difficulty` and `equation`.
+   `objectiveCodes` and `equation`.
 3. This file.
 
 ## The one rule above all others
@@ -33,7 +33,7 @@ You are rewriting **form**, not **content**.
 
 Copy these from the skeleton exactly as they are. They are already correct:
 
-- `id`, `strand`, `objectiveCodes`, `difficulty`, `equation`
+- `id`, `strand`, `objectiveCodes`, `equation`
 
 If one of them looks wrong to you, **leave it alone and note it in your report**
 (see the end). Do not fix it.
@@ -222,7 +222,7 @@ Check each of these yourself:
 - [ ] Every equation question has **0** distractors and `forms: ["open"]`.
 - [ ] `answer` never appears in its own `distractors`.
 - [ ] No distractor contains "of the above" or "of these".
-- [ ] `id`, `strand`, `objectiveCodes`, `difficulty`, `equation` are unchanged.
+- [ ] `id`, `strand`, `objectiveCodes`, `equation` are unchanged.
 - [ ] No facts invented.
 
 ## Your report

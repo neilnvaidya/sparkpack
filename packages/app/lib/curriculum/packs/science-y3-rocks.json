@@ -25,7 +25,6 @@
     {
       "id": "rk-1",
       "factKey": "rk-1",
-      "difficulty": 1,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -50,7 +49,6 @@
     {
       "id": "rk-2",
       "factKey": "rk-2",
-      "difficulty": 2,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -76,7 +74,6 @@
     {
       "id": "rk-3",
       "factKey": "rk-3",
-      "difficulty": 1,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -96,7 +93,6 @@
     {
       "id": "rk-4",
       "factKey": "rk-4",
-      "difficulty": 2,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -116,7 +112,6 @@
     {
       "id": "rk-5",
       "factKey": "rk-5",
-      "difficulty": 3,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -142,7 +137,6 @@
     {
       "id": "rk-6",
       "factKey": "rk-6",
-      "difficulty": 2,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -165,7 +159,6 @@
     {
       "id": "rk-7",
       "factKey": "rk-7",
-      "difficulty": 1,
       "strand": "Comparing rocks",
       "objectiveCodes": [
         "Y3-R-1"
@@ -191,7 +184,6 @@
     {
       "id": "fo-1",
       "factKey": "fo-1",
-      "difficulty": 1,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -214,7 +206,6 @@
     {
       "id": "fo-2",
       "factKey": "fo-2",
-      "difficulty": 2,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -240,7 +231,6 @@
     {
       "id": "fo-3",
       "factKey": "fo-3",
-      "difficulty": 3,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -266,7 +256,6 @@
     {
       "id": "fo-4",
       "factKey": "fo-4",
-      "difficulty": 2,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -286,7 +275,6 @@
     {
       "id": "fo-5",
       "factKey": "fo-5",
-      "difficulty": 3,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -306,7 +294,6 @@
     {
       "id": "fo-6",
       "factKey": "fo-6",
-      "difficulty": 2,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -329,7 +316,6 @@
     {
       "id": "fo-7",
       "factKey": "fo-7",
-      "difficulty": 2,
       "strand": "Fossils",
       "objectiveCodes": [
         "Y3-R-2"
@@ -355,7 +341,6 @@
     {
       "id": "so-1",
       "factKey": "so-1",
-      "difficulty": 1,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"
@@ -378,7 +363,6 @@
     {
       "id": "so-2",
       "factKey": "so-2",
-      "difficulty": 2,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"
@@ -401,7 +385,6 @@
     {
       "id": "so-3",
       "factKey": "so-3",
-      "difficulty": 2,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"
@@ -427,7 +410,6 @@
     {
       "id": "so-4",
       "factKey": "so-4",
-      "difficulty": 1,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"
@@ -447,7 +429,6 @@
     {
       "id": "so-5",
       "factKey": "so-5",
-      "difficulty": 3,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"
@@ -467,7 +448,6 @@
     {
       "id": "so-6",
       "factKey": "so-6",
-      "difficulty": 2,
       "strand": "Soil",
       "objectiveCodes": [
         "Y3-R-3"

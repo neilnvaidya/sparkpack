@@ -41,7 +41,6 @@
     {
       "id": "eq-1",
       "factKey": "eq-1",
-      "difficulty": 1,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5"
@@ -66,7 +65,6 @@
     {
       "id": "eq-2",
       "factKey": "eq-2",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5"
@@ -91,7 +89,6 @@
     {
       "id": "eq-3",
       "factKey": "eq-3",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5"
@@ -116,7 +113,6 @@
     {
       "id": "eq-4",
       "factKey": "eq-4",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5"
@@ -141,7 +137,6 @@
     {
       "id": "eq-5",
       "factKey": "eq-5",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5",
@@ -167,7 +162,6 @@
     {
       "id": "eq-6",
       "factKey": "eq-6",
-      "difficulty": 3,
       "strand": "",
       "objectiveCodes": [
         "Y3-F-5"
@@ -192,7 +186,6 @@
     {
       "id": "t-1",
       "factKey": "t-1",
-      "difficulty": 1,
       "strand": "Tenths",
       "objectiveCodes": [
         "Y3-F-1"
@@ -215,7 +208,6 @@
     {
       "id": "t-2",
       "factKey": "t-2",
-      "difficulty": 2,
       "strand": "Tenths",
       "objectiveCodes": [
         "Y3-F-1"
@@ -239,7 +231,6 @@
     {
       "id": "t-3",
       "factKey": "t-3",
-      "difficulty": 2,
       "strand": "Tenths",
       "objectiveCodes": [
         "Y3-F-1"
@@ -259,7 +250,6 @@
     {
       "id": "t-4",
       "factKey": "t-4",
-      "difficulty": 2,
       "strand": "Tenths",
       "objectiveCodes": [
         "Y3-F-1"
@@ -285,7 +275,6 @@
     {
       "id": "fa-1",
       "factKey": "fa-1",
-      "difficulty": 1,
       "strand": "Fractions of amounts",
       "objectiveCodes": [
         "Y3-F-2"
@@ -305,7 +294,6 @@
     {
       "id": "fa-2",
       "factKey": "fa-2",
-      "difficulty": 2,
       "strand": "Fractions of amounts",
       "objectiveCodes": [
         "Y3-F-2"
@@ -325,7 +313,6 @@
     {
       "id": "fa-3",
       "factKey": "fa-3",
-      "difficulty": 2,
       "strand": "Fractions of amounts",
       "objectiveCodes": [
         "Y3-F-2"
@@ -345,7 +332,6 @@
     {
       "id": "fa-4",
       "factKey": "fa-4",
-      "difficulty": 3,
       "strand": "Fractions of amounts",
       "objectiveCodes": [
         "Y3-F-2",
@@ -366,7 +352,6 @@
     {
       "id": "fa-5",
       "factKey": "fa-5",
-      "difficulty": 3,
       "strand": "Fractions of amounts",
       "objectiveCodes": [
         "Y3-F-2",
@@ -387,7 +372,6 @@
     {
       "id": "ec-1",
       "factKey": "ec-1",
-      "difficulty": 2,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-4"
@@ -407,7 +391,6 @@
     {
       "id": "ec-2",
       "factKey": "ec-2",
-      "difficulty": 2,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-4"
@@ -433,7 +416,6 @@
     {
       "id": "ec-3",
       "factKey": "ec-3",
-      "difficulty": 3,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-6"
@@ -453,7 +435,6 @@
     {
       "id": "ec-4",
       "factKey": "ec-4",
-      "difficulty": 3,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-6"
@@ -479,7 +460,6 @@
     {
       "id": "ec-5",
       "factKey": "ec-5",
-      "difficulty": 2,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-6"
@@ -499,7 +479,6 @@
     {
       "id": "ec-6",
       "factKey": "ec-6",
-      "difficulty": 3,
       "strand": "Equivalents and comparing",
       "objectiveCodes": [
         "Y3-F-6"
@@ -519,7 +498,6 @@
     {
       "id": "t-5",
       "factKey": "t-5",
-      "difficulty": 1,
       "strand": "Tenths",
       "objectiveCodes": [
         "Y3-F-1"

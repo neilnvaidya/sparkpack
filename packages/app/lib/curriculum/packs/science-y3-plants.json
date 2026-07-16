@@ -29,7 +29,6 @@
     {
       "id": "pp-1",
       "factKey": "pp-1",
-      "difficulty": 1,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1"
@@ -52,7 +51,6 @@
     {
       "id": "pp-2",
       "factKey": "pp-2",
-      "difficulty": 1,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1"
@@ -75,7 +73,6 @@
     {
       "id": "pp-3",
       "factKey": "pp-3",
-      "difficulty": 2,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1"
@@ -101,7 +98,6 @@
     {
       "id": "pp-4",
       "factKey": "pp-4",
-      "difficulty": 2,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1",
@@ -128,7 +124,6 @@
     {
       "id": "pp-5",
       "factKey": "pp-5",
-      "difficulty": 1,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1"
@@ -148,7 +143,6 @@
     {
       "id": "pp-6",
       "factKey": "pp-6",
-      "difficulty": 2,
       "strand": "Parts of a plant",
       "objectiveCodes": [
         "Y3-P-1"
@@ -168,7 +162,6 @@
     {
       "id": "rq-1",
       "factKey": "rq-1",
-      "difficulty": 1,
       "strand": "What plants need",
       "objectiveCodes": [
         "Y3-P-2"
@@ -192,7 +185,6 @@
     {
       "id": "rq-2",
       "factKey": "rq-2",
-      "difficulty": 2,
       "strand": "What plants need",
       "objectiveCodes": [
         "Y3-P-2"
@@ -218,7 +210,6 @@
     {
       "id": "rq-3",
       "factKey": "rq-3",
-      "difficulty": 1,
       "strand": "What plants need",
       "objectiveCodes": [
         "Y3-P-2"
@@ -238,7 +229,6 @@
     {
       "id": "rq-4",
       "factKey": "rq-4",
-      "difficulty": 2,
       "strand": "What plants need",
       "objectiveCodes": [
         "Y3-P-2"
@@ -258,7 +248,6 @@
     {
       "id": "rq-5",
       "factKey": "rq-5",
-      "difficulty": 3,
       "strand": "What plants need",
       "objectiveCodes": [
         "Y3-P-2"
@@ -284,7 +273,6 @@
     {
       "id": "wt-1",
       "factKey": "wt-1",
-      "difficulty": 2,
       "strand": "Water transport",
       "objectiveCodes": [
         "Y3-P-3"
@@ -307,7 +295,6 @@
     {
       "id": "wt-2",
       "factKey": "wt-2",
-      "difficulty": 2,
       "strand": "Water transport",
       "objectiveCodes": [
         "Y3-P-3"
@@ -327,7 +314,6 @@
     {
       "id": "wt-3",
       "factKey": "wt-3",
-      "difficulty": 3,
       "strand": "Water transport",
       "objectiveCodes": [
         "Y3-P-3"
@@ -353,7 +339,6 @@
     {
       "id": "wt-4",
       "factKey": "wt-4",
-      "difficulty": 3,
       "strand": "Water transport",
       "objectiveCodes": [
         "Y3-P-3"
@@ -373,7 +358,6 @@
     {
       "id": "lc-1",
       "factKey": "lc-1",
-      "difficulty": 2,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"
@@ -395,7 +379,6 @@
     {
       "id": "lc-2",
       "factKey": "lc-2",
-      "difficulty": 2,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"
@@ -421,7 +404,6 @@
     {
       "id": "lc-3",
       "factKey": "lc-3",
-      "difficulty": 3,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"
@@ -446,7 +428,6 @@
     {
       "id": "lc-4",
       "factKey": "lc-4",
-      "difficulty": 3,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"
@@ -469,7 +450,6 @@
     {
       "id": "lc-5",
       "factKey": "lc-5",
-      "difficulty": 2,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"
@@ -489,7 +469,6 @@
     {
       "id": "lc-6",
       "factKey": "lc-6",
-      "difficulty": 3,
       "strand": "Life cycle",
       "objectiveCodes": [
         "Y3-P-4"

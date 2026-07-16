@@ -25,7 +25,6 @@
     {
       "id": "sy-1",
       "factKey": "sy-1",
-      "difficulty": 1,
       "strand": "Synonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -51,7 +50,6 @@
     {
       "id": "sy-2",
       "factKey": "sy-2",
-      "difficulty": 2,
       "strand": "Synonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -77,7 +75,6 @@
     {
       "id": "sy-3",
       "factKey": "sy-3",
-      "difficulty": 1,
       "strand": "Synonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -97,7 +94,6 @@
     {
       "id": "sy-4",
       "factKey": "sy-4",
-      "difficulty": 3,
       "strand": "Synonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -123,7 +119,6 @@
     {
       "id": "sy-5",
       "factKey": "sy-5",
-      "difficulty": 2,
       "strand": "Synonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -148,7 +143,6 @@
     {
       "id": "an-1",
       "factKey": "an-1",
-      "difficulty": 1,
       "strand": "Antonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -172,7 +166,6 @@
     {
       "id": "an-2",
       "factKey": "an-2",
-      "difficulty": 2,
       "strand": "Antonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -198,7 +191,6 @@
     {
       "id": "an-3",
       "factKey": "an-3",
-      "difficulty": 2,
       "strand": "Antonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -218,7 +210,6 @@
     {
       "id": "an-4",
       "factKey": "an-4",
-      "difficulty": 3,
       "strand": "Antonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -244,7 +235,6 @@
     {
       "id": "an-5",
       "factKey": "an-5",
-      "difficulty": 1,
       "strand": "Antonyms",
       "objectiveCodes": [
         "Y34-RC-1"
@@ -264,7 +254,6 @@
     {
       "id": "id-1",
       "factKey": "id-1",
-      "difficulty": 2,
       "strand": "Idioms",
       "objectiveCodes": [
         "Y34-RC-2"
@@ -290,7 +279,6 @@
     {
       "id": "id-2",
       "factKey": "id-2",
-      "difficulty": 2,
       "strand": "Idioms",
       "objectiveCodes": [
         "Y34-RC-2"
@@ -316,7 +304,6 @@
     {
       "id": "id-3",
       "factKey": "id-3",
-      "difficulty": 2,
       "strand": "Idioms",
       "objectiveCodes": [
         "Y34-RC-2"
@@ -336,7 +323,6 @@
     {
       "id": "id-4",
       "factKey": "id-4",
-      "difficulty": 3,
       "strand": "Idioms",
       "objectiveCodes": [
         "Y34-RC-2"
@@ -360,7 +346,6 @@
     {
       "id": "id-5",
       "factKey": "id-5",
-      "difficulty": 3,
       "strand": "Idioms",
       "objectiveCodes": [
         "Y34-RC-2"
@@ -380,7 +365,6 @@
     {
       "id": "dc-1",
       "factKey": "dc-1",
-      "difficulty": 1,
       "strand": "Dictionary skills",
       "objectiveCodes": [
         "Y34-RC-3"
@@ -404,7 +388,6 @@
     {
       "id": "dc-2",
       "factKey": "dc-2",
-      "difficulty": 2,
       "strand": "Dictionary skills",
       "objectiveCodes": [
         "Y34-RC-3"
@@ -430,7 +413,6 @@
     {
       "id": "dc-3",
       "factKey": "dc-3",
-      "difficulty": 3,
       "strand": "Dictionary skills",
       "objectiveCodes": [
         "Y34-RC-3"
@@ -456,7 +438,6 @@
     {
       "id": "dc-4",
       "factKey": "dc-4",
-      "difficulty": 2,
       "strand": "Dictionary skills",
       "objectiveCodes": [
         "Y34-RC-3"
@@ -476,7 +457,6 @@
     {
       "id": "dc-5",
       "factKey": "dc-5",
-      "difficulty": 2,
       "strand": "Dictionary skills",
       "objectiveCodes": [
         "Y34-RC-3"

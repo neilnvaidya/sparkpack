@@ -21,7 +21,6 @@
     {
       "id": "nu-1",
       "factKey": "nu-1",
-      "difficulty": 1,
       "strand": "Nutrition",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -44,7 +43,6 @@
     {
       "id": "nu-2",
       "factKey": "nu-2",
-      "difficulty": 2,
       "strand": "Nutrition",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -64,7 +62,6 @@
     {
       "id": "nu-3",
       "factKey": "nu-3",
-      "difficulty": 2,
       "strand": "Nutrition",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -90,7 +87,6 @@
     {
       "id": "nu-4",
       "factKey": "nu-4",
-      "difficulty": 3,
       "strand": "Nutrition",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -110,7 +106,6 @@
     {
       "id": "nu-5",
       "factKey": "nu-5",
-      "difficulty": 1,
       "strand": "Nutrition",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -136,7 +131,6 @@
     {
       "id": "fg-1",
       "factKey": "fg-1",
-      "difficulty": 2,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -159,7 +153,6 @@
     {
       "id": "fg-2",
       "factKey": "fg-2",
-      "difficulty": 2,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -185,7 +178,6 @@
     {
       "id": "fg-3",
       "factKey": "fg-3",
-      "difficulty": 2,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -211,7 +203,6 @@
     {
       "id": "fg-4",
       "factKey": "fg-4",
-      "difficulty": 1,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -231,7 +222,6 @@
     {
       "id": "fg-5",
       "factKey": "fg-5",
-      "difficulty": 3,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -251,7 +241,6 @@
     {
       "id": "fg-6",
       "factKey": "fg-6",
-      "difficulty": 3,
       "strand": "Food groups",
       "objectiveCodes": [
         "Y3-AIH-1"
@@ -274,7 +263,6 @@
     {
       "id": "sk-1",
       "factKey": "sk-1",
-      "difficulty": 1,
       "strand": "Skeletons",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -299,7 +287,6 @@
     {
       "id": "sk-2",
       "factKey": "sk-2",
-      "difficulty": 2,
       "strand": "Skeletons",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -325,7 +312,6 @@
     {
       "id": "sk-3",
       "factKey": "sk-3",
-      "difficulty": 2,
       "strand": "Skeletons",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -351,7 +337,6 @@
     {
       "id": "sk-4",
       "factKey": "sk-4",
-      "difficulty": 1,
       "strand": "Skeletons",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -371,7 +356,6 @@
     {
       "id": "sk-5",
       "factKey": "sk-5",
-      "difficulty": 3,
       "strand": "Skeletons",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -391,7 +375,6 @@
     {
       "id": "mu-1",
       "factKey": "mu-1",
-      "difficulty": 2,
       "strand": "Muscles",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -413,7 +396,6 @@
     {
       "id": "mu-2",
       "factKey": "mu-2",
-      "difficulty": 2,
       "strand": "Muscles",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -433,7 +415,6 @@
     {
       "id": "mu-3",
       "factKey": "mu-3",
-      "difficulty": 3,
       "strand": "Muscles",
       "objectiveCodes": [
         "Y3-AIH-2"
@@ -459,7 +440,6 @@
     {
       "id": "mu-4",
       "factKey": "mu-4",
-      "difficulty": 3,
       "strand": "Muscles",
       "objectiveCodes": [
         "Y3-AIH-2"

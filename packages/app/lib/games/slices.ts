@@ -11,6 +11,13 @@ import type { z } from 'zod'
 import type { CurriculumPack, CurriculumQuestion } from '@/lib/curriculum/schema'
 import { textQuestions, questionsWithForm, questionsByStrand } from '@/lib/curriculum'
 import { renderQuestion, renderBest, soleForm, formatEquation } from '@/lib/questions/render'
+import {
+  pointsFor,
+  easiestForm,
+  FORM_RANK,
+  EASIEST_FIRST,
+  HARDEST_FIRST,
+} from '@/lib/questions/scoring'
 import { CARD_COLOR_OPTIONS } from '@/lib/constants/team-colors'
 import {
   GAME_SLICE_META,
@@ -32,11 +39,12 @@ export interface GameSlice extends GameSliceMeta {
   build: (pack: CurriculumPack) => unknown
 }
 
-const POINTS_BY_DIFFICULTY: Record<1 | 2 | 3, number> = {
-  1: 100,
-  2: 150,
-  3: 200,
-}
+/**
+ * Ordering easiest → hardest by the form a question can be asked in. Replaces
+ * sorting on the old authored `difficulty` field: form is the ladder now.
+ */
+const byFormRank = (a: CurriculumQuestion, b: CurriculumQuestion) =>
+  FORM_RANK[easiestForm(a.forms)] - FORM_RANK[easiestForm(b.forms)]
 
 // ─── Question Rush ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
@@ -59,11 +67,11 @@ function equationCard(q: CurriculumQuestion, i: number) {
 function buildQuestionRush(pack: CurriculumPack): z.infer<typeof questionRushContentSchema> {
   let equationIndex = 0
   const questions = pack.questions.map((q) => {
-    const base = { id: q.id, points: POINTS_BY_DIFFICULTY[q.difficulty] }
     if (q.equation) {
       const card = equationCard(q, equationIndex++)
       return {
-        ...base,
+        id: q.id,
+        points: pointsFor('open'),
         ...renderQuestion(q, 'open'),
         prompt: card.prompt,
         answer: card.answer,
@@ -71,7 +79,9 @@ function buildQuestionRush(pack: CurriculumPack): z.infer<typeof questionRushCon
         equation: card.equation,
       }
     }
-    return { ...base, ...renderQuestion(q, soleForm(q)) }
+    const rendered = renderQuestion(q, soleForm(q))
+    // Points follow the form it was actually dealt in, not the question.
+    return { id: q.id, points: pointsFor(rendered.form), ...rendered }
   })
 
   return questionRushContentSchema.parse({
@@ -110,21 +120,23 @@ function buildBoardQuiz(pack: CurriculumPack): z.infer<typeof boardQuizContentSc
     }
   }
 
-  // Cells are stored row-major: row 0 = lowest points. Within each strand,
-  // easier items go in lower-point rows.
+  // Cells are stored row-major: row 0 = lowest points. Within each strand, the
+  // questions that can be asked most gently go in the lowest-point rows.
   const columns = strands.map(([topic, items]) => ({
     topic,
-    items: [...items].sort((a, b) => a.difficulty - b.difficulty).slice(0, rows),
+    items: [...items].sort(byFormRank).slice(0, rows),
   }))
 
   const cells = []
   for (let r = 0; r < rows; r++) {
+    // Low rows ask the easiest way a question can be asked; high rows the
+    // hardest. Pre-3b most questions offer one form and this is a no-op — the
+    // gradient arrives with the content pass, not with this code.
+    const ladder = r < rows / 2 ? EASIEST_FIRST : HARDEST_FIRST
     for (const col of columns) {
-      cells.push({
-        topic: col.topic,
-        points: BOARD_POINTS[r],
-        question: renderQuestion(col.items[r], soleForm(col.items[r])),
-      })
+      const question = renderBest(col.items[r], ladder)
+      if (!question) throw new Error(`No usable form for question "${col.items[r].id}"`)
+      cells.push({ topic: col.topic, points: BOARD_POINTS[r], question })
     }
   }
 
@@ -155,8 +167,8 @@ function buildBoardQuiz(pack: CurriculumPack): z.infer<typeof boardQuizContentSc
 // ─── Flash Round ──────────────────────────────────────────────────────────────
 
 function buildFlashRound(pack: CurriculumPack): z.infer<typeof flashRoundContentSchema> {
-  // Easy → hard keeps the round feeling like a ramp-up.
-  const sorted = [...pack.questions].sort((a, b) => a.difficulty - b.difficulty)
+  // Easy → hard keeps the round feeling like a ramp-up: true/false first, open last.
+  const sorted = [...pack.questions].sort(byFormRank)
   return flashRoundContentSchema.parse({
     title: pack.title,
     questions: sorted.map((q) => renderQuestion(q, soleForm(q))),
@@ -185,24 +197,35 @@ function buildThreeInARow(pack: CurriculumPack): z.infer<typeof threeInARowConte
 
 // ─── Summit Climb ─────────────────────────────────────────────────────────────
 
+/**
+ * Steady rungs and risky rungs used to be two pools of CONTENT: the pack had to
+ * supply 8 genuinely easy facts and 8 genuinely hard ones, which is why the slice
+ * carried a `minPerDifficulty` floor and why one pack could not offer the game.
+ *
+ * Difficulty is a property of the ASKING now, so any fact can be either rung: a
+ * steady one asks it the gentlest way it can be asked, a risky one the hardest.
+ * The pools are just a deal — no pack can be short of "easy content" again.
+ *
+ * Pre-3b caveat: most questions offer a single form, so both ladders fall back
+ * to it and a steady rung can still be an open question. The split sharpens as
+ * packs are enriched; it does not depend on this code changing again.
+ */
 function buildSummitClimb(pack: CurriculumPack): z.infer<typeof summitClimbContentSchema> {
-  const items = textQuestions(pack)
-  const diff1 = shuffleDeck(items.filter((i) => i.difficulty === 1))
-  const diff3 = shuffleDeck(items.filter((i) => i.difficulty === 3))
-  const diff2 = shuffleDeck(items.filter((i) => i.difficulty === 2))
+  const deck = shuffleDeck(textQuestions(pack))
+  const easyItems = deck.filter((_, i) => i % 2 === 0)
+  const hardItems = deck.filter((_, i) => i % 2 === 1)
 
-  // Backfill each pool toward 8 with core (difficulty-2) items; split any leftovers.
-  const need1 = Math.max(0, 8 - diff1.length)
-  const need3 = Math.max(0, 8 - diff3.length)
-  const easyItems = [...diff1, ...diff2.slice(0, need1)]
-  const hardItems = [...diff3, ...diff2.slice(need1, need1 + need3)]
-  const leftover = diff2.slice(need1 + need3)
-  leftover.forEach((item, i) => (i % 2 === 0 ? easyItems : hardItems).push(item))
+  const render = (items: CurriculumQuestion[], ladder: typeof EASIEST_FIRST) =>
+    items.map((q) => {
+      const rendered = renderBest(q, ladder)
+      if (!rendered) throw new Error(`No usable form for question "${q.id}"`)
+      return rendered
+    })
 
   return summitClimbContentSchema.parse({
     title: pack.title,
-    easy: easyItems.map((q) => renderQuestion(q, soleForm(q))),
-    hard: hardItems.map((q) => renderQuestion(q, soleForm(q))),
+    easy: render(easyItems, EASIEST_FIRST),
+    hard: render(hardItems, HARDEST_FIRST),
   })
 }
 

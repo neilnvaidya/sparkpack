@@ -29,7 +29,6 @@
     {
       "id": "sh-1",
       "factKey": "sh-1",
-      "difficulty": 1,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -51,7 +50,6 @@
     {
       "id": "sh-2",
       "factKey": "sh-2",
-      "difficulty": 1,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -71,7 +69,6 @@
     {
       "id": "sh-3",
       "factKey": "sh-3",
-      "difficulty": 2,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -93,7 +90,6 @@
     {
       "id": "sh-4",
       "factKey": "sh-4",
-      "difficulty": 2,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -119,7 +115,6 @@
     {
       "id": "sh-5",
       "factKey": "sh-5",
-      "difficulty": 3,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -141,7 +136,6 @@
     {
       "id": "sh-6",
       "factKey": "sh-6",
-      "difficulty": 3,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -167,7 +161,6 @@
     {
       "id": "sh-7",
       "factKey": "sh-7",
-      "difficulty": 1,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -189,7 +182,6 @@
     {
       "id": "sh-8",
       "factKey": "sh-8",
-      "difficulty": 2,
       "strand": "2-D and 3-D shapes",
       "objectiveCodes": [
         "Y3-G-1"
@@ -209,7 +201,6 @@
     {
       "id": "an-1",
       "factKey": "an-1",
-      "difficulty": 1,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-2",
@@ -236,7 +227,6 @@
     {
       "id": "an-2",
       "factKey": "an-2",
-      "difficulty": 2,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-3"
@@ -258,7 +248,6 @@
     {
       "id": "an-3",
       "factKey": "an-3",
-      "difficulty": 2,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-3"
@@ -280,7 +269,6 @@
     {
       "id": "an-4",
       "factKey": "an-4",
-      "difficulty": 2,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-3"
@@ -300,7 +288,6 @@
     {
       "id": "an-5",
       "factKey": "an-5",
-      "difficulty": 3,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-2",
@@ -326,7 +313,6 @@
     {
       "id": "an-6",
       "factKey": "an-6",
-      "difficulty": 3,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-3"
@@ -346,7 +332,6 @@
     {
       "id": "an-7",
       "factKey": "an-7",
-      "difficulty": 2,
       "strand": "Angles and turns",
       "objectiveCodes": [
         "Y3-G-2"
@@ -372,7 +357,6 @@
     {
       "id": "li-1",
       "factKey": "li-1",
-      "difficulty": 1,
       "strand": "Lines",
       "objectiveCodes": [
         "Y3-G-4"
@@ -392,7 +376,6 @@
     {
       "id": "li-2",
       "factKey": "li-2",
-      "difficulty": 2,
       "strand": "Lines",
       "objectiveCodes": [
         "Y3-G-4"
@@ -412,7 +395,6 @@
     {
       "id": "li-3",
       "factKey": "li-3",
-      "difficulty": 2,
       "strand": "Lines",
       "objectiveCodes": [
         "Y3-G-4"
@@ -434,7 +416,6 @@
     {
       "id": "li-4",
       "factKey": "li-4",
-      "difficulty": 3,
       "strand": "Lines",
       "objectiveCodes": [
         "Y3-G-4"
@@ -456,7 +437,6 @@
     {
       "id": "li-5",
       "factKey": "li-5",
-      "difficulty": 2,
       "strand": "Lines",
       "objectiveCodes": [
         "Y3-G-4"

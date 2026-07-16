@@ -21,7 +21,6 @@
     {
       "id": "pi-1",
       "factKey": "pi-1",
-      "difficulty": 1,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-1"
@@ -43,7 +42,6 @@
     {
       "id": "pi-2",
       "factKey": "pi-2",
-      "difficulty": 2,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-1",
@@ -66,7 +64,6 @@
     {
       "id": "pi-3",
       "factKey": "pi-3",
-      "difficulty": 3,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-2"
@@ -92,7 +89,6 @@
     {
       "id": "pi-4",
       "factKey": "pi-4",
-      "difficulty": 2,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-1"
@@ -112,7 +108,6 @@
     {
       "id": "pi-5",
       "factKey": "pi-5",
-      "difficulty": 1,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-1"
@@ -134,7 +129,6 @@
     {
       "id": "pi-6",
       "factKey": "pi-6",
-      "difficulty": 2,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-1"
@@ -154,7 +148,6 @@
     {
       "id": "pi-7",
       "factKey": "pi-7",
-      "difficulty": 2,
       "strand": "Pictograms",
       "objectiveCodes": [
         "Y3-S-2"
@@ -180,7 +173,6 @@
     {
       "id": "ba-1",
       "factKey": "ba-1",
-      "difficulty": 1,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-1"
@@ -200,7 +192,6 @@
     {
       "id": "ba-2",
       "factKey": "ba-2",
-      "difficulty": 2,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-2"
@@ -222,7 +213,6 @@
     {
       "id": "ba-3",
       "factKey": "ba-3",
-      "difficulty": 3,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-1",
@@ -249,7 +239,6 @@
     {
       "id": "ba-4",
       "factKey": "ba-4",
-      "difficulty": 3,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-2"
@@ -271,7 +260,6 @@
     {
       "id": "ba-5",
       "factKey": "ba-5",
-      "difficulty": 1,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-1"
@@ -297,7 +285,6 @@
     {
       "id": "ba-6",
       "factKey": "ba-6",
-      "difficulty": 2,
       "strand": "Bar charts",
       "objectiveCodes": [
         "Y3-S-2"
@@ -319,7 +306,6 @@
     {
       "id": "ta-1",
       "factKey": "ta-1",
-      "difficulty": 2,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-2"
@@ -341,7 +327,6 @@
     {
       "id": "ta-2",
       "factKey": "ta-2",
-      "difficulty": 3,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-2"
@@ -363,7 +348,6 @@
     {
       "id": "ta-3",
       "factKey": "ta-3",
-      "difficulty": 2,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-1"
@@ -383,7 +367,6 @@
     {
       "id": "ta-4",
       "factKey": "ta-4",
-      "difficulty": 2,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-1"
@@ -409,7 +392,6 @@
     {
       "id": "ta-5",
       "factKey": "ta-5",
-      "difficulty": 1,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-2"
@@ -431,7 +413,6 @@
     {
       "id": "ta-6",
       "factKey": "ta-6",
-      "difficulty": 3,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-2"
@@ -457,7 +438,6 @@
     {
       "id": "ta-7",
       "factKey": "ta-7",
-      "difficulty": 2,
       "strand": "Tables",
       "objectiveCodes": [
         "Y3-S-1"

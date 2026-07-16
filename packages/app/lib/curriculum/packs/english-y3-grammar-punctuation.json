@@ -33,7 +33,6 @@
     {
       "id": "wc-1",
       "factKey": "wc-1",
-      "difficulty": 1,
       "strand": "Word classes",
       "objectiveCodes": [
         "Y34-GP-1"
@@ -55,7 +54,6 @@
     {
       "id": "wc-2",
       "factKey": "wc-2",
-      "difficulty": 1,
       "strand": "Word classes",
       "objectiveCodes": [
         "Y34-GP-1"
@@ -77,7 +75,6 @@
     {
       "id": "wc-3",
       "factKey": "wc-3",
-      "difficulty": 2,
       "strand": "Word classes",
       "objectiveCodes": [
         "Y34-GP-1"
@@ -103,7 +100,6 @@
     {
       "id": "wc-4",
       "factKey": "wc-4",
-      "difficulty": 3,
       "strand": "Word classes",
       "objectiveCodes": [
         "Y34-GP-1"
@@ -129,7 +125,6 @@
     {
       "id": "wc-5",
       "factKey": "wc-5",
-      "difficulty": 2,
       "strand": "Word classes",
       "objectiveCodes": [
         "Y34-GP-1"
@@ -149,7 +144,6 @@
     {
       "id": "cj-1",
       "factKey": "cj-1",
-      "difficulty": 2,
       "strand": "Conjunctions",
       "objectiveCodes": [
         "Y34-GP-2"
@@ -173,7 +167,6 @@
     {
       "id": "cj-2",
       "factKey": "cj-2",
-      "difficulty": 2,
       "strand": "Conjunctions",
       "objectiveCodes": [
         "Y34-GP-2"
@@ -199,7 +192,6 @@
     {
       "id": "cj-3",
       "factKey": "cj-3",
-      "difficulty": 3,
       "strand": "Conjunctions",
       "objectiveCodes": [
         "Y34-GP-2"
@@ -225,7 +217,6 @@
     {
       "id": "cj-4",
       "factKey": "cj-4",
-      "difficulty": 2,
       "strand": "Conjunctions",
       "objectiveCodes": [
         "Y34-GP-2"
@@ -245,7 +236,6 @@
     {
       "id": "cj-5",
       "factKey": "cj-5",
-      "difficulty": 3,
       "strand": "Conjunctions",
       "objectiveCodes": [
         "Y34-GP-2"
@@ -267,7 +257,6 @@
     {
       "id": "aa-1",
       "factKey": "aa-1",
-      "difficulty": 1,
       "strand": "A or an",
       "objectiveCodes": [
         "Y34-GP-3"
@@ -291,7 +280,6 @@
     {
       "id": "aa-2",
       "factKey": "aa-2",
-      "difficulty": 1,
       "strand": "A or an",
       "objectiveCodes": [
         "Y34-GP-3"
@@ -315,7 +303,6 @@
     {
       "id": "aa-3",
       "factKey": "aa-3",
-      "difficulty": 2,
       "strand": "A or an",
       "objectiveCodes": [
         "Y34-GP-3"
@@ -335,7 +322,6 @@
     {
       "id": "aa-4",
       "factKey": "aa-4",
-      "difficulty": 3,
       "strand": "A or an",
       "objectiveCodes": [
         "Y34-GP-3"
@@ -359,7 +345,6 @@
     {
       "id": "sp-1",
       "factKey": "sp-1",
-      "difficulty": 2,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-4"
@@ -385,7 +370,6 @@
     {
       "id": "sp-2",
       "factKey": "sp-2",
-      "difficulty": 2,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-4"
@@ -409,7 +393,6 @@
     {
       "id": "sp-3",
       "factKey": "sp-3",
-      "difficulty": 3,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-4"
@@ -429,7 +412,6 @@
     {
       "id": "sp-4",
       "factKey": "sp-4",
-      "difficulty": 2,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-5"
@@ -451,7 +433,6 @@
     {
       "id": "sp-5",
       "factKey": "sp-5",
-      "difficulty": 2,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-5"
@@ -471,7 +452,6 @@
     {
       "id": "sp-6",
       "factKey": "sp-6",
-      "difficulty": 3,
       "strand": "Speech and paragraphs",
       "objectiveCodes": [
         "Y34-GP-4"

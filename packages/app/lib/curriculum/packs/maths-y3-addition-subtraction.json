@@ -29,7 +29,6 @@
     {
       "id": "eq-1",
       "factKey": "eq-1",
-      "difficulty": 1,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -54,7 +53,6 @@
     {
       "id": "eq-2",
       "factKey": "eq-2",
-      "difficulty": 1,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -79,7 +77,6 @@
     {
       "id": "eq-3",
       "factKey": "eq-3",
-      "difficulty": 1,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -104,7 +101,6 @@
     {
       "id": "eq-4",
       "factKey": "eq-4",
-      "difficulty": 1,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -129,7 +125,6 @@
     {
       "id": "eq-5",
       "factKey": "eq-5",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -154,7 +149,6 @@
     {
       "id": "eq-6",
       "factKey": "eq-6",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-1"
@@ -179,7 +173,6 @@
     {
       "id": "eq-7",
       "factKey": "eq-7",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -204,7 +197,6 @@
     {
       "id": "eq-8",
       "factKey": "eq-8",
-      "difficulty": 2,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -229,7 +221,6 @@
     {
       "id": "eq-9",
       "factKey": "eq-9",
-      "difficulty": 3,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -254,7 +245,6 @@
     {
       "id": "eq-10",
       "factKey": "eq-10",
-      "difficulty": 3,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -279,7 +269,6 @@
     {
       "id": "eq-11",
       "factKey": "eq-11",
-      "difficulty": 3,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -304,7 +293,6 @@
     {
       "id": "eq-12",
       "factKey": "eq-12",
-      "difficulty": 3,
       "strand": "",
       "objectiveCodes": [
         "Y3-AS-2"
@@ -329,7 +317,6 @@
     {
       "id": "wp-1",
       "factKey": "wp-1",
-      "difficulty": 1,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -351,7 +338,6 @@
     {
       "id": "wp-2",
       "factKey": "wp-2",
-      "difficulty": 2,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -373,7 +359,6 @@
     {
       "id": "wp-3",
       "factKey": "wp-3",
-      "difficulty": 2,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -395,7 +380,6 @@
     {
       "id": "wp-4",
       "factKey": "wp-4",
-      "difficulty": 2,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -417,7 +401,6 @@
     {
       "id": "wp-5",
       "factKey": "wp-5",
-      "difficulty": 3,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -439,7 +422,6 @@
     {
       "id": "wp-6",
       "factKey": "wp-6",
-      "difficulty": 3,
       "strand": "Word problems",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -461,7 +443,6 @@
     {
       "id": "mn-1",
       "factKey": "mn-1",
-      "difficulty": 2,
       "strand": "Missing numbers",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -487,7 +468,6 @@
     {
       "id": "mn-2",
       "factKey": "mn-2",
-      "difficulty": 2,
       "strand": "Missing numbers",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -513,7 +493,6 @@
     {
       "id": "mn-3",
       "factKey": "mn-3",
-      "difficulty": 3,
       "strand": "Missing numbers",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -539,7 +518,6 @@
     {
       "id": "mn-4",
       "factKey": "mn-4",
-      "difficulty": 3,
       "strand": "Missing numbers",
       "objectiveCodes": [
         "Y3-AS-4"
@@ -565,7 +543,6 @@
     {
       "id": "ec-1",
       "factKey": "ec-1",
-      "difficulty": 1,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
@@ -585,7 +562,6 @@
     {
       "id": "ec-2",
       "factKey": "ec-2",
-      "difficulty": 2,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
@@ -605,7 +581,6 @@
     {
       "id": "ec-3",
       "factKey": "ec-3",
-      "difficulty": 2,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
@@ -625,7 +600,6 @@
     {
       "id": "ec-4",
       "factKey": "ec-4",
-      "difficulty": 2,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
@@ -645,7 +619,6 @@
     {
       "id": "ec-5",
       "factKey": "ec-5",
-      "difficulty": 3,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
@@ -667,7 +640,6 @@
     {
       "id": "ec-6",
       "factKey": "ec-6",
-      "difficulty": 2,
       "strand": "Estimate and check",
       "objectiveCodes": [
         "Y3-AS-3"
