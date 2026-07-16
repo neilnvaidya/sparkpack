@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 2,
+  "id": "maths-y3-measurement",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "measurement",
+  "title": "Measurement",
+  "description": "Length, mass, capacity, perimeter, money including giving change, and time on analogue and digital clocks.",
+  "objectives": [
+    {
+      "code": "Y3-M-1",
+      "statement": "Measure, compare, add and subtract: lengths (m/cm/mm); mass (kg/g); volume/capacity (l/ml)."
+    },
+    {
+      "code": "Y3-M-2",
+      "statement": "Measure the perimeter of simple 2-D shapes."
+    },
+    {
+      "code": "Y3-M-3",
+      "statement": "Add and subtract amounts of money to give change, using both £ and p in practical contexts."
+    },
+    {
+      "code": "Y3-M-4",
+      "statement": "Tell and write the time from an analogue clock, including using Roman numerals from I to XII, and 12-hour and 24-hour clocks."
+    },
+    {
+      "code": "Y3-M-5",
+      "statement": "Estimate and read time with increasing accuracy to the nearest minute; record and compare time in terms of seconds, minutes and hours; use vocabulary such as o'clock, a.m./p.m., morning, afternoon, noon and midnight."
+    },
+    {
+      "code": "Y3-M-6",
+      "statement": "Know the number of seconds in a minute and the number of days in each month, year and leap year; compare durations of events."
+    }
+  ],
+  "questions": [
+    {
+      "id": "l-1",
+      "factKey": "l-1",
+      "difficulty": 1,
+      "strand": "Length",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many centimetres are in 1 metre?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "100",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "100 cm",
+        "100 centimetres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "l-2",
+      "factKey": "l-2",
+      "difficulty": 2,
+      "strand": "Length",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many millimetres are in 1 centimetre?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "10",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "10 mm",
+        "10 millimetres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "l-3",
+      "factKey": "l-3",
+      "difficulty": 2,
+      "strand": "Length",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is the longest?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "4 m",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "4 m"
+      ],
+      "distractors": [
+        "45 cm",
+        "405 mm",
+        "440 mm"
+      ],
+      "equation": null
+    },
+    {
+      "id": "l-4",
+      "factKey": "l-4",
+      "difficulty": 3,
+      "strand": "Length",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A ribbon is 1 m 20 cm long. How many centimetres is that?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "120 cm",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "120",
+        "120 centimetres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "p-1",
+      "factKey": "p-1",
+      "difficulty": 2,
+      "strand": "Perimeter",
+      "objectiveCodes": [
+        "Y3-M-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A square has sides of 5 cm. What is its perimeter?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "20 cm",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "20",
+        "20 centimetres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "p-2",
+      "factKey": "p-2",
+      "difficulty": 3,
+      "strand": "Perimeter",
+      "objectiveCodes": [
+        "Y3-M-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "22 cm",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "22",
+        "22 centimetres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "p-3",
+      "factKey": "p-3",
+      "difficulty": 1,
+      "strand": "Perimeter",
+      "objectiveCodes": [
+        "Y3-M-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Perimeter is the distance all the way around the outside of a shape.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mc-1",
+      "factKey": "mc-1",
+      "difficulty": 1,
+      "strand": "Mass and capacity",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many grams are in 1 kilogram?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "1000",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "1000 g",
+        "1000 grams"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mc-2",
+      "factKey": "mc-2",
+      "difficulty": 1,
+      "strand": "Mass and capacity",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many millilitres are in 1 litre?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "1000",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "1000 ml",
+        "1000 millilitres"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mc-3",
+      "factKey": "mc-3",
+      "difficulty": 2,
+      "strand": "Mass and capacity",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is the heaviest?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "1 kg",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "1 kg"
+      ],
+      "distractors": [
+        "900 g",
+        "half a kilogram",
+        "250 g"
+      ],
+      "equation": null
+    },
+    {
+      "id": "mc-4",
+      "factKey": "mc-4",
+      "difficulty": 3,
+      "strand": "Mass and capacity",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "1500 ml is the same as one and a half litres.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mo-1",
+      "factKey": "mo-1",
+      "difficulty": 2,
+      "strand": "Money",
+      "objectiveCodes": [
+        "Y3-M-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "You buy a snack for 65p and pay with a £1 coin. How much change do you get?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "35p",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "35",
+        "35 pence"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mo-2",
+      "factKey": "mo-2",
+      "difficulty": 2,
+      "strand": "Money",
+      "objectiveCodes": [
+        "Y3-M-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "How many pence are in £2?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "200",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "200"
+      ],
+      "distractors": [
+        "20",
+        "100",
+        "2000"
+      ],
+      "equation": null
+    },
+    {
+      "id": "mo-3",
+      "factKey": "mo-3",
+      "difficulty": 3,
+      "strand": "Money",
+      "objectiveCodes": [
+        "Y3-M-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A pencil costs 45p and a ruler costs 80p. What is the total cost?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "£1.25",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "125p",
+        "1.25",
+        "one pound twenty-five"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mo-4",
+      "factKey": "mo-4",
+      "difficulty": 3,
+      "strand": "Money",
+      "objectiveCodes": [
+        "Y3-M-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "A comic costs £1.30. You pay with a £2 coin. What is your change?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "70p",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "70",
+        "70 pence"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ti-1",
+      "factKey": "ti-1",
+      "difficulty": 1,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-6"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many seconds are in one minute?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "60",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "60 seconds"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ti-2",
+      "factKey": "ti-2",
+      "difficulty": 1,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-5"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many minutes are in one hour?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "60",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "60 minutes"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ti-3",
+      "factKey": "ti-3",
+      "difficulty": 2,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "On a clock face with Roman numerals, what number does XII stand for?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "12",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "12"
+      ],
+      "distractors": [
+        "2",
+        "7",
+        "10"
+      ],
+      "equation": null
+    },
+    {
+      "id": "ti-4",
+      "factKey": "ti-4",
+      "difficulty": 2,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "15:00 on a 24-hour clock is 3 o'clock in the afternoon.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ti-5",
+      "factKey": "ti-5",
+      "difficulty": 3,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-6"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many days are in a leap year?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "366",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "366 days"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "ti-6",
+      "factKey": "ti-6",
+      "difficulty": 3,
+      "strand": "Time",
+      "objectiveCodes": [
+        "Y3-M-6"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these months has exactly 30 days?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "April",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "April"
+      ],
+      "distractors": [
+        "January",
+        "February",
+        "December"
+      ],
+      "equation": null
+    },
+    {
+      "id": "l-5",
+      "factKey": "l-5",
+      "difficulty": 1,
+      "strand": "Length",
+      "objectiveCodes": [
+        "Y3-M-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A door is about 2 metres tall.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "mo-5",
+      "factKey": "mo-5",
+      "difficulty": 2,
+      "strand": "Money",
+      "objectiveCodes": [
+        "Y3-M-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Ten 10p coins make £1.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
+  ]
+}

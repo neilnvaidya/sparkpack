@@ -1,0 +1,483 @@
+{
+  "schemaVersion": 2,
+  "id": "maths-y3-geometry-shapes",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "geometry-shapes",
+  "title": "Geometry: Properties of Shapes",
+  "description": "2-D and 3-D shapes, angles and turns, right angles, and horizontal, vertical, parallel and perpendicular lines.",
+  "objectives": [
+    {
+      "code": "Y3-G-1",
+      "statement": "Draw 2-D shapes and make 3-D shapes using modelling materials; recognise 3-D shapes in different orientations and describe them."
+    },
+    {
+      "code": "Y3-G-2",
+      "statement": "Recognise angles as a property of shape or a description of a turn."
+    },
+    {
+      "code": "Y3-G-3",
+      "statement": "Identify right angles, recognise that two right angles make a half-turn, three make three quarters of a turn and four a complete turn; identify whether angles are greater than or less than a right angle."
+    },
+    {
+      "code": "Y3-G-4",
+      "statement": "Identify horizontal and vertical lines and pairs of perpendicular and parallel lines."
+    }
+  ],
+  "questions": [
+    {
+      "id": "sh-1",
+      "factKey": "sh-1",
+      "difficulty": 1,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many sides does a hexagon have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "6",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "six"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-2",
+      "factKey": "sh-2",
+      "difficulty": 1,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A triangle has 4 sides.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-3",
+      "factKey": "sh-3",
+      "difficulty": 2,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many faces does a cube have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "6",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "six"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-4",
+      "factKey": "sh-4",
+      "difficulty": 2,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which 3-D shape has 2 circular faces and 1 curved surface?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "cylinder",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "cylinder"
+      ],
+      "distractors": [
+        "sphere",
+        "cone",
+        "cube"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sh-5",
+      "factKey": "sh-5",
+      "difficulty": 3,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many vertices (corners) does a square-based pyramid have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "5",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "five"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-6",
+      "factKey": "sh-6",
+      "difficulty": 3,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "How many edges does a cuboid have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "12",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "12"
+      ],
+      "distractors": [
+        "6",
+        "8",
+        "10"
+      ],
+      "equation": null
+    },
+    {
+      "id": "sh-7",
+      "factKey": "sh-7",
+      "difficulty": 1,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many sides does a pentagon have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "5",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "five"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "sh-8",
+      "factKey": "sh-8",
+      "difficulty": 2,
+      "strand": "2-D and 3-D shapes",
+      "objectiveCodes": [
+        "Y3-G-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A sphere has no flat faces.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-1",
+      "factKey": "an-1",
+      "difficulty": 1,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-2",
+        "Y3-G-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "How many right angles does a square have?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "4",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "4"
+      ],
+      "distractors": [
+        "2",
+        "3",
+        "5"
+      ],
+      "equation": null
+    },
+    {
+      "id": "an-2",
+      "factKey": "an-2",
+      "difficulty": 2,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many right angles make a full turn?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "4",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "four"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-3",
+      "factKey": "an-3",
+      "difficulty": 2,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "How many right angles make a half turn?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "2",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "two"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-4",
+      "factKey": "an-4",
+      "difficulty": 2,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Three right angles make three quarters of a full turn.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-5",
+      "factKey": "an-5",
+      "difficulty": 3,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-2",
+        "Y3-G-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "The corner of a book makes what kind of angle?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "a right angle",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "a right angle"
+      ],
+      "distractors": [
+        "an angle smaller than a right angle",
+        "an angle greater than a right angle"
+      ],
+      "equation": null
+    },
+    {
+      "id": "an-6",
+      "factKey": "an-6",
+      "difficulty": 3,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "An angle can be greater than or less than a right angle.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "an-7",
+      "factKey": "an-7",
+      "difficulty": 2,
+      "strand": "Angles and turns",
+      "objectiveCodes": [
+        "Y3-G-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "You face the door, then turn to face the opposite wall behind you. What turn have you made?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "a half turn",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "a half turn"
+      ],
+      "distractors": [
+        "a quarter turn",
+        "three quarters of a turn",
+        "a full turn"
+      ],
+      "equation": null
+    },
+    {
+      "id": "li-1",
+      "factKey": "li-1",
+      "difficulty": 1,
+      "strand": "Lines",
+      "objectiveCodes": [
+        "Y3-G-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "A flagpole standing straight up is vertical.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "li-2",
+      "factKey": "li-2",
+      "difficulty": 2,
+      "strand": "Lines",
+      "objectiveCodes": [
+        "Y3-G-4"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "The horizon is a horizontal line.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "li-3",
+      "factKey": "li-3",
+      "difficulty": 2,
+      "strand": "Lines",
+      "objectiveCodes": [
+        "Y3-G-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What do we call two lines that stay the same distance apart and never meet?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Parallel lines",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "parallel"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "li-4",
+      "factKey": "li-4",
+      "difficulty": 3,
+      "strand": "Lines",
+      "objectiveCodes": [
+        "Y3-G-4"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What do we call two lines that meet at a right angle?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Perpendicular lines",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "perpendicular"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "li-5",
+      "factKey": "li-5",
+      "difficulty": 2,
+      "strand": "Lines",
+      "objectiveCodes": [
+        "Y3-G-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is the best example of parallel lines?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "the two rails of a train track",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "the two rails of a train track"
+      ],
+      "distractors": [
+        "the hands of a clock at 3 o'clock",
+        "the corner of a window",
+        "the letter T"
+      ],
+      "equation": null
+    }
+  ]
+}

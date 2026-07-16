@@ -1,0 +1,531 @@
+{
+  "schemaVersion": 2,
+  "id": "maths-y3-number-place-value",
+  "subject": "maths",
+  "keyStage": "KS2",
+  "year": 3,
+  "topicId": "number-place-value",
+  "title": "Number and Place Value",
+  "description": "Counting in multiples, place value in three-digit numbers, and comparing, ordering, reading and writing numbers to 1000.",
+  "objectives": [
+    {
+      "code": "Y3-NPV-1",
+      "statement": "Count from 0 in multiples of 4, 8, 50 and 100; find 10 or 100 more or less than a given number."
+    },
+    {
+      "code": "Y3-NPV-2",
+      "statement": "Recognise the place value of each digit in a three-digit number (hundreds, tens, ones)."
+    },
+    {
+      "code": "Y3-NPV-3",
+      "statement": "Compare and order numbers up to 1000."
+    },
+    {
+      "code": "Y3-NPV-4",
+      "statement": "Identify, represent and estimate numbers using different representations."
+    },
+    {
+      "code": "Y3-NPV-5",
+      "statement": "Read and write numbers up to 1000 in numerals and in words."
+    },
+    {
+      "code": "Y3-NPV-6",
+      "statement": "Solve number problems and practical problems involving these ideas."
+    }
+  ],
+  "questions": [
+    {
+      "id": "cm-1",
+      "factKey": "cm-1",
+      "difficulty": 1,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Count in 4s: 4, 8, 12, ... What comes next?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "16",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "cm-2",
+      "factKey": "cm-2",
+      "difficulty": 1,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Count in 50s: 50, 100, 150, ... What comes next?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "200",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "cm-3",
+      "factKey": "cm-3",
+      "difficulty": 2,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Count in 8s: 8, 16, 24, 32, ... What comes next?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "40",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "cm-4",
+      "factKey": "cm-4",
+      "difficulty": 2,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What is 10 more than 482?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "492",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "492"
+      ],
+      "distractors": [
+        "483",
+        "582",
+        "472"
+      ],
+      "equation": null
+    },
+    {
+      "id": "cm-5",
+      "factKey": "cm-5",
+      "difficulty": 2,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "What is 100 less than 706?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "606",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "606"
+      ],
+      "distractors": [
+        "696",
+        "806",
+        "705"
+      ],
+      "equation": null
+    },
+    {
+      "id": "cm-6",
+      "factKey": "cm-6",
+      "difficulty": 3,
+      "strand": "Counting in multiples",
+      "objectiveCodes": [
+        "Y3-NPV-1"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "Counting in 4s from 0, you will say the number 30.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pv-1",
+      "factKey": "pv-1",
+      "difficulty": 1,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In the number 358, what does the digit 5 stand for?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "50 (5 tens)",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "50",
+        "5 tens",
+        "fifty"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pv-2",
+      "factKey": "pv-2",
+      "difficulty": 2,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "In the number 703, what does the digit 7 stand for?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "700 (7 hundreds)",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "700",
+        "7 hundreds",
+        "seven hundred"
+      ],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pv-3",
+      "factKey": "pv-3",
+      "difficulty": 1,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which number has 6 tens?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "163",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "163"
+      ],
+      "distractors": [
+        "306",
+        "736",
+        "637"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pv-4",
+      "factKey": "pv-4",
+      "difficulty": 1,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "In 425, the digit 2 stands for 20.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pv-5",
+      "factKey": "pv-5",
+      "difficulty": 3,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2",
+        "Y3-NPV-6"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "What number is made of 4 hundreds, 0 tens and 9 ones?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "409",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "pv-6",
+      "factKey": "pv-6",
+      "difficulty": 3,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-2",
+        "Y3-NPV-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which of these is the same as 570?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "57 tens",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "57 tens"
+      ],
+      "distractors": [
+        "5 hundreds and 7 ones",
+        "7 tens and 5 ones",
+        "5 tens and 70 ones"
+      ],
+      "equation": null
+    },
+    {
+      "id": "pv-7",
+      "factKey": "pv-7",
+      "difficulty": 3,
+      "strand": "Place value",
+      "objectiveCodes": [
+        "Y3-NPV-4"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "A number line goes from 0 to 1000. An arrow points exactly halfway along. What number is it pointing to?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "500",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "500"
+      ],
+      "distractors": [
+        "250",
+        "750",
+        "1000"
+      ],
+      "equation": null
+    },
+    {
+      "id": "co-1",
+      "factKey": "co-1",
+      "difficulty": 1,
+      "strand": "Comparing and ordering",
+      "objectiveCodes": [
+        "Y3-NPV-3"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which number is the largest?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "401",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "401"
+      ],
+      "distractors": [
+        "399",
+        "389",
+        "400"
+      ],
+      "equation": null
+    },
+    {
+      "id": "co-2",
+      "factKey": "co-2",
+      "difficulty": 2,
+      "strand": "Comparing and ordering",
+      "objectiveCodes": [
+        "Y3-NPV-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Put these numbers in order, smallest first: 645, 456, 564.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "456, 564, 645",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "co-3",
+      "factKey": "co-3",
+      "difficulty": 1,
+      "strand": "Comparing and ordering",
+      "objectiveCodes": [
+        "Y3-NPV-3"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "725 is smaller than 752.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "co-4",
+      "factKey": "co-4",
+      "difficulty": 2,
+      "strand": "Comparing and ordering",
+      "objectiveCodes": [
+        "Y3-NPV-3"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Which is greater: 208 or 280?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "280",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "co-5",
+      "factKey": "co-5",
+      "difficulty": 3,
+      "strand": "Comparing and ordering",
+      "objectiveCodes": [
+        "Y3-NPV-3",
+        "Y3-NPV-6"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "999 is the largest three-digit number.",
+      "claimIsTrue": true,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "nw-1",
+      "factKey": "nw-1",
+      "difficulty": 1,
+      "strand": "Numbers in words",
+      "objectiveCodes": [
+        "Y3-NPV-5"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Write 'two hundred and sixty' in numerals.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "260",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "nw-2",
+      "factKey": "nw-2",
+      "difficulty": 2,
+      "strand": "Numbers in words",
+      "objectiveCodes": [
+        "Y3-NPV-5"
+      ],
+      "forms": [
+        "open"
+      ],
+      "ask": "Write the number 507 in words.",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "Five hundred and seven",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    },
+    {
+      "id": "nw-3",
+      "factKey": "nw-3",
+      "difficulty": 2,
+      "strand": "Numbers in words",
+      "objectiveCodes": [
+        "Y3-NPV-5"
+      ],
+      "forms": [
+        "mcq"
+      ],
+      "ask": "Which numeral shows 'nine hundred and nineteen'?",
+      "claim": "",
+      "claimIsTrue": null,
+      "answer": "919",
+      "answerDetail": "",
+      "acceptableAnswers": [
+        "919"
+      ],
+      "distractors": [
+        "909",
+        "990",
+        "991"
+      ],
+      "equation": null
+    },
+    {
+      "id": "nw-4",
+      "factKey": "nw-4",
+      "difficulty": 2,
+      "strand": "Numbers in words",
+      "objectiveCodes": [
+        "Y3-NPV-5"
+      ],
+      "forms": [
+        "truefalse"
+      ],
+      "ask": "",
+      "claim": "'Four hundred and forty' is written 404.",
+      "claimIsTrue": false,
+      "answer": "",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": [],
+      "equation": null
+    }
+  ]
+}
