@@ -1,5 +1,31 @@
 # Workplan — current session state and next steps
 
+> **Latest: the authoring tool, step 3b-0 (2026-07-16) — built, unreviewed.**
+> Dev-only tool at **`/dev/authoring`** (`npm run dev`): pick a topic from the
+> curriculum tree, expand a question, see its three forms side by side, edit,
+> and hit Write. Spec and build notes:
+> **[CONTENT-PASS-PLAN.md](./CONTENT-PASS-PLAN.md)** — read that first.
+>
+> **Verified by build only, at Neil's instruction.** `npm run build` and `tsc`
+> clean, 26 tests pass, slice snapshot unmoved. **Neil is doing the UI pass** —
+> nothing here has been driven in a browser.
+>
+> Safety properties worth not breaking: the API is **dev-only (404 in prod)**, a
+> pack that fails Zod **never reaches disk**, writes use a **stable key order**
+> so `git diff` stays reviewable, and the formatting pass **rewrites only `ask`
+> and `claim`** — the answer set is warned about, never edited (auto-capitalising
+> would turn `45 cm` into `45 Cm`).
+>
+> **The corpus is archived** at `Docs/packs-archive/2026-07-16/` (19 packs) — the
+> pre-3b restore point.
+>
+> **Next: step 3b, the content pass.** Everything it needs exists:
+> `npm run make-skeleton <packId>` emits the drafting target, and
+> **[DRAFTER-INSTRUCTIONS.md](./DRAFTER-INSTRUCTIONS.md)** is the brief to hand a
+> cheaper model verbatim, one pack per run. **`geography-y3-uk` is the pilot — do
+> not draft pack two until pack one is reviewed and committed**, because the first
+> review will change the instructions.
+
 > **Latest: schema v2 lift, step 3a (2026-07-16) — done.** Packs are now
 > `schemaVersion: 2` — **417 items → 417 questions**, one per item, no content
 > invented. **The authoring contract is written up in
@@ -33,9 +59,27 @@
 > 417 questions offer <3 forms · 124 MCQs have <5 distractors · 118 slotless
 > claims · 417 questions have no shared factKey.
 >
-> **Not yet done:** step 3b (the content pass — see "The content cost" in the
-> plan), step 4 (two-axis scoring: `FORM_SCAFFOLD`, replaces `POINTS_BY_DIFFICULTY`),
-> step 5 (`factKey` dedupe + `factReuse` for Three in a Row).
+> **Not yet done: steps 3b–5 — now specced in
+> [CONTENT-PASS-PLAN.md](./CONTENT-PASS-PLAN.md), read that first.** Three
+> decisions (2026-07-16) reshaped them from the original plan:
+> **a dev authoring tool (step 3b-0) is built before any content**, because
+> reviewing 2,085 AI-drafted distractors as raw JSON is rubber-stamping, not
+> review; **step 4 collapses to points-by-form** (300/200/100 for
+> open/mcq/truefalse — intrinsic `difficulty` stays in the schema for Summit's
+> pools but stops driving points, so `FORM_SCAFFOLD`/`challenge()` are dropped);
+> **step 5 becomes a verify-and-tighten pass** (factKey dedupe, schema
+> tightening, delete `claimIsTrue` and the v1 remnants). 3b's exit criterion is
+> the four validator warnings reaching zero.
+>
+> Two later additions (2026-07-16): **form-resistant questions are quarantined,
+> not exempted** — pulled out of their pack into
+> `content-quarantine/form-resistant.json` with provenance, awaiting a future
+> "pick all that are correct" multi-select form. That is what lets step 5 make
+> `forms.length === 3` a blanket rule with no opt-out. And **step 6 = objective
+> mapping**, split out and deliberately last: 365/417 questions already tag an
+> objective, the 52 untagged are the two Y2 packs, and judging whether a tag is
+> *apt* is a harder call than judging a distractor — so it gets its own reviewed
+> pass. The payoff is a per-pack "objectives with zero questions" gap report.
 > **Not yet verified in-browser by Neil** — he is doing a pass.
 > `scripts/migrate-packs-v2.mjs` and the v1 schema (`curriculumPackV1Schema`,
 > `curriculumItemSchema` and friends) are kept only so this commit is

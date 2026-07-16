@@ -9,7 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "validate-packs": "node scripts/validate-packs.mjs"
+    "validate-packs": "node scripts/validate-packs.mjs",
+    "archive-packs": "node scripts/archive-packs.mjs",
+    "make-skeleton": "node scripts/make-skeleton.mjs",
+    "test": "vitest run"
   },
   "repository": {
     "type": "git",

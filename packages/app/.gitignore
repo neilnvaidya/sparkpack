@@ -2,3 +2,9 @@ node_modules
 .next
 .env.local
 .env*.local
+
+# 3b drafting workspace — skeletons and in-flight AI drafts. Intermediate and
+# regenerable (`npm run make-skeleton <packId>`); the reviewed result lands in
+# lib/curriculum/packs/ via the authoring tool, so nothing here is source of
+# truth. content-quarantine/ IS committed — those questions exist nowhere else.
+content-drafts/
