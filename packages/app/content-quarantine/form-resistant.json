@@ -1,0 +1,169 @@
+{
+  "note": "Form-resistant questions pulled from packs during the 3b content pass. Not shipped, not deleted — awaiting a \"pick all that are correct\" multi-select form. See Docs/CONTENT-PASS-PLAN.md.",
+  "questions": [
+    {
+      "question": {
+        "id": "co-1",
+        "factKey": "co-1",
+        "strand": "Countries",
+        "objectiveCodes": ["Y3-UK-1"],
+        "forms": ["open"],
+        "ask": "Name the four countries that make up the United Kingdom.",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "England, Scotland, Wales and Northern Ireland",
+        "answerDetail": "",
+        "acceptableAnswers": [
+          "england, scotland, wales, northern ireland",
+          "england scotland wales northern ireland"
+        ],
+        "distractors": [],
+        "equation": null
+      },
+      "subject": "geography",
+      "year": 3,
+      "topicId": "uk",
+      "packId": "geography-y3-uk",
+      "reason": "Resists mcq: the answer is a set of four items, not one option, so no single-item distractor set is honest. Resists truefalse: a slotted claim would only test one country's membership at a time, which is a different (and lesser) fact than naming all four. This is the canonical example from CONTENT-RULES.md — genuinely a set-answer question, a fit for a future multi-select form.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "fo-5",
+        "factKey": "fo-5",
+        "strand": "Forces and surfaces",
+        "objectiveCodes": ["Y3-FM-1"],
+        "forms": ["open"],
+        "ask": "Why is friction useful when you are walking?",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "It stops your feet slipping and helps you grip the ground",
+        "answerDetail": "",
+        "acceptableAnswers": ["it stops you slipping", "it helps you grip"],
+        "distractors": [],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 3,
+      "topicId": "forces-magnets",
+      "packId": "science-y3-forces-magnets",
+      "reason": "Resists mcq: the answer is an explanation (grip + prevents slipping), not a single fact with unambiguously wrong alternatives. Resists truefalse: any slotted claim would test a narrower fact (e.g. 'friction helps you grip') and lose the explanatory 'why'. This is the second canonical example named in CONTENT-RULES.md/DRAFTER-INSTRUCTIONS.md.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "sh-6",
+        "factKey": "sh-6",
+        "strand": "Shadows",
+        "objectiveCodes": ["Y3-L-4", "Y3-L-5"],
+        "forms": ["open"],
+        "ask": "Why does a shadow have roughly the same shape as the object that makes it?",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "Because the object blocks the light in that shape",
+        "answerDetail": "",
+        "acceptableAnswers": ["the object blocks the light in its shape", "the light is blocked in the shape of the object"],
+        "distractors": [],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 3,
+      "topicId": "light",
+      "packId": "science-y3-light",
+      "reason": "Resists mcq and truefalse: the answer is a causal explanation of why shadows take the shape they do, not a single named fact. A slotted claim would flatten the 'why' into a narrower, less useful statement.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "re-4",
+        "factKey": "re-4",
+        "strand": "Reflection",
+        "objectiveCodes": ["Y3-L-2"],
+        "forms": ["mcq"],
+        "ask": "Why do cyclists wear reflective strips at night?",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "so light from car headlights bounces back and drivers can see them",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": ["to look colourful", "to keep warm", "to go faster", "to be more waterproof", "to weigh less"],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 3,
+      "topicId": "light",
+      "packId": "science-y3-light",
+      "reason": "Resists open: the answer is a multi-part causal explanation (headlight light reflects off the strip, so drivers notice the cyclist), too long to stand as a short canonical answer. Resists truefalse: a slotted claim would flatten the 'why' into a narrower fact and lose the causal chain. Only a working mcq exists, and per the 'complete or quarantine' rule a partial-forms question does not stay in the corpus.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "lc-3",
+        "factKey": "lc-3",
+        "strand": "Life cycle",
+        "objectiveCodes": ["Y3-P-4"],
+        "forms": ["mcq"],
+        "ask": "Put these stages in the correct order.",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "pollination → seed formation → seed dispersal → new plant grows",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": ["seed dispersal → pollination → new plant grows → seed formation", "new plant grows → pollination → seed dispersal → seed formation"],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 3,
+      "topicId": "plants",
+      "packId": "science-y3-plants",
+      "reason": "Resists open: the answer is a four-item ordered sequence, not a short single fact. Resists truefalse: a slotted claim can only swap one item at a time, which tests a much narrower (and less useful) fact than the whole ordering. This is a sequencing question — a strong fit for a future ordering/multi-select form, not the current three.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "lc-4",
+        "factKey": "lc-4",
+        "strand": "Life cycle",
+        "objectiveCodes": ["Y3-P-4"],
+        "forms": ["open"],
+        "ask": "Why is it useful for seeds to be spread far away from the parent plant?",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "So the new plants have space, light and water and do not have to compete with the parent plant",
+        "answerDetail": "",
+        "acceptableAnswers": ["so they have room to grow", "so they don't compete for light and water"],
+        "distractors": [],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 3,
+      "topicId": "plants",
+      "packId": "science-y3-plants",
+      "reason": "Resists mcq and truefalse: the answer is a causal explanation (avoiding competition for space, light and water), not a single named fact with unambiguously wrong alternatives.",
+      "quarantinedAt": "2026-07-16"
+    },
+    {
+      "question": {
+        "id": "gu-3",
+        "factKey": "gu-3",
+        "strand": "Growing up",
+        "objectiveCodes": [],
+        "forms": ["mcq"],
+        "ask": "Which order is correct for how a butterfly grows?",
+        "claim": "",
+        "claimIsTrue": null,
+        "answer": "egg → caterpillar → pupa → butterfly",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": ["caterpillar → egg → butterfly → pupa", "egg → pupa → caterpillar → butterfly"],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Resists open and truefalse for the same reason as the plants pack's life-cycle ordering question (lc-3): the answer is a four-item sequence, not a short single fact or a claim that a single {} slot can carry.",
+      "quarantinedAt": "2026-07-16"
+    }
+  ]
+}

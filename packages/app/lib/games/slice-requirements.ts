@@ -29,6 +29,15 @@ export interface SliceRequirement {
    * question both declare `open`.
    */
   textOnly?: boolean
+  /**
+   * Whether a slice may deal two questions that share a `factKey` — i.e. two
+   * forms of the same fact. Default `'distinct'`: at most one question per
+   * factKey, so a game never gives away one question by asking another.
+   * `'forms'` (only Three in a Row) allows the same fact to reappear, because
+   * that game fills 16 cells from fewer facts by showing some twice in
+   * different forms — a deliberate, named exception, not a loophole.
+   */
+  factReuse?: 'distinct' | 'forms'
 }
 
 export interface GameSliceMeta {
@@ -44,11 +53,21 @@ export function questionsMatching(
   pack: CurriculumPack,
   requires: SliceRequirement
 ): CurriculumQuestion[] {
-  return pack.questions.filter(
+  const matching = pack.questions.filter(
     (q) =>
       (!requires.textOnly || q.equation === null) &&
       q.forms.some((f) => requires.forms.includes(f))
   )
+  if (requires.factReuse === 'forms') return matching
+
+  // Default: at most one question per factKey, so a slice can never deal two
+  // askings of the same fact — the entire point of authoring a shared factKey.
+  const seen = new Set<string>()
+  return matching.filter((q) => {
+    if (seen.has(q.factKey)) return false
+    seen.add(q.factKey)
+    return true
+  })
 }
 
 export function isRequirementMet(pack: CurriculumPack, requires: SliceRequirement): boolean {
@@ -90,7 +109,9 @@ export const GAME_SLICE_META: GameSliceMeta[] = [
     slug: 'three-in-a-row',
     name: 'Three in a Row',
     tagline: 'Claim squares to line up three in your colour',
-    requires: { forms: ALL_FORMS, min: 16, textOnly: true },
+    // Allowed to fill its 16 cells from fewer facts by showing some twice in
+    // different forms — see SliceRequirement.factReuse.
+    requires: { forms: ALL_FORMS, min: 16, textOnly: true, factReuse: 'forms' },
   },
   {
     templateId: 'summit_climb',

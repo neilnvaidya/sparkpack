@@ -38,504 +38,346 @@
       "id": "l-1",
       "factKey": "l-1",
       "strand": "Length",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many centimetres are in 1 metre?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} centimetres in 1 metre.",
       "answer": "100",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "100 cm",
-        "100 centimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["10", "1000", "10000", "50", "200"],
       "equation": null
     },
     {
       "id": "l-2",
       "factKey": "l-2",
       "strand": "Length",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many millimetres are in 1 centimetre?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} millimetres in 1 centimetre.",
       "answer": "10",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "10 mm",
-        "10 millimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["1", "100", "1000", "5", "20"],
       "equation": null
     },
     {
       "id": "l-3",
       "factKey": "l-3",
       "strand": "Length",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these is the longest?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which is the longest: 4 m, 45 cm, 405 mm or 440 mm?",
+      "claim": "Out of 4 m, 45 cm, 405 mm and 440 mm, the longest is {}.",
       "answer": "4 m",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "4 m"
-      ],
-      "distractors": [
-        "45 cm",
-        "405 mm",
-        "440 mm"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["45 cm", "405 mm", "440 mm", "39 cm", "410 mm"],
       "equation": null
     },
     {
       "id": "l-4",
       "factKey": "l-4",
       "strand": "Length",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A ribbon is 1 m 20 cm long. How many centimetres is that?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A ribbon 1 m 20 cm long is {} long.",
       "answer": "120 cm",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "120",
-        "120 centimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["120", "120 centimetres"],
+      "distractors": ["20 cm", "100 cm", "12 cm", "220 cm", "102 cm"],
       "equation": null
     },
     {
       "id": "p-1",
       "factKey": "p-1",
       "strand": "Perimeter",
-      "objectiveCodes": [
-        "Y3-M-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A square has sides of 5 cm. What is its perimeter?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A square with sides of 5 cm has a perimeter of {}.",
       "answer": "20 cm",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "20",
-        "20 centimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["20", "20 centimetres"],
+      "distractors": ["10 cm", "15 cm", "25 cm", "5 cm", "40 cm"],
       "equation": null
     },
     {
       "id": "p-2",
       "factKey": "p-2",
       "strand": "Perimeter",
-      "objectiveCodes": [
-        "Y3-M-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A rectangle is 8 cm long and 3 cm wide. What is its perimeter?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A rectangle 8 cm long and 3 cm wide has a perimeter of {}.",
       "answer": "22 cm",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "22",
-        "22 centimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["22", "22 centimetres"],
+      "distractors": ["11 cm", "24 cm", "16 cm", "20 cm", "26 cm"],
       "equation": null
     },
     {
       "id": "p-3",
       "factKey": "p-3",
       "strand": "Perimeter",
-      "objectiveCodes": [
-        "Y3-M-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Perimeter is the distance all the way around the outside of a shape.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-M-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is the perimeter of a shape?",
+      "claim": "The perimeter of a shape is {}.",
+      "answer": "the distance all the way around the outside of the shape",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the space inside the shape",
+        "the number of corners it has",
+        "the number of sides it has",
+        "the height of the shape only",
+        "the weight of the shape"
+      ],
       "equation": null
     },
     {
       "id": "mc-1",
       "factKey": "mc-1",
       "strand": "Mass and capacity",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many grams are in 1 kilogram?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} grams in 1 kilogram.",
       "answer": "1000",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "1000 g",
-        "1000 grams"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["100", "10", "10000", "500", "50"],
       "equation": null
     },
     {
       "id": "mc-2",
       "factKey": "mc-2",
       "strand": "Mass and capacity",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many millilitres are in 1 litre?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} millilitres in 1 litre.",
       "answer": "1000",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "1000 ml",
-        "1000 millilitres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["100", "10", "10000", "500", "50"],
       "equation": null
     },
     {
       "id": "mc-3",
       "factKey": "mc-3",
       "strand": "Mass and capacity",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these is the heaviest?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which is the heaviest: 1 kg, 900 g, half a kilogram or 250 g?",
+      "claim": "Out of 1 kg, 900 g, half a kilogram and 250 g, the heaviest is {}.",
       "answer": "1 kg",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "1 kg"
-      ],
-      "distractors": [
-        "900 g",
-        "half a kilogram",
-        "250 g"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["900 g", "half a kilogram", "250 g", "600 g", "800 g"],
       "equation": null
     },
     {
       "id": "mc-4",
       "factKey": "mc-4",
       "strand": "Mass and capacity",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "1500 ml is the same as one and a half litres.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 1500 ml the same as?",
+      "claim": "1500 ml is the same as {}.",
+      "answer": "one and a half litres",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["1.5 litres"],
+      "distractors": [
+        "one litre",
+        "two litres",
+        "fifteen litres",
+        "half a litre",
+        "one litre and fifty millilitres"
+      ],
       "equation": null
     },
     {
       "id": "mo-1",
       "factKey": "mo-1",
       "strand": "Money",
-      "objectiveCodes": [
-        "Y3-M-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "You buy a snack for 65p and pay with a £1 coin. How much change do you get?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Change from paying for a 65p snack with a £1 coin is {}.",
       "answer": "35p",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "35",
-        "35 pence"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["35", "35 pence"],
+      "distractors": ["65p", "30p", "45p", "40p", "135p"],
       "equation": null
     },
     {
       "id": "mo-2",
       "factKey": "mo-2",
       "strand": "Money",
-      "objectiveCodes": [
-        "Y3-M-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-M-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many pence are in £2?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} pence in £2.",
       "answer": "200",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "200"
-      ],
-      "distractors": [
-        "20",
-        "100",
-        "2000"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["20", "100", "2000", "250", "1000"],
       "equation": null
     },
     {
       "id": "mo-3",
       "factKey": "mo-3",
       "strand": "Money",
-      "objectiveCodes": [
-        "Y3-M-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A pencil costs 45p and a ruler costs 80p. What is the total cost?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A 45p pencil and an 80p ruler cost {} in total.",
       "answer": "£1.25",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "125p",
-        "1.25",
-        "one pound twenty-five"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["125p", "1.25", "one pound twenty-five"],
+      "distractors": ["£1.15", "£1.35", "£0.35", "£1.20", "£1.05"],
       "equation": null
     },
     {
       "id": "mo-4",
       "factKey": "mo-4",
       "strand": "Money",
-      "objectiveCodes": [
-        "Y3-M-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A comic costs £1.30. You pay with a £2 coin. What is your change?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Change from paying £1.30 for a comic with a £2 coin is {}.",
       "answer": "70p",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "70",
-        "70 pence"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["70", "70 pence"],
+      "distractors": ["30p", "60p", "80p", "£1.30", "90p"],
       "equation": null
     },
     {
       "id": "ti-1",
       "factKey": "ti-1",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-6"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-6"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many seconds are in one minute?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} seconds in one minute.",
       "answer": "60",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "60 seconds"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["100", "30", "50", "120", "6"],
       "equation": null
     },
     {
       "id": "ti-2",
       "factKey": "ti-2",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-5"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-5"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many minutes are in one hour?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} minutes in one hour.",
       "answer": "60",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "60 minutes"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["100", "30", "50", "120", "24"],
       "equation": null
     },
     {
       "id": "ti-3",
       "factKey": "ti-3",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-M-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "On a clock face with Roman numerals, what number does XII stand for?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "On a clock face with Roman numerals, XII stands for {}.",
       "answer": "12",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "12"
-      ],
-      "distractors": [
-        "2",
-        "7",
-        "10"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["2", "7", "10", "6", "1"],
       "equation": null
     },
     {
       "id": "ti-4",
       "factKey": "ti-4",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "15:00 on a 24-hour clock is 3 o'clock in the afternoon.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-M-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What time is 15:00 on a 24-hour clock, using 12-hour time?",
+      "claim": "15:00 on a 24-hour clock is {}.",
+      "answer": "3 o'clock in the afternoon",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["3pm", "3:00pm"],
+      "distractors": [
+        "3 o'clock in the morning",
+        "5 o'clock in the afternoon",
+        "1 o'clock in the afternoon",
+        "9 o'clock in the evening",
+        "noon"
+      ],
       "equation": null
     },
     {
       "id": "ti-5",
       "factKey": "ti-5",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-6"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-M-6"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many days are in a leap year?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "There are {} days in a leap year.",
       "answer": "366",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "366 days"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["365", "364", "367", "360", "370"],
       "equation": null
     },
     {
       "id": "ti-6",
       "factKey": "ti-6",
       "strand": "Time",
-      "objectiveCodes": [
-        "Y3-M-6"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these months has exactly 30 days?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-M-6"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which month has exactly 30 days?",
+      "claim": "{} has exactly 30 days.",
       "answer": "April",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "April"
-      ],
-      "distractors": [
-        "January",
-        "February",
-        "December"
-      ],
+      "acceptableAnswers": ["June", "September", "November"],
+      "distractors": ["January", "February", "December", "March", "May"],
       "equation": null
     },
     {
       "id": "l-5",
       "factKey": "l-5",
       "strand": "Length",
-      "objectiveCodes": [
-        "Y3-M-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A door is about 2 metres tall.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-M-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "About how tall is a typical door?",
+      "claim": "A door is about {} tall.",
+      "answer": "2 metres",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "20 centimetres",
+        "20 metres",
+        "half a metre",
+        "10 metres",
+        "5 centimetres"
+      ],
       "equation": null
     },
     {
       "id": "mo-5",
       "factKey": "mo-5",
       "strand": "Money",
-      "objectiveCodes": [
-        "Y3-M-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Ten 10p coins make £1.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-M-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "How many 10p coins make £1?",
+      "claim": "{} ten-pence coins make £1.",
+      "answer": "10",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["5", "20", "100", "2", "50"],
       "equation": null
     }
   ]

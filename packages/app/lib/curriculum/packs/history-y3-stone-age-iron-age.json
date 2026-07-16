@@ -30,71 +30,53 @@
       "id": "sa-1",
       "factKey": "sa-1",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In the early Stone Age, people moved around to find food. What do we call people who hunt animals and gather plants?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Hunter-gatherers",
+      "claim": "People who hunt animals and gather plants for food are called {}.",
+      "answer": "hunter-gatherers",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "hunter-gatherers",
-        "hunter gatherers"
+      "acceptableAnswers": ["hunter gatherers"],
+      "distractors": [
+        "farmers",
+        "soldiers",
+        "traders",
+        "blacksmiths",
+        "priests"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "sa-2",
       "factKey": "sa-2",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What were most Stone Age tools and weapons made from?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Most Stone Age tools and weapons were made from {}.",
       "answer": "stone, wood and bone",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "stone, wood and bone"
-      ],
-      "distractors": [
-        "plastic",
-        "iron",
-        "gold"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["plastic", "iron", "gold", "glass", "rubber"],
       "equation": null
     },
     {
       "id": "sa-3",
       "factKey": "sa-3",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Skara Brae in Scotland is a famous example of what?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Skara Brae in Scotland is a famous example of {}.",
       "answer": "a Stone Age village",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a Stone Age village"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "a Roman fort",
         "a modern city",
-        "a Bronze Age mine"
+        "a Bronze Age mine",
+        "an Iron Age hill fort",
+        "a Viking longhouse"
       ],
       "equation": null
     },
@@ -102,107 +84,102 @@
       "id": "sa-4",
       "factKey": "sa-4",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Towards the end of the Stone Age, people began to farm and settle in one place.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What began to happen towards the end of the Stone Age?",
+      "claim": "Towards the end of the Stone Age, {}.",
+      "answer": "people began to farm and settle in one place",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "people started using iron swords",
+        "everyone moved to cities",
+        "people stopped eating meat",
+        "people invented writing",
+        "people built stone castles"
+      ],
       "equation": null
     },
     {
       "id": "sa-5",
       "factKey": "sa-5",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Give one big change that happened when Stone Age people started farming instead of only hunting.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "They settled in one place, built homes, and grew crops and kept animals",
+      "claim": "One big change when Stone Age people started farming was that {}.",
+      "answer": "they settled in one place and built permanent homes",
       "answerDetail": "",
       "acceptableAnswers": [
         "they stopped moving around",
-        "they built permanent homes",
         "they grew crops and kept animals"
       ],
-      "distractors": [],
+      "distractors": [
+        "they started using cars",
+        "they invented the internet",
+        "they stopped needing food",
+        "they began flying kites",
+        "they moved to the Moon"
+      ],
       "equation": null
     },
     {
       "id": "sa-6",
       "factKey": "sa-6",
       "strand": "Stone Age",
-      "objectiveCodes": [
-        "Y3-SAIA-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Stone Age people used metal tools like iron swords.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Out of stone tools and iron swords, which did Stone Age people NOT have?",
+      "claim": "Stone Age people did not have {}.",
+      "answer": "iron swords",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "stone tools",
+        "wooden spears",
+        "bone needles",
+        "flint knives",
+        "antler tools"
+      ],
       "equation": null
     },
     {
       "id": "ba-1",
       "factKey": "ba-1",
       "strand": "Bronze Age",
-      "objectiveCodes": [
-        "Y3-SAIA-2"
-      ],
-      "forms": [
-        "open"
-      ],
-      "ask": "The Bronze Age is named after a metal. What metal is bronze mostly made from mixing?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Copper (mixed with tin)",
+      "objectiveCodes": ["Y3-SAIA-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "The Bronze Age is named after a metal. What is bronze made by mixing?",
+      "claim": "Bronze is made by mixing {}.",
+      "answer": "copper and tin",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "copper",
-        "copper and tin"
+      "acceptableAnswers": ["copper"],
+      "distractors": [
+        "iron and steel",
+        "gold and silver",
+        "zinc and lead",
+        "aluminium and nickel",
+        "lead and glass"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "ba-2",
       "factKey": "ba-2",
       "strand": "Bronze Age",
-      "objectiveCodes": [
-        "Y3-SAIA-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which famous monument on Salisbury Plain was completed during the Bronze Age?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The famous monument on Salisbury Plain completed during the Bronze Age is {}.",
       "answer": "Stonehenge",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "Stonehenge"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "the Tower of London",
         "Hadrian's Wall",
-        "Buckingham Palace"
+        "Buckingham Palace",
+        "the Colosseum",
+        "Windsor Castle"
       ],
       "equation": null
     },
@@ -210,43 +187,39 @@
       "id": "ba-3",
       "factKey": "ba-3",
       "strand": "Bronze Age",
-      "objectiveCodes": [
-        "Y3-SAIA-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Bronze is harder and longer-lasting than tools made only of stone.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which lasts longer and is harder-wearing: tools made of bronze, or tools made only of stone?",
+      "claim": "{} last longer and are harder-wearing than tools made only of stone.",
+      "answer": "tools made of bronze",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "tools made only of stone",
+        "tools made of wood",
+        "tools made of clay",
+        "tools made of bark",
+        "tools made of straw"
+      ],
       "equation": null
     },
     {
       "id": "ba-4",
       "factKey": "ba-4",
       "strand": "Bronze Age",
-      "objectiveCodes": [
-        "Y3-SAIA-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why was learning to make bronze such an important change?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Learning to make bronze was an important change because {}.",
       "answer": "it could be made into stronger tools and weapons than stone",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it could be made into stronger tools and weapons than stone"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "it was used to make paper",
         "it made people move around more",
-        "it was used only for decoration"
+        "it was used only for decoration",
+        "it was used as food",
+        "it made hill forts appear overnight"
       ],
       "equation": null
     },
@@ -254,64 +227,53 @@
       "id": "ba-5",
       "factKey": "ba-5",
       "strand": "Bronze Age",
-      "objectiveCodes": [
-        "Y3-SAIA-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "People believe Stonehenge may have been used for ceremonies and to track the seasons.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do people believe Stonehenge may have been used for?",
+      "claim": "People believe Stonehenge may have been used for {}.",
+      "answer": "ceremonies and tracking the seasons",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "storing food for winter only",
+        "a prison",
+        "a marketplace for cars",
+        "a school building",
+        "a football stadium"
+      ],
       "equation": null
     },
     {
       "id": "ia-1",
       "factKey": "ia-1",
       "strand": "Iron Age",
-      "objectiveCodes": [
-        "Y3-SAIA-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-SAIA-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "The Iron Age is named after which metal that people learned to use for tools?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Iron",
+      "claim": "The Iron Age is named after the metal {}.",
+      "answer": "iron",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "iron"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["bronze", "gold", "silver", "copper", "tin"],
       "equation": null
     },
     {
       "id": "ia-2",
       "factKey": "ia-2",
       "strand": "Iron Age",
-      "objectiveCodes": [
-        "Y3-SAIA-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What was an Iron Age hill fort?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "An Iron Age hill fort was {}.",
       "answer": "a settlement on a hill defended by banks and ditches",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a settlement on a hill defended by banks and ditches"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "a stone castle with a moat",
         "a small farm in a valley",
-        "a Roman army camp"
+        "a Roman army camp",
+        "a Viking longhouse settlement",
+        "a Tudor manor house"
       ],
       "equation": null
     },
@@ -319,43 +281,39 @@
       "id": "ia-3",
       "factKey": "ia-3",
       "strand": "Iron Age",
-      "objectiveCodes": [
-        "Y3-SAIA-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "In the Iron Age, Britain was divided into areas ruled by different tribes.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "In the Iron Age, was Britain ruled as one single kingdom, or divided into areas ruled by different tribes?",
+      "claim": "In the Iron Age, Britain was {}.",
+      "answer": "divided into areas ruled by different tribes",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "ruled as one single kingdom",
+        "ruled by the Romans",
+        "ruled by the Vikings",
+        "not settled by anyone",
+        "ruled by a single king from London"
+      ],
       "equation": null
     },
     {
       "id": "ia-4",
       "factKey": "ia-4",
       "strand": "Iron Age",
-      "objectiveCodes": [
-        "Y3-SAIA-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-SAIA-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why did Iron Age people build hill forts?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Iron Age people built hill forts {}.",
       "answer": "to protect their people and animals from attack",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "to protect their people and animals from attack"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "for holidays by the sea",
         "to grow crops indoors",
-        "to store bronze"
+        "to store bronze",
+        "to trade with the Romans peacefully",
+        "to watch the stars"
       ],
       "equation": null
     },
@@ -363,42 +321,39 @@
       "id": "ia-5",
       "factKey": "ia-5",
       "strand": "Iron Age",
-      "objectiveCodes": [
-        "Y3-SAIA-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Iron Age people were skilled at metalwork and made decorated jewellery and art.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What were Iron Age people skilled at making, using metalwork?",
+      "claim": "Iron Age people were skilled at metalwork and made {}.",
+      "answer": "decorated jewellery and art",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "cars and bicycles",
+        "glass windows",
+        "plastic toys",
+        "paper books",
+        "electric lights"
+      ],
       "equation": null
     },
     {
       "id": "ti-1",
       "factKey": "ti-1",
       "strand": "Timeline and evidence",
-      "objectiveCodes": [
-        "Y3-SAIA-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which order are these periods in, from earliest to latest?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-SAIA-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Put the Stone Age, Bronze Age and Iron Age in order, from earliest to latest.",
+      "claim": "The correct order of these three ages, from earliest to latest, is {}.",
       "answer": "Stone Age → Bronze Age → Iron Age",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "Stone Age → Bronze Age → Iron Age"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
-        "Iron Age → Bronze Age → Stone Age",
-        "Bronze Age → Stone Age → Iron Age"
+        "Stone Age → Iron Age → Bronze Age",
+        "Bronze Age → Stone Age → Iron Age",
+        "Bronze Age → Iron Age → Stone Age",
+        "Iron Age → Stone Age → Bronze Age",
+        "Iron Age → Bronze Age → Stone Age"
       ],
       "equation": null
     },
@@ -406,81 +361,74 @@
       "id": "ti-2",
       "factKey": "ti-2",
       "strand": "Timeline and evidence",
-      "objectiveCodes": [
-        "Y3-SAIA-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-SAIA-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What do we call the study of the past by digging up and examining objects people left behind?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Archaeology",
+      "claim": "The study of the past by digging up and examining objects people left behind is called {}.",
+      "answer": "archaeology",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "archaeology"
+      "acceptableAnswers": [],
+      "distractors": [
+        "history",
+        "geography",
+        "biology",
+        "astronomy",
+        "geology"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "ti-3",
       "factKey": "ti-3",
       "strand": "Timeline and evidence",
-      "objectiveCodes": [
-        "Y3-SAIA-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-SAIA-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is the word for an object made by people in the past, such as a tool or pot, that we can study today?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "An artefact",
+      "claim": "An object made by people in the past, such as a tool or pot, that we can study today is called {}.",
+      "answer": "an artefact",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "artefact",
-        "artifact"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["artifact"],
+      "distractors": ["a fossil", "a monument", "a myth", "a legend", "a ruin"],
       "equation": null
     },
     {
       "id": "ti-4",
       "factKey": "ti-4",
       "strand": "Timeline and evidence",
-      "objectiveCodes": [
-        "Y3-SAIA-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "We call the time before written records 'prehistory'.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do we call the time before written records existed?",
+      "claim": "We call the time before written records existed {}.",
+      "answer": "prehistory",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "history",
+        "the future",
+        "modern times",
+        "the present day",
+        "the Renaissance"
+      ],
       "equation": null
     },
     {
       "id": "ti-5",
       "factKey": "ti-5",
       "strand": "Timeline and evidence",
-      "objectiveCodes": [
-        "Y3-SAIA-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Because there are no written records from the Stone Age, we learn about it mainly from objects found in the ground.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-SAIA-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Why do we learn about the Stone Age mainly from objects found in the ground?",
+      "claim": "We learn about the Stone Age mainly from objects found in the ground because {}.",
+      "answer": "there are no written records from that time",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "Stone Age people had no interest in history",
+        "the ground preserves colours better than paper",
+        "written records from that time were destroyed on purpose",
+        "photographs had not been invented yet",
+        "Stone Age people preferred pictures to words"
+      ],
       "equation": null
     }
   ]

@@ -51,7 +51,6 @@ const skeleton = {
     forms: [],
     ask: '',
     claim: '',
-    claimIsTrue: null,
     answer: '',
     answerDetail: '',
     acceptableAnswers: [],

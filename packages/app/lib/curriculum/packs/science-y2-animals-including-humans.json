@@ -27,18 +27,13 @@
       "factKey": "gu-1",
       "strand": "Growing up",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is a baby frog called?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A tadpole",
+      "claim": "A baby frog is called {}.",
+      "answer": "a tadpole",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "tadpole"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["a chick", "a cub", "a kid", "a calf", "a foal"],
       "equation": null
     },
     {
@@ -46,40 +41,13 @@
       "factKey": "gu-2",
       "strand": "Growing up",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is a baby sheep called?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A lamb",
+      "claim": "A baby sheep is called {}.",
+      "answer": "a lamb",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "lamb"
-      ],
-      "distractors": [],
-      "equation": null
-    },
-    {
-      "id": "gu-3",
-      "factKey": "gu-3",
-      "strand": "Growing up",
-      "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which order is correct for how a butterfly grows?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "egg → caterpillar → pupa → butterfly",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "egg → caterpillar → pupa → butterfly"
-      ],
-      "distractors": [
-        "caterpillar → egg → butterfly → pupa",
-        "egg → pupa → caterpillar → butterfly"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a calf", "a foal", "a kid", "a cub", "a chick"],
       "equation": null
     },
     {
@@ -87,22 +55,13 @@
       "factKey": "gu-4",
       "strand": "Growing up",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is a baby cow called?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A baby cow is called {}.",
       "answer": "a calf",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a calf"
-      ],
-      "distractors": [
-        "a cub",
-        "a foal",
-        "a kid"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a cub", "a foal", "a kid", "a chick", "a lamb"],
       "equation": null
     },
     {
@@ -110,16 +69,13 @@
       "factKey": "gu-5",
       "strand": "Growing up",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A duckling grows into a duck.",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does a duckling grow into?",
+      "claim": "A duckling grows into {}.",
+      "answer": "a duck",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["a goose", "a swan", "a chicken", "a frog", "a fish"],
       "equation": null
     },
     {
@@ -127,16 +83,19 @@
       "factKey": "gu-6",
       "strand": "Growing up",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Kittens look completely different from cats when they grow up.",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which baby animal looks quite similar to its adult form: a kitten, or a caterpillar?",
+      "claim": "{} looks quite similar to its adult form.",
+      "answer": "a kitten",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a caterpillar",
+        "a tadpole",
+        "a maggot",
+        "an egg",
+        "a chrysalis"
+      ],
       "equation": null
     },
     {
@@ -144,19 +103,13 @@
       "factKey": "bn-1",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
-      "ask": "Name the three things all animals need to survive.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Water, food and air",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name one thing all animals need in order to survive.",
+      "claim": "All animals need {} in order to survive.",
+      "answer": "water",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "food, water and air",
-        "food, water, air"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["food", "air"],
+      "distractors": ["toys", "television", "money", "sweets", "a computer"],
       "equation": null
     },
     {
@@ -164,19 +117,19 @@
       "factKey": "bn-2",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why do animals need water?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Their bodies need water to work and stay alive",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "to stay alive",
-        "to stay hydrated"
+      "claim": "Animals need water {}.",
+      "answer": "to stay alive",
+      "answerDetail": "Their bodies need water to work properly.",
+      "acceptableAnswers": ["to stay hydrated"],
+      "distractors": [
+        "to look shiny",
+        "to grow taller instantly",
+        "to change colour",
+        "to fly",
+        "to become invisible"
       ],
-      "distractors": [],
       "equation": null
     },
     {
@@ -184,22 +137,13 @@
       "factKey": "bn-3",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these is NOT a basic need of animals?",
-      "claim": "",
-      "claimIsTrue": null,
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is NOT a basic need of animals?",
+      "claim": "{} is not a basic need of animals.",
       "answer": "television",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "television"
-      ],
-      "distractors": [
-        "water",
-        "air",
-        "food"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["water", "air", "food", "shelter", "warmth"],
       "equation": null
     },
     {
@@ -207,21 +151,13 @@
       "factKey": "bn-4",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "As well as food, water and air, what helps animals stay safe and well?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "As well as food, water and air, {} helps animals stay safe and well.",
       "answer": "shelter and warmth",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "shelter and warmth"
-      ],
-      "distractors": [
-        "sweets",
-        "toys"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["sweets", "toys", "a computer", "a television", "money"],
       "equation": null
     },
     {
@@ -229,16 +165,19 @@
       "factKey": "bn-5",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Humans can survive without water.",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens to humans if they go without water for too long?",
+      "claim": "If humans go without water for too long, {}.",
+      "answer": "they cannot survive",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["they die", "they become dehydrated and die"],
+      "distractors": [
+        "they grow taller",
+        "they become stronger",
+        "nothing happens at all",
+        "they turn a different colour",
+        "they need less food"
+      ],
       "equation": null
     },
     {
@@ -246,16 +185,19 @@
       "factKey": "bn-6",
       "strand": "Basic needs",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "All animals, including humans, need air to breathe.",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do all animals, including humans, need in order to breathe?",
+      "claim": "All animals, including humans, need {} in order to breathe.",
+      "answer": "air",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "water only",
+        "food only",
+        "light only",
+        "warmth only",
+        "shelter only"
+      ],
       "equation": null
     },
     {
@@ -263,19 +205,19 @@
       "factKey": "hl-1",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why is exercise good for you?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "It keeps your heart, muscles and body strong and healthy",
+      "claim": "Exercise is good for you because {}.",
+      "answer": "it keeps your body strong and healthy",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it keeps you fit and healthy",
-        "it makes your body strong"
+      "acceptableAnswers": ["it keeps you fit and healthy"],
+      "distractors": [
+        "it makes you tired forever",
+        "it makes your bones weaker",
+        "it stops you growing",
+        "it makes you ill",
+        "it has no effect on your body"
       ],
-      "distractors": [],
       "equation": null
     },
     {
@@ -283,18 +225,23 @@
       "factKey": "hl-2",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
-      "ask": "Name two things you should do to keep your teeth healthy.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Brush them twice a day and avoid too many sugary foods and drinks",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name one thing you should do to keep your teeth healthy.",
+      "claim": "One thing you should do to keep your teeth healthy is {}.",
+      "answer": "brush them twice a day",
       "answerDetail": "",
       "acceptableAnswers": [
-        "brush your teeth and eat less sugar"
+        "eat less sugar",
+        "avoid too many sugary foods and drinks",
+        "visit the dentist"
       ],
-      "distractors": [],
+      "distractors": [
+        "eat sweets all day",
+        "never brush them",
+        "drink lots of fizzy drinks",
+        "chew on rocks",
+        "ignore toothache"
+      ],
       "equation": null
     },
     {
@@ -302,20 +249,18 @@
       "factKey": "hl-3",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which meal is the healthiest choice?",
-      "claim": "",
-      "claimIsTrue": null,
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name a healthy meal.",
+      "claim": "{} is a healthy meal choice.",
       "answer": "chicken, rice and vegetables",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "chicken, rice and vegetables"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "chips and cola",
-        "cake and sweets"
+        "cake and sweets",
+        "crisps and fizzy drinks",
+        "sweets and chocolate",
+        "biscuits and juice"
       ],
       "equation": null
     },
@@ -324,20 +269,18 @@
       "factKey": "hl-4",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why do we wash our hands before eating?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "We wash our hands before eating {}.",
       "answer": "to get rid of germs",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "to get rid of germs"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "to make them smell nice",
-        "to make them wet"
+        "to make them wet",
+        "to look cool",
+        "to make a game of it",
+        "to use up soap"
       ],
       "equation": null
     },
@@ -346,16 +289,19 @@
       "factKey": "hl-5",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Eating sweets every day is good for your teeth.",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens to your teeth if you eat sweets every day?",
+      "claim": "If you eat sweets every day, your teeth {}.",
+      "answer": "can be damaged",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["can get holes", "can decay"],
+      "distractors": [
+        "become stronger",
+        "turn a brighter white",
+        "grow bigger",
+        "never need brushing again",
+        "stay exactly the same"
+      ],
       "equation": null
     },
     {
@@ -363,16 +309,19 @@
       "factKey": "hl-6",
       "strand": "Healthy living",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Sleep helps your body grow and repair.",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does sleep help your body do?",
+      "claim": "Sleep helps your body {}.",
+      "answer": "grow and repair",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "shrink",
+        "get more tired",
+        "stop growing",
+        "become ill",
+        "forget everything"
+      ],
       "equation": null
     },
     {
@@ -380,18 +329,19 @@
       "factKey": "aa-1",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What do we call animals that only eat plants?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Herbivores",
+      "claim": "Animals that only eat plants are called {}.",
+      "answer": "herbivores",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "herbivore"
+      "acceptableAnswers": ["herbivore"],
+      "distractors": [
+        "carnivores",
+        "omnivores",
+        "predators",
+        "scavengers",
+        "vertebrates"
       ],
-      "distractors": [],
       "equation": null
     },
     {
@@ -399,18 +349,19 @@
       "factKey": "aa-2",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What do we call animals that eat both plants and meat?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Omnivores",
+      "claim": "Animals that eat both plants and meat are called {}.",
+      "answer": "omnivores",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "omnivore"
+      "acceptableAnswers": ["omnivore"],
+      "distractors": [
+        "carnivores",
+        "herbivores",
+        "predators",
+        "scavengers",
+        "vertebrates"
       ],
-      "distractors": [],
       "equation": null
     },
     {
@@ -418,22 +369,13 @@
       "factKey": "aa-3",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these animals is a carnivore?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "lion",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which animal is a carnivore?",
+      "claim": "{} is a carnivore.",
+      "answer": "a lion",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "lion"
-      ],
-      "distractors": [
-        "rabbit",
-        "cow",
-        "sheep"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a rabbit", "a cow", "a sheep", "a deer", "a horse"],
       "equation": null
     },
     {
@@ -441,22 +383,13 @@
       "factKey": "aa-4",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these animals hatches from an egg?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "chicken",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which animal hatches from an egg?",
+      "claim": "{} hatches from an egg.",
+      "answer": "a chicken",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "chicken"
-      ],
-      "distractors": [
-        "dog",
-        "cat",
-        "cow"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a dog", "a cat", "a cow", "a horse", "a sheep"],
       "equation": null
     },
     {
@@ -464,16 +397,19 @@
       "factKey": "aa-5",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Humans are mammals.",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What type of animal is a human?",
+      "claim": "A human is {}.",
+      "answer": "a mammal",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a reptile",
+        "a bird",
+        "a fish",
+        "an insect",
+        "an amphibian"
+      ],
       "equation": null
     },
     {
@@ -481,16 +417,19 @@
       "factKey": "aa-6",
       "strand": "Amazing animals",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Fish breathe air with lungs, just like humans.",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "How do fish breathe underwater?",
+      "claim": "Fish breathe underwater by {}.",
+      "answer": "using gills",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "using lungs, like humans",
+        "holding their breath",
+        "not breathing at all",
+        "using their skin only",
+        "using their fins"
+      ],
       "equation": null
     }
   ]

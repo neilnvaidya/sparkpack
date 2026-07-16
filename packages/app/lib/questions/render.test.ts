@@ -20,7 +20,6 @@ const wales: CurriculumQuestion = {
   forms: ['open', 'mcq', 'truefalse'],
   ask: 'What is the capital city of Wales?',
   claim: 'The capital city of Wales is {}.',
-  claimIsTrue: null,
   answer: 'Cardiff',
   answerDetail: '',
   acceptableAnswers: ['cardiff'],
@@ -83,18 +82,24 @@ describe('truefalse', () => {
     expect(falsy.answerDetail).toBe('Actually: The capital city of Wales is Cardiff.')
   })
 
-  test('a slotless claim keeps its authored polarity', () => {
-    const lifted: CurriculumQuestion = {
+  test('an equation varies polarity with a generated wrong result', () => {
+    const eq: CurriculumQuestion = {
       ...wales,
-      forms: ['truefalse'],
-      claim: 'Scotland is one of the four countries of the United Kingdom.',
-      claimIsTrue: true,
+      ask: '',
+      claim: '',
+      answer: '',
+      acceptableAnswers: [],
       distractors: [],
+      equation: { operator: '+', left: '24', right: '16', result: '40' },
     }
-    for (let seed = 1; seed <= 10; seed++) {
-      const r = renderQuestion(lifted, 'truefalse', seeded(seed))
-      expect(r.isTrue).toBe(true)
-      expect(r.prompt).toBe('Scotland is one of the four countries of the United Kingdom.')
+    const rendered = [1, 2, 3, 4, 5, 6, 7, 8].map((s) => renderQuestion(eq, 'truefalse', seeded(s)))
+    expect(new Set(rendered.map((r) => r.isTrue)).size).toBe(2)
+    for (const r of rendered) {
+      expect(r.prompt).toBe(r.isTrue ? '24 + 16 = 40.' : r.prompt)
+      if (!r.isTrue) {
+        expect(r.prompt).not.toBe('24 + 16 = 40.')
+        expect(r.answerDetail).toBe('Actually: 24 + 16 = 40.')
+      }
     }
   })
 })
@@ -121,5 +126,24 @@ describe('open', () => {
     const q = renderQuestion(eq, 'open', seeded(1))
     expect(q.prompt).toBe('24 + 16 = ?')
     expect(q.answer).toBe('40')
+  })
+
+  test('an equation can also be dealt as mcq, with generated distractors', () => {
+    const eq: CurriculumQuestion = {
+      ...wales,
+      forms: ['open', 'mcq', 'truefalse'],
+      ask: '',
+      claim: '',
+      answer: '',
+      acceptableAnswers: [],
+      distractors: [],
+      equation: { operator: '+', left: '24', right: '16', result: '40' },
+    }
+    const q = renderQuestion(eq, 'mcq', seeded(1))
+    expect(q.prompt).toBe('24 + 16 = ?')
+    expect(q.answer).toBe('40')
+    expect(q.options).toHaveLength(4)
+    expect(q.options!.filter((o) => o.correct)).toHaveLength(1)
+    expect(new Set(q.options!.map((o) => o.text)).size).toBe(4)
   })
 })

@@ -70,7 +70,7 @@ describe('formatQuestion — warnings (human judgement)', () => {
   })
 
   it('flags a slotless claim', () => {
-    const { warnings } = formatQuestion(q({ claim: 'Dark is the absence of light.', claimIsTrue: true }))
+    const { warnings } = formatQuestion(q({ claim: 'Dark is the absence of light.' }))
     expect(warnings.some((w) => w.field === 'claim' && w.message.includes('Slotless'))).toBe(true)
   })
 

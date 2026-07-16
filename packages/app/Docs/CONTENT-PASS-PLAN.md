@@ -457,6 +457,78 @@ The final pass, entirely downstream of 3b.
 
 ---
 
+## The games pass — the ladder moves into the games (2026-07-16)
+
+Not a planned step. It was forced by 3b succeeding: **enrichment broke the games,
+because it removed the crutch they were standing on.**
+
+Every question now declares all three forms. That is the goal, and it made two
+helpers silently wrong:
+
+| Helper | Assumed | Post-3b reality |
+|---|---|---|
+| `soleForm(q)` → `q.forms[0]` | a question offers exactly one form | returns `open` for **all 412** |
+| `byFormRank` → sorts on `easiestForm(q.forms)` | packs hold a spread of forms | `truefalse` for all 412 — **a constant sort** |
+
+So Question Rush, Flash Round, Three in a Row and Risk It dealt **100% open
+questions**, and the Board gradient and Flash ramp were inert. Every game was at
+maximum difficulty, and the schema's whole payoff was unreachable.
+
+**The fix is conceptual, not a patch.** While the corpus was half-enriched you
+could read difficulty *off* a question — sort a pack and the easy ones surfaced.
+That cannot survive an enriched corpus: if every question is easy, medium and
+hard, then no ordering of questions is an ordering by difficulty. The gradient is
+a property of **the position in the game**, so the game must choose it.
+
+- `formForRung(index, count)` (`lib/questions/scoring.ts`) — the ladder, spread
+  across positions, rounding so the ends are always hit. `soleForm`, `byFormRank`
+  and `easiestForm` are deleted.
+- `preferFrom(target)` radiates outward from a target form, so a question that
+  cannot be asked the chosen way degrades to the nearest rung. `EASIEST_FIRST` /
+  `HARDEST_FIRST` are now just `preferFrom` at the two ends.
+
+Per game, and each is a different question about what the gradient is *for*:
+
+| Game | Gradient |
+|---|---|
+| Flash Round | a real ramp, dealt: true/false first, open last |
+| Strategy Board | **the row is the difficulty** — 100 t/f, 200 mcq, 300 open |
+| Question Rush | rung within the *round*, so the three face-up cards are worth 100/200/300 |
+| Three in a Row | an even spread over a shuffled deck — no ramp, cells cost the same |
+| Summit Climb | the ends only: steady = true/false, risky = open. Unchanged, and now real |
+| Risk It | **pinned to mcq** — see below |
+
+**The board lost its 400 row** (Neil's call). Three forms means three honest
+rows; a fourth had nothing left to be and dealt a second mcq at 400. The points
+column is printed before anyone picks, so it is a promise — 4x4 = 16 cells was
+not worth it lying. Now 4x3 = 12.
+
+**Risk It is pinned to one form**, the only game with no gradient. Teams wager
+knowing only the strand, so varying the form makes them bet on an unknown fact
+asked an unknown way — and 5 points on a true/false is a different bet from 5 on
+an open question. Announcing the form at the wager stage is the better fix and
+probably the better game; it needs the wager screen to say so. Still open.
+
+### What this exposed in the content
+
+Turning MCQ on for the first time made **28 questions render wrong**, and the
+validator now counts them (`lib/curriculum/checks.ts`, CONTENT-RULES rule 5).
+They name their own candidates and then draw distractors from outside that set:
+
+```
+Which is bigger: 1/3, or 1/4?        A. 1/5   B. 1/6   C. 1/3 <- correct   D. 1/2
+```
+
+`1/2` is on screen and is bigger than `1/3`, so a pupil picking the largest
+option is marked wrong. This was invisible for as long as every game dealt
+`open`, because `open` shows no options — the bug was authored in 3b and hidden
+by the game bug. Fixing one revealed the other.
+
+**Neil rewrites these**; the check is the worklist. Note the report's `offered`
+list has some noise (a distractor like `with` matching an ordinary word in the
+sentence) — it does not change which questions are flagged, but read the `ask`,
+not the field.
+
 ## Step 6 — objective mapping
 
 Split out of step 5 because it is a different kind of work: 3b–5 are about the
@@ -496,6 +568,79 @@ the pack's declared objectives, so they are structurally valid — what's unveri
 is whether they're *apt*); then per pack, list objectives with zero questions —
 that is the content-gap report, and it may be the most useful artefact in the
 whole plan. Only then consider a `min(1)` on `objectiveCodes`.
+
+### BACKFILL DONE (2026-07-16) — 51 → 6 untagged
+
+`scripts/backfill-y2-objectives.mjs` — the mapping is in the file, commented per
+group, and it is **AI-drafted and awaiting review**, same loop as 3b. Delete the
+script once reviewed. The diff is 90 lines and every one of them is an
+`objectiveCodes` tag; no prose moved.
+
+It went better than the plan feared. Both Y2 packs have strands that map almost
+one-to-one onto their declared objectives, so this was closer to filing than
+judging:
+
+| Pack | Mapping |
+|---|---|
+| `science-y2-animals-including-humans` | `Growing up` → AIH-1, `Basic needs` → AIH-2, `Healthy living` → AIH-3 |
+| `maths-y2-addition-subtraction` | arithmetic within 20 → AS-2; two two-digit numbers → AS-3; word problems → AS-1 (+AS-3); missing numbers → AS-5 |
+
+**The content-gap report, in full — three gaps in 412 questions:**
+
+- **`science-y2` `aa-1..aa-6` (6 questions) have no objective and are left
+  untagged.** The `Amazing animals` strand asks about herbivores/omnivores/
+  carnivores, egg-laying, mammals and gills — that is *classification*, which is
+  Year 1 "animals including humans" in the NC, not any of the three objectives
+  this pack declares. They could have been filed under AIH-1/2/3 and the count
+  would read zero, but `objectiveCodes` is only worth having if it means
+  something. **The fix is a declared objective they genuinely meet, and its
+  statutory wording is Neil's to add** — inventing NC text is exactly what
+  "objectives carry the statutory wording verbatim" forbids.
+- **`Y2-AS-4` (commutativity) has no question.** No pack question asks whether
+  addition can be done in any order. One authored question closes it.
+- **`Y3-F-3` has no question** — the only uncovered objective in the whole Y3
+  corpus.
+
+Everything else: **412 questions, 406 tagged, no unknown codes, and every other
+declared objective in every other pack has at least one question.** So `min(1)`
+on `objectiveCodes` is one authored objective and one authored question away from
+being safe to enforce.
+
+### Fixed in passing
+
+The **Unicode minus** defect the plan logged against `maths-y2-addition-subtraction`
+**had moved**: 3b wrote the Y2 pack with ASCII `-` and introduced U+2212 into
+`maths-y3-addition-subtraction` instead (11 spots across `mn-2`, `mn-3`, `ec-2`,
+`ec-6`). Replaced with ASCII. The slice snapshot moved by exactly those strings
+and nothing else — which is the snapshot doing its job.
+
+## The serializer fights Prettier — open, and it blocks review
+
+**`lib/authoring/serialize.ts` cannot round-trip the current corpus.** It is
+`JSON.stringify(pack, null, 2)`, which always expands arrays; the 19 packs 3b
+wrote are **Prettier-formatted** (`npx prettier --check` on the packs dir passes),
+so short arrays are inline — `"forms": ["open", "mcq", "truefalse"]` on one line,
+and `distractors` inline or expanded depending on whether it fits 80 columns.
+
+At HEAD the packs matched serialize.ts; the content pass reformatted all 19.
+
+So **the first Write in the authoring tool reformats the whole pack** — roughly
+700 lines of noise around one real edit. That directly breaks the tool's stated
+contract ("a save produces a reviewable `git diff` and nothing else") and it
+lands precisely on the review of the 28 flagged questions, which is the next job.
+
+Two ways out, and it is a real choice:
+
+1. **Teach serialize.ts Prettier's formatting** (it already has Prettier
+   available via npx; as a dependency it could format in-process). Corpus
+   untouched, one file changes. The inline style is also easier to review — a
+   question is ~14 lines rather than ~30.
+2. **Normalise all 19 packs to serialize.ts output.** One reformat commit, then
+   everything agrees — but it churns every pack and inflates the 3b diffs that
+   are not committed yet.
+
+Recommend (1). Not done here: it is a tooling decision, and doing it while the 3b
+content is uncommitted would tangle a formatting change with a content pass.
 
 ## Open items
 

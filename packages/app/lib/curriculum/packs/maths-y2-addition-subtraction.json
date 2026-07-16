@@ -35,12 +35,9 @@
       "factKey": "eq-1",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -57,12 +54,9 @@
       "factKey": "eq-2",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -79,12 +73,9 @@
       "factKey": "eq-3",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -101,12 +92,9 @@
       "factKey": "eq-4",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -123,12 +111,9 @@
       "factKey": "eq-5",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -145,12 +130,9 @@
       "factKey": "eq-6",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -167,12 +149,9 @@
       "factKey": "eq-7",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -189,12 +168,9 @@
       "factKey": "eq-8",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -211,12 +187,9 @@
       "factKey": "eq-9",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -233,12 +206,9 @@
       "factKey": "eq-10",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -255,12 +225,9 @@
       "factKey": "eq-11",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -277,12 +244,9 @@
       "factKey": "eq-12",
       "strand": "",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -299,18 +263,13 @@
       "factKey": "wp-1",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Ava has 14 stickers. She gets 8 more. How many stickers does she have now?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "14 stickers plus 8 more is {} stickers.",
       "answer": "22",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "22 stickers"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["12", "32", "6", "23", "20"],
       "equation": null
     },
     {
@@ -318,18 +277,13 @@
       "factKey": "wp-2",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "There are 25 apples in a basket. 9 are eaten. How many apples are left?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "25 apples minus 9 eaten leaves {} apples.",
       "answer": "16",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "16 apples"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["34", "15", "17", "6", "9"],
       "equation": null
     },
     {
@@ -337,18 +291,13 @@
       "factKey": "wp-3",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A class has 17 boys and 15 girls. How many children are in the class?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "17 boys and 15 girls makes {} children.",
       "answer": "32",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "32 children"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["22", "42", "2", "30", "33"],
       "equation": null
     },
     {
@@ -356,19 +305,13 @@
       "factKey": "wp-4",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Sam has 40p. He spends 23p on a pencil. How much money does he have left?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "40p minus 23p spent leaves {}.",
       "answer": "17p",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "17",
-        "17 pence"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["17", "17 pence"],
+      "distractors": ["63p", "27p", "7p", "13p", "3p"],
       "equation": null
     },
     {
@@ -376,18 +319,13 @@
       "factKey": "wp-5",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A book has 90 pages. Maya has read 47 pages. How many pages does she have left to read?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "90 pages minus 47 read leaves {} pages.",
       "answer": "43",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "43 pages"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["137", "53", "33", "47", "40"],
       "equation": null
     },
     {
@@ -395,18 +333,13 @@
       "factKey": "wp-6",
       "strand": "Word problems",
       "objectiveCodes": [],
-      "forms": [
-        "open"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Two teams score 36 points and 48 points. How many points did they score altogether?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "36 points and 48 points makes {} points altogether.",
       "answer": "84",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "84 points"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["12", "74", "94", "48", "36"],
       "equation": null
     },
     {
@@ -414,22 +347,13 @@
       "factKey": "mn-1",
       "strand": "Missing numbers",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "? + 6 = 14. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '? + 6 = 14' is {}.",
       "answer": "8",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "8"
-      ],
-      "distractors": [
-        "6",
-        "9",
-        "20"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["6", "9", "20", "16", "2"],
       "equation": null
     },
     {
@@ -437,22 +361,13 @@
       "factKey": "mn-2",
       "strand": "Missing numbers",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "20 − ? = 12. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "20 - ? = 12. What is the missing number?",
+      "claim": "The missing number in '20 - ? = 12' is {}.",
       "answer": "8",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "8"
-      ],
-      "distractors": [
-        "12",
-        "32",
-        "10"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["12", "32", "10", "6", "28"],
       "equation": null
     },
     {
@@ -460,22 +375,13 @@
       "factKey": "mn-3",
       "strand": "Missing numbers",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "? − 30 = 45. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "? - 30 = 45. What is the missing number?",
+      "claim": "The missing number in '? - 30 = 45' is {}.",
       "answer": "75",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "75"
-      ],
-      "distractors": [
-        "15",
-        "65",
-        "85"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["15", "65", "85", "30", "105"],
       "equation": null
     },
     {
@@ -483,22 +389,13 @@
       "factKey": "mn-4",
       "strand": "Missing numbers",
       "objectiveCodes": [],
-      "forms": [
-        "mcq"
-      ],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "34 + ? = 81. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '34 + ? = 81' is {}.",
       "answer": "47",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "47"
-      ],
-      "distractors": [
-        "53",
-        "57",
-        "113"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["53", "57", "113", "37", "81"],
       "equation": null
     },
     {
@@ -506,16 +403,13 @@
       "factKey": "tf-1",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "9 + 5 = 14",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 9 + 5?",
+      "claim": "9 + 5 = {}.",
+      "answer": "14",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["13", "15", "4", "19", "10"],
       "equation": null
     },
     {
@@ -523,16 +417,13 @@
       "factKey": "tf-2",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "18 − 9 = 8",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 18 - 9?",
+      "claim": "18 - 9 = {}.",
+      "answer": "9",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["8", "7", "27", "10", "18"],
       "equation": null
     },
     {
@@ -540,16 +431,13 @@
       "factKey": "tf-3",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "30 + 40 = 70",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 30 + 40?",
+      "claim": "30 + 40 = {}.",
+      "answer": "70",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["60", "80", "10", "700", "17"],
       "equation": null
     },
     {
@@ -557,16 +445,13 @@
       "factKey": "tf-4",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "62 − 20 = 42",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 62 - 20?",
+      "claim": "62 - 20 = {}.",
+      "answer": "42",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["32", "52", "82", "40", "44"],
       "equation": null
     },
     {
@@ -574,16 +459,13 @@
       "factKey": "tf-5",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "36 + 25 = 51",
-      "claimIsTrue": false,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 36 + 25?",
+      "claim": "36 + 25 = {}.",
+      "answer": "61",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["51", "71", "11", "50", "62"],
       "equation": null
     },
     {
@@ -591,16 +473,13 @@
       "factKey": "tf-6",
       "strand": "True or false?",
       "objectiveCodes": [],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "100 − 55 = 45",
-      "claimIsTrue": true,
-      "answer": "",
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 100 - 55?",
+      "claim": "100 - 55 = {}.",
+      "answer": "45",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["55", "35", "65", "50", "40"],
       "equation": null
     }
   ]

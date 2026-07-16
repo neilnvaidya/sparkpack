@@ -74,28 +74,27 @@ export const curriculumQuestionSchema = z.object({
   /** Sub-topic grouping, e.g. board-quiz categories. "" only for equations. */
   strand: z.string(),
   objectiveCodes: z.array(z.string()),
-  /** Forms this question may be presented in. Target: all three. */
-  forms: z.array(questionFormSchema).min(1),
-  /** Interrogative surface. Must stand alone — never "which of these". */
-  ask: z.string(),
-  /** Declarative frame with one "{}" slot. See claimIsTrue for the exception. */
-  claim: z.string(),
   /**
-   * TRANSITIONAL. Set only when `claim` has no "{}" slot — i.e. a fixed
-   * proposition lifted from a v1 truefalse item, whose polarity was authored
-   * rather than derived. Such a question cannot vary its true/false answer and
-   * cannot reuse distractors as false fills.
-   *
-   * Enrichment rewrites these into slotted claims and sets this back to null.
-   * Once every pack is enriched, delete this field and require the slot.
+   * Forms this question may be presented in. Every non-quarantined question
+   * offers all three, full stop — a question that genuinely resists a form
+   * lives in content-quarantine/form-resistant.json, not here with a shorter
+   * `forms` array. See REQUIRED_FORMS below.
    */
-  claimIsTrue: z.boolean().nullable(),
-  /** CANONICAL SHORT answer — must read as an MCQ option and as a slot fill. */
+  forms: z.array(questionFormSchema).min(1),
+  /** Interrogative surface. Must stand alone — never "which of these". Equations leave this "". */
+  ask: z.string(),
+  /** Declarative frame with exactly one "{}" slot. Equations leave this "". */
+  claim: z.string(),
+  /** CANONICAL SHORT answer — must read as an MCQ option and as a slot fill. Equations leave this "". */
   answer: z.string(),
   /** Fuller model answer the teacher reads on reveal. "" when there is none. */
   answerDetail: z.string(),
   acceptableAnswers: z.array(z.string()),
-  /** Plausible wrong answers. Target 5+; 3 are chosen per game. */
+  /**
+   * Plausible wrong answers; 3 are chosen per game. Equations leave this [] —
+   * their distractors are generated at build time (lib/questions/equation-distractors.ts)
+   * because the right answer depends on which part a game hides.
+   */
   distractors: z.array(z.string()),
   /** Number sentences only; null for everything else. */
   equation: questionEquationSchema.nullable(),
@@ -103,14 +102,9 @@ export const curriculumQuestionSchema = z.object({
 
 export type CurriculumQuestion = z.infer<typeof curriculumQuestionSchema>
 
-/**
- * The floor for an MCQ to be a choice at all: the answer plus one wrong option.
- * Real content sits here — the a/an items are genuine two-option questions
- * ("I ate ___ apple"). The authoring target is DISTRACTOR_TARGET; the validator
- * warns below it rather than erroring, so enrichment can proceed pack by pack.
- */
-const MIN_DISTRACTORS_STRUCTURAL = 1
-/** The authoring target: 3 of these are drawn per game, so options vary on replay. */
+/** Every non-equation question must declare all three — no partial-forms exemption. */
+const REQUIRED_FORMS: QuestionForm[] = ['open', 'mcq', 'truefalse']
+/** 3 of these are drawn per game, so options vary on replay. Hard minimum since step 5. */
 export const DISTRACTOR_TARGET = 5
 
 export const curriculumPackSchema = z
@@ -143,33 +137,31 @@ export const curriculumPackSchema = z
       if (ids.has(q.id)) at('id', `Duplicate question id "${q.id}"`)
       ids.add(q.id)
 
-      // Only what a declared form actually needs is required. A question that
-      // offers just 'open' owes no distractors — that is what keeps the corpus
-      // valid while enrichment fills the rest in, pack by pack.
-      if (q.forms.includes('open') && q.ask === '' && q.equation === null) {
-        at('ask', "form 'open' needs an `ask` (or an equation)")
-      }
-      if (q.forms.includes('mcq')) {
-        if (q.ask === '') at('ask', "form 'mcq' needs an `ask`")
-        if (q.answer === '') at('answer', "form 'mcq' needs an `answer`")
-        if (q.distractors.length < MIN_DISTRACTORS_STRUCTURAL) {
-          at('distractors', `form 'mcq' needs at least ${MIN_DISTRACTORS_STRUCTURAL} distractors`)
-        }
-      }
-      if (q.forms.includes('truefalse') && q.claim === '') {
-        at('claim', "form 'truefalse' needs a `claim`")
+      // Every question offers all three forms, full stop. A question that
+      // genuinely resists one belongs in content-quarantine/form-resistant.json,
+      // not here with a shorter `forms` array — no per-question exemption.
+      if (q.forms.length !== REQUIRED_FORMS.length || !REQUIRED_FORMS.every((f) => q.forms.includes(f))) {
+        at('forms', 'every question must offer all three forms: open, mcq, truefalse')
       }
 
-      const slots = q.claim.split('{}').length - 1
-      if (slots > 1) at('claim', '`claim` may contain at most one "{}" slot')
-      if (slots === 1 && q.claimIsTrue !== null) {
-        at('claimIsTrue', 'a slotted `claim` derives its polarity — claimIsTrue must be null')
-      }
-      if (slots === 1 && q.answer === '') {
-        at('answer', 'a slotted `claim` needs an `answer` to fill the slot')
-      }
-      if (q.claim !== '' && slots === 0 && q.claimIsTrue === null) {
-        at('claimIsTrue', 'a `claim` with no "{}" slot must state its polarity via claimIsTrue')
+      if (q.equation === null) {
+        if (q.ask === '') at('ask', 'an `ask` is required')
+        if (q.answer === '') at('answer', 'an `answer` is required')
+        if (q.distractors.length < DISTRACTOR_TARGET) {
+          at('distractors', `needs at least ${DISTRACTOR_TARGET} distractors`)
+        }
+        const slots = q.claim.split('{}').length - 1
+        if (q.claim === '') at('claim', 'a `claim` is required')
+        else if (slots !== 1) at('claim', '`claim` must contain exactly one "{}" slot')
+      } else {
+        // Equation-derived forms synthesize ask/claim/answer/distractors at
+        // build time (lib/questions/equation-distractors.ts) — never author them.
+        if (q.ask !== '') at('ask', 'equations synthesize `ask` at build time — leave it ""')
+        if (q.claim !== '') at('claim', 'equations synthesize `claim` at build time — leave it ""')
+        if (q.answer !== '') at('answer', 'equations synthesize `answer` at build time — leave it ""')
+        if (q.distractors.length !== 0) {
+          at('distractors', 'do not author equation distractors — leave []')
+        }
       }
 
       if (q.answer !== '' && q.distractors.includes(q.answer)) {

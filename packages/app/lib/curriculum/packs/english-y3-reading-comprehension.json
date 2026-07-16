@@ -26,253 +26,171 @@
       "id": "sy-1",
       "factKey": "sy-1",
       "strand": "Synonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Give a synonym (a word that means the same) for 'happy'.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any of: glad, cheerful, pleased, joyful",
+      "claim": "A synonym (word with the same meaning) for 'happy' is {}.",
+      "answer": "glad",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "glad",
-        "cheerful",
-        "pleased",
-        "joyful",
-        "delighted"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["cheerful", "pleased", "joyful", "delighted"],
+      "distractors": ["sad", "angry", "tired", "bored", "scared"],
       "equation": null
     },
     {
       "id": "sy-2",
       "factKey": "sy-2",
       "strand": "Synonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which word is a synonym for 'big'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "{} is a synonym for 'big'.",
       "answer": "enormous",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "enormous"
-      ],
-      "distractors": [
-        "tiny",
-        "quiet",
-        "fast"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["tiny", "quiet", "fast", "small", "calm"],
       "equation": null
     },
     {
       "id": "sy-3",
       "factKey": "sy-3",
       "strand": "Synonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Synonyms are words that have a similar meaning.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What are synonyms?",
+      "claim": "Synonyms are {}.",
+      "answer": "words that have a similar meaning",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "words that mean the opposite",
+        "words that sound the same but mean different things",
+        "words that rhyme",
+        "words that start with the same letter",
+        "words with no meaning"
+      ],
       "equation": null
     },
     {
       "id": "sy-4",
       "factKey": "sy-4",
       "strand": "Synonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A writer wants a stronger word than 'sad'. Which is the best choice?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A writer wanting a stronger word than 'sad' would choose {}.",
       "answer": "miserable",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "miserable"
-      ],
-      "distractors": [
-        "fine",
-        "calm",
-        "busy"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["fine", "calm", "busy", "content", "okay"],
       "equation": null
     },
     {
       "id": "sy-5",
       "factKey": "sy-5",
       "strand": "Synonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Give a synonym for 'quick'.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any of: fast, speedy, rapid, swift",
+      "claim": "A synonym for 'quick' is {}.",
+      "answer": "fast",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "fast",
-        "speedy",
-        "rapid",
-        "swift"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["speedy", "rapid", "swift"],
+      "distractors": ["slow", "lazy", "heavy", "quiet", "tall"],
       "equation": null
     },
     {
       "id": "an-1",
       "factKey": "an-1",
       "strand": "Antonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Give an antonym (a word that means the opposite) for 'hot'.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "An antonym (opposite) for 'hot' is {}.",
       "answer": "cold",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "cold",
-        "cool",
-        "freezing"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["cool", "freezing"],
+      "distractors": ["sunny", "spicy", "large", "loud", "green"],
       "equation": null
     },
     {
       "id": "an-2",
       "factKey": "an-2",
       "strand": "Antonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which word is an antonym for 'ancient'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "{} is an antonym for 'ancient'.",
       "answer": "modern",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "modern"
-      ],
-      "distractors": [
-        "old",
-        "huge",
-        "dark"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["old", "huge", "dark", "tiny", "loud"],
       "equation": null
     },
     {
       "id": "an-3",
       "factKey": "an-3",
       "strand": "Antonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "An antonym is a word that means the opposite of another word.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is an antonym?",
+      "claim": "An antonym is {}.",
+      "answer": "a word that means the opposite of another word",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a word that means the same as another word",
+        "a word that sounds the same as another",
+        "a type of punctuation",
+        "a very long word",
+        "a word with no meaning"
+      ],
       "equation": null
     },
     {
       "id": "an-4",
       "factKey": "an-4",
       "strand": "Antonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which pair are antonyms?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "generous and mean",
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Give a word that is an antonym of 'generous'.",
+      "claim": "{} is an antonym of 'generous'.",
+      "answer": "mean",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "generous and mean"
-      ],
-      "distractors": [
-        "begin and start",
-        "brave and fearless",
-        "happy and glad"
-      ],
+      "acceptableAnswers": ["stingy", "selfish"],
+      "distractors": ["kind", "giving", "charitable", "selfless", "caring"],
       "equation": null
     },
     {
       "id": "an-5",
       "factKey": "an-5",
       "strand": "Antonyms",
-      "objectiveCodes": [
-        "Y34-RC-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "'Light' is an antonym of 'dark'.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is an antonym of 'dark'?",
+      "claim": "An antonym of 'dark' is {}.",
+      "answer": "light",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["gloomy", "shadowy", "dim", "night-time", "black"],
       "equation": null
     },
     {
       "id": "id-1",
       "factKey": "id-1",
       "strand": "Idioms",
-      "objectiveCodes": [
-        "Y34-RC-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What does the idiom 'it's raining cats and dogs' mean?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The idiom 'it's raining cats and dogs' means {}.",
       "answer": "it is raining very heavily",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it is raining very heavily"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "animals are falling from the sky",
         "the weather is sunny",
-        "pets are outside"
+        "pets are outside",
+        "it is snowing heavily",
+        "nothing is happening"
       ],
       "equation": null
     },
@@ -280,24 +198,19 @@
       "id": "id-2",
       "factKey": "id-2",
       "strand": "Idioms",
-      "objectiveCodes": [
-        "Y34-RC-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "If someone says 'break a leg' before a show, they mean...",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "If someone says 'break a leg' before a show, they mean {}.",
       "answer": "good luck",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "good luck"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "hurt yourself",
         "run away",
-        "sit down"
+        "sit down",
+        "stay very still",
+        "go home"
       ],
       "equation": null
     },
@@ -305,106 +218,97 @@
       "id": "id-3",
       "factKey": "id-3",
       "strand": "Idioms",
-      "objectiveCodes": [
-        "Y34-RC-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "An idiom is a phrase whose meaning is different from the literal meaning of its words.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is an idiom?",
+      "claim": "An idiom is {}.",
+      "answer": "a phrase whose meaning is different from the literal meaning of its words",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a phrase that means exactly what it says",
+        "a type of punctuation mark",
+        "a very short sentence",
+        "a word with no meaning",
+        "a rule of grammar"
+      ],
       "equation": null
     },
     {
       "id": "id-4",
       "factKey": "id-4",
       "strand": "Idioms",
-      "objectiveCodes": [
-        "Y34-RC-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-RC-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What does someone mean if they say a task is 'a piece of cake'?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "It is very easy",
+      "claim": "If someone says a task is 'a piece of cake', they mean {}.",
+      "answer": "it is very easy",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it is easy",
-        "very easy",
-        "simple"
+      "acceptableAnswers": ["simple"],
+      "distractors": [
+        "it is very difficult",
+        "it is dangerous",
+        "it is impossible",
+        "it takes a long time",
+        "it is expensive"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "id-5",
       "factKey": "id-5",
       "strand": "Idioms",
-      "objectiveCodes": [
-        "Y34-RC-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "If a story says a character 'let the cat out of the bag', it means they told a secret.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does it mean if a character 'lets the cat out of the bag'?",
+      "claim": "If a character 'lets the cat out of the bag', it means {}.",
+      "answer": "they told a secret",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "they let a real cat escape",
+        "they opened a present",
+        "they made a mistake baking",
+        "they went shopping",
+        "they fed an animal"
+      ],
       "equation": null
     },
     {
       "id": "dc-1",
       "factKey": "dc-1",
       "strand": "Dictionary skills",
-      "objectiveCodes": [
-        "Y34-RC-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-RC-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In what order are words listed in a dictionary?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Alphabetical order",
+      "claim": "Words are listed in a dictionary in {}.",
+      "answer": "alphabetical order",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "alphabetical order",
-        "a to z",
-        "alphabetically"
+      "acceptableAnswers": ["a to z", "alphabetically"],
+      "distractors": [
+        "random order",
+        "order of word length",
+        "order of how common the word is",
+        "numerical order",
+        "reverse alphabetical order"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "dc-2",
       "factKey": "dc-2",
       "strand": "Dictionary skills",
-      "objectiveCodes": [
-        "Y34-RC-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which word would come first in a dictionary?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-RC-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Between 'apple' and 'orange', which comes first in a dictionary?",
+      "claim": "Between 'apple' and 'orange', {} comes first in a dictionary.",
       "answer": "apple",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "apple"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "orange",
+        "they are the same",
+        "it does not matter",
         "melon",
         "pear"
       ],
@@ -414,24 +318,19 @@
       "id": "dc-3",
       "factKey": "dc-3",
       "strand": "Dictionary skills",
-      "objectiveCodes": [
-        "Y34-RC-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Both 'plant' and 'plate' start with 'pla'. Which comes first in a dictionary?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Between 'plant' and 'plate', {} comes first in a dictionary.",
       "answer": "plant",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "plant"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "plate",
         "they are the same",
-        "it does not matter"
+        "it does not matter",
+        "neither of them",
+        "both at once"
       ],
       "equation": null
     },
@@ -439,43 +338,39 @@
       "id": "dc-4",
       "factKey": "dc-4",
       "strand": "Dictionary skills",
-      "objectiveCodes": [
-        "Y34-RC-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A dictionary tells you what a word means.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-RC-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does a dictionary tell you about a word?",
+      "claim": "A dictionary tells you {} about a word.",
+      "answer": "what it means",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "how much it costs",
+        "how old it is",
+        "what colour it is",
+        "how heavy it is",
+        "how it tastes"
+      ],
       "equation": null
     },
     {
       "id": "dc-5",
       "factKey": "dc-5",
       "strand": "Dictionary skills",
-      "objectiveCodes": [
-        "Y34-RC-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-RC-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "You read a word you do not understand. What is the best way to check its meaning?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The best way to check the meaning of a word you do not understand is to {}.",
       "answer": "look it up in a dictionary",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "look it up in a dictionary"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "skip the whole page",
         "guess and move on without checking",
-        "read the word louder"
+        "read the word louder",
+        "throw the book away",
+        "copy the word many times"
       ],
       "equation": null
     }

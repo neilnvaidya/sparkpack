@@ -38,45 +38,39 @@
       "id": "fo-1",
       "factKey": "fo-1",
       "strand": "Forces and surfaces",
-      "objectiveCodes": [
-        "Y3-FM-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-FM-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is the name of the force that slows things down as they slide across a surface?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Friction",
+      "claim": "The force that slows things down as they slide across a surface is called {}.",
+      "answer": "friction",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "friction"
+      "acceptableAnswers": [],
+      "distractors": [
+        "gravity",
+        "magnetism",
+        "air resistance",
+        "tension",
+        "momentum"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "fo-2",
       "factKey": "fo-2",
       "strand": "Forces and surfaces",
-      "objectiveCodes": [
-        "Y3-FM-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-FM-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A toy car is pushed with the same force across different surfaces. On which surface will it roll the furthest?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A toy car pushed with the same force will roll furthest across a {}.",
       "answer": "smooth wooden floor",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "smooth wooden floor"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "thick carpet",
-        "a sandy tray",
-        "a rough doormat"
+        "sandy tray",
+        "rough doormat",
+        "patch of long grass",
+        "gravel path"
       ],
       "equation": null
     },
@@ -84,107 +78,73 @@
       "id": "fo-3",
       "factKey": "fo-3",
       "strand": "Forces and surfaces",
-      "objectiveCodes": [
-        "Y3-FM-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "There is more friction on a rough surface than on a smooth one.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What kind of surface produces the most friction?",
+      "claim": "{} produces the most friction.",
+      "answer": "a rough surface",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["rough surface", "rough"],
+      "distractors": [
+        "a smooth surface",
+        "a wet surface",
+        "an icy surface",
+        "a polished surface",
+        "a silky surface"
+      ],
       "equation": null
     },
     {
       "id": "fo-4",
       "factKey": "fo-4",
       "strand": "Forces and surfaces",
-      "objectiveCodes": [
-        "Y3-FM-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A ball rolls more easily on a smooth path than through long grass.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Where would a ball roll more easily: along a smooth path, or through long grass?",
+      "claim": "{} lets a ball roll more easily than long grass does.",
+      "answer": "a smooth path",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
-      "equation": null
-    },
-    {
-      "id": "fo-5",
-      "factKey": "fo-5",
-      "strand": "Forces and surfaces",
-      "objectiveCodes": [
-        "Y3-FM-1"
+      "acceptableAnswers": ["smooth path"],
+      "distractors": [
+        "thick mud",
+        "deep snow",
+        "loose gravel",
+        "wet sand",
+        "a ploughed field"
       ],
-      "forms": [
-        "open"
-      ],
-      "ask": "Why is friction useful when you are walking?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "It stops your feet slipping and helps you grip the ground",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "it stops you slipping",
-        "it helps you grip"
-      ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "co-1",
       "factKey": "co-1",
       "strand": "Contact and distance",
-      "objectiveCodes": [
-        "Y3-FM-2"
-      ],
-      "forms": [
-        "open"
-      ],
-      "ask": "Give one example of a force that needs two objects to touch.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any of: pushing, pulling, friction",
+      "objectiveCodes": ["Y3-FM-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Give an example of a contact force — a force that needs two objects to be touching.",
+      "claim": "{} is an example of a force that needs two objects to be touching.",
+      "answer": "a push",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a push",
-        "a pull",
-        "friction"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["a pull", "friction", "pushing", "pulling"],
+      "distractors": ["magnetism", "gravity", "light", "sound", "heat"],
       "equation": null
     },
     {
       "id": "co-2",
       "factKey": "co-2",
       "strand": "Contact and distance",
-      "objectiveCodes": [
-        "Y3-FM-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these forces can act without the objects touching?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-FM-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which type of force can act without the objects touching?",
+      "claim": "{} can act without the objects touching.",
       "answer": "a magnetic force",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a magnetic force"
-      ],
+      "acceptableAnswers": ["magnetism", "magnetic force"],
       "distractors": [
         "friction",
         "a push",
-        "a pull with a rope"
+        "a pull with a rope",
+        "a squeeze",
+        "a twist"
       ],
       "equation": null
     },
@@ -192,85 +152,73 @@
       "id": "co-3",
       "factKey": "co-3",
       "strand": "Contact and distance",
-      "objectiveCodes": [
-        "Y3-FM-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A magnet can move a paperclip without touching it.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens to a steel paperclip when a magnet is held close to it without touching?",
+      "claim": "When a magnet is held close to a steel paperclip without touching it, the paperclip is {}.",
+      "answer": "pulled towards the magnet",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["attracted to the magnet", "attracted"],
+      "distractors": [
+        "pushed away from the magnet",
+        "unaffected",
+        "melted by the magnet",
+        "turned into a magnet",
+        "warmed up"
+      ],
       "equation": null
     },
     {
       "id": "co-4",
       "factKey": "co-4",
       "strand": "Contact and distance",
-      "objectiveCodes": [
-        "Y3-FM-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "All forces need two objects to be touching to work.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What word describes a force, like magnetism, that can act without the objects touching?",
+      "claim": "A force like magnetism, which can act without the objects touching, is called a {} force.",
+      "answer": "non-contact",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["a non-contact force", "non-contact force"],
+      "distractors": [
+        "contact",
+        "friction",
+        "balanced",
+        "unbalanced",
+        "resultant"
+      ],
       "equation": null
     },
     {
       "id": "ma-1",
       "factKey": "ma-1",
       "strand": "Magnetic materials",
-      "objectiveCodes": [
-        "Y3-FM-3",
-        "Y3-FM-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-FM-3", "Y3-FM-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Name a metal that a magnet will attract.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Iron (or steel)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "iron",
-        "steel"
-      ],
-      "distractors": [],
+      "claim": "A magnet will attract objects made of {}.",
+      "answer": "iron",
+      "answerDetail": "Iron — and steel, because steel is mostly iron.",
+      "acceptableAnswers": ["steel"],
+      "distractors": ["copper", "aluminium", "gold", "silver", "tin"],
       "equation": null
     },
     {
       "id": "ma-2",
       "factKey": "ma-2",
       "strand": "Magnetic materials",
-      "objectiveCodes": [
-        "Y3-FM-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these objects would a magnet attract?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-FM-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which object would a magnet attract?",
+      "claim": "A magnet would attract {}.",
       "answer": "a steel paperclip",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a steel paperclip"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "a plastic ruler",
         "a wooden pencil",
-        "a glass marble"
+        "a glass marble",
+        "a cotton ball",
+        "a ceramic mug"
       ],
       "equation": null
     },
@@ -278,62 +226,59 @@
       "id": "ma-3",
       "factKey": "ma-3",
       "strand": "Magnetic materials",
-      "objectiveCodes": [
-        "Y3-FM-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Magnets attract all metals.",
-      "claimIsTrue": false,
-      "answer": "",
-      "answerDetail": "",
+      "objectiveCodes": ["Y3-FM-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "A class tests an iron nail, a steel spoon, a steel paperclip and a copper coin with a magnet. Which one will NOT be attracted?",
+      "claim": "Out of an iron nail, a steel spoon, a steel paperclip and a copper coin, the magnet will not attract {}.",
+      "answer": "the copper coin",
+      "answerDetail": "Copper is a metal, but it is not one of the magnetic metals.",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the iron nail",
+        "the steel spoon",
+        "the steel paperclip",
+        "a steel nail",
+        "an iron nut"
+      ],
       "equation": null
     },
     {
       "id": "ma-4",
       "factKey": "ma-4",
       "strand": "Magnetic materials",
-      "objectiveCodes": [
-        "Y3-FM-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Wood and plastic are not attracted to magnets.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "A class tests a wooden ruler, a steel spoon, an iron nail and a steel paperclip with a magnet. Which one will NOT be attracted?",
+      "claim": "Out of a wooden ruler, a steel spoon, an iron nail and a steel paperclip, the magnet will not attract {}.",
+      "answer": "the wooden ruler",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the steel spoon",
+        "the iron nail",
+        "the steel paperclip",
+        "a steel nail",
+        "an iron nut"
+      ],
       "equation": null
     },
     {
       "id": "ma-5",
       "factKey": "ma-5",
       "strand": "Magnetic materials",
-      "objectiveCodes": [
-        "Y3-FM-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "A class tests a coin, a plastic cup, a steel spoon and a rubber band with a magnet. Which will the magnet attract?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-FM-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "A class tests a copper coin, a plastic cup, a steel spoon and a rubber band with a magnet. Which one will the magnet attract?",
+      "claim": "Out of a copper coin, a plastic cup, a steel spoon and a rubber band, the magnet will attract {}.",
       "answer": "the steel spoon",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "the steel spoon"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
+        "the copper coin",
         "the plastic cup",
         "the rubber band",
-        "all of them"
+        "a wooden spoon",
+        "a glass jar"
       ],
       "equation": null
     },
@@ -341,134 +286,114 @@
       "id": "po-1",
       "factKey": "po-1",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-5"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-FM-5"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How many poles does a magnet have?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Two (a north pole and a south pole)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "2",
-        "two",
-        "north and south"
-      ],
-      "distractors": [],
+      "claim": "A magnet has {} poles.",
+      "answer": "two",
+      "answerDetail": "A north pole and a south pole.",
+      "acceptableAnswers": ["2"],
+      "distractors": ["one", "three", "four", "five", "six"],
       "equation": null
     },
     {
       "id": "po-2",
-      "factKey": "po-2",
+      "factKey": "poles-like-repel",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-6"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-FM-6"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What happens when the north pole of one magnet is held near the north pole of another?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "they repel (push apart)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "they repel (push apart)"
-      ],
+      "claim": "When the north pole of one magnet is held near the north pole of another, they {}.",
+      "answer": "repel",
+      "answerDetail": "They repel — push apart.",
+      "acceptableAnswers": ["push apart", "repel each other"],
       "distractors": [
-        "they attract (pull together)",
-        "nothing happens",
-        "they stick together"
+        "attract",
+        "stick together",
+        "cancel out",
+        "get hot",
+        "make no difference"
       ],
       "equation": null
     },
     {
       "id": "po-3",
-      "factKey": "po-3",
+      "factKey": "poles-opposite-attract",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-6"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-FM-6"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What happens when a north pole is held near a south pole?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "they attract (pull together)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "they attract (pull together)"
-      ],
+      "claim": "When a north pole is held near a south pole, they {}.",
+      "answer": "attract",
+      "answerDetail": "They attract — pull together.",
+      "acceptableAnswers": ["pull together", "attract each other"],
       "distractors": [
-        "they repel (push apart)",
-        "they explode",
-        "they lose their magnetism"
+        "repel",
+        "explode",
+        "lose their magnetism",
+        "make no difference",
+        "get hot"
       ],
       "equation": null
     },
     {
       "id": "po-4",
-      "factKey": "po-4",
+      "factKey": "poles-like-repel",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-6"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Two poles that are the same (both north or both south) will repel each other.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-6"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens when two magnetic poles that are the same (both north or both south) are brought close together?",
+      "claim": "When two magnetic poles that are the same are brought close together, they {}.",
+      "answer": "repel",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["push apart", "repel each other"],
+      "distractors": [
+        "attract",
+        "stick together",
+        "cancel out",
+        "spin around",
+        "make no difference"
+      ],
       "equation": null
     },
     {
       "id": "po-5",
-      "factKey": "po-5",
+      "factKey": "poles-opposite-attract",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-6"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Opposite poles of two magnets push away from each other.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-FM-6"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens when two different (opposite) magnetic poles are brought close together?",
+      "claim": "When two different (opposite) magnetic poles are brought close together, they {}.",
+      "answer": "attract",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["pull together", "attract each other"],
+      "distractors": [
+        "repel",
+        "make no difference",
+        "cancel out",
+        "get hot",
+        "spin around"
+      ],
       "equation": null
     },
     {
       "id": "po-6",
-      "factKey": "po-6",
+      "factKey": "poles-like-repel",
       "strand": "Poles",
-      "objectiveCodes": [
-        "Y3-FM-6"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-FM-6"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Two magnets are pushed together and they spring apart. What does this tell you about the poles facing each other?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "They are the same poles (both north or both south)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "they are the same",
-        "same poles",
-        "both north or both south"
+      "claim": "If two magnets spring apart when pushed together, the poles facing each other must be {}.",
+      "answer": "the same",
+      "answerDetail": "Both north or both south.",
+      "acceptableAnswers": ["both north or both south", "the same poles"],
+      "distractors": [
+        "opposite",
+        "different",
+        "broken",
+        "too weak",
+        "made of different metals"
       ],
-      "distractors": [],
       "equation": null
     }
   ]

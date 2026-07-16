@@ -30,91 +30,67 @@
       "id": "pr-1",
       "factKey": "pr-1",
       "strand": "Prefixes",
-      "objectiveCodes": [
-        "Y34-SP-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Add the prefix 'un' to 'happy' to make a word meaning 'not happy'.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding the prefix 'un' to 'happy' makes {}.",
       "answer": "unhappy",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "unhappy"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["inhappy", "dishappy", "mishappy", "rehappy", "nonhappy"],
       "equation": null
     },
     {
       "id": "pr-2",
       "factKey": "pr-2",
       "strand": "Prefixes",
-      "objectiveCodes": [
-        "Y34-SP-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Add the prefix 're' to 'build' to make a word meaning 'build again'.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding the prefix 're' to 'build' makes {}.",
       "answer": "rebuild",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "rebuild"
+      "acceptableAnswers": [],
+      "distractors": [
+        "unbuild",
+        "disbuild",
+        "misbuild",
+        "inbuild",
+        "superbuild"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "pr-3",
       "factKey": "pr-3",
       "strand": "Prefixes",
-      "objectiveCodes": [
-        "Y34-SP-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which prefix makes 'behave' mean 'behave badly'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The prefix that makes 'behave' mean 'behave badly' is {}.",
       "answer": "mis–",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "mis–"
-      ],
-      "distractors": [
-        "un–",
-        "re–",
-        "dis–"
-      ],
+      "acceptableAnswers": ["mis"],
+      "distractors": ["un–", "re–", "dis–", "in–", "sub–"],
       "equation": null
     },
     {
       "id": "pr-4",
       "factKey": "pr-4",
       "strand": "Prefixes",
-      "objectiveCodes": [
-        "Y34-SP-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which word uses the prefix 'dis' correctly?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-SP-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Spell the word that means 'to vanish', using the prefix 'dis'.",
+      "claim": "The correctly spelled word for 'to vanish', using the prefix 'dis', is {}.",
       "answer": "disappear",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "disappear"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "dissappear",
         "disapear",
-        "dizappear"
+        "dizappear",
+        "disapeer",
+        "disappeer"
       ],
       "equation": null
     },
@@ -122,64 +98,59 @@
       "id": "pr-5",
       "factKey": "pr-5",
       "strand": "Prefixes",
-      "objectiveCodes": [
-        "Y34-SP-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A prefix is added to the beginning of a word to change its meaning.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-SP-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Where is a prefix added to a word?",
+      "claim": "A prefix is added to the {} of a word to change its meaning.",
+      "answer": "beginning",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "end",
+        "middle",
+        "nowhere — it replaces the word",
+        "punctuation",
+        "plural ending"
+      ],
       "equation": null
     },
     {
       "id": "su-1",
       "factKey": "su-1",
       "strand": "Suffixes",
-      "objectiveCodes": [
-        "Y34-SP-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Add the suffix 'ly' to 'quick' to describe how something is done.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding the suffix 'ly' to 'quick' gives {}.",
       "answer": "quickly",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "quickly"
+      "acceptableAnswers": [],
+      "distractors": [
+        "quicklier",
+        "quickley",
+        "quikly",
+        "quickley's",
+        "quickllly"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "su-2",
       "factKey": "su-2",
       "strand": "Suffixes",
-      "objectiveCodes": [
-        "Y34-SP-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How do you correctly add 'ly' to 'gentle'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding 'ly' to 'gentle' correctly gives {}.",
       "answer": "gently",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "gently"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "gentlely",
         "gentley",
-        "gentlly"
+        "gentlly",
+        "gentleley",
+        "gentlyly"
       ],
       "equation": null
     },
@@ -187,24 +158,19 @@
       "id": "su-3",
       "factKey": "su-3",
       "strand": "Suffixes",
-      "objectiveCodes": [
-        "Y34-SP-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which is the correct spelling when 'ation' is added to 'inform'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding 'ation' to 'inform' correctly gives {}.",
       "answer": "information",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "information"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "informnation",
         "informashun",
-        "informaton"
+        "informaton",
+        "informationn",
+        "imformation"
       ],
       "equation": null
     },
@@ -212,200 +178,149 @@
       "id": "su-4",
       "factKey": "su-4",
       "strand": "Suffixes",
-      "objectiveCodes": [
-        "Y34-SP-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A suffix is a letter or group of letters added to the end of a word.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-SP-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Where is a suffix added to a word?",
+      "claim": "A suffix is added to the {} of a word.",
+      "answer": "end",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "beginning",
+        "middle",
+        "nowhere — it replaces the word",
+        "front, before the first letter",
+        "punctuation"
+      ],
       "equation": null
     },
     {
       "id": "su-5",
       "factKey": "su-5",
       "strand": "Suffixes",
-      "objectiveCodes": [
-        "Y34-SP-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Add the suffix 'ous' to 'poison' to make an adjective.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Adding the suffix 'ous' to 'poison' gives {}.",
       "answer": "poisonous",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "poisonous"
+      "acceptableAnswers": [],
+      "distractors": [
+        "poisonious",
+        "poisenous",
+        "poisonly",
+        "poisonful",
+        "poisonness"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "ho-1",
       "factKey": "ho-1",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: 'The dog wagged ___ tail.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The correct word to complete 'The dog wagged ___ tail' is {}.",
       "answer": "their",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "their"
-      ],
-      "distractors": [
-        "there",
-        "they're"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["there", "they're", "quick", "happy", "blue"],
       "equation": null
     },
     {
       "id": "ho-2",
-      "factKey": "ho-2",
+      "factKey": "hear-here-homophones",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: 'Can you ___ the music?'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The correct word to complete 'Can you ___ the music?' is {}.",
       "answer": "hear",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "hear"
-      ],
-      "distractors": [
-        "here"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["here", "eat", "walk", "jump", "sleep"],
       "equation": null
     },
     {
       "id": "ho-3",
       "factKey": "ho-3",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: '___ going to the park later.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The correct word to complete '___ going to the park later' is {}.",
       "answer": "They're",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "They're"
-      ],
-      "distractors": [
-        "There",
-        "Their"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["There", "Their", "He's", "She's", "We're"],
       "equation": null
     },
     {
       "id": "ho-4",
       "factKey": "ho-4",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Homophones are words that sound the same but have different meanings and spellings.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What are homophones?",
+      "claim": "Homophones are {}.",
+      "answer": "words that sound the same but have different meanings and spellings",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "words that are spelled the same but mean different things",
+        "words that rhyme but look different",
+        "words with no meaning",
+        "words that are always nouns",
+        "punctuation marks"
+      ],
       "equation": null
     },
     {
       "id": "ho-5",
       "factKey": "ho-5",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which spelling means a number: 'two', 'too' or 'to'?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The spelling that means a number is {}.",
       "answer": "two",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "two"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["too", "to", "free", "true", "blue"],
       "equation": null
     },
     {
       "id": "cm-1",
       "factKey": "cm-1",
       "strand": "Commonly misspelt",
-      "objectiveCodes": [
-        "Y34-SP-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which is the correct spelling?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-SP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Spell the word that means 'for the reason that'.",
+      "claim": "The correct spelling of the word meaning 'for the reason that' is {}.",
       "answer": "because",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "because"
-      ],
-      "distractors": [
-        "becuase",
-        "becuse",
-        "becaus"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["becuase", "becuse", "becaus", "becausee", "bcause"],
       "equation": null
     },
     {
       "id": "cm-2",
       "factKey": "cm-2",
       "strand": "Commonly misspelt",
-      "objectiveCodes": [
-        "Y34-SP-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which is the correct spelling?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-SP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Spell the word meaning 'not the same'.",
+      "claim": "The correct spelling of the word meaning 'not the same' is {}.",
       "answer": "different",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "different"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "diffrent",
         "diferent",
-        "differant"
+        "differant",
+        "difarent",
+        "diffirent"
       ],
       "equation": null
     },
@@ -413,24 +328,19 @@
       "id": "cm-3",
       "factKey": "cm-3",
       "strand": "Commonly misspelt",
-      "objectiveCodes": [
-        "Y34-SP-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which is the correct spelling?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-SP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Spell the word meaning 'the one you like best'.",
+      "claim": "The correct spelling of the word meaning 'the one you like best' is {}.",
       "answer": "favourite",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "favourite"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "faverite",
         "favorit",
-        "favourit"
+        "favourit",
+        "favuorite",
+        "favoutite"
       ],
       "equation": null
     },
@@ -438,59 +348,42 @@
       "id": "cm-4",
       "factKey": "cm-4",
       "strand": "Commonly misspelt",
-      "objectiveCodes": [
-        "Y34-SP-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "The word 'friend' is spelt f-r-i-e-n-d.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-SP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Spell the word 'friend' — a person you like and trust.",
+      "claim": "The word meaning 'a person you like and trust' is spelt {}.",
+      "answer": "friend",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["freind", "frend", "friend's", "frend's", "freand"],
       "equation": null
     },
     {
       "id": "cm-5",
       "factKey": "cm-5",
       "strand": "Commonly misspelt",
-      "objectiveCodes": [
-        "Y34-SP-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-SP-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Spell the word that means the opposite of 'question', beginning with 'a'.",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The word that means the opposite of 'question', beginning with 'a', is spelt {}.",
       "answer": "answer",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "answer"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["anwser", "anser", "ansewr", "awnser", "anwer"],
       "equation": null
     },
     {
       "id": "ho-6",
-      "factKey": "ho-6",
+      "factKey": "hear-here-homophones",
       "strand": "Homophones",
-      "objectiveCodes": [
-        "Y34-SP-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "'Hear' and 'here' sound the same but are spelt differently.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-SP-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "'Hear' and 'here' sound the same. Which one means 'in this place'?",
+      "claim": "The homophone that means 'in this place' is {}.",
+      "answer": "here",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["hear", "sleep", "quick", "yellow", "jump"],
       "equation": null
     }
   ]

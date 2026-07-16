@@ -34,443 +34,345 @@
       "id": "wc-1",
       "factKey": "wc-1",
       "strand": "Word classes",
-      "objectiveCodes": [
-        "Y34-GP-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What word class is 'dog' — a naming word for a person, place or thing?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A noun",
+      "claim": "'Dog' is {}.",
+      "answer": "a noun",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "noun"
+      "acceptableAnswers": ["noun"],
+      "distractors": [
+        "a verb",
+        "an adjective",
+        "an adverb",
+        "a preposition",
+        "a conjunction"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "wc-2",
       "factKey": "wc-2",
       "strand": "Word classes",
-      "objectiveCodes": [
-        "Y34-GP-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What word class is 'run' — a doing or being word?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A verb",
+      "claim": "'Run' is {}.",
+      "answer": "a verb",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "verb"
+      "acceptableAnswers": ["verb"],
+      "distractors": [
+        "a noun",
+        "an adjective",
+        "an adverb",
+        "a preposition",
+        "a conjunction"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "wc-3",
       "factKey": "wc-3",
       "strand": "Word classes",
-      "objectiveCodes": [
-        "Y34-GP-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "In 'the fluffy cat', which word is the adjective?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-GP-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "In 'The fluffy cat slept quietly under the table', which word is the adjective?",
+      "claim": "In 'The fluffy cat slept quietly under the table', {} is the adjective.",
       "answer": "fluffy",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "fluffy"
-      ],
-      "distractors": [
-        "the",
-        "cat",
-        "none of them"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["cat", "slept", "quietly", "under", "table"],
       "equation": null
     },
     {
       "id": "wc-4",
       "factKey": "wc-4",
       "strand": "Word classes",
-      "objectiveCodes": [
-        "Y34-GP-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "In 'She sang loudly', which word is the adverb?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-GP-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "In 'She sang loudly on the big stage', which word is the adverb?",
+      "claim": "In 'She sang loudly on the big stage', {} is the adverb.",
       "answer": "loudly",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "loudly"
-      ],
-      "distractors": [
-        "She",
-        "sang",
-        "none of them"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["She", "sang", "on", "big", "stage"],
       "equation": null
     },
     {
       "id": "wc-5",
       "factKey": "wc-5",
       "strand": "Word classes",
-      "objectiveCodes": [
-        "Y34-GP-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "An adjective is a word that describes a noun.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-GP-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What kind of word does an adjective describe?",
+      "claim": "An adjective is a word that describes {}.",
+      "answer": "a noun",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a verb",
+        "an adverb",
+        "a preposition",
+        "a conjunction",
+        "a sentence"
+      ],
       "equation": null
     },
     {
       "id": "cj-1",
       "factKey": "cj-1",
       "strand": "Conjunctions",
-      "objectiveCodes": [
-        "Y34-GP-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which joining word fits: 'We stayed inside ___ it was raining.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The best word to complete 'We stayed inside ___ it was raining' is {}.",
       "answer": "because",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "because",
-        "as",
-        "since"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["as", "since"],
+      "distractors": ["quickly", "table", "green", "running", "blue"],
       "equation": null
     },
     {
       "id": "cj-2",
       "factKey": "cj-2",
       "strand": "Conjunctions",
-      "objectiveCodes": [
-        "Y34-GP-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which word is a conjunction (a joining word)?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The word {} is a conjunction (a joining word).",
       "answer": "although",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "although"
-      ],
-      "distractors": [
-        "quickly",
-        "table",
-        "green"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["quickly", "table", "green", "jump", "happy"],
       "equation": null
     },
     {
       "id": "cj-3",
       "factKey": "cj-3",
       "strand": "Conjunctions",
-      "objectiveCodes": [
-        "Y34-GP-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which conjunction best shows time: 'I brushed my teeth ___ I went to bed.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The conjunction that best shows time in 'I brushed my teeth ___ I went to bed' is {}.",
       "answer": "before",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "before"
-      ],
-      "distractors": [
-        "because",
-        "but",
-        "or"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["because", "but", "or", "and", "although"],
       "equation": null
     },
     {
       "id": "cj-4",
       "factKey": "cj-4",
       "strand": "Conjunctions",
-      "objectiveCodes": [
-        "Y34-GP-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A conjunction is used to join two parts of a sentence.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-GP-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is a conjunction used for?",
+      "claim": "A conjunction is used for {}.",
+      "answer": "joining two parts of a sentence",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "describing a noun",
+        "naming a person or thing",
+        "showing an action",
+        "adding punctuation only",
+        "making a word plural"
+      ],
       "equation": null
     },
     {
       "id": "cj-5",
       "factKey": "cj-5",
       "strand": "Conjunctions",
-      "objectiveCodes": [
-        "Y34-GP-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Name the word class of 'under' in 'the cat sat under the table' (it shows position).",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A preposition",
+      "claim": "In 'the cat sat under the table', 'under' is {}.",
+      "answer": "a preposition",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "preposition"
+      "acceptableAnswers": ["preposition"],
+      "distractors": [
+        "a noun",
+        "a verb",
+        "an adjective",
+        "a conjunction",
+        "an adverb"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "aa-1",
       "factKey": "aa-1",
       "strand": "A or an",
-      "objectiveCodes": [
-        "Y34-GP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: 'I ate ___ apple.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The word that correctly completes 'I ate ___ apple' is {}.",
       "answer": "an",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "an"
-      ],
-      "distractors": [
-        "a"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a", "the", "on", "in", "with"],
       "equation": null
     },
     {
       "id": "aa-2",
       "factKey": "aa-2",
       "strand": "A or an",
-      "objectiveCodes": [
-        "Y34-GP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: 'She has ___ dog.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The word that correctly completes 'She has ___ dog' is {}.",
       "answer": "a",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a"
-      ],
-      "distractors": [
-        "an"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["an", "the", "on", "in", "with"],
       "equation": null
     },
     {
       "id": "aa-3",
       "factKey": "aa-3",
       "strand": "A or an",
-      "objectiveCodes": [
-        "Y34-GP-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "We use 'an' before a word that begins with a vowel sound.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-GP-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Do we use 'a' or 'an' before a word that begins with a vowel sound?",
+      "claim": "We use {} before a word that begins with a vowel sound.",
+      "answer": "an",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["a", "the", "on", "in", "with"],
       "equation": null
     },
     {
       "id": "aa-4",
       "factKey": "aa-4",
       "strand": "A or an",
-      "objectiveCodes": [
-        "Y34-GP-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Choose the correct word: 'It was ___ hour long.'",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The word that correctly completes 'It was ___ hour long' is {}.",
       "answer": "an",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "an"
-      ],
-      "distractors": [
-        "a"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["a", "the", "on", "in", "with"],
       "equation": null
     },
     {
       "id": "sp-1",
       "factKey": "sp-1",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which sentence uses inverted commas (speech marks) correctly?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y34-GP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Add inverted commas and a comma correctly to this speech: Hello said Ben",
+      "claim": "The correctly punctuated version of 'Hello said Ben' is {}.",
       "answer": "\"Hello,\" said Ben.",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "\"Hello,\" said Ben."
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "Hello, said Ben.",
         "\"Hello, said Ben.",
-        "Hello,\" said Ben."
+        "Hello,\" said Ben.",
+        "\"Hello\" said Ben.",
+        "\"Hello,\" Said Ben."
       ],
       "equation": null
     },
     {
       "id": "sp-2",
-      "factKey": "sp-2",
+      "factKey": "inverted-commas-mark-speech",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What punctuation marks go around the exact words a character says out loud?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Inverted commas (speech marks)",
+      "claim": "The punctuation marks that go around the exact words a character says out loud are called {}.",
+      "answer": "inverted commas",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "inverted commas",
-        "speech marks",
-        "quotation marks"
+      "acceptableAnswers": ["speech marks", "quotation marks"],
+      "distractors": [
+        "full stops",
+        "commas",
+        "question marks",
+        "exclamation marks",
+        "brackets"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "sp-3",
-      "factKey": "sp-3",
+      "factKey": "inverted-commas-mark-speech",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Inverted commas go around the exact words that a person speaks.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-GP-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do inverted commas go around?",
+      "claim": "Inverted commas go around {}.",
+      "answer": "the exact words that a person speaks",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the title of the story only",
+        "the character's name only",
+        "numbers in the text",
+        "the whole paragraph always",
+        "punctuation marks themselves"
+      ],
       "equation": null
     },
     {
       "id": "sp-4",
       "factKey": "sp-4",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-5"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y34-GP-5"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What do we call a group of sentences about one idea or theme in a piece of writing?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A paragraph",
+      "claim": "A group of sentences about one idea or theme in a piece of writing is called {}.",
+      "answer": "a paragraph",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "paragraph"
+      "acceptableAnswers": ["paragraph"],
+      "distractors": [
+        "a sentence",
+        "a chapter",
+        "a stanza",
+        "a clause",
+        "a phrase"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "sp-5",
       "factKey": "sp-5",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-5"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "We usually start a new paragraph when we change idea, time or place.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y34-GP-5"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "When do we usually start a new paragraph?",
+      "claim": "We usually start a new paragraph {}.",
+      "answer": "when we change idea, time or place",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "at the end of every sentence",
+        "only at the very end of the story",
+        "when we want more pages",
+        "never — a story is only one paragraph",
+        "every ten words"
+      ],
       "equation": null
     },
     {
       "id": "sp-6",
       "factKey": "sp-6",
       "strand": "Speech and paragraphs",
-      "objectiveCodes": [
-        "Y34-GP-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y34-GP-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Where should the comma go in this line of speech: '\"Wait for me [ ]\" she called.'",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "inside the speech marks, before them closing",
+      "claim": "In '\"Wait for me [ ]\" she called.', the comma should go {}.",
+      "answer": "inside the closing speech marks",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "inside the speech marks, before them closing"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "outside the speech marks",
         "there should be no comma",
-        "after 'she'"
+        "after 'she'",
+        "before the opening speech mark",
+        "at the very end of the sentence"
       ],
       "equation": null
     }

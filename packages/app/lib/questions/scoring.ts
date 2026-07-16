@@ -34,19 +34,45 @@ export const FORM_RANK: Record<QuestionForm, number> = {
   open: 2,
 }
 
-/**
- * Preference ladders. `renderBest` takes the first form a question offers, so
- * order is the whole meaning: EASIEST_FIRST silently makes a question easier
- * where it can, HARDEST_FIRST does the opposite.
- *
- * Until the 3b content pass, most questions offer exactly one form, so both
- * ladders collapse to "whatever it offers". They only bite once a question can
- * actually be asked three ways.
- */
-export const EASIEST_FIRST: QuestionForm[] = ['truefalse', 'mcq', 'open']
-export const HARDEST_FIRST: QuestionForm[] = ['open', 'mcq', 'truefalse']
+/** The ladder itself, easiest rung first. */
+export const FORM_LADDER: QuestionForm[] = ['truefalse', 'mcq', 'open']
 
-/** The easiest form a question currently offers — its position on the ladder. */
-export function easiestForm(forms: QuestionForm[]): QuestionForm {
-  return [...forms].sort((a, b) => FORM_RANK[a] - FORM_RANK[b])[0]
+/**
+ * The form for rung `index` of `count`, spread evenly across the ladder.
+ *
+ * This is where a game's difficulty gradient comes from now. It used to be read
+ * off the question — sort a pack by its forms and the easy ones surfaced first.
+ * That only worked while the corpus was half-enriched. Post-3b every question
+ * offers all three forms, so *every* question is easy, medium and hard, and any
+ * ordering of questions by difficulty is a constant sort. The gradient is a
+ * property of the position in the game, and the game must choose it.
+ *
+ * Rounding rather than truncating means the ends are always hit: rung 0 is the
+ * easiest form and rung `count - 1` the hardest, for any count >= 2.
+ */
+export function formForRung(index: number, count: number): QuestionForm {
+  if (count <= 1) return FORM_LADDER[0]
+  const top = FORM_LADDER.length - 1
+  const clamped = Math.min(Math.max(index, 0), count - 1)
+  return FORM_LADDER[Math.round((clamped * top) / (count - 1))]
 }
+
+/**
+ * Preference order starting at `target`, then the nearest rungs outward.
+ *
+ * `renderBest` takes the first form a question offers, so order is the whole
+ * meaning. Radiating from the target means a question that cannot be asked the
+ * chosen way degrades to the closest thing it can, rather than to an arbitrary
+ * form at the far end of the ladder.
+ */
+export function preferFrom(target: QuestionForm): QuestionForm[] {
+  return [...FORM_LADDER].sort(
+    (a, b) =>
+      Math.abs(FORM_RANK[a] - FORM_RANK[target]) -
+      Math.abs(FORM_RANK[b] - FORM_RANK[target])
+  )
+}
+
+/** Ask a question the gentlest / harshest way it can be asked. */
+export const EASIEST_FIRST: QuestionForm[] = preferFrom('truefalse')
+export const HARDEST_FIRST: QuestionForm[] = preferFrom('open')

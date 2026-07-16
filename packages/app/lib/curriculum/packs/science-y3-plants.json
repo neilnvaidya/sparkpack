@@ -28,70 +28,49 @@
   "questions": [
     {
       "id": "pp-1",
-      "factKey": "pp-1",
+      "factKey": "roots-anchor-plant",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-P-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which part of a plant takes in water and holds the plant in the ground?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "The roots",
+      "claim": "The {} takes in water and holds the plant in the ground.",
+      "answer": "root",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "roots",
-        "root"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["roots", "the roots", "the root"],
+      "distractors": ["leaf", "stem", "flower", "seed", "petal"],
       "equation": null
     },
     {
       "id": "pp-2",
       "factKey": "pp-2",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-P-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which part of a plant makes food using sunlight?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "The leaves",
+      "claim": "The {} makes food using sunlight.",
+      "answer": "leaf",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "leaves",
-        "leaf"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["leaves", "the leaves", "the leaf"],
+      "distractors": ["root", "stem", "flower", "seed", "petal"],
       "equation": null
     },
     {
       "id": "pp-3",
       "factKey": "pp-3",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-P-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is the main job of the stem?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The main job of the stem is {}.",
       "answer": "to hold the plant up and carry water",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "to hold the plant up and carry water"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "to make seeds",
         "to take in sunlight",
-        "to attract insects"
+        "to attract insects",
+        "to take in water from the soil",
+        "to produce pollen"
       ],
       "equation": null
     },
@@ -99,25 +78,19 @@
       "id": "pp-4",
       "factKey": "pp-4",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1",
-        "Y3-P-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-P-1", "Y3-P-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which part of the plant helps it to make seeds?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "{} helps the plant to make seeds.",
       "answer": "the flower",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "the flower"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "the roots",
         "the stem",
-        "the leaves"
+        "the leaves",
+        "the bark",
+        "the root hairs"
       ],
       "equation": null
     },
@@ -125,214 +98,191 @@
       "id": "pp-5",
       "factKey": "pp-5",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Roots usually grow downwards into the soil.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which way do roots usually grow: downwards into the soil, or upwards into the air?",
+      "claim": "Roots usually grow {} into the soil.",
+      "answer": "downwards",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "upwards",
+        "sideways only",
+        "in a spiral only",
+        "not at all",
+        "towards the nearest light"
+      ],
       "equation": null
     },
     {
       "id": "pp-6",
-      "factKey": "pp-6",
+      "factKey": "roots-anchor-plant",
       "strand": "Parts of a plant",
-      "objectiveCodes": [
-        "Y3-P-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "The leaves hold the plant firmly in the ground.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which part of the plant holds it firmly in the ground: the leaves or the roots?",
+      "claim": "{} hold the plant firmly in the ground.",
+      "answer": "the roots",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the leaves",
+        "the flowers",
+        "the stem alone",
+        "the petals",
+        "the seeds"
+      ],
       "equation": null
     },
     {
       "id": "rq-1",
       "factKey": "rq-1",
       "strand": "What plants need",
-      "objectiveCodes": [
-        "Y3-P-2"
-      ],
-      "forms": [
-        "open"
-      ],
-      "ask": "Name two things a plant needs to grow well.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any two of: light, water, air, nutrients from soil, room to grow",
+      "objectiveCodes": ["Y3-P-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name one thing a plant needs in order to grow well.",
+      "claim": "A plant needs {} in order to grow well.",
+      "answer": "light",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "water and light",
-        "light and water",
-        "water and nutrients"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["water", "air", "nutrients", "room to grow"],
+      "distractors": ["chocolate", "music", "carpet", "glue", "sand"],
       "equation": null
     },
     {
       "id": "rq-2",
       "factKey": "rq-2",
       "strand": "What plants need",
-      "objectiveCodes": [
-        "Y3-P-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these do plants get from the soil?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-P-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do plants get from the soil?",
+      "claim": "Plants get {} from the soil.",
       "answer": "nutrients",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "nutrients"
-      ],
-      "distractors": [
-        "sunlight",
-        "air",
-        "sound"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["sunlight", "air", "sound", "rain clouds", "moonlight"],
       "equation": null
     },
     {
       "id": "rq-3",
       "factKey": "rq-3",
       "strand": "What plants need",
-      "objectiveCodes": [
-        "Y3-P-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A plant kept in a dark cupboard with no light will grow just as well as one on a sunny windowsill.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Where would a plant grow better: a dark cupboard with no light, or a sunny windowsill?",
+      "claim": "A plant would grow better on {} than in a dark cupboard with no light.",
+      "answer": "a sunny windowsill",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a dark cupboard with no light",
+        "a sealed box",
+        "a shelf inside a freezer",
+        "underground with no light",
+        "a room with the curtains always shut"
+      ],
       "equation": null
     },
     {
       "id": "rq-4",
       "factKey": "rq-4",
       "strand": "What plants need",
-      "objectiveCodes": [
-        "Y3-P-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Different plants can need different amounts of water and light.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name something that can vary from one type of plant to another.",
+      "claim": "{} can vary from one plant to another.",
+      "answer": "how much water it needs",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": [
+        "how much light it needs",
+        "the amount of water needed",
+        "the amount of light needed"
+      ],
+      "distractors": [
+        "the number of legs it has",
+        "its blood type",
+        "the sound it makes",
+        "its heartbeat",
+        "its skin colour"
+      ],
       "equation": null
     },
     {
       "id": "rq-5",
       "factKey": "rq-5",
       "strand": "What plants need",
-      "objectiveCodes": [
-        "Y3-P-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-P-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A class grows two identical plants. One is given water and the other is not. Everything else is kept the same. What is this test finding out?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "This test is finding out {}.",
       "answer": "whether the plant needs water",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "whether the plant needs water"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "whether the plant needs light",
         "whether the plant needs soil",
-        "how tall the plant can grow"
+        "how tall the plant can grow",
+        "whether the plant needs a pot",
+        "how quickly the plant grows"
       ],
       "equation": null
     },
     {
       "id": "wt-1",
-      "factKey": "wt-1",
+      "factKey": "water-travels-up-stem",
       "strand": "Water transport",
-      "objectiveCodes": [
-        "Y3-P-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-P-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "How does water get from the soil to the leaves of a plant?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "It is taken in by the roots and travels up through the stem",
+      "claim": "Water travels from the roots to the leaves by moving {}.",
+      "answer": "up through the stem",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "through the stem",
-        "up the stem from the roots"
+      "acceptableAnswers": [],
+      "distractors": [
+        "down through the stem",
+        "through the air",
+        "through the flower only",
+        "sideways through the leaves",
+        "through the petals"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "wt-2",
-      "factKey": "wt-2",
+      "factKey": "water-travels-up-stem",
       "strand": "Water transport",
-      "objectiveCodes": [
-        "Y3-P-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Water travels up a plant through the stem.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which direction does water travel inside a plant's stem?",
+      "claim": "Water travels {} inside a plant's stem.",
+      "answer": "upwards",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "downwards",
+        "sideways only",
+        "in a circle",
+        "outwards through the flower",
+        "nowhere — it stays still"
+      ],
       "equation": null
     },
     {
       "id": "wt-3",
       "factKey": "wt-3",
       "strand": "Water transport",
-      "objectiveCodes": [
-        "Y3-P-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-P-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A white flower is placed in water dyed blue. After a day the petals turn blue. What does this show?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The petals turning blue shows that {}.",
       "answer": "water travels up the stem into the flower",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "water travels up the stem into the flower"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "flowers can change colour on their own",
         "the water has evaporated",
-        "petals are made of dye"
+        "petals are made of dye",
+        "the flower absorbed the dye through its roots only",
+        "the dye turned into a gas that coloured the air"
       ],
       "equation": null
     },
@@ -340,149 +290,99 @@
       "id": "wt-4",
       "factKey": "wt-4",
       "strand": "Water transport",
-      "objectiveCodes": [
-        "Y3-P-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Plants lose some water from their leaves into the air.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What happens to some of the water that reaches a plant's leaves?",
+      "claim": "Some of the water that reaches a plant's leaves {}.",
+      "answer": "is lost into the air",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["evaporates", "evaporates into the air"],
+      "distractors": [
+        "turns into sugar",
+        "turns into oxygen",
+        "is stored in the leaf forever",
+        "flows back down to the roots",
+        "turns into pollen"
+      ],
       "equation": null
     },
     {
       "id": "lc-1",
       "factKey": "lc-1",
       "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-P-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is it called when pollen is carried from one flower to another?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Pollination",
+      "claim": "When pollen is carried from one flower to another, this is called {}.",
+      "answer": "pollination",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "pollination"
+      "acceptableAnswers": [],
+      "distractors": [
+        "germination",
+        "fertilisation",
+        "photosynthesis",
+        "respiration",
+        "dispersal"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "lc-2",
       "factKey": "lc-2",
       "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these often helps to carry pollen between flowers?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-P-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What kind of creature often helps to carry pollen between flowers?",
+      "claim": "{} often help to carry pollen between flowers.",
       "answer": "bees",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "bees"
-      ],
-      "distractors": [
-        "fish",
-        "worms",
-        "spiders"
-      ],
-      "equation": null
-    },
-    {
-      "id": "lc-3",
-      "factKey": "lc-3",
-      "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Put these stages in the correct order.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "pollination → seed formation → seed dispersal → new plant grows",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "pollination → seed formation → seed dispersal → new plant grows"
-      ],
-      "distractors": [
-        "seed dispersal → pollination → new plant grows → seed formation",
-        "new plant grows → pollination → seed dispersal → seed formation"
-      ],
-      "equation": null
-    },
-    {
-      "id": "lc-4",
-      "factKey": "lc-4",
-      "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "open"
-      ],
-      "ask": "Why is it useful for seeds to be spread far away from the parent plant?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "So the new plants have space, light and water and do not have to compete with the parent plant",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "so they have room to grow",
-        "so they don't compete for light and water"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["fish", "worms", "spiders", "frogs", "crabs"],
       "equation": null
     },
     {
       "id": "lc-5",
       "factKey": "lc-5",
       "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Some seeds are spread by the wind.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name one way that seeds can be spread away from the parent plant.",
+      "claim": "Seeds can be spread away from the parent plant {}.",
+      "answer": "by the wind",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": [
+        "wind",
+        "by animals",
+        "by water",
+        "by exploding pods"
+      ],
+      "distractors": [
+        "by singing",
+        "by melting",
+        "by freezing",
+        "by glowing",
+        "by shrinking"
+      ],
       "equation": null
     },
     {
       "id": "lc-6",
       "factKey": "lc-6",
       "strand": "Life cycle",
-      "objectiveCodes": [
-        "Y3-P-4"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Seed dispersal means the seed turning into a flower while still inside the parent plant.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-P-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does 'seed dispersal' mean?",
+      "claim": "'Seed dispersal' means {}.",
+      "answer": "seeds being spread away from the parent plant",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a seed turning into a flower inside the parent plant",
+        "a flower turning into a seed",
+        "a seed being eaten and destroyed",
+        "a plant losing all its leaves",
+        "a seed staying attached to the parent plant forever"
+      ],
       "equation": null
     }
   ]

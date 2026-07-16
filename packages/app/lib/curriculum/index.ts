@@ -26,7 +26,6 @@ import {
   curriculumPackSchema,
   type CurriculumPack,
   type CurriculumQuestion,
-  type QuestionForm,
 } from './schema'
 
 const RAW_PACKS: unknown[] = [
@@ -70,26 +69,6 @@ export function getAllPacks(): CurriculumPack[] {
 
 export function getPack(id: string): CurriculumPack | null {
   return getAllPacks().find((p) => p.id === id) ?? null
-}
-
-/** Questions presentable in the given form, in pack order. */
-export function questionsWithForm(
-  pack: CurriculumPack,
-  forms: QuestionForm[]
-): CurriculumQuestion[] {
-  return pack.questions.filter((q) => q.forms.some((f) => forms.includes(f)))
-}
-
-/**
- * Questions that are not number sentences.
- *
- * Board-style games want these: an equation has no strand to file under and no
- * prose to read out. This is the v2 equivalent of the old "qa/mcq/truefalse"
- * kind filter — `forms` alone cannot express it, because a lifted qa and a
- * lifted equation both declare `open`.
- */
-export function textQuestions(pack: CurriculumPack): CurriculumQuestion[] {
-  return pack.questions.filter((q) => q.equation === null)
 }
 
 /** Questions grouped by strand (unstranded questions go under fallback). */

@@ -22,109 +22,81 @@
       "id": "nu-1",
       "factKey": "nu-1",
       "strand": "Nutrition",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Where do animals, including humans, get their nutrition from?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "From the food they eat",
+      "claim": "Animals, including humans, get their nutrition from {}.",
+      "answer": "the food they eat",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "food",
-        "the food they eat"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["food"],
+      "distractors": ["sunlight", "air", "water alone", "soil", "exercise"],
       "equation": null
     },
     {
       "id": "nu-2",
-      "factKey": "nu-2",
+      "factKey": "plants-make-food-animals-dont",
       "strand": "Nutrition",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Unlike plants, animals cannot make their own food.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which can make its own food using sunlight: a plant, or an animal?",
+      "claim": "{} can make its own food using sunlight.",
+      "answer": "a plant",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["plants"],
+      "distractors": ["an animal", "a dog", "a human", "a bird", "a fish"],
       "equation": null
     },
     {
       "id": "nu-3",
       "factKey": "nu-3",
       "strand": "Nutrition",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why do humans need to eat a variety of different foods?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The reason humans need to eat a variety of different foods is {}.",
       "answer": "to get the different nutrients the body needs",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "to get the different nutrients the body needs"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "so meals taste nicer",
         "to spend more money",
-        "so they never feel hungry"
+        "so they never feel hungry",
+        "to make their skeleton bigger",
+        "to use less energy"
       ],
       "equation": null
     },
     {
       "id": "nu-4",
-      "factKey": "nu-4",
+      "factKey": "plants-make-food-animals-dont",
       "strand": "Nutrition",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A green plant can make its own food using sunlight, but a dog cannot.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Out of a green plant and a dog, which one can make its own food using sunlight?",
+      "claim": "Out of a green plant and a dog, {} can make its own food using sunlight.",
+      "answer": "the green plant",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["the dog", "a cat", "a bird", "a fish", "a human"],
       "equation": null
     },
     {
       "id": "nu-5",
       "factKey": "nu-5",
       "strand": "Nutrition",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these is a source of food nutrition?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name a source of food nutrition.",
+      "claim": "{} is a source of food nutrition.",
       "answer": "a bowl of cereal",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "a bowl of cereal"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "sunlight",
         "fresh air",
-        "a glass of water"
+        "a glass of water",
+        "a good book",
+        "a warm blanket"
       ],
       "equation": null
     },
@@ -132,46 +104,33 @@
       "id": "fg-1",
       "factKey": "fg-1",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which food group gives us most of our energy and includes bread, rice and pasta?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Carbohydrates",
+      "claim": "The food group that gives us most of our energy, including bread, rice and pasta, is called {}.",
+      "answer": "carbohydrates",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "carbohydrate",
-        "carbs"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["carbohydrate", "carbs"],
+      "distractors": ["proteins", "fats", "vitamins", "fibre", "sugars"],
       "equation": null
     },
     {
       "id": "fg-2",
       "factKey": "fg-2",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these foods is a good source of protein for building the body?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which food is a good source of protein for building the body?",
+      "claim": "{} is a good source of protein for building the body.",
       "answer": "chicken",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "chicken"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "sweets",
         "butter",
-        "jam"
+        "jam",
+        "boiled sweets",
+        "a fizzy drink"
       ],
       "equation": null
     },
@@ -179,24 +138,19 @@
       "id": "fg-3",
       "factKey": "fg-3",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which food group are fruits and vegetables an important source of vitamins from?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "they contain vitamins and fibre",
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do fruits and vegetables give us lots of?",
+      "claim": "Fruits and vegetables give us lots of {}.",
+      "answer": "vitamins and fibre",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "they contain vitamins and fibre"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
-        "they are mostly fat",
-        "they are only protein",
-        "they have no nutrients"
+        "mostly fat",
+        "mostly sugar",
+        "protein only",
+        "no nutrients at all",
+        "mostly salt"
       ],
       "equation": null
     },
@@ -204,236 +158,204 @@
       "id": "fg-4",
       "factKey": "fg-4",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Eating a balanced diet means eating the right types and amounts of different foods.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What does it mean to eat 'a balanced diet'?",
+      "claim": "Eating 'a balanced diet' means {}.",
+      "answer": "eating the right types and amounts of different foods",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "eating only your favourite food",
+        "eating as much as possible",
+        "eating only sweet foods",
+        "eating one meal a day only",
+        "eating no vegetables at all"
+      ],
       "equation": null
     },
     {
       "id": "fg-5",
       "factKey": "fg-5",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A meal made only of sweets and cake gives your body all the nutrients it needs.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name one problem with eating only sweets and cake.",
+      "claim": "One problem with eating only sweets and cake is that {}.",
+      "answer": "it is missing important nutrients",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": [
+        "not a balanced diet",
+        "missing vitamins",
+        "missing protein"
+      ],
+      "distractors": [
+        "it tastes too sweet",
+        "it is too colourful",
+        "it is too easy to make",
+        "it is not tasty",
+        "it takes too long to eat"
+      ],
       "equation": null
     },
     {
       "id": "fg-6",
       "factKey": "fg-6",
       "strand": "Food groups",
-      "objectiveCodes": [
-        "Y3-AIH-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Name a food group that helps keep bones and teeth strong, found in milk and cheese.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Dairy (a source of calcium)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "dairy",
-        "calcium"
+      "claim": "The food group that helps keep bones and teeth strong, found in milk and cheese, is called {}.",
+      "answer": "dairy",
+      "answerDetail": "A source of calcium.",
+      "acceptableAnswers": ["calcium"],
+      "distractors": [
+        "protein",
+        "carbohydrates",
+        "fats",
+        "vitamins from fruit",
+        "fibre from vegetables"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "sk-1",
       "factKey": "sk-1",
       "strand": "Skeletons",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Name one job that the skeleton does for the body.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any of: support, protection, or helping the body move",
+      "claim": "One job the skeleton does for the body is {}.",
+      "answer": "support",
       "answerDetail": "",
       "acceptableAnswers": [
-        "support",
         "protection",
         "movement",
-        "it holds us up"
+        "it holds us up",
+        "helping us move"
       ],
-      "distractors": [],
+      "distractors": [
+        "digestion",
+        "breathing air in",
+        "pumping blood",
+        "thinking",
+        "tasting food"
+      ],
       "equation": null
     },
     {
       "id": "sk-2",
       "factKey": "sk-2",
       "strand": "Skeletons",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which part of the skeleton protects the brain?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "the skull",
+      "claim": "The {} protects the brain.",
+      "answer": "skull",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "the skull"
-      ],
-      "distractors": [
-        "the ribs",
-        "the spine",
-        "the leg bones"
-      ],
+      "acceptableAnswers": ["the skull"],
+      "distractors": ["ribs", "spine", "leg bones", "collarbone", "pelvis"],
       "equation": null
     },
     {
       "id": "sk-3",
       "factKey": "sk-3",
       "strand": "Skeletons",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which bones protect the heart and lungs?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "the ribs",
+      "claim": "The {} protect the heart and lungs.",
+      "answer": "ribs",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "the ribs"
-      ],
-      "distractors": [
-        "the skull",
-        "the fingers",
-        "the toes"
-      ],
+      "acceptableAnswers": ["the ribs"],
+      "distractors": ["skull", "fingers", "toes", "spine", "collarbone"],
       "equation": null
     },
     {
       "id": "sk-4",
       "factKey": "sk-4",
       "strand": "Skeletons",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "An animal with a skeleton of bones inside its body has a bony skeleton.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What do we call the skeleton of an animal that has bones inside its body?",
+      "claim": "The skeleton of an animal that has bones inside its body is called {}.",
+      "answer": "a bony skeleton",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["bony skeleton"],
+      "distractors": [
+        "an exoskeleton",
+        "a shell",
+        "a soft skeleton",
+        "no skeleton at all",
+        "a fin skeleton"
+      ],
       "equation": null
     },
     {
       "id": "sk-5",
       "factKey": "sk-5",
       "strand": "Skeletons",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Every animal in the world has a skeleton of bones inside its body.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Out of a human and a jellyfish, which one does NOT have a skeleton of bones inside its body?",
+      "claim": "Out of a human and a jellyfish, {} does not have a skeleton of bones inside its body.",
+      "answer": "the jellyfish",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["the human", "a dog", "a cat", "a bird", "a fish"],
       "equation": null
     },
     {
       "id": "mu-1",
       "factKey": "mu-1",
       "strand": "Muscles",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is joined to bones and pulls on them to make the body move?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Muscles",
+      "claim": "{} are joined to bones and pull on them to make the body move.",
+      "answer": "muscles",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "muscle"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["muscle"],
+      "distractors": ["bones", "skin", "blood", "nerves", "fat"],
       "equation": null
     },
     {
       "id": "mu-2",
       "factKey": "mu-2",
       "strand": "Muscles",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Muscles work by pulling on bones, not by pushing them.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Do muscles make bones move by pulling on them, or by pushing them?",
+      "claim": "Muscles make bones move {}.",
+      "answer": "by pulling on them",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["by pulling"],
+      "distractors": [
+        "by pushing them",
+        "by squeezing them flat",
+        "by melting them",
+        "by spinning them",
+        "by inflating them"
+      ],
       "equation": null
     },
     {
       "id": "mu-3",
       "factKey": "mu-3",
       "strand": "Muscles",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "To bend and straighten your arm, muscles work in pairs. When one muscle contracts (shortens), the other one...",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "To bend and straighten your arm, muscles work in pairs. When one muscle contracts (shortens), what does the other one do?",
+      "claim": "When one muscle in a pair contracts, the other one {}.",
       "answer": "relaxes",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "relaxes"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "also contracts",
         "disappears",
-        "turns to bone"
+        "turns to bone",
+        "grows longer",
+        "turns to liquid"
       ],
       "equation": null
     },
@@ -441,21 +363,20 @@
       "id": "mu-4",
       "factKey": "mu-4",
       "strand": "Muscles",
-      "objectiveCodes": [
-        "Y3-AIH-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AIH-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What do we call the place where two bones meet and the body can bend?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A joint",
+      "claim": "The place where two bones meet and the body can bend is called {}.",
+      "answer": "a joint",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "joint"
+      "acceptableAnswers": ["joint"],
+      "distractors": [
+        "a muscle",
+        "a tendon",
+        "a rib",
+        "a skull plate",
+        "a vertebra"
       ],
-      "distractors": [],
       "equation": null
     }
   ]

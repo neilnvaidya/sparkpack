@@ -17,6 +17,7 @@
  */
 
 import type { CurriculumQuestion, QuestionForm } from '@/lib/curriculum/schema'
+import { equationResultDistractors } from '@/lib/questions/equation-distractors'
 
 export type { QuestionForm }
 
@@ -91,6 +92,25 @@ function renderOpen(q: CurriculumQuestion): RenderedQuestion {
 }
 
 function renderMcq(q: CurriculumQuestion, rng: Rng): RenderedQuestion {
+  if (q.equation) {
+    const answer = q.equation.result
+    const drawn = shuffle(equationResultDistractors(q.equation), rng).slice(
+      0,
+      MCQ_OPTION_COUNT - 1
+    )
+    const options = shuffle([answer, ...drawn], rng).map((text, i) => ({
+      label: OPTION_LABELS[i],
+      text,
+      correct: text === answer,
+    }))
+    return {
+      form: 'mcq',
+      prompt: formatEquation(q.equation, 'result'),
+      answer,
+      acceptableAnswers: [answer],
+      options,
+    }
+  }
   // Draw a fresh subset of the distractor pool, then shuffle in the answer, so
   // the same question dealt twice looks different.
   const drawn = shuffle(q.distractors, rng).slice(0, MCQ_OPTION_COUNT - 1)
@@ -110,21 +130,23 @@ function renderMcq(q: CurriculumQuestion, rng: Rng): RenderedQuestion {
 }
 
 function renderTrueFalse(q: CurriculumQuestion, rng: Rng): RenderedQuestion {
-  // Slotless claims carry an authored polarity and cannot flip. Slotted ones
-  // choose: fill with the answer for TRUE, a distractor for FALSE. That makes
-  // balance a deal-time decision instead of an authoring habit.
-  if (q.claimIsTrue !== null) {
+  if (q.equation) {
+    const isTrue = rng() < 0.5
+    const shown = isTrue ? q.equation.result : shuffle(equationResultDistractors(q.equation), rng)[0]
+    const full = (result: string) =>
+      `${q.equation!.left} ${q.equation!.operator} ${q.equation!.right} = ${result}.`
     return {
       form: 'truefalse',
-      prompt: q.claim,
-      answer: q.claimIsTrue ? 'True' : 'False',
-      ...(q.answerDetail ? { answerDetail: q.answerDetail } : {}),
-      acceptableAnswers: [q.claimIsTrue ? 'True' : 'False'],
-      isTrue: q.claimIsTrue,
+      prompt: full(shown),
+      answer: isTrue ? 'True' : 'False',
+      ...(isTrue ? {} : { answerDetail: `Actually: ${full(q.equation.result)}` }),
+      acceptableAnswers: [isTrue ? 'True' : 'False'],
+      isTrue,
     }
   }
-  const canBeFalse = q.distractors.length > 0
-  const isTrue = canBeFalse ? rng() < 0.5 : true
+  // Fill with the answer for TRUE, a distractor for FALSE — a deal-time
+  // decision instead of an authoring habit, so polarity varies on replay.
+  const isTrue = rng() < 0.5
   const fill = isTrue ? q.answer : shuffle(q.distractors, rng)[0]
   return {
     form: 'truefalse',
@@ -170,9 +192,4 @@ export function renderBest(
 ): RenderedQuestion | null {
   const form = preference.find((f) => q.forms.includes(f))
   return form ? renderQuestion(q, form, rng) : null
-}
-
-/** The form a question offers, when it offers exactly one (true across the corpus pre-enrichment). */
-export function soleForm(q: CurriculumQuestion): QuestionForm {
-  return q.forms[0]
 }

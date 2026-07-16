@@ -278,24 +278,9 @@ export default function QuestionEditor({
               </p>
             </div>
           ) : (
-            <div>
-              <Label hint="transitional — rewrite with a slot">claimIsTrue</Label>
-              <select
-                value={q.claimIsTrue === null ? '' : String(q.claimIsTrue)}
-                style={inputStyle}
-                onChange={(e) =>
-                  set('claimIsTrue', e.target.value === '' ? null : e.target.value === 'true')
-                }
-              >
-                <option value="">null (needs a slot)</option>
-                <option value="true">true</option>
-                <option value="false">false</option>
-              </select>
-              <p style={{ fontSize: '11px', color: INK.textFaint, lineHeight: 1.4, marginTop: '8px' }}>
-                A slotless claim has fixed polarity and cannot vary. Rewrite it with a {'{}'} slot — this
-                field disappears once every pack is enriched.
-              </p>
-            </div>
+            <p style={{ fontSize: '11px', color: '#d81b43', lineHeight: 1.4 }}>
+              `claim` must contain exactly one {'{}'} slot — every question needs one, no exceptions.
+            </p>
           )}
         </Panel>
       </div>

@@ -26,111 +26,91 @@
       "id": "rk-1",
       "factKey": "rk-1",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Name one property you could use to compare two rocks.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Any of: hardness, colour, whether it is shiny or dull, whether it lets water through",
+      "claim": "One property you could use to compare two rocks is {}.",
+      "answer": "hardness",
       "answerDetail": "",
       "acceptableAnswers": [
-        "hardness",
         "colour",
         "how hard it is",
         "whether it soaks up water"
       ],
-      "distractors": [],
+      "distractors": [
+        "how it smells",
+        "how it tastes",
+        "how loud it is",
+        "its favourite colour",
+        "how fast it can run"
+      ],
       "equation": null
     },
     {
       "id": "rk-2",
       "factKey": "rk-2",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A rock that lets water soak into it is described as...",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A rock that lets water soak into it is described as {}.",
       "answer": "permeable",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "permeable"
-      ],
-      "distractors": [
-        "waterproof",
-        "shiny",
-        "magnetic"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["waterproof", "shiny", "magnetic", "flexible", "edible"],
       "equation": null
     },
     {
       "id": "rk-3",
       "factKey": "rk-3",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "All rocks are exactly the same hardness.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which is harder: granite, or chalk?",
+      "claim": "{} is harder than chalk.",
+      "answer": "granite",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["chalk", "clay", "peat", "sand", "soil"],
       "equation": null
     },
     {
       "id": "rk-4",
       "factKey": "rk-4",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Some rocks are hard and used for buildings, while others are soft and crumble easily.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Which rock would be better for building a house: a hard rock like granite, or a soft, crumbly rock like chalk?",
+      "claim": "{} would be better for building a house than a soft, crumbly rock like chalk.",
+      "answer": "a hard rock like granite",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a soft, crumbly rock like chalk",
+        "loose sand",
+        "wet mud",
+        "loose soil",
+        "wet clay"
+      ],
       "equation": null
     },
     {
       "id": "rk-5",
       "factKey": "rk-5",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "To test which of two rocks is harder, you could...",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "To test which of two rocks is harder, you could {}.",
       "answer": "see which one scratches the other",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "see which one scratches the other"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "weigh them on scales",
         "measure how long they are",
-        "count their colours"
+        "count their colours",
+        "smell them",
+        "listen to them"
       ],
       "equation": null
     },
@@ -138,46 +118,42 @@
       "id": "rk-6",
       "factKey": "rk-6",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why is a hard, waterproof rock like granite good for building?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "It is strong and does not let water soak in, so it lasts a long time",
+      "claim": "Granite is good for building because {}.",
+      "answer": "it is strong and does not let water soak in",
       "answerDetail": "",
       "acceptableAnswers": [
         "it is strong and waterproof",
         "it is hard and lasts a long time"
       ],
-      "distractors": [],
+      "distractors": [
+        "it is soft and crumbly",
+        "it dissolves in rain",
+        "it is very light and floats",
+        "it melts in the sun",
+        "it attracts insects"
+      ],
       "equation": null
     },
     {
       "id": "rk-7",
       "factKey": "rk-7",
       "strand": "Comparing rocks",
-      "objectiveCodes": [
-        "Y3-R-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Chalk is a soft rock. What happens if you rub it along the ground?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "If you rub chalk along the ground, {}.",
       "answer": "it leaves a mark and wears away",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it leaves a mark and wears away"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
-        "nothing at all",
+        "nothing at all happens",
         "it gets harder",
-        "it turns into water"
+        "it turns into water",
+        "it turns transparent",
+        "it becomes magnetic"
       ],
       "equation": null
     },
@@ -185,71 +161,56 @@
       "id": "fo-1",
       "factKey": "fo-1",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is a fossil?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "The remains or shape of a living thing that lived long ago, preserved in rock",
+      "claim": "A fossil is {}.",
+      "answer": "the preserved remains of an ancient living thing, found in rock",
       "answerDetail": "",
       "acceptableAnswers": [
         "the remains of a dead animal or plant in rock",
         "the shape of an old living thing in rock"
       ],
-      "distractors": [],
+      "distractors": [
+        "a living plant",
+        "a type of soil",
+        "a modern animal bone",
+        "a man-made statue",
+        "a piece of coloured glass"
+      ],
       "equation": null
     },
     {
       "id": "fo-2",
       "factKey": "fo-2",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Fossils are usually found inside which of these?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What are fossils usually found inside?",
+      "claim": "Fossils are usually found inside {}.",
       "answer": "rock",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "rock"
-      ],
-      "distractors": [
-        "metal",
-        "plastic",
-        "glass"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["metal", "plastic", "glass", "ice", "cloth"],
       "equation": null
     },
     {
       "id": "fo-3",
       "factKey": "fo-3",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "Which of these best describes how a fossil forms?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What best describes how a fossil forms?",
+      "claim": "A fossil forms when {}.",
       "answer": "an animal is trapped in rock and its shape is preserved over a very long time",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "an animal is trapped in rock and its shape is preserved over a very long time"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "an animal turns to stone in a few days",
         "a rock grows legs and moves",
-        "a plant is painted onto a rock"
+        "a plant is painted onto a rock",
+        "an animal turns to gold instantly",
+        "a fossil is carved by a person"
       ],
       "equation": null
     },
@@ -257,216 +218,196 @@
       "id": "fo-4",
       "factKey": "fo-4",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Fossils can teach us about animals and plants that lived millions of years ago.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What can fossils teach us about?",
+      "claim": "Fossils can teach us about {}.",
+      "answer": "animals and plants that lived millions of years ago",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "how to build houses",
+        "the weather tomorrow",
+        "how to cook food",
+        "modern-day fashion",
+        "current pop music"
+      ],
       "equation": null
     },
     {
       "id": "fo-5",
       "factKey": "fo-5",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Fossils form very quickly, in just a few hours.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Do fossils form very quickly, in a few hours, or very slowly, over millions of years?",
+      "claim": "Fossils form {}.",
+      "answer": "very slowly, over millions of years",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "very quickly, in a few hours",
+        "in about a week",
+        "in one year",
+        "in ten years",
+        "overnight"
+      ],
       "equation": null
     },
     {
       "id": "fo-6",
       "factKey": "fo-6",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is the name of a scientist who studies fossils?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "A palaeontologist",
+      "claim": "A scientist who studies fossils is called {}.",
+      "answer": "a palaeontologist",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "palaeontologist",
-        "paleontologist"
+      "acceptableAnswers": ["palaeontologist", "paleontologist"],
+      "distractors": [
+        "a biologist",
+        "a chemist",
+        "an astronomer",
+        "a geographer",
+        "a historian"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "fo-7",
       "factKey": "fo-7",
       "strand": "Fossils",
-      "objectiveCodes": [
-        "Y3-R-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Which part of an animal is most likely to become a fossil?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The part of an animal most likely to become a fossil is {}.",
       "answer": "its hard bones or shell",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "its hard bones or shell"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "its soft skin",
         "its breath",
-        "its footsteps in the air"
+        "its footsteps in the air",
+        "its blood",
+        "its fur"
       ],
       "equation": null
     },
     {
       "id": "so-1",
-      "factKey": "so-1",
+      "factKey": "soil-is-rock-plus-organic",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What are soils made from?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Tiny pieces of rock mixed with organic matter (rotted plants and animals)",
+      "claim": "Soils are made from {}.",
+      "answer": "broken rock and organic matter",
       "answerDetail": "",
       "acceptableAnswers": [
         "broken up rock and rotted plants",
         "rock and organic matter"
       ],
-      "distractors": [],
+      "distractors": [
+        "only water",
+        "only plastic",
+        "sand from a beach shop only",
+        "clouds and rain",
+        "melted metal"
+      ],
       "equation": null
     },
     {
       "id": "so-2",
       "factKey": "so-2",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "What is the name for the rotted plant and animal material found in soil?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Organic matter",
+      "claim": "The rotted plant and animal material found in soil is called {}.",
+      "answer": "organic matter",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "organic matter",
-        "humus"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["humus"],
+      "distractors": ["minerals", "sand", "clay", "gravel", "pebbles"],
       "equation": null
     },
     {
       "id": "so-3",
       "factKey": "so-3",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Where do the tiny pieces of rock in soil come from?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The tiny pieces of rock in soil come from {}.",
       "answer": "larger rocks broken down over a long time",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "larger rocks broken down over a long time"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "they are made in factories",
         "they fall from the sky as rain",
-        "they grow from seeds"
+        "they grow from seeds",
+        "they melt from ice",
+        "they are laid by insects"
       ],
       "equation": null
     },
     {
       "id": "so-4",
-      "factKey": "so-4",
+      "factKey": "soil-is-rock-plus-organic",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Soil contains pieces of broken-down rock.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "As well as organic matter, what else does soil contain?",
+      "claim": "As well as organic matter, soil also contains {}.",
+      "answer": "pieces of broken-down rock",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "pieces of plastic",
+        "pieces of glass",
+        "pieces of metal",
+        "pieces of coral only",
+        "nothing else"
+      ],
       "equation": null
     },
     {
       "id": "so-5",
-      "factKey": "so-5",
+      "factKey": "soil-is-rock-plus-organic",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Soil is made only of water and nothing else.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Is soil actually made from only water, or from a mixture of broken rock and organic matter?",
+      "claim": "Soil is actually made from {}.",
+      "answer": "a mixture of broken rock and organic matter",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "only water",
+        "only air",
+        "only plastic",
+        "only sand from the seaside",
+        "only mud and nothing else"
+      ],
       "equation": null
     },
     {
       "id": "so-6",
       "factKey": "so-6",
       "strand": "Soil",
-      "objectiveCodes": [
-        "Y3-R-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-R-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Why is soil important for plants?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Soil is important for plants because {}.",
       "answer": "it gives their roots somewhere to grow and holds water and nutrients",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "it gives their roots somewhere to grow and holds water and nutrients"
-      ],
+      "acceptableAnswers": [],
       "distractors": [
         "it keeps them cold",
         "it stops them growing",
-        "plants do not need soil for anything"
+        "plants do not need soil for anything",
+        "it makes them taste sweet",
+        "it changes their colour"
       ],
       "equation": null
     }

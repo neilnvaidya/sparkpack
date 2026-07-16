@@ -30,15 +30,10 @@
       "id": "eq-1",
       "factKey": "eq-1",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -54,15 +49,10 @@
       "id": "eq-2",
       "factKey": "eq-2",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -78,15 +68,10 @@
       "id": "eq-3",
       "factKey": "eq-3",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -102,15 +87,10 @@
       "id": "eq-4",
       "factKey": "eq-4",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -126,15 +106,10 @@
       "id": "eq-5",
       "factKey": "eq-5",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -150,15 +125,10 @@
       "id": "eq-6",
       "factKey": "eq-6",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -174,15 +144,10 @@
       "id": "eq-7",
       "factKey": "eq-7",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -198,15 +163,10 @@
       "id": "eq-8",
       "factKey": "eq-8",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -222,15 +182,10 @@
       "id": "eq-9",
       "factKey": "eq-9",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -246,15 +201,10 @@
       "id": "eq-10",
       "factKey": "eq-10",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -270,15 +220,10 @@
       "id": "eq-11",
       "factKey": "eq-11",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -294,15 +239,10 @@
       "id": "eq-12",
       "factKey": "eq-12",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-AS-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -318,342 +258,236 @@
       "id": "wp-1",
       "factKey": "wp-1",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A school has 246 pupils. 3 new pupils join. How many pupils are there now?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "246 pupils plus 3 new pupils makes {} pupils.",
       "answer": "249",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "249 pupils"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["243", "252", "246", "259", "149"],
       "equation": null
     },
     {
       "id": "wp-2",
       "factKey": "wp-2",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A shop had 380 apples and sold 140 of them. How many apples are left?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "380 apples minus 140 sold leaves {} apples.",
       "answer": "240",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "240 apples"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["220", "260", "520", "140", "380"],
       "equation": null
     },
     {
       "id": "wp-3",
       "factKey": "wp-3",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Class A collects 325 stickers and Class B collects 267 stickers. How many stickers is that altogether?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "325 stickers plus 267 stickers is {} stickers altogether.",
       "answer": "592",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "592 stickers"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["582", "602", "492", "692", "58"],
       "equation": null
     },
     {
       "id": "wp-4",
       "factKey": "wp-4",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A baker makes 205 rolls in the morning and 96 in the afternoon. How many rolls in total?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "205 rolls plus 96 rolls is {} rolls in total.",
       "answer": "301",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "301 rolls"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["291", "311", "201", "396", "109"],
       "equation": null
     },
     {
       "id": "wp-5",
       "factKey": "wp-5",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A cinema has 450 seats. 278 tickets have been sold. How many seats are still empty?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "450 seats minus 278 sold tickets leaves {} seats empty.",
       "answer": "172",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "172 seats"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["162", "182", "728", "272", "178"],
       "equation": null
     },
     {
       "id": "wp-6",
       "factKey": "wp-6",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Tom's book has 328 pages. He has read 159 pages. How many pages are left to read?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "328 pages minus 159 read leaves {} pages left.",
       "answer": "169",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "169 pages"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["159", "179", "487", "269", "171"],
       "equation": null
     },
     {
       "id": "mn-1",
       "factKey": "mn-1",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "? + 40 = 320. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '? + 40 = 320' is {}.",
       "answer": "280",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "280"
-      ],
-      "distractors": [
-        "360",
-        "300",
-        "380"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["360", "300", "380", "240", "160"],
       "equation": null
     },
     {
       "id": "mn-2",
       "factKey": "mn-2",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "500 − ? = 350. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "500 - ? = 350. What is the missing number?",
+      "claim": "The missing number in '500 - ? = 350' is {}.",
       "answer": "150",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "150"
-      ],
-      "distractors": [
-        "250",
-        "850",
-        "200"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["250", "850", "200", "300", "450"],
       "equation": null
     },
     {
       "id": "mn-3",
       "factKey": "mn-3",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
-      "ask": "? − 125 = 480. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "? - 125 = 480. What is the missing number?",
+      "claim": "The missing number in '? - 125 = 480' is {}.",
       "answer": "605",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "605"
-      ],
-      "distractors": [
-        "355",
-        "505",
-        "625"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["355", "505", "625", "480", "730"],
       "equation": null
     },
     {
       "id": "mn-4",
       "factKey": "mn-4",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-AS-4"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-AS-4"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "246 + ? = 512. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '246 + ? = 512' is {}.",
       "answer": "266",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "266"
-      ],
-      "distractors": [
-        "276",
-        "366",
-        "734"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["276", "366", "734", "256", "512"],
       "equation": null
     },
     {
       "id": "ec-1",
       "factKey": "ec-1",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A good estimate for 198 + 303 is 500.",
-      "claimIsTrue": true,
-      "answer": "",
-      "answerDetail": "",
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is a good estimate for 198 + 303, rounding to the nearest hundred?",
+      "claim": "A good estimate for 198 + 303 is {}.",
+      "answer": "500",
+      "answerDetail": "200 + 300.",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["400", "600", "300", "700", "800"],
       "equation": null
     },
     {
       "id": "ec-2",
       "factKey": "ec-2",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "To check that 460 − 180 = 280, you can work out 280 + 180.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "How can you check that 460 - 180 = 280?",
+      "claim": "You can check that 460 - 180 = 280 by {}.",
+      "answer": "working out 280 + 180",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "working out 460 + 180",
+        "working out 280 - 180",
+        "working out 460 × 180",
+        "working out 180 - 460",
+        "guessing"
+      ],
       "equation": null
     },
     {
       "id": "ec-3",
       "factKey": "ec-3",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "398 + 401 is about 900.",
-      "claimIsTrue": false,
-      "answer": "",
-      "answerDetail": "",
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is a good estimate for 398 + 401, rounding to the nearest hundred?",
+      "claim": "A good estimate for 398 + 401 is {}.",
+      "answer": "800",
+      "answerDetail": "400 + 400.",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["900", "700", "1000", "600", "500"],
       "equation": null
     },
     {
       "id": "ec-4",
       "factKey": "ec-4",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "The inverse of addition is subtraction.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is the inverse of addition?",
+      "claim": "The inverse of addition is {}.",
+      "answer": "subtraction",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "multiplication",
+        "division",
+        "addition itself",
+        "estimation",
+        "rounding"
+      ],
       "equation": null
     },
     {
       "id": "ec-5",
       "factKey": "ec-5",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "Round each number to the nearest hundred to estimate 512 + 289.",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "About 800 (500 + 300)",
-      "answerDetail": "",
-      "acceptableAnswers": [
-        "800"
-      ],
-      "distractors": [],
+      "claim": "Rounding each number to the nearest hundred, an estimate for 512 + 289 is {}.",
+      "answer": "800",
+      "answerDetail": "500 + 300.",
+      "acceptableAnswers": [],
+      "distractors": ["700", "900", "750", "850", "801"],
       "equation": null
     },
     {
       "id": "ec-6",
       "factKey": "ec-6",
       "strand": "Estimate and check",
-      "objectiveCodes": [
-        "Y3-AS-3"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A good estimate for 612 − 195 is 400.",
-      "claimIsTrue": true,
-      "answer": "",
-      "answerDetail": "",
+      "objectiveCodes": ["Y3-AS-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is a good estimate for 612 - 195, rounding to the nearest hundred?",
+      "claim": "A good estimate for 612 - 195 is {}.",
+      "answer": "400",
+      "answerDetail": "600 - 200.",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["500", "300", "600", "200", "700"],
       "equation": null
     }
   ]

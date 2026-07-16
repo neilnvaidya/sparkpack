@@ -26,15 +26,10 @@
       "id": "eq-1",
       "factKey": "eq-1",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -50,15 +45,10 @@
       "id": "eq-2",
       "factKey": "eq-2",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -74,15 +64,10 @@
       "id": "eq-3",
       "factKey": "eq-3",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -98,15 +83,10 @@
       "id": "eq-4",
       "factKey": "eq-4",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -122,15 +102,10 @@
       "id": "eq-5",
       "factKey": "eq-5",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -146,15 +121,10 @@
       "id": "eq-6",
       "factKey": "eq-6",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -170,15 +140,10 @@
       "id": "eq-7",
       "factKey": "eq-7",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -194,15 +159,10 @@
       "id": "eq-8",
       "factKey": "eq-8",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -218,15 +178,10 @@
       "id": "eq-9",
       "factKey": "eq-9",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -242,15 +197,10 @@
       "id": "eq-10",
       "factKey": "eq-10",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -266,15 +216,10 @@
       "id": "eq-11",
       "factKey": "eq-11",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -290,15 +235,10 @@
       "id": "eq-12",
       "factKey": "eq-12",
       "strand": "",
-      "objectiveCodes": [
-        "Y3-MD-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "",
       "claim": "",
-      "claimIsTrue": null,
       "answer": "",
       "answerDetail": "",
       "acceptableAnswers": [],
@@ -314,323 +254,230 @@
       "id": "wp-1",
       "factKey": "wp-1",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "An egg box holds 4 eggs. How many eggs are in 5 boxes?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "4 eggs per box in 5 boxes is {} eggs.",
       "answer": "20",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "20 eggs"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["9", "24", "16", "25", "45"],
       "equation": null
     },
     {
       "id": "wp-2",
       "factKey": "wp-2",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "3 friends share 27 sweets equally. How many sweets does each friend get?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "27 sweets shared equally among 3 friends is {} each.",
       "answer": "9",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "9 sweets",
-        "9 each"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["8", "24", "3", "30", "81"],
       "equation": null
     },
     {
       "id": "wp-3",
       "factKey": "wp-3",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A spider has 8 legs. How many legs do 6 spiders have altogether?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "8 legs per spider across 6 spiders is {} legs altogether.",
       "answer": "48",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "48 legs"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["14", "42", "54", "64", "86"],
       "equation": null
     },
     {
       "id": "wp-4",
       "factKey": "wp-4",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A blue ribbon is 12 cm long. A red ribbon is 4 times as long. How long is the red ribbon?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "A red ribbon 4 times as long as a 12 cm blue ribbon is {}.",
       "answer": "48 cm",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "48",
-        "48 centimetres"
-      ],
-      "distractors": [],
+      "acceptableAnswers": ["48", "48 centimetres"],
+      "distractors": ["16 cm", "36 cm", "44 cm", "52 cm", "3 cm"],
       "equation": null
     },
     {
       "id": "wp-5",
       "factKey": "wp-5",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "32 children sit in teams of 8. How many teams are there?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "32 children in teams of 8 makes {} teams.",
       "answer": "4",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "4 teams"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["8", "24", "40", "3", "5"],
       "equation": null
     },
     {
       "id": "wp-6",
       "factKey": "wp-6",
       "strand": "Word problems",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "One box holds 16 crayons. How many crayons are in 3 boxes?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "16 crayons per box across 3 boxes is {} crayons.",
       "answer": "48",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "48 crayons"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["19", "13", "32", "54", "45"],
+      "equation": null
+    },
+    {
+      "id": "wp-7",
+      "factKey": "wp-7",
+      "strand": "Word problems",
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "A minibus seats 8 people. How many people can 3 minibuses seat altogether?",
+      "claim": "8 people per minibus across 3 minibuses is {} people altogether.",
+      "answer": "24",
+      "answerDetail": "",
+      "acceptableAnswers": [],
+      "distractors": ["11", "16", "32", "38", "5"],
       "equation": null
     },
     {
       "id": "mn-1",
       "factKey": "mn-1",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "? × 4 = 28. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '? × 4 = 28' is {}.",
       "answer": "7",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "7"
-      ],
-      "distractors": [
-        "6",
-        "8",
-        "24"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["6", "8", "24", "5", "14"],
       "equation": null
     },
     {
       "id": "mn-2",
       "factKey": "mn-2",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "24 ÷ ? = 3. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '24 ÷ ? = 3' is {}.",
       "answer": "8",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "8"
-      ],
-      "distractors": [
-        "6",
-        "9",
-        "21"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["6", "9", "21", "4", "12"],
       "equation": null
     },
     {
       "id": "mn-3",
       "factKey": "mn-3",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "8 × ? = 64. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '8 × ? = 64' is {}.",
       "answer": "8",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "8"
-      ],
-      "distractors": [
-        "6",
-        "7",
-        "9"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["6", "7", "9", "10", "4"],
       "equation": null
     },
     {
       "id": "mn-4",
       "factKey": "mn-4",
       "strand": "Missing numbers",
-      "objectiveCodes": [
-        "Y3-MD-3"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-MD-3"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "? ÷ 3 = 12. What is the missing number?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "The missing number in '? ÷ 3 = 12' is {}.",
       "answer": "36",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "36"
-      ],
-      "distractors": [
-        "4",
-        "24",
-        "39"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["4", "24", "39", "33", "40"],
       "equation": null
     },
     {
       "id": "tf-1",
       "factKey": "tf-1",
       "strand": "True or false?",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "4 × 8 = 32",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 4 × 8?",
+      "claim": "4 × 8 = {}.",
+      "answer": "32",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["24", "28", "36", "40", "12"],
       "equation": null
     },
     {
       "id": "tf-2",
       "factKey": "tf-2",
       "strand": "True or false?",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "3 × 7 = 24",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 3 × 7?",
+      "claim": "3 × 7 = {}.",
+      "answer": "21",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["24", "18", "28", "14", "27"],
       "equation": null
     },
     {
       "id": "tf-3",
       "factKey": "tf-3",
       "strand": "True or false?",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "56 ÷ 8 = 7",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 56 ÷ 8?",
+      "claim": "56 ÷ 8 = {}.",
+      "answer": "7",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["6", "8", "9", "5", "14"],
       "equation": null
     },
     {
       "id": "tf-4",
       "factKey": "tf-4",
       "strand": "True or false?",
-      "objectiveCodes": [
-        "Y3-MD-2"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Multiplying a number by 4 is the same as doubling it and doubling again.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-MD-2"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What two steps are the same as multiplying a number by 4?",
+      "claim": "Multiplying a number by 4 is the same as {}.",
+      "answer": "doubling it and doubling again",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "halving it and halving again",
+        "adding 4 to it twice",
+        "tripling it once",
+        "squaring it",
+        "dividing it by 4 twice"
+      ],
       "equation": null
     },
     {
       "id": "tf-5",
       "factKey": "tf-5",
       "strand": "True or false?",
-      "objectiveCodes": [
-        "Y3-MD-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "40 ÷ 8 = 6",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-MD-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What is 40 ÷ 8?",
+      "claim": "40 ÷ 8 = {}.",
+      "answer": "5",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": ["6", "4", "8", "10", "45"],
       "equation": null
     }
   ]

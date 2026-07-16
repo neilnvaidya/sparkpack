@@ -22,436 +22,334 @@
       "id": "pi-1",
       "factKey": "pi-1",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In a pictogram, one apple symbol stands for 2 apples. What do 3 symbols stand for?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "3 apple symbols stand for {}.",
       "answer": "6 apples",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "6"
+      "acceptableAnswers": ["6"],
+      "distractors": [
+        "5 apples",
+        "3 apples",
+        "8 apples",
+        "1 apple",
+        "9 apples"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "pi-2",
       "factKey": "pi-2",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-1",
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-1", "Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In a pictogram, one star stands for 5 points. A team has 4 stars. How many points is that?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "4 star symbols worth 5 points each stand for {}.",
       "answer": "20 points",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "20"
+      "acceptableAnswers": ["20"],
+      "distractors": [
+        "9 points",
+        "15 points",
+        "25 points",
+        "4 points",
+        "24 points"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "pi-3",
       "factKey": "pi-3",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In a pictogram, one circle stands for 10 books. How many circles are needed to show 35 books?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "To show 35 books, where one circle stands for 10 books, you need {} circles.",
       "answer": "3 and a half",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "3 and a half"
-      ],
-      "distractors": [
-        "3",
-        "4",
-        "35"
-      ],
+      "acceptableAnswers": ["3.5"],
+      "distractors": ["3", "4", "35", "17.5", "1.75"],
       "equation": null
     },
     {
       "id": "pi-4",
       "factKey": "pi-4",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "In a pictogram, half a symbol can stand for half the value of a whole symbol.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "In a pictogram, what does half a symbol usually stand for?",
+      "claim": "In a pictogram, half a symbol stands for {}.",
+      "answer": "half the value of a whole symbol",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "nothing at all",
+        "double the value of a whole symbol",
+        "the same as a whole symbol",
+        "zero",
+        "a random number"
+      ],
       "equation": null
     },
     {
       "id": "pi-5",
       "factKey": "pi-5",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In a pictogram, one sun symbol stands for 4 sunny days. What do 2 symbols stand for?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "2 sun symbols stand for {}.",
       "answer": "8 sunny days",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "8"
+      "acceptableAnswers": ["8"],
+      "distractors": [
+        "6 sunny days",
+        "4 sunny days",
+        "10 sunny days",
+        "2 sunny days",
+        "12 sunny days"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "pi-6",
       "factKey": "pi-6",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "Every pictogram symbol always stands for exactly 1, no matter what the key says.",
-      "claimIsTrue": false,
-      "answer": "",
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "What tells you how many each pictogram symbol is worth?",
+      "claim": "How many each pictogram symbol is worth is shown by {}.",
+      "answer": "the key",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "the title only",
+        "the symbol's colour",
+        "the size of the page",
+        "the date",
+        "the child's name"
+      ],
       "equation": null
     },
     {
       "id": "pi-7",
       "factKey": "pi-7",
       "strand": "Pictograms",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "In a pictogram, one square stands for 2 goals. Team A has 5 squares and Team B has 3 squares. How many more goals did Team A score?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "With one square standing for 2 goals, Team A (5 squares) scored {} more goals than Team B (3 squares).",
       "answer": "4",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "4"
-      ],
-      "distractors": [
-        "2",
-        "8",
-        "10"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["2", "8", "10", "1", "6"],
       "equation": null
     },
     {
       "id": "ba-1",
       "factKey": "ba-1",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "On a bar chart, the taller the bar, the bigger the number it shows.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "On a bar chart, what does a taller bar show?",
+      "claim": "On a bar chart, a taller bar shows {}.",
+      "answer": "a bigger number",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "a smaller number",
+        "the same number always",
+        "the colour of the data",
+        "nothing useful",
+        "the date"
+      ],
       "equation": null
     },
     {
       "id": "ba-2",
       "factKey": "ba-2",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A bar chart shows 8 children chose cats and 12 chose dogs. How many more chose dogs than cats?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "4 more",
+      "claim": "8 children chose cats and 12 chose dogs — {} more chose dogs.",
+      "answer": "4",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "4"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["20", "8", "12", "3", "5"],
       "equation": null
     },
     {
       "id": "ba-3",
       "factKey": "ba-3",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-1",
-        "Y3-S-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-1", "Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "On a bar chart, the scale goes up in steps of 2. A bar reaches halfway between 6 and 8. What is its value?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "On a bar chart with a scale in steps of 2, a bar reaching halfway between 6 and 8 has value {}.",
       "answer": "7",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "7"
-      ],
-      "distractors": [
-        "6",
-        "8",
-        "9"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["6", "8", "9", "6.5", "7.5"],
       "equation": null
     },
     {
       "id": "ba-4",
       "factKey": "ba-4",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A bar chart shows favourite colours: red 15, blue 9, green 6. How many children voted in total?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "30 children",
+      "claim": "With red 15, blue 9 and green 6 votes, {} children voted in total.",
+      "answer": "30",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "30"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["21", "24", "36", "15", "9"],
       "equation": null
     },
     {
       "id": "ba-5",
       "factKey": "ba-5",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A bar chart shows favourite fruits: apples 10, bananas 14, grapes 7. Which fruit was the most popular?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "Bananas",
+      "claim": "With apples 10, bananas 14 and grapes 7, the most popular fruit was {}.",
+      "answer": "bananas",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "Bananas"
-      ],
-      "distractors": [
-        "Apples",
-        "Grapes",
-        "They are equal"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["apples", "grapes", "they are equal", "oranges", "pears"],
       "equation": null
     },
     {
       "id": "ba-6",
       "factKey": "ba-6",
       "strand": "Bar charts",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A bar chart shows 20 children walk to school and 13 come by car. How many fewer come by car?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "7 fewer",
+      "claim": "With 20 walking and 13 by car, {} fewer come by car.",
+      "answer": "7",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "7"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["33", "20", "13", "6", "8"],
       "equation": null
     },
     {
       "id": "ta-1",
       "factKey": "ta-1",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A table shows laps run: Monday 25, Tuesday 32. How many laps were run altogether?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "57 laps",
+      "claim": "With Monday 25 and Tuesday 32 laps, {} laps were run altogether.",
+      "answer": "57",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "57"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["7", "32", "25", "50", "65"],
       "equation": null
     },
     {
       "id": "ta-2",
       "factKey": "ta-2",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A table shows Class A read 48 books and Class B read 29 books. How many fewer books did Class B read?",
-      "claim": "",
-      "claimIsTrue": null,
-      "answer": "19 fewer",
+      "claim": "With Class A 48 books and Class B 29 books, Class B read {} fewer books.",
+      "answer": "19",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "19"
-      ],
-      "distractors": [],
+      "acceptableAnswers": [],
+      "distractors": ["77", "29", "48", "9", "39"],
       "equation": null
     },
     {
       "id": "ta-3",
       "factKey": "ta-3",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "In a tally chart, a group of five is drawn as four lines with a fifth line across them.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "How is a group of five shown in a tally chart?",
+      "claim": "In a tally chart, a group of five is drawn as {}.",
+      "answer": "four lines with a fifth line across them",
       "answerDetail": "",
       "acceptableAnswers": [],
-      "distractors": [],
+      "distractors": [
+        "five separate dots",
+        "a big number 5",
+        "five circles",
+        "a star shape",
+        "five crosses in a row"
+      ],
       "equation": null
     },
     {
       "id": "ta-4",
       "factKey": "ta-4",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A tally shows two full groups of five and two extra marks. What number is that?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "Two full tally groups of five and two extra marks make {}.",
       "answer": "12",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "12"
-      ],
-      "distractors": [
-        "7",
-        "10",
-        "52"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["7", "10", "52", "5", "17"],
       "equation": null
     },
     {
       "id": "ta-5",
       "factKey": "ta-5",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "open"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A table shows ice creams sold: Saturday 30, Sunday 40. On which day were more ice creams sold?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "With Saturday 30 and Sunday 40 ice creams sold, more were sold on {}.",
       "answer": "Sunday",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "sunday"
+      "acceptableAnswers": ["sunday"],
+      "distractors": [
+        "Saturday",
+        "Monday",
+        "both the same",
+        "neither",
+        "Friday"
       ],
-      "distractors": [],
       "equation": null
     },
     {
       "id": "ta-6",
       "factKey": "ta-6",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-2"
-      ],
-      "forms": [
-        "mcq"
-      ],
+      "objectiveCodes": ["Y3-S-2"],
+      "forms": ["open", "mcq", "truefalse"],
       "ask": "A table shows stickers collected: Amy 24, Ben 18, Cara 30. How many do Amy and Ben have altogether?",
-      "claim": "",
-      "claimIsTrue": null,
+      "claim": "With Amy 24 and Ben 18 stickers, together they have {}.",
       "answer": "42",
       "answerDetail": "",
-      "acceptableAnswers": [
-        "42"
-      ],
-      "distractors": [
-        "32",
-        "48",
-        "72"
-      ],
+      "acceptableAnswers": [],
+      "distractors": ["32", "48", "72", "54", "24"],
       "equation": null
     },
     {
       "id": "ta-7",
       "factKey": "ta-7",
       "strand": "Tables",
-      "objectiveCodes": [
-        "Y3-S-1"
-      ],
-      "forms": [
-        "truefalse"
-      ],
-      "ask": "",
-      "claim": "A table with rows and columns can show the same information as a bar chart.",
-      "claimIsTrue": true,
-      "answer": "",
+      "objectiveCodes": ["Y3-S-1"],
+      "forms": ["open", "mcq", "truefalse"],
+      "ask": "Name another way, besides a bar chart, that data can be shown.",
+      "claim": "{} can show the same information as a bar chart.",
+      "answer": "a table",
       "answerDetail": "",
-      "acceptableAnswers": [],
-      "distractors": [],
+      "acceptableAnswers": ["a pictogram"],
+      "distractors": [
+        "a shopping list",
+        "a diary entry",
+        "a story",
+        "a poem",
+        "a letter"
+      ],
       "equation": null
     }
   ]
