@@ -28169,94 +28169,45 @@ exports[`every pack builds every available game identically 1`] = `
       },
       {
         "acceptableAnswers": [
-          "True",
+          "a kitten",
         ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "a kitten looks quite similar to its adult form.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "All animals need water in order to survive.",
-      },
-      {
-        "acceptableAnswers": [
-          "to stay alive",
-        ],
-        "answer": "to stay alive",
-        "answerDetail": "Their bodies need water to work properly.",
+        "answer": "a kitten",
         "form": "mcq",
         "options": [
           {
             "correct": false,
             "label": "A",
-            "text": "to become invisible",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "to stay alive",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "to fly",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "to change colour",
-          },
-        ],
-        "prompt": "Why do animals need water?",
-      },
-      {
-        "acceptableAnswers": [
-          "television",
-        ],
-        "answer": "television",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "shelter",
+            "text": "a chrysalis",
           },
           {
             "correct": false,
             "label": "B",
-            "text": "food",
+            "text": "a maggot",
           },
           {
             "correct": true,
             "label": "C",
-            "text": "television",
+            "text": "a kitten",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "air",
+            "text": "an egg",
           },
         ],
-        "prompt": "What is NOT a basic need of animals?",
+        "prompt": "Which baby animal looks quite similar to its adult form: a kitten, or a caterpillar?",
       },
       {
         "acceptableAnswers": [
-          "shelter and warmth",
+          "water",
         ],
-        "answer": "shelter and warmth",
+        "answer": "water",
         "form": "mcq",
         "options": [
           {
             "correct": true,
             "label": "A",
-            "text": "shelter and warmth",
+            "text": "water",
           },
           {
             "correct": false,
@@ -28271,7 +28222,98 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "D",
-            "text": "sweets",
+            "text": "a computer",
+          },
+        ],
+        "prompt": "Name one thing all animals need in order to survive.",
+      },
+      {
+        "acceptableAnswers": [
+          "to stay alive",
+        ],
+        "answer": "to stay alive",
+        "answerDetail": "Their bodies need water to work properly.",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "to change colour",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "to fly",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "to stay alive",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "to become invisible",
+          },
+        ],
+        "prompt": "Why do animals need water?",
+      },
+      {
+        "acceptableAnswers": [
+          "television",
+        ],
+        "answer": "television",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "air",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "water",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "television",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "warmth",
+          },
+        ],
+        "prompt": "What is NOT a basic need of animals?",
+      },
+      {
+        "acceptableAnswers": [
+          "shelter and warmth",
+        ],
+        "answer": "shelter and warmth",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "money",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "a television",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "shelter and warmth",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "toys",
           },
         ],
         "prompt": "As well as food, water and air, what helps animals stay safe and well?",
@@ -28286,7 +28328,7 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "A",
-            "text": "they turn a different colour",
+            "text": "they become stronger",
           },
           {
             "correct": true,
@@ -28296,12 +28338,12 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "C",
-            "text": "nothing happens at all",
+            "text": "they need less food",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "they become stronger",
+            "text": "they turn a different colour",
           },
         ],
         "prompt": "What happens to humans if they go without water for too long?",
@@ -28314,24 +28356,24 @@ exports[`every pack builds every available game identically 1`] = `
         "form": "mcq",
         "options": [
           {
-            "correct": false,
-            "label": "A",
-            "text": "shelter only",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "food only",
-          },
-          {
             "correct": true,
-            "label": "C",
+            "label": "A",
             "text": "air",
           },
           {
             "correct": false,
-            "label": "D",
+            "label": "B",
+            "text": "water only",
+          },
+          {
+            "correct": false,
+            "label": "C",
             "text": "warmth only",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "shelter only",
           },
         ],
         "prompt": "What do all animals, including humans, need in order to breathe?",
@@ -28344,24 +28386,24 @@ exports[`every pack builds every available game identically 1`] = `
         "form": "mcq",
         "options": [
           {
-            "correct": false,
-            "label": "A",
-            "text": "it makes your bones weaker",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "it stops you growing",
-          },
-          {
             "correct": true,
-            "label": "C",
+            "label": "A",
             "text": "it keeps your body strong and healthy",
           },
           {
             "correct": false,
-            "label": "D",
+            "label": "B",
             "text": "it makes you ill",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "it makes your bones weaker",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "it stops you growing",
           },
         ],
         "prompt": "Why is exercise good for you?",
@@ -28369,31 +28411,12 @@ exports[`every pack builds every available game identically 1`] = `
       {
         "acceptableAnswers": [
           "brush them twice a day",
+          "eat less sugar",
+          "avoid too many sugary foods and drinks",
+          "visit the dentist",
         ],
         "answer": "brush them twice a day",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "eat sweets all day",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "brush them twice a day",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "never brush them",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "drink lots of fizzy drinks",
-          },
-        ],
+        "form": "open",
         "prompt": "Name one thing you should do to keep your teeth healthy.",
       },
       {
@@ -28401,29 +28424,7 @@ exports[`every pack builds every available game identically 1`] = `
           "chicken, rice and vegetables",
         ],
         "answer": "chicken, rice and vegetables",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "chicken, rice and vegetables",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "crisps and fizzy drinks",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "biscuits and juice",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "cake and sweets",
-          },
-        ],
+        "form": "open",
         "prompt": "Name a healthy meal.",
       },
       {
@@ -28431,59 +28432,17 @@ exports[`every pack builds every available game identically 1`] = `
           "to get rid of germs",
         ],
         "answer": "to get rid of germs",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "to make them wet",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "to use up soap",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "to get rid of germs",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "to make a game of it",
-          },
-        ],
+        "form": "open",
         "prompt": "Why do we wash our hands before eating?",
       },
       {
         "acceptableAnswers": [
           "can be damaged",
+          "can get holes",
+          "can decay",
         ],
         "answer": "can be damaged",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "stay exactly the same",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "can be damaged",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "grow bigger",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "never need brushing again",
-          },
-        ],
+        "form": "open",
         "prompt": "What happens to your teeth if you eat sweets every day?",
       },
       {
@@ -28491,80 +28450,8 @@ exports[`every pack builds every available game identically 1`] = `
           "grow and repair",
         ],
         "answer": "grow and repair",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "shrink",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "grow and repair",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "stop growing",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "get more tired",
-          },
-        ],
+        "form": "open",
         "prompt": "What does sleep help your body do?",
-      },
-      {
-        "acceptableAnswers": [
-          "herbivores",
-          "herbivore",
-        ],
-        "answer": "herbivores",
-        "form": "open",
-        "prompt": "What do we call animals that only eat plants?",
-      },
-      {
-        "acceptableAnswers": [
-          "omnivores",
-          "omnivore",
-        ],
-        "answer": "omnivores",
-        "form": "open",
-        "prompt": "What do we call animals that eat both plants and meat?",
-      },
-      {
-        "acceptableAnswers": [
-          "a lion",
-        ],
-        "answer": "a lion",
-        "form": "open",
-        "prompt": "Which animal is a carnivore?",
-      },
-      {
-        "acceptableAnswers": [
-          "a chicken",
-        ],
-        "answer": "a chicken",
-        "form": "open",
-        "prompt": "Which animal hatches from an egg?",
-      },
-      {
-        "acceptableAnswers": [
-          "a mammal",
-        ],
-        "answer": "a mammal",
-        "form": "open",
-        "prompt": "What type of animal is a human?",
-      },
-      {
-        "acceptableAnswers": [
-          "using gills",
-        ],
-        "answer": "using gills",
-        "form": "open",
-        "prompt": "How do fish breathe underwater?",
       },
     ],
     "title": "Animals, Including Humans",
@@ -28886,115 +28773,6 @@ exports[`every pack builds every available game identically 1`] = `
         "points": 200,
         "prompt": "What does sleep help your body do?",
       },
-      {
-        "acceptableAnswers": [
-          "herbivores",
-          "herbivore",
-        ],
-        "answer": "herbivores",
-        "form": "open",
-        "id": "aa-1",
-        "points": 300,
-        "prompt": "What do we call animals that only eat plants?",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: Animals that eat both plants and meat are called omnivores.",
-        "form": "truefalse",
-        "id": "aa-2",
-        "isTrue": false,
-        "points": 100,
-        "prompt": "Animals that eat both plants and meat are called predators.",
-      },
-      {
-        "acceptableAnswers": [
-          "a lion",
-        ],
-        "answer": "a lion",
-        "form": "mcq",
-        "id": "aa-3",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "a horse",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a rabbit",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "a lion",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a sheep",
-          },
-        ],
-        "points": 200,
-        "prompt": "Which animal is a carnivore?",
-      },
-      {
-        "acceptableAnswers": [
-          "a chicken",
-        ],
-        "answer": "a chicken",
-        "form": "open",
-        "id": "aa-4",
-        "points": 300,
-        "prompt": "Which animal hatches from an egg?",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: A human is a mammal.",
-        "form": "truefalse",
-        "id": "aa-5",
-        "isTrue": false,
-        "points": 100,
-        "prompt": "A human is a bird.",
-      },
-      {
-        "acceptableAnswers": [
-          "using gills",
-        ],
-        "answer": "using gills",
-        "form": "mcq",
-        "id": "aa-6",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "using their fins",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "using gills",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "not breathing at all",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "using their skin only",
-          },
-        ],
-        "points": 200,
-        "prompt": "How do fish breathe underwater?",
-      },
     ],
     "questionsPerRound": 3,
     "title": "Animals, Including Humans",
@@ -29010,24 +28788,24 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Growing up",
         "options": [
           {
-            "correct": true,
+            "correct": false,
             "label": "A",
+            "text": "a chrysalis",
+          },
+          {
+            "correct": true,
+            "label": "B",
             "text": "a kitten",
           },
           {
             "correct": false,
-            "label": "B",
-            "text": "a maggot",
-          },
-          {
-            "correct": false,
             "label": "C",
-            "text": "a caterpillar",
+            "text": "an egg",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "a chrysalis",
+            "text": "a maggot",
           },
         ],
         "prompt": "Which baby animal looks quite similar to its adult form: a kitten, or a caterpillar?",
@@ -29043,12 +28821,12 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "A",
-            "text": "nothing happens at all",
+            "text": "they turn a different colour",
           },
           {
             "correct": false,
             "label": "B",
-            "text": "they turn a different colour",
+            "text": "nothing happens at all",
           },
           {
             "correct": true,
@@ -29058,7 +28836,7 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "D",
-            "text": "they need less food",
+            "text": "they become stronger",
           },
         ],
         "prompt": "What happens to humans if they go without water for too long?",
@@ -29072,58 +28850,27 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Healthy living",
         "options": [
           {
-            "correct": false,
-            "label": "A",
-            "text": "to make them wet",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "to make them smell nice",
-          },
-          {
             "correct": true,
-            "label": "C",
+            "label": "A",
             "text": "to get rid of germs",
           },
           {
             "correct": false,
-            "label": "D",
+            "label": "B",
             "text": "to use up soap",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "to make them wet",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "to make them smell nice",
           },
         ],
         "prompt": "Why do we wash our hands before eating?",
-      },
-      {
-        "acceptableAnswers": [
-          "a chicken",
-        ],
-        "answer": "a chicken",
-        "form": "mcq",
-        "hint": "Amazing animals",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "a sheep",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a horse",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "a chicken",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a cat",
-          },
-        ],
-        "prompt": "Which animal hatches from an egg?",
       },
       {
         "acceptableAnswers": [
@@ -29136,7 +28883,7 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "A",
-            "text": "a foal",
+            "text": "a chick",
           },
           {
             "correct": true,
@@ -29146,12 +28893,12 @@ exports[`every pack builds every available game identically 1`] = `
           {
             "correct": false,
             "label": "C",
-            "text": "a lamb",
+            "text": "a kid",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "a chick",
+            "text": "a foal",
           },
         ],
         "prompt": "What is a baby cow called?",
@@ -29165,24 +28912,24 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Basic needs",
         "options": [
           {
-            "correct": true,
+            "correct": false,
             "label": "A",
-            "text": "water",
+            "text": "a computer",
           },
           {
             "correct": false,
             "label": "B",
-            "text": "toys",
+            "text": "television",
           },
           {
-            "correct": false,
+            "correct": true,
             "label": "C",
-            "text": "sweets",
+            "text": "water",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "a computer",
+            "text": "sweets",
           },
         ],
         "prompt": "Name one thing all animals need in order to survive.",
@@ -29196,58 +28943,27 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Healthy living",
         "options": [
           {
-            "correct": true,
+            "correct": false,
             "label": "A",
-            "text": "can be damaged",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "never need brushing again",
-          },
-          {
-            "correct": false,
-            "label": "C",
             "text": "turn a brighter white",
           },
           {
             "correct": false,
-            "label": "D",
-            "text": "grow bigger",
-          },
-        ],
-        "prompt": "What happens to your teeth if you eat sweets every day?",
-      },
-      {
-        "acceptableAnswers": [
-          "a lion",
-        ],
-        "answer": "a lion",
-        "form": "mcq",
-        "hint": "Amazing animals",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "a cow",
-          },
-          {
-            "correct": false,
             "label": "B",
-            "text": "a deer",
+            "text": "grow bigger",
           },
           {
             "correct": true,
             "label": "C",
-            "text": "a lion",
+            "text": "can be damaged",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "a rabbit",
+            "text": "never need brushing again",
           },
         ],
-        "prompt": "Which animal is a carnivore?",
+        "prompt": "What happens to your teeth if you eat sweets every day?",
       },
       {
         "acceptableAnswers": [
@@ -29258,24 +28974,24 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Growing up",
         "options": [
           {
-            "correct": true,
+            "correct": false,
             "label": "A",
+            "text": "a calf",
+          },
+          {
+            "correct": true,
+            "label": "B",
             "text": "a lamb",
           },
           {
             "correct": false,
-            "label": "B",
-            "text": "a kid",
-          },
-          {
-            "correct": false,
             "label": "C",
-            "text": "a chick",
+            "text": "a foal",
           },
           {
             "correct": false,
             "label": "D",
-            "text": "a cub",
+            "text": "a kid",
           },
         ],
         "prompt": "What is a baby sheep called?",
@@ -29289,27 +29005,89 @@ exports[`every pack builds every available game identically 1`] = `
         "hint": "Basic needs",
         "options": [
           {
-            "correct": false,
-            "label": "A",
-            "text": "money",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "toys",
-          },
-          {
             "correct": true,
-            "label": "C",
+            "label": "A",
             "text": "shelter and warmth",
           },
           {
             "correct": false,
+            "label": "B",
+            "text": "a computer",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "money",
+          },
+          {
+            "correct": false,
             "label": "D",
-            "text": "a television",
+            "text": "toys",
           },
         ],
         "prompt": "As well as food, water and air, what helps animals stay safe and well?",
+      },
+      {
+        "acceptableAnswers": [
+          "it keeps your body strong and healthy",
+        ],
+        "answer": "it keeps your body strong and healthy",
+        "form": "mcq",
+        "hint": "Healthy living",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "it makes your bones weaker",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "it has no effect on your body",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "it keeps your body strong and healthy",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "it makes you ill",
+          },
+        ],
+        "prompt": "Why is exercise good for you?",
+      },
+      {
+        "acceptableAnswers": [
+          "a tadpole",
+        ],
+        "answer": "a tadpole",
+        "form": "mcq",
+        "hint": "Growing up",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "a foal",
+          },
+          {
+            "correct": true,
+            "label": "B",
+            "text": "a tadpole",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "a kid",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "a calf",
+          },
+        ],
+        "prompt": "What is a baby frog called?",
       },
     ],
     "title": "Animals, Including Humans",
@@ -29351,23 +29129,10 @@ exports[`every pack builds every available game identically 1`] = `
               "False",
             ],
             "answer": "False",
-            "answerDetail": "Actually: Animals that only eat plants are called herbivores.",
+            "answerDetail": "Actually: A baby frog is called a tadpole.",
             "form": "truefalse",
             "isTrue": false,
-            "prompt": "Animals that only eat plants are called vertebrates.",
-          },
-          "topic": "Amazing animals",
-        },
-        {
-          "points": 100,
-          "question": {
-            "acceptableAnswers": [
-              "True",
-            ],
-            "answer": "True",
-            "form": "truefalse",
-            "isTrue": true,
-            "prompt": "A baby frog is called a tadpole.",
+            "prompt": "A baby frog is called a foal.",
           },
           "topic": "Growing up",
         },
@@ -29384,22 +29149,22 @@ exports[`every pack builds every available game identically 1`] = `
               {
                 "correct": false,
                 "label": "A",
-                "text": "to become invisible",
+                "text": "to fly",
               },
               {
                 "correct": false,
                 "label": "B",
-                "text": "to change colour",
-              },
-              {
-                "correct": true,
-                "label": "C",
-                "text": "to stay alive",
+                "text": "to grow taller instantly",
               },
               {
                 "correct": false,
+                "label": "C",
+                "text": "to become invisible",
+              },
+              {
+                "correct": true,
                 "label": "D",
-                "text": "to fly",
+                "text": "to stay alive",
               },
             ],
             "prompt": "Why do animals need water?",
@@ -29416,9 +29181,9 @@ exports[`every pack builds every available game identically 1`] = `
             "form": "mcq",
             "options": [
               {
-                "correct": true,
+                "correct": false,
                 "label": "A",
-                "text": "brush them twice a day",
+                "text": "eat sweets all day",
               },
               {
                 "correct": false,
@@ -29428,51 +29193,17 @@ exports[`every pack builds every available game identically 1`] = `
               {
                 "correct": false,
                 "label": "C",
-                "text": "eat sweets all day",
+                "text": "ignore toothache",
               },
               {
-                "correct": false,
+                "correct": true,
                 "label": "D",
-                "text": "ignore toothache",
+                "text": "brush them twice a day",
               },
             ],
             "prompt": "Name one thing you should do to keep your teeth healthy.",
           },
           "topic": "Healthy living",
-        },
-        {
-          "points": 200,
-          "question": {
-            "acceptableAnswers": [
-              "omnivores",
-            ],
-            "answer": "omnivores",
-            "form": "mcq",
-            "options": [
-              {
-                "correct": false,
-                "label": "A",
-                "text": "predators",
-              },
-              {
-                "correct": false,
-                "label": "B",
-                "text": "scavengers",
-              },
-              {
-                "correct": true,
-                "label": "C",
-                "text": "omnivores",
-              },
-              {
-                "correct": false,
-                "label": "D",
-                "text": "vertebrates",
-              },
-            ],
-            "prompt": "What do we call animals that eat both plants and meat?",
-          },
-          "topic": "Amazing animals",
         },
         {
           "points": 200,
@@ -29486,17 +29217,17 @@ exports[`every pack builds every available game identically 1`] = `
               {
                 "correct": false,
                 "label": "A",
-                "text": "a foal",
-              },
-              {
-                "correct": false,
-                "label": "B",
-                "text": "a calf",
+                "text": "a kid",
               },
               {
                 "correct": true,
-                "label": "C",
+                "label": "B",
                 "text": "a lamb",
+              },
+              {
+                "correct": false,
+                "label": "C",
+                "text": "a calf",
               },
               {
                 "correct": false,
@@ -29536,18 +29267,6 @@ exports[`every pack builds every available game identically 1`] = `
           "points": 300,
           "question": {
             "acceptableAnswers": [
-              "a lion",
-            ],
-            "answer": "a lion",
-            "form": "open",
-            "prompt": "Which animal is a carnivore?",
-          },
-          "topic": "Amazing animals",
-        },
-        {
-          "points": 300,
-          "question": {
-            "acceptableAnswers": [
               "a calf",
             ],
             "answer": "a calf",
@@ -29557,7 +29276,7 @@ exports[`every pack builds every available game identically 1`] = `
           "topic": "Growing up",
         },
       ],
-      "cols": 4,
+      "cols": 3,
       "pointsPerRow": [
         100,
         200,
@@ -29580,7 +29299,6 @@ exports[`every pack builds every available game identically 1`] = `
     "topics": [
       "Basic needs",
       "Healthy living",
-      "Amazing animals",
       "Growing up",
     ],
   },
@@ -29593,7 +29311,16 @@ exports[`every pack builds every available game identically 1`] = `
         "answer": "True",
         "form": "truefalse",
         "isTrue": true,
-        "prompt": "If humans go without water for too long, they cannot survive.",
+        "prompt": "Sleep helps your body grow and repair.",
+      },
+      {
+        "acceptableAnswers": [
+          "True",
+        ],
+        "answer": "True",
+        "form": "truefalse",
+        "isTrue": true,
+        "prompt": "a kitten looks quite similar to its adult form.",
       },
       {
         "acceptableAnswers": [
@@ -29609,30 +29336,40 @@ exports[`every pack builds every available game identically 1`] = `
           "False",
         ],
         "answer": "False",
-        "answerDetail": "Actually: television is not a basic need of animals.",
+        "answerDetail": "Actually: As well as food, water and air, shelter and warmth helps animals stay safe and well.",
         "form": "truefalse",
         "isTrue": false,
-        "prompt": "food is not a basic need of animals.",
+        "prompt": "As well as food, water and air, money helps animals stay safe and well.",
       },
       {
         "acceptableAnswers": [
           "False",
         ],
         "answer": "False",
-        "answerDetail": "Actually: A duckling grows into a duck.",
+        "answerDetail": "Actually: Exercise is good for you because it keeps your body strong and healthy.",
         "form": "truefalse",
         "isTrue": false,
-        "prompt": "A duckling grows into a swan.",
+        "prompt": "Exercise is good for you because it stops you growing.",
       },
       {
         "acceptableAnswers": [
           "False",
         ],
         "answer": "False",
-        "answerDetail": "Actually: A baby cow is called a calf.",
+        "answerDetail": "Actually: Animals need water to stay alive.",
         "form": "truefalse",
         "isTrue": false,
-        "prompt": "A baby cow is called a foal.",
+        "prompt": "Animals need water to grow taller instantly.",
+      },
+      {
+        "acceptableAnswers": [
+          "False",
+        ],
+        "answer": "False",
+        "answerDetail": "Actually: One thing you should do to keep your teeth healthy is brush them twice a day.",
+        "form": "truefalse",
+        "isTrue": false,
+        "prompt": "One thing you should do to keep your teeth healthy is never brush them.",
       },
       {
         "acceptableAnswers": [
@@ -29641,26 +29378,7 @@ exports[`every pack builds every available game identically 1`] = `
         "answer": "True",
         "form": "truefalse",
         "isTrue": true,
-        "prompt": "A baby sheep is called a lamb.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "Animals that only eat plants are called herbivores.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "answerDetail": "Their bodies need water to work properly.",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "Animals need water to stay alive.",
+        "prompt": "television is not a basic need of animals.",
       },
       {
         "acceptableAnswers": [
@@ -29671,25 +29389,89 @@ exports[`every pack builds every available game identically 1`] = `
         "isTrue": true,
         "prompt": "All animals, including humans, need air in order to breathe.",
       },
+    ],
+    "hard": [
       {
         "acceptableAnswers": [
-          "False",
+          "water",
+          "food",
+          "air",
         ],
-        "answer": "False",
-        "answerDetail": "Actually: Animals that eat both plants and meat are called omnivores.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "Animals that eat both plants and meat are called herbivores.",
+        "answer": "water",
+        "form": "open",
+        "prompt": "Name one thing all animals need in order to survive.",
       },
       {
         "acceptableAnswers": [
-          "False",
+          "a lamb",
         ],
-        "answer": "False",
-        "answerDetail": "Actually: Exercise is good for you because it keeps your body strong and healthy.",
+        "answer": "a lamb",
+        "form": "open",
+        "prompt": "What is a baby sheep called?",
+      },
+      {
+        "acceptableAnswers": [
+          "a calf",
+        ],
+        "answer": "a calf",
+        "form": "open",
+        "prompt": "What is a baby cow called?",
+      },
+      {
+        "acceptableAnswers": [
+          "they cannot survive",
+          "they die",
+          "they become dehydrated and die",
+        ],
+        "answer": "they cannot survive",
+        "form": "open",
+        "prompt": "What happens to humans if they go without water for too long?",
+      },
+      {
+        "acceptableAnswers": [
+          "to get rid of germs",
+        ],
+        "answer": "to get rid of germs",
+        "form": "open",
+        "prompt": "Why do we wash our hands before eating?",
+      },
+      {
+        "acceptableAnswers": [
+          "a duck",
+        ],
+        "answer": "a duck",
+        "form": "open",
+        "prompt": "What does a duckling grow into?",
+      },
+      {
+        "acceptableAnswers": [
+          "chicken, rice and vegetables",
+        ],
+        "answer": "chicken, rice and vegetables",
+        "form": "open",
+        "prompt": "Name a healthy meal.",
+      },
+      {
+        "acceptableAnswers": [
+          "a tadpole",
+        ],
+        "answer": "a tadpole",
+        "form": "open",
+        "prompt": "What is a baby frog called?",
+      },
+    ],
+    "title": "Animals, Including Humans",
+  },
+  "science-y2-animals-including-humans :: three_in_a_row": {
+    "questions": [
+      {
+        "acceptableAnswers": [
+          "True",
+        ],
+        "answer": "True",
         "form": "truefalse",
-        "isTrue": false,
-        "prompt": "Exercise is good for you because it makes you ill.",
+        "isTrue": true,
+        "prompt": "Sleep helps your body grow and repair.",
       },
       {
         "acceptableAnswers": [
@@ -29698,49 +29480,267 @@ exports[`every pack builds every available game identically 1`] = `
         "answer": "True",
         "form": "truefalse",
         "isTrue": true,
-        "prompt": "We wash our hands before eating to get rid of germs.",
+        "prompt": "All animals need water in order to survive.",
       },
-    ],
-    "hard": [
+      {
+        "acceptableAnswers": [
+          "True",
+        ],
+        "answer": "True",
+        "form": "truefalse",
+        "isTrue": true,
+        "prompt": "a kitten looks quite similar to its adult form.",
+      },
+      {
+        "acceptableAnswers": [
+          "False",
+        ],
+        "answer": "False",
+        "answerDetail": "Actually: A baby sheep is called a lamb.",
+        "form": "truefalse",
+        "isTrue": false,
+        "prompt": "A baby sheep is called a chick.",
+      },
+      {
+        "acceptableAnswers": [
+          "can be damaged",
+        ],
+        "answer": "can be damaged",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": true,
+            "label": "A",
+            "text": "can be damaged",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "become stronger",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "turn a brighter white",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "stay exactly the same",
+          },
+        ],
+        "prompt": "What happens to your teeth if you eat sweets every day?",
+      },
+      {
+        "acceptableAnswers": [
+          "a calf",
+        ],
+        "answer": "a calf",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "a chick",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "a lamb",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "a calf",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "a foal",
+          },
+        ],
+        "prompt": "What is a baby cow called?",
+      },
       {
         "acceptableAnswers": [
           "shelter and warmth",
         ],
         "answer": "shelter and warmth",
-        "form": "open",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "a television",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "a computer",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "money",
+          },
+          {
+            "correct": true,
+            "label": "D",
+            "text": "shelter and warmth",
+          },
+        ],
         "prompt": "As well as food, water and air, what helps animals stay safe and well?",
       },
       {
         "acceptableAnswers": [
-          "using gills",
+          "they cannot survive",
         ],
-        "answer": "using gills",
-        "form": "open",
-        "prompt": "How do fish breathe underwater?",
+        "answer": "they cannot survive",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "they turn a different colour",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "nothing happens at all",
+          },
+          {
+            "correct": true,
+            "label": "C",
+            "text": "they cannot survive",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "they need less food",
+          },
+        ],
+        "prompt": "What happens to humans if they go without water for too long?",
       },
       {
         "acceptableAnswers": [
-          "a mammal",
+          "it keeps your body strong and healthy",
         ],
-        "answer": "a mammal",
-        "form": "open",
-        "prompt": "What type of animal is a human?",
+        "answer": "it keeps your body strong and healthy",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": true,
+            "label": "A",
+            "text": "it keeps your body strong and healthy",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "it stops you growing",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "it has no effect on your body",
+          },
+          {
+            "correct": false,
+            "label": "D",
+            "text": "it makes you tired forever",
+          },
+        ],
+        "prompt": "Why is exercise good for you?",
       },
       {
         "acceptableAnswers": [
-          "grow and repair",
+          "to get rid of germs",
         ],
-        "answer": "grow and repair",
-        "form": "open",
-        "prompt": "What does sleep help your body do?",
+        "answer": "to get rid of germs",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "to make them wet",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "to look cool",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "to make them smell nice",
+          },
+          {
+            "correct": true,
+            "label": "D",
+            "text": "to get rid of germs",
+          },
+        ],
+        "prompt": "Why do we wash our hands before eating?",
       },
       {
         "acceptableAnswers": [
-          "a kitten",
+          "to stay alive",
         ],
-        "answer": "a kitten",
-        "form": "open",
-        "prompt": "Which baby animal looks quite similar to its adult form: a kitten, or a caterpillar?",
+        "answer": "to stay alive",
+        "answerDetail": "Their bodies need water to work properly.",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "to fly",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "to look shiny",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "to grow taller instantly",
+          },
+          {
+            "correct": true,
+            "label": "D",
+            "text": "to stay alive",
+          },
+        ],
+        "prompt": "Why do animals need water?",
+      },
+      {
+        "acceptableAnswers": [
+          "a duck",
+        ],
+        "answer": "a duck",
+        "form": "mcq",
+        "options": [
+          {
+            "correct": false,
+            "label": "A",
+            "text": "a chicken",
+          },
+          {
+            "correct": false,
+            "label": "B",
+            "text": "a fish",
+          },
+          {
+            "correct": false,
+            "label": "C",
+            "text": "a swan",
+          },
+          {
+            "correct": true,
+            "label": "D",
+            "text": "a duck",
+          },
+        ],
+        "prompt": "What does a duckling grow into?",
       },
       {
         "acceptableAnswers": [
@@ -29763,29 +29763,11 @@ exports[`every pack builds every available game identically 1`] = `
       },
       {
         "acceptableAnswers": [
-          "a chicken",
+          "television",
         ],
-        "answer": "a chicken",
+        "answer": "television",
         "form": "open",
-        "prompt": "Which animal hatches from an egg?",
-      },
-      {
-        "acceptableAnswers": [
-          "water",
-          "food",
-          "air",
-        ],
-        "answer": "water",
-        "form": "open",
-        "prompt": "Name one thing all animals need in order to survive.",
-      },
-      {
-        "acceptableAnswers": [
-          "a lion",
-        ],
-        "answer": "a lion",
-        "form": "open",
-        "prompt": "Which animal is a carnivore?",
+        "prompt": "What is NOT a basic need of animals?",
       },
       {
         "acceptableAnswers": [
@@ -29794,451 +29776,14 @@ exports[`every pack builds every available game identically 1`] = `
         "answer": "a tadpole",
         "form": "open",
         "prompt": "What is a baby frog called?",
-      },
-    ],
-    "title": "Animals, Including Humans",
-  },
-  "science-y2-animals-including-humans :: three_in_a_row": {
-    "questions": [
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "If humans go without water for too long, they cannot survive.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "As well as food, water and air, shelter and warmth helps animals stay safe and well.",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: If you eat sweets every day, your teeth can be damaged.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "If you eat sweets every day, your teeth grow bigger.",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: Fish breathe underwater by using gills.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "Fish breathe underwater by holding their breath.",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: television is not a basic need of animals.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "air is not a basic need of animals.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "A human is a mammal.",
-      },
-      {
-        "acceptableAnswers": [
-          "a duck",
-        ],
-        "answer": "a duck",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "a fish",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a frog",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "a duck",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a swan",
-          },
-        ],
-        "prompt": "What does a duckling grow into?",
-      },
-      {
-        "acceptableAnswers": [
-          "grow and repair",
-        ],
-        "answer": "grow and repair",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "get more tired",
-          },
-          {
-            "correct": true,
-            "label": "B",
-            "text": "grow and repair",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "forget everything",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "become ill",
-          },
-        ],
-        "prompt": "What does sleep help your body do?",
-      },
-      {
-        "acceptableAnswers": [
-          "a calf",
-        ],
-        "answer": "a calf",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "a calf",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a cub",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "a chick",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a lamb",
-          },
-        ],
-        "prompt": "What is a baby cow called?",
-      },
-      {
-        "acceptableAnswers": [
-          "a kitten",
-        ],
-        "answer": "a kitten",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "a kitten",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "an egg",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "a tadpole",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a maggot",
-          },
-        ],
-        "prompt": "Which baby animal looks quite similar to its adult form: a kitten, or a caterpillar?",
-      },
-      {
-        "acceptableAnswers": [
-          "a lamb",
-        ],
-        "answer": "a lamb",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "a foal",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a cub",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "a lamb",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a calf",
-          },
-        ],
-        "prompt": "What is a baby sheep called?",
-      },
-      {
-        "acceptableAnswers": [
-          "brush them twice a day",
-        ],
-        "answer": "brush them twice a day",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "brush them twice a day",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "drink lots of fizzy drinks",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "ignore toothache",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "chew on rocks",
-          },
-        ],
-        "prompt": "Name one thing you should do to keep your teeth healthy.",
-      },
-      {
-        "acceptableAnswers": [
-          "herbivores",
-        ],
-        "answer": "herbivores",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "vertebrates",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "omnivores",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "herbivores",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "scavengers",
-          },
-        ],
-        "prompt": "What do we call animals that only eat plants?",
-      },
-      {
-        "acceptableAnswers": [
-          "chicken, rice and vegetables",
-        ],
-        "answer": "chicken, rice and vegetables",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "crisps and fizzy drinks",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "chips and cola",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "chicken, rice and vegetables",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "sweets and chocolate",
-          },
-        ],
-        "prompt": "Name a healthy meal.",
-      },
-      {
-        "acceptableAnswers": [
-          "to stay alive",
-        ],
-        "answer": "to stay alive",
-        "answerDetail": "Their bodies need water to work properly.",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": false,
-            "label": "A",
-            "text": "to fly",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "to change colour",
-          },
-          {
-            "correct": true,
-            "label": "C",
-            "text": "to stay alive",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "to grow taller instantly",
-          },
-        ],
-        "prompt": "Why do animals need water?",
-      },
-      {
-        "acceptableAnswers": [
-          "a chicken",
-        ],
-        "answer": "a chicken",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "a chicken",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "a cat",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "a horse",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "a sheep",
-          },
-        ],
-        "prompt": "Which animal hatches from an egg?",
       },
       {
         "acceptableAnswers": [
           "air",
         ],
         "answer": "air",
-        "form": "mcq",
-        "options": [
-          {
-            "correct": true,
-            "label": "A",
-            "text": "air",
-          },
-          {
-            "correct": false,
-            "label": "B",
-            "text": "warmth only",
-          },
-          {
-            "correct": false,
-            "label": "C",
-            "text": "food only",
-          },
-          {
-            "correct": false,
-            "label": "D",
-            "text": "light only",
-          },
-        ],
+        "form": "open",
         "prompt": "What do all animals, including humans, need in order to breathe?",
-      },
-      {
-        "acceptableAnswers": [
-          "water",
-          "food",
-          "air",
-        ],
-        "answer": "water",
-        "form": "open",
-        "prompt": "Name one thing all animals need in order to survive.",
-      },
-      {
-        "acceptableAnswers": [
-          "omnivores",
-          "omnivore",
-        ],
-        "answer": "omnivores",
-        "form": "open",
-        "prompt": "What do we call animals that eat both plants and meat?",
-      },
-      {
-        "acceptableAnswers": [
-          "a lion",
-        ],
-        "answer": "a lion",
-        "form": "open",
-        "prompt": "Which animal is a carnivore?",
-      },
-      {
-        "acceptableAnswers": [
-          "it keeps your body strong and healthy",
-          "it keeps you fit and healthy",
-        ],
-        "answer": "it keeps your body strong and healthy",
-        "form": "open",
-        "prompt": "Why is exercise good for you?",
-      },
-      {
-        "acceptableAnswers": [
-          "a tadpole",
-        ],
-        "answer": "a tadpole",
-        "form": "open",
-        "prompt": "What is a baby frog called?",
-      },
-      {
-        "acceptableAnswers": [
-          "to get rid of germs",
-        ],
-        "answer": "to get rid of germs",
-        "form": "open",
-        "prompt": "Why do we wash our hands before eating?",
       },
     ],
     "title": "Animals, Including Humans",
@@ -30404,62 +29949,6 @@ exports[`every pack builds every available game identically 1`] = `
         "form": "truefalse",
         "isTrue": true,
         "prompt": "Sleep helps your body grow and repair.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "Animals that only eat plants are called herbivores.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "Animals that eat both plants and meat are called omnivores.",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: a lion is a carnivore.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "a cow is a carnivore.",
-      },
-      {
-        "acceptableAnswers": [
-          "False",
-        ],
-        "answer": "False",
-        "answerDetail": "Actually: a chicken hatches from an egg.",
-        "form": "truefalse",
-        "isTrue": false,
-        "prompt": "a horse hatches from an egg.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "A human is a mammal.",
-      },
-      {
-        "acceptableAnswers": [
-          "True",
-        ],
-        "answer": "True",
-        "form": "truefalse",
-        "isTrue": true,
-        "prompt": "Fish breathe underwater by using gills.",
       },
     ],
     "title": "Animals, Including Humans",

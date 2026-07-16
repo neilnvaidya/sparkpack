@@ -174,8 +174,20 @@ only because content had to carry the whole easy-to-hard spread.)*
 
 - Pack id is `<subject>-y<year>-<topicId>` and must match the filename.
 - `objectives` carry the **statutory NC wording verbatim** — objectives-first, no
-  information loss. Every question should tag at least one `objectiveCode`. (The
-  two Y2 packs tag none, so their objectives are currently unreachable.)
+  information loss.
+- **Every question must tag at least one `objectiveCode`, and the schema enforces
+  it.** A question must be curriculum-tied or it leaves the corpus: content the
+  library cannot say anything about looks like coverage while being none, and it
+  cannot be found by objective or reported on.
+  - **The reverse is fine.** An objective with no question is a content *gap* —
+    an acceptable one, and reporting those gaps is most of why this field exists.
+    `Y2-AS-4` (commutativity) and `Y3-F-3` are the two open gaps.
+  - Questions pulled for having no objective go to
+    `content-quarantine/no-objective.json` with full provenance and a route home
+    — not deleted. A pulled question with no way back is a deleted question with
+    extra steps.
+  - Consequence in the tool: a newly added question cannot be saved until it is
+    tagged, because `blankQuestion` starts with none. That is the rule working.
 - `strand` groups questions into sub-topics; board games use it for columns and
   need 2–4 strands with 2+ questions each. Only equations may have `""`.
 - Question ids need only be unique within a pack.

@@ -585,26 +585,48 @@ judging:
 | `science-y2-animals-including-humans` | `Growing up` → AIH-1, `Basic needs` → AIH-2, `Healthy living` → AIH-3 |
 | `maths-y2-addition-subtraction` | arithmetic within 20 → AS-2; two two-digit numbers → AS-3; word problems → AS-1 (+AS-3); missing numbers → AS-5 |
 
-**The content-gap report, in full — three gaps in 412 questions:**
+### The rule, and the drop
 
-- **`science-y2` `aa-1..aa-6` (6 questions) have no objective and are left
-  untagged.** The `Amazing animals` strand asks about herbivores/omnivores/
-  carnivores, egg-laying, mammals and gills — that is *classification*, which is
-  Year 1 "animals including humans" in the NC, not any of the three objectives
-  this pack declares. They could have been filed under AIH-1/2/3 and the count
-  would read zero, but `objectiveCodes` is only worth having if it means
-  something. **The fix is a declared objective they genuinely meet, and its
-  statutory wording is Neil's to add** — inventing NC text is exactly what
-  "objectives carry the statutory wording verbatim" forbids.
-- **`Y2-AS-4` (commutativity) has no question.** No pack question asks whether
-  addition can be done in any order. One authored question closes it.
-- **`Y3-F-3` has no question** — the only uncovered objective in the whole Y3
-  corpus.
+**A question must be curriculum-tied or it leaves the corpus** (Neil,
+2026-07-16). **An objective with no question is an acceptable gap** — that is a
+content-gap report and it is useful. The reverse is not the same thing: a
+question with no objective is content the library can say nothing about. It
+cannot be found by objective, cannot be reported on, and looks like coverage
+while being none.
 
-Everything else: **412 questions, 406 tagged, no unknown codes, and every other
-declared objective in every other pack has at least one question.** So `min(1)`
-on `objectiveCodes` is one authored objective and one authored question away from
-being safe to enforce.
+So `science-y2`'s **`aa-1..aa-6` are out** (`scripts/drop-untagged.mjs`). The
+`Amazing animals` strand asks about herbivores/omnivores/carnivores, egg-laying,
+mammals and gills — *classification*, which is Year 1 "animals including humans"
+in the NC, not any of the three objectives that pack declares. They could have
+been filed under AIH-1/2/3 and the count would have read zero while meaning
+nothing.
+
+They are **pulled, not deleted**: `content-quarantine/no-objective.json`, full
+provenance, and a stated route home (a Y1 pack, or a declared objective they
+genuinely meet — whose statutory wording is Neil's to add). Good questions in the
+wrong pack; the plan's own rule is that a pulled question with no route home is a
+deleted question with extra steps.
+
+**`objectiveCodes` is now `min(1)` in the schema.** The plan said "only then
+consider it" — this is then. Note the tool consequence: `blankQuestion` starts
+untagged, so a newly added question cannot be saved until it is tagged. That is
+the rule working, not a bug.
+
+**Watch the floor.** `science-y2` is now **17 text-only questions against a floor
+of 16** — Three in a Row and Summit Climb need 16. It keeps all seven games with
+**zero margin**. One more removal costs it two games, so anything pulled from
+that pack has to be replaced in the tool.
+
+### The content-gap report, in full
+
+**406 questions, all tagged, no unknown codes.** Two objectives have no question,
+and both are acceptable gaps:
+
+- **`Y2-AS-4`** (addition is commutative, subtraction is not) — nothing asks
+  whether addition can be done in any order. One authored question closes it.
+- **`Y3-F-3`** — the only uncovered objective in the whole Y3 corpus.
+
+Every other declared objective in every other pack has at least one question.
 
 ### Fixed in passing
 

@@ -73,7 +73,21 @@ export const curriculumQuestionSchema = z.object({
   factKey: z.string(),
   /** Sub-topic grouping, e.g. board-quiz categories. "" only for equations. */
   strand: z.string(),
-  objectiveCodes: z.array(z.string()),
+  /**
+   * At least one, and every code must be declared by the pack (checked below).
+   *
+   * A question must be curriculum-tied or it leaves the corpus. The reverse is
+   * NOT true and is fine: an objective with no question is a content gap, and
+   * reporting those gaps is most of why this field exists. But a question with
+   * no objective is content the library can say nothing about — it cannot be
+   * found by objective or reported on, and it looks like coverage while being
+   * none. That quietly falsifies the objectives-first premise.
+   *
+   * Enforceable as of step 6: every question in every pack tags at least one.
+   * The six that could not (Y1 classification content in a Y2 pack) are in
+   * content-quarantine/no-objective.json with a route home.
+   */
+  objectiveCodes: z.array(z.string()).min(1),
   /**
    * Forms this question may be presented in. Every non-quarantined question
    * offers all three, full stop — a question that genuinely resists a form

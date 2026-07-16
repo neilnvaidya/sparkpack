@@ -1,0 +1,161 @@
+{
+  "note": "Questions pulled from packs because they tag no objective the pack declares. Not shipped, not deleted. A question must be curriculum-tied or it leaves the corpus; an objective with no question is an acceptable gap, but the reverse is not. Kept with full provenance so each has a route home. See Docs/CONTENT-PASS-PLAN.md step 6.",
+  "questions": [
+    {
+      "question": {
+        "id": "aa-1",
+        "factKey": "aa-1",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "What do we call animals that only eat plants?",
+        "claim": "Animals that only eat plants are called {}.",
+        "answer": "herbivores",
+        "answerDetail": "",
+        "acceptableAnswers": ["herbivore"],
+        "distractors": [
+          "carnivores",
+          "omnivores",
+          "predators",
+          "scavengers",
+          "vertebrates"
+        ],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.872Z"
+    },
+    {
+      "question": {
+        "id": "aa-2",
+        "factKey": "aa-2",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "What do we call animals that eat both plants and meat?",
+        "claim": "Animals that eat both plants and meat are called {}.",
+        "answer": "omnivores",
+        "answerDetail": "",
+        "acceptableAnswers": ["omnivore"],
+        "distractors": [
+          "carnivores",
+          "herbivores",
+          "predators",
+          "scavengers",
+          "vertebrates"
+        ],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.873Z"
+    },
+    {
+      "question": {
+        "id": "aa-3",
+        "factKey": "aa-3",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "Which animal is a carnivore?",
+        "claim": "{} is a carnivore.",
+        "answer": "a lion",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": ["a rabbit", "a cow", "a sheep", "a deer", "a horse"],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.873Z"
+    },
+    {
+      "question": {
+        "id": "aa-4",
+        "factKey": "aa-4",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "Which animal hatches from an egg?",
+        "claim": "{} hatches from an egg.",
+        "answer": "a chicken",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": ["a dog", "a cat", "a cow", "a horse", "a sheep"],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.873Z"
+    },
+    {
+      "question": {
+        "id": "aa-5",
+        "factKey": "aa-5",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "What type of animal is a human?",
+        "claim": "A human is {}.",
+        "answer": "a mammal",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": [
+          "a reptile",
+          "a bird",
+          "a fish",
+          "an insect",
+          "an amphibian"
+        ],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.873Z"
+    },
+    {
+      "question": {
+        "id": "aa-6",
+        "factKey": "aa-6",
+        "strand": "Amazing animals",
+        "objectiveCodes": [],
+        "forms": ["open", "mcq", "truefalse"],
+        "ask": "How do fish breathe underwater?",
+        "claim": "Fish breathe underwater by {}.",
+        "answer": "using gills",
+        "answerDetail": "",
+        "acceptableAnswers": [],
+        "distractors": [
+          "using lungs, like humans",
+          "holding their breath",
+          "not breathing at all",
+          "using their skin only",
+          "using their fins"
+        ],
+        "equation": null
+      },
+      "subject": "science",
+      "year": 2,
+      "topicId": "animals-including-humans",
+      "packId": "science-y2-animals-including-humans",
+      "reason": "Tags no objective this pack declares. The pack is Y2 \"animals including humans\" (offspring; basic needs; exercise, diet and hygiene); these ask about herbivores, omnivores, carnivores, egg-laying, mammals and gills — that is classification, which is Year 1 \"animals including humans\" in the national curriculum. Filing them under AIH-1/2/3 would make the count read zero while meaning nothing. Route home: a Y1 pack, or a declared objective they genuinely meet (statutory wording required).",
+      "pulledAt": "2026-07-16T07:16:50.873Z"
+    }
+  ]
+}
