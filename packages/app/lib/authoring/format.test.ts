@@ -1,7 +1,9 @@
 import { describe, it, expect } from 'vitest'
+import { readdirSync, readFileSync } from 'node:fs'
+import { join } from 'node:path'
 import { formatQuestion, applyFixes } from './format'
 import { blankQuestion } from './serialize'
-import { serializePack } from './serialize'
+import { serializePack } from './serialize-pack'
 import type { CurriculumQuestion, CurriculumPack } from '@/lib/curriculum/schema'
 
 const q = (over: Partial<CurriculumQuestion> = {}): CurriculumQuestion => ({
@@ -103,20 +105,36 @@ describe('applyFixes', () => {
 })
 
 describe('serializePack', () => {
-  it('writes keys in the declared order regardless of input order', () => {
+  it('writes keys in the declared order regardless of input order', async () => {
     const pack = {
       questions: [{ equation: null, id: 'a', factKey: 'a' }],
       id: 'x-y1-z',
       schemaVersion: 2,
     } as unknown as CurriculumPack
-    const out = serializePack(pack)
+    const out = await serializePack(pack)
     expect(out.indexOf('"schemaVersion"')).toBeLessThan(out.indexOf('"id"'))
     expect(out.indexOf('"id": "a"')).toBeLessThan(out.indexOf('"factKey"'))
     expect(out.endsWith('\n')).toBe(true)
   })
 
-  it('keeps a key that is not in the declared order rather than dropping it', () => {
+  it('keeps a key that is not in the declared order rather than dropping it', async () => {
     const pack = { id: 'x', mystery: 1, questions: [] } as unknown as CurriculumPack
-    expect(serializePack(pack)).toContain('"mystery"')
+    expect(await serializePack(pack)).toContain('"mystery"')
+  })
+
+  // The one that matters. Everything else about the serialiser is opinion; this
+  // is the contract — a Write of an unchanged pack must produce an empty diff.
+  // It is what broke when 3b reformatted the corpus and JSON.stringify did not
+  // follow, and it is what keeps `git diff` usable as a review surface.
+  it('round-trips every pack on disk byte for byte', async () => {
+    const dir = join(process.cwd(), 'lib/curriculum/packs')
+    const files = readdirSync(dir).filter((f) => f.endsWith('.json'))
+    expect(files.length).toBeGreaterThan(0)
+
+    for (const file of files) {
+      const onDisk = readFileSync(join(dir, file), 'utf8')
+      const written = await serializePack(JSON.parse(onDisk) as CurriculumPack)
+      expect(written, `${file} does not round-trip`).toBe(onDisk)
+    }
   })
 })

@@ -614,33 +614,43 @@ The **Unicode minus** defect the plan logged against `maths-y2-addition-subtract
 `ec-6`). Replaced with ASCII. The slice snapshot moved by exactly those strings
 and nothing else — which is the snapshot doing its job.
 
-## The serializer fights Prettier — open, and it blocks review
+## The serializer fights Prettier — FIXED (2026-07-16)
 
-**`lib/authoring/serialize.ts` cannot round-trip the current corpus.** It is
+**`lib/authoring/serialize.ts` could not round-trip the corpus.** It was
 `JSON.stringify(pack, null, 2)`, which always expands arrays; the 19 packs 3b
-wrote are **Prettier-formatted** (`npx prettier --check` on the packs dir passes),
-so short arrays are inline — `"forms": ["open", "mcq", "truefalse"]` on one line,
-and `distractors` inline or expanded depending on whether it fits 80 columns.
+wrote are **Prettier-formatted**, so short arrays are inline —
+`"forms": ["open", "mcq", "truefalse"]` on one line, `distractors` inline or
+expanded depending on whether it fits 80 columns.
 
-At HEAD the packs matched serialize.ts; the content pass reformatted all 19.
+At HEAD the packs matched serialize.ts. The content pass reformatted all 19, and
+nothing noticed because nothing had written a pack since.
 
-So **the first Write in the authoring tool reformats the whole pack** — roughly
-700 lines of noise around one real edit. That directly breaks the tool's stated
-contract ("a save produces a reviewable `git diff` and nothing else") and it
-lands precisely on the review of the 28 flagged questions, which is the next job.
+So **the first Write in the authoring tool would have reformatted the whole
+pack** — ~700 lines of noise around one real edit. That breaks the tool's actual
+contract ("a save produces a reviewable `git diff` and nothing else"), and it
+would have landed exactly on the review of the 28 flagged questions.
 
-Two ways out, and it is a real choice:
+**Fixed by running the real Prettier, not approximating it** — the inline-or-
+expand rule is print-width-sensitive and reimplementing it is how this drifts
+again. Prettier is now a devDependency.
 
-1. **Teach serialize.ts Prettier's formatting** (it already has Prettier
-   available via npx; as a dependency it could format in-process). Corpus
-   untouched, one file changes. The inline style is also easier to review — a
-   question is ~14 lines rather than ~30.
-2. **Normalise all 19 packs to serialize.ts output.** One reformat commit, then
-   everything agrees — but it churns every pack and inflates the 3b diffs that
-   are not committed yet.
+- `lib/authoring/serialize.ts` keeps the pure half (`orderQuestion`, `orderPack`,
+  `blankQuestion`). **It has to stay pure**: the authoring page is a client
+  component and imports `blankQuestion`, so a top-level `import 'prettier'` here
+  would ship the formatter to the browser.
+- `lib/authoring/serialize-pack.ts` is the server half: `serializePack`, now
+  async. Same for `serializeQuarantine`, which had the identical bug — that file
+  is committed too, and an editor save would have fought the tool.
 
-Recommend (1). Not done here: it is a tooling decision, and doing it while the 3b
-content is uncommitted would tangle a formatting change with a content pass.
+**The guard is a test, not a promise**: `format.test.ts` round-trips *every pack
+on disk* byte for byte. If the corpus and the serialiser ever disagree again, it
+fails. That test is the actual contract; everything else here is commentary.
+
+One trap worth knowing: Prettier **preserves an object's expansion** — it keeps
+an object multi-line only if the source it was given had a newline after `{`. So
+`serializePack` feeds it `JSON.stringify(x, null, 2)`, not compact JSON. Hand it
+compact JSON and it collapses every question that fits 80 columns onto one line.
+The round-trip test caught exactly this.
 
 ## Open items
 

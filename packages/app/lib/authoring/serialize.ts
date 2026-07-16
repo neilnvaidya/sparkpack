@@ -57,11 +57,19 @@ export function orderQuestion(q: CurriculumQuestion): CurriculumQuestion {
   return ordered(q, QUESTION_KEY_ORDER)
 }
 
-/** Canonical pack JSON: declared key order, 2-space indent, trailing newline. */
-export function serializePack(pack: CurriculumPack): string {
+/**
+ * A pack with every key in its declared order — the part of canonical form that
+ * is pure and has no opinion about whitespace.
+ *
+ * The whitespace half lives in `serialize-pack.ts`, which runs Prettier and so
+ * is server-only. They are split because this module is also imported by the
+ * authoring page, a client component: a top-level `import 'prettier'` here would
+ * put the whole formatter in the browser bundle.
+ */
+export function orderPack(pack: CurriculumPack): CurriculumPack {
   const shaped = ordered(pack, PACK_KEY_ORDER)
   shaped.questions = pack.questions.map(orderQuestion)
-  return JSON.stringify(shaped, null, 2) + '\n'
+  return shaped
 }
 
 /**

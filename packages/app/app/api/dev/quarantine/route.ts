@@ -16,7 +16,7 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { isDev, notFound } from '../guard'
 import { curriculumPackSchema } from '@/lib/curriculum/schema'
-import { serializePack } from '@/lib/authoring/serialize'
+import { serializePack } from '@/lib/authoring/serialize-pack'
 import { serializeQuarantine } from '@/lib/authoring/quarantine'
 import {
   packPath,
@@ -71,10 +71,10 @@ export async function POST(request: Request) {
       reason,
       quarantinedAt: new Date().toISOString(),
     })
-    await writeQuarantine(serializeQuarantine(quarantine))
+    await writeQuarantine(await serializeQuarantine(quarantine))
 
     const next = { ...pack, questions: pack.questions.filter((q) => q.id !== questionId) }
-    await writePackFile(packId, serializePack(curriculumPackSchema.parse(next)))
+    await writePackFile(packId, await serializePack(curriculumPackSchema.parse(next)))
 
     return NextResponse.json({ ok: true, remaining: next.questions.length })
   } catch (err) {

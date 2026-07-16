@@ -15,6 +15,7 @@
  * file there would fail the build on sight. It is never imported by the app.
  */
 
+import { format, resolveConfig } from 'prettier'
 import { z } from 'zod'
 import { curriculumQuestionSchema, subjectSchema } from '@/lib/curriculum/schema'
 
@@ -54,6 +55,16 @@ export const EMPTY_QUARANTINE: QuarantineFile = {
   questions: [],
 }
 
-export function serializeQuarantine(file: QuarantineFile): string {
-  return JSON.stringify(file, null, 2) + '\n'
+/**
+ * Same contract as `serializePack`, for the same reason: this file is committed
+ * and reviewed, so a write must produce a readable diff rather than reformat the
+ * lot. Prettier decides, because an editor save would use Prettier too — and
+ * whichever of the two writes second would otherwise rewrite the whole file.
+ *
+ * Lives here rather than in `serialize-pack.ts` because only the quarantine
+ * route uses it, and that route is server-side already.
+ */
+export async function serializeQuarantine(file: QuarantineFile): Promise<string> {
+  const config = await resolveConfig('form-resistant.json')
+  return format(JSON.stringify(file, null, 2), { ...config, parser: 'json' })
 }

@@ -11,7 +11,7 @@
 import { NextResponse } from 'next/server'
 import { isDev, notFound } from '../../guard'
 import { curriculumPackSchema } from '@/lib/curriculum/schema'
-import { serializePack } from '@/lib/authoring/serialize'
+import { serializePack } from '@/lib/authoring/serialize-pack'
 import { packPath, writePackFile } from '@/lib/authoring/fs'
 
 export const dynamic = 'force-dynamic'
@@ -52,7 +52,7 @@ export async function POST(
   try {
     // packPath re-validates the id shape before it touches the filesystem.
     packPath(packId)
-    await writePackFile(packId, serializePack(parsed.data))
+    await writePackFile(packId, await serializePack(parsed.data))
   } catch (err) {
     return NextResponse.json(
       { error: err instanceof Error ? err.message : String(err) },
