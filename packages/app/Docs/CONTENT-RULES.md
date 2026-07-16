@@ -104,10 +104,17 @@ replay.** One list serves MCQ options *and* false claim fills, so:
    same answer.
 4. **Same register and length as `answer`**, so the correct option is not obvious
    by shape alone.
+5. **If `ask` names its own candidates, every distractor must be one of them.**
+   "Which is bigger: 1/3, or 1/4?" offers a closed set of two. MCQ renders `ask`
+   verbatim and draws three distractors, so a pool of `1/5, 1/6, 1/2, 1/8` puts
+   four options on screen that the question never offered — and `1/2` is bigger
+   than the answer, so a pupil picking the largest option on the board is marked
+   wrong. Either keep the distractors inside the named set, or write an `ask`
+   that names none of them. The validator flags this; it cannot fix it.
 
-The validator checks count and uniqueness. **It cannot check plausibility** — that
-is human review, and it is the main quality risk in the whole design. A bad
-distractor is worse than no game.
+The validator checks count, uniqueness, and rule 5. **It cannot check
+plausibility** — that is human review, and it is the main quality risk in the
+whole design. A bad distractor is worse than no game.
 
 ### `forms`
 
@@ -180,6 +187,7 @@ only because content had to carry the whole easy-to-hard spread.)*
 |---|---|
 | Shape, per-form data, one `{}` slot, `claimIsTrue` consistency | `schema.ts` superRefine |
 | Equation arithmetic; answer not among distractors; distractors unique | `schema.ts` superRefine |
+| Distractors escaping a candidate set the `ask` named (rule 5) | `lib/curriculum/checks.ts` |
 | Pack id vs filename; board strand fit; which games a pack powers | `validate-packs.mjs` |
 | Every pack × every game still builds the same content | `vitest` snapshot |
 | Distractor **plausibility**, `ask` standing alone, register | **nobody — human review** |
