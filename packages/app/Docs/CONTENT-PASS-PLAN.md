@@ -334,16 +334,48 @@ forms are the difficulty ladder.
   `slices.ts:62`.
 - The plan's `FORM_SCAFFOLD` multiplier and `challenge()` are **dropped** — they
   only existed to combine the two axes, and there is now one axis.
-- **`difficulty` stays in the schema and stays authored.** Summit Climb pools by
-  it (`minPerDifficulty: {1: 8, 3: 8}`, `slice-requirements.ts:118`) and the board
-  and ladder sort by it (`slices.ts:117,159,190-194`). Dropping it from *points*
-  is not dropping it from the *corpus*; the two-axis idea can be revived later
-  without re-authoring anything.
 - Games declare an ordered **form preference ladder** and take the first form a
   question offers: Summit "steady" → truefalse-first, "risky" → open-first; board
-  rows 1-2 → easiest form available, rows 3-4 → hardest; T/F Showdown requires
-  `truefalse` with no fallback. **This only becomes meaningful after 3b** — a
-  single-form question has nothing to prefer.
+  rows 1-2 → easiest form available, rows 3-4 → hardest; Flash Round ramps by
+  form; T/F Showdown requires `truefalse` with no fallback. **This only becomes
+  meaningful after 3b** — a single-form question has nothing to prefer.
+
+### `difficulty` is deleted here, not kept
+
+Corrected 2026-07-16, on Neil noticing the field looked out of place in the
+authoring tool. The earlier note here said difficulty "stays in the schema and
+stays authored" so the two-axis idea could be revived. That undersold it: **the
+form ladder replaces every remaining use of the field, so step 4 removes it.**
+
+It is load-bearing *today*, in four places that have nothing to do with points —
+which is why it could not simply be dropped when scoring collapsed:
+
+| Use | Where | Replaced by |
+|---|---|---|
+| Summit's easy/hard rungs | `slices.ts:190-194` | steady → truefalse, risky → open |
+| Board's row gradient | `slices.ts:117` | easiest form in low rows, hardest in high |
+| Flash Round's ramp | `slices.ts:159` | sort by form |
+| Gates which packs offer Summit | `slice-requirements.ts:62` (`minPerDifficulty`) | **nothing — it dissolves** |
+
+That last row is the one that matters. `minPerDifficulty: {1: 8, 3: 8}` exists
+only because *content* had to carry the whole easy-to-hard spread, so a pack
+needed eight genuinely easy facts and eight genuinely hard ones. After 3b every
+question offers all three forms, so **any** question can be a steady rung
+(true/false) or a risky one (open). The requirement is satisfied by every pack
+trivially, which means it should be deleted rather than relaxed — and with it
+goes the `maths-y3-multiplication-division` "only 2 difficulty-1 items" defect,
+without authoring anything.
+
+Until step 4 lands the field must keep a valid value, so the authoring tool
+**collapses it into a "legacy" line** rather than removing the control: never
+prompted for, still fixable, clearly marked for deletion. The skeleton generator
+carries it through untouched and DRAFTER-INSTRUCTIONS forbids the drafter from
+changing it.
+
+If the two-axis idea is ever wanted back, it is a schema addition and a
+re-authoring pass — not something this field's continued existence would have
+saved, since its values were never authored on the "intrinsic hardness" basis the
+two-axis model assumed.
 
 Only Question Rush and Board Quiz consume points; Flash Round and T/F Showdown
 keep flat +1 for their speed feel.

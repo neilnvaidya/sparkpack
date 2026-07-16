@@ -95,19 +95,37 @@ export default function QuestionEditor({
           <Label>strand</Label>
           <input value={q.strand} style={inputStyle} onChange={(e) => set('strand', e.target.value)} />
         </div>
-        <div style={{ minWidth: '110px' }}>
-          <Label hint="intrinsic">difficulty</Label>
+      </div>
+
+      {/*
+        `difficulty` is on its way out and is deliberately not a decision the
+        reviewer is asked to make — form is the difficulty ladder now. It stays
+        only because three games still read it (Summit's easy/hard rungs, the
+        board's row gradient, Flash Round's ramp), and it dies in step 4 once
+        those order by form instead. Collapsed, not removed: you can still fix a
+        value, you are just never prompted for one.
+      */}
+      <details style={{ marginBottom: '14px' }}>
+        <summary style={{ fontSize: '11px', color: INK.textFaint, cursor: 'pointer' }}>
+          legacy · difficulty {q.difficulty} — removed in step 4, ignore it
+        </summary>
+        <div style={{ marginTop: '8px', maxWidth: '420px' }}>
           <select
             value={q.difficulty}
-            style={inputStyle}
+            style={{ ...inputStyle, maxWidth: '160px' }}
             onChange={(e) => set('difficulty', Number(e.target.value) as 1 | 2 | 3)}
           >
             <option value={1}>1 — easy</option>
             <option value={2}>2 — core</option>
             <option value={3}>3 — stretch</option>
           </select>
+          <p style={{ fontSize: '11px', color: INK.textFaint, lineHeight: 1.5, margin: '6px 0 0' }}>
+            Intrinsic difficulty of the fact. Superseded by form (open / mcq / truefalse), which is
+            the difficulty ladder. Still read by Summit Climb, Strategy Board Quiz and Flash Round
+            for ordering — so the value must stay valid, but do not spend review time on it.
+          </p>
         </div>
-      </div>
+      </details>
 
       {/* --- forms --- */}
       <div style={{ marginBottom: '14px' }}>
